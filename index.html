@@ -312,7 +312,7 @@
 
     const lines = ['呼んだ？🌙', 'ここにいるよ', 'ふふ', '見ててくれるの？🌙', 'いい夜ですね', 'おかえりなさい'];
 
-    let renderer, scene, camera, controls, model, sparkles;
+    let renderer, scene, camera, controls, model, sparkles, mixer = null;
     let bounce = 0;            // クリック時のぴょこっと反応
     let spin = 0;              // クリック時の回転ブースト
     const clock = new THREE.Clock();
@@ -356,7 +356,7 @@
 
       const loader = new GLTFLoader();
       loader.setMeshoptDecoder(MeshoptDecoder);
-      loader.load('./assets/runa-web.glb', onLoaded, onProgress, onError);
+      loader.load('./assets/runa-web-idle.glb', onLoaded, onProgress, onError);
 
       window.addEventListener('resize', onResize);
       canvas.addEventListener('click', onClick);
@@ -385,6 +385,12 @@
       model.position.y += 0.05;
 
       scene.add(model);
+
+      // アイドル動作（呼吸・ゆるやかな重心移動・首と腕のゆれ）を再生
+      if (gltf.animations && gltf.animations.length) {
+        mixer = new THREE.AnimationMixer(model);
+        mixer.clipAction(gltf.animations[0]).play();
+      }
 
       // きらめき（クリック時に弾けるパーティクル）
       sparkles = makeSparkles();
@@ -473,6 +479,9 @@
 
     function animate() {
       const dt = clock.getDelta();
+
+      // アイドル動作の更新
+      if (mixer) mixer.update(dt);
 
       if (model) {
         // ぴょこっと反応（減衰する上下バウンド）
