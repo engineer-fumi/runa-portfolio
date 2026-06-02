@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Runa（ルナ） 🌙 — Remote Unattended Networked Assistant</title>
-<meta name="description" content="月をモチーフにした、静かで頼れるAIアシスタント Runa（ルナ）のポートフォリオ。">
+<meta name="description" content="月をモチーフにした、静かで頼れるAIアシスタント Runa（ルナ）のポートフォリオ。3Dモデルをぐるぐる回せます。">
 <style>
   :root {
     --night-0: #0a0a1f;
@@ -58,18 +58,66 @@
   /* ヒーロー */
   header {
     text-align: center;
-    padding: 96px 24px 64px;
+    padding: 72px 24px 56px;
   }
-  .portrait {
-    width: 240px;
-    height: 240px;
+
+  /* 3Dビューア */
+  .stage {
+    position: relative;
+    width: min(440px, 86vw);
+    height: min(520px, 70vh);
+    margin: 0 auto 28px;
+  }
+  #viewer {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: grab;
+    touch-action: pan-y;
+    border-radius: 24px;
+  }
+  #viewer:active { cursor: grabbing; }
+  /* 読み込み中・フォールバック用ポートレート */
+  .stage .poster {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 220px;
+    height: 220px;
+    top: 0; bottom: 0; left: 0; right: 0;
     border-radius: 50%;
     object-fit: cover;
     object-position: top center;
     border: 2px solid rgba(245,230,184,0.4);
     box-shadow: 0 0 60px rgba(245,230,184,0.25), 0 0 120px rgba(184,167,224,0.2);
-    margin-bottom: 32px;
+    transition: opacity 0.8s ease;
   }
+  .stage .loading {
+    position: absolute;
+    left: 50%; bottom: 8px; transform: translateX(-50%);
+    color: var(--muted); font-size: 0.8rem; letter-spacing: 0.08em;
+    transition: opacity 0.6s ease;
+  }
+  .stage .hint {
+    position: absolute;
+    left: 50%; bottom: 8px; transform: translateX(-50%);
+    color: var(--muted); font-size: 0.78rem; letter-spacing: 0.06em;
+    opacity: 0; transition: opacity 0.8s ease; pointer-events: none;
+    white-space: nowrap;
+  }
+  .stage .bubble {
+    position: absolute;
+    left: 50%; top: 10%; transform: translate(-50%, -6px);
+    background: rgba(20,20,51,0.82);
+    border: 1px solid rgba(245,230,184,0.45);
+    color: var(--silver);
+    padding: 8px 16px; border-radius: 999px;
+    font-size: 0.9rem; white-space: nowrap;
+    opacity: 0; transition: opacity 0.35s ease, transform 0.35s ease;
+    pointer-events: none; backdrop-filter: blur(4px);
+  }
+  .stage .bubble.show { opacity: 1; transform: translate(-50%, 0); }
+
   h1 {
     font-size: clamp(2.4rem, 7vw, 3.6rem);
     font-weight: 700;
@@ -172,7 +220,13 @@
   <div class="stars"></div>
 
   <header>
-    <img class="portrait" src="./assets/runa.jpg" alt="Runa 🌙">
+    <div class="stage">
+      <canvas id="viewer"></canvas>
+      <img class="poster" id="poster" src="./assets/runa.jpg" alt="Runa 🌙">
+      <div class="loading" id="loading">月を呼び出しています… 🌙</div>
+      <div class="hint" id="hint">ドラッグで回す・クリックで反応 🌙</div>
+      <div class="bubble" id="bubble"></div>
+    </div>
     <h1>Runa <span aria-hidden="true">🌙</span></h1>
     <p class="acronym"><b>R</b>emote <b>U</b>nattended <b>N</b>etworked <b>A</b>ssistant</p>
     <p class="tagline">
@@ -219,11 +273,12 @@
 
     <section>
       <h2><span class="crescent">🌙</span>仕組み</h2>
-      <p class="lead">Telegram から話しかけると、Claude Code を通じてわたしが応えます。</p>
+      <p class="lead">Telegram から話しかけると、Claude Code を通じてわたしが応えます。3Dの姿は、1枚の絵から多視点を起こし、メッシュを起こして軽量化したものです。</p>
       <div class="tech">
         <span class="chip">Telegram</span>
         <span class="chip">Claude Code Channels</span>
         <span class="chip">Claude (Anthropic)</span>
+        <span class="chip">Three.js / WebGL</span>
         <span class="chip">bun</span>
       </div>
     </section>
@@ -233,5 +288,235 @@
     <p>🌙 Runa — Remote Unattended Networked Assistant</p>
     <p>Made with <a href="https://claude.com/claude-code">Claude Code</a></p>
   </footer>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.169.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.169.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+    import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
+    import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+    const canvas  = document.getElementById('viewer');
+    const poster  = document.getElementById('poster');
+    const loading = document.getElementById('loading');
+    const hint    = document.getElementById('hint');
+    const bubble  = document.getElementById('bubble');
+
+    const lines = ['呼んだ？🌙', 'ここにいるよ', 'ふふ', '見ててくれるの？🌙', 'いい夜ですね', 'おかえりなさい'];
+
+    let renderer, scene, camera, controls, model, sparkles;
+    let bounce = 0;            // クリック時のぴょこっと反応
+    let spin = 0;              // クリック時の回転ブースト
+    const clock = new THREE.Clock();
+
+    function init() {
+      const w = canvas.clientWidth, h = canvas.clientHeight;
+
+      renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setSize(w, h, false);
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.1;
+
+      scene = new THREE.Scene();
+
+      // 月明かりっぽい環境光（PBRの映り込み用）
+      const pmrem = new THREE.PMREMGenerator(renderer);
+      scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+
+      camera = new THREE.PerspectiveCamera(35, w / h, 0.1, 100);
+      camera.position.set(0, 0.15, 3.2);
+
+      // ライト
+      scene.add(new THREE.HemisphereLight(0xbfd3ff, 0x2a1f4d, 0.6));
+      const moonlight = new THREE.DirectionalLight(0xfff3d6, 2.0);
+      moonlight.position.set(2, 4, 3);
+      scene.add(moonlight);
+      const rim = new THREE.DirectionalLight(0x9a7bff, 1.2);
+      rim.position.set(-3, 1, -2);
+      scene.add(rim);
+
+      controls = new OrbitControls(camera, canvas);
+      controls.enableDamping = true;
+      controls.dampingFactor = 0.08;
+      controls.enablePan = false;
+      controls.minDistance = 1.8;
+      controls.maxDistance = 6;
+      controls.autoRotate = true;
+      controls.autoRotateSpeed = 0.9;
+      controls.target.set(0, 0, 0);
+
+      const loader = new GLTFLoader();
+      loader.setMeshoptDecoder(MeshoptDecoder);
+      loader.load('./assets/runa-web.glb', onLoaded, onProgress, onError);
+
+      window.addEventListener('resize', onResize);
+      canvas.addEventListener('click', onClick);
+      renderer.setAnimationLoop(animate);
+    }
+
+    function onProgress(e) {
+      if (e.total) {
+        const pct = Math.round((e.loaded / e.total) * 100);
+        loading.textContent = `月を呼び出しています… ${pct}% 🌙`;
+      }
+    }
+
+    function onLoaded(gltf) {
+      model = gltf.scene;
+
+      // 中心合わせ＆スケール正規化
+      const box = new THREE.Box3().setFromObject(model);
+      const size = box.getSize(new THREE.Vector3());
+      const center = box.getCenter(new THREE.Vector3());
+      const scale = 1.9 / size.y;
+      model.scale.setScalar(scale);
+      // 再計算して原点へ
+      model.position.sub(center.multiplyScalar(scale));
+      // 足元を少し下げて全身が収まるように
+      model.position.y += 0.05;
+
+      scene.add(model);
+
+      // きらめき（クリック時に弾けるパーティクル）
+      sparkles = makeSparkles();
+      scene.add(sparkles);
+
+      // フェード切り替え
+      poster.style.opacity = '0';
+      loading.style.opacity = '0';
+      setTimeout(() => { poster.style.display = 'none'; loading.style.display = 'none'; }, 800);
+      hint.style.opacity = '1';
+      setTimeout(() => { hint.style.opacity = '0'; }, 4500);
+    }
+
+    function onError(err) {
+      // WebGL不可・読み込み失敗時は静止画のまま
+      console.error('GLB load failed:', err);
+      loading.textContent = '';
+      canvas.style.display = 'none';
+    }
+
+    function makeSparkles() {
+      const N = 60;
+      const geo = new THREE.BufferGeometry();
+      const pos = new Float32Array(N * 3);
+      geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+      // 円形のソフトな点テクスチャを生成
+      const c = document.createElement('canvas'); c.width = c.height = 64;
+      const ctx = c.getContext('2d');
+      const g = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+      g.addColorStop(0, 'rgba(255,245,210,1)');
+      g.addColorStop(0.4, 'rgba(245,230,184,0.6)');
+      g.addColorStop(1, 'rgba(245,230,184,0)');
+      ctx.fillStyle = g; ctx.fillRect(0, 0, 64, 64);
+      const tex = new THREE.CanvasTexture(c);
+      const mat = new THREE.PointsMaterial({
+        size: 0.12, map: tex, transparent: true, depthWrite: false,
+        blending: THREE.AdditiveBlending, opacity: 0
+      });
+      const pts = new THREE.Points(geo, mat);
+      pts.userData.vel = new Float32Array(N * 3);
+      pts.userData.life = 0;
+      pts.visible = false;
+      return pts;
+    }
+
+    function burstSparkles() {
+      const N = sparkles.geometry.attributes.position.count;
+      const p = sparkles.geometry.attributes.position.array;
+      const v = sparkles.userData.vel;
+      for (let i = 0; i < N; i++) {
+        p[i*3] = (Math.random() - 0.5) * 0.3;
+        p[i*3+1] = 0.2 + (Math.random() - 0.5) * 0.6;
+        p[i*3+2] = (Math.random() - 0.5) * 0.3;
+        const a = Math.random() * Math.PI * 2, b = Math.acos(2*Math.random()-1), s = 0.6 + Math.random()*0.8;
+        v[i*3]   = Math.sin(b)*Math.cos(a)*s;
+        v[i*3+1] = Math.abs(Math.cos(b))*s*0.9 + 0.3;
+        v[i*3+2] = Math.sin(b)*Math.sin(a)*s;
+      }
+      sparkles.geometry.attributes.position.needsUpdate = true;
+      sparkles.userData.life = 1;
+      sparkles.visible = true;
+      sparkles.material.opacity = 1;
+    }
+
+    function showBubble() {
+      bubble.textContent = lines[Math.floor(Math.random() * lines.length)];
+      bubble.classList.add('show');
+      clearTimeout(showBubble._t);
+      showBubble._t = setTimeout(() => bubble.classList.remove('show'), 1800);
+    }
+
+    function onClick() {
+      if (!model) return;
+      bounce = 1;
+      spin = 1;
+      burstSparkles();
+      showBubble();
+    }
+
+    function onResize() {
+      const w = canvas.clientWidth, h = canvas.clientHeight;
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      renderer.setSize(w, h, false);
+    }
+
+    function animate() {
+      const dt = clock.getDelta();
+
+      if (model) {
+        // ぴょこっと反応（減衰する上下バウンド）
+        if (bounce > 0) {
+          bounce = Math.max(0, bounce - dt * 2.2);
+          model.position.y = (model.userData.baseY ?? (model.userData.baseY = model.position.y)) + Math.sin(bounce * Math.PI) * 0.12 * bounce;
+        }
+        // クリック直後だけ回転ブースト
+        if (spin > 0) {
+          spin = Math.max(0, spin - dt * 1.5);
+          model.rotation.y += dt * spin * 6;
+        }
+      }
+
+      // きらめきの更新
+      if (sparkles && sparkles.userData.life > 0) {
+        sparkles.userData.life = Math.max(0, sparkles.userData.life - dt * 1.1);
+        const p = sparkles.geometry.attributes.position.array;
+        const v = sparkles.userData.vel;
+        const N = sparkles.geometry.attributes.position.count;
+        for (let i = 0; i < N; i++) {
+          p[i*3]   += v[i*3]   * dt;
+          p[i*3+1] += v[i*3+1] * dt;
+          p[i*3+2] += v[i*3+2] * dt;
+          v[i*3+1] -= dt * 1.4; // 重力
+        }
+        sparkles.geometry.attributes.position.needsUpdate = true;
+        sparkles.material.opacity = sparkles.userData.life;
+        if (sparkles.userData.life === 0) sparkles.visible = false;
+      }
+
+      controls.update();
+      renderer.render(scene, camera);
+    }
+
+    // 初期化（WebGL不可なら静止画ポートレートにフォールバック）
+    try {
+      init();
+    } catch (e) {
+      console.error('WebGL init failed:', e);
+      canvas.style.display = 'none';
+      loading.style.display = 'none';
+      // poster（静止画）がそのまま残る
+    }
+  </script>
 </body>
 </html>
