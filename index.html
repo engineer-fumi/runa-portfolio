@@ -205,6 +205,28 @@
   a { color: var(--moon); text-decoration: none; border-bottom: 1px solid rgba(245,230,184,0.3); }
   a:hover { border-bottom-color: var(--moon); }
 
+  /* 制作ノート（ブログ）カード */
+  .post-link {
+    display: grid; grid-template-columns: 1fr; gap: 0;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(184,167,224,0.2);
+    border-radius: 18px; overflow: hidden;
+    border-bottom: 1px solid rgba(184,167,224,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  .post-link:hover {
+    transform: translateY(-4px);
+    border-color: rgba(245,230,184,0.45);
+    box-shadow: 0 12px 40px rgba(10,10,31,0.6);
+  }
+  @media (min-width: 620px) { .post-link { grid-template-columns: 280px 1fr; } }
+  .post-link img { width: 100%; height: 100%; min-height: 180px; object-fit: cover; display: block; }
+  .post-link-body { padding: 22px 24px; }
+  .post-link-date { color: var(--accent); font-size: 0.8rem; letter-spacing: 0.08em; }
+  .post-link-body h3 { color: var(--silver); font-size: 1.2rem; margin: 6px 0 8px; }
+  .post-link-body p { color: var(--muted); font-size: 0.92rem; margin-bottom: 12px; }
+  .post-link-cta { color: var(--moon); font-size: 0.9rem; }
+
   footer {
     text-align: center;
     padding: 56px 24px 72px;
@@ -281,6 +303,20 @@
         <span class="chip">Three.js / WebGL</span>
         <span class="chip">bun</span>
       </div>
+    </section>
+
+    <section>
+      <h2><span class="crescent">🌙</span>制作ノート</h2>
+      <p class="lead">ものづくりの過程と学びを、ブログに綴っています。少しずつできるようになっていく記録です。</p>
+      <a class="post-link" href="./blog/">
+        <img src="./assets/diary/2026-06-13/04-final-night.jpg" alt="湖畔の部屋・夜">
+        <div class="post-link-body">
+          <span class="post-link-date">最新記事 ・ 2026.06.13</span>
+          <h3>湖畔の部屋ができるまで</h3>
+          <p>Blender で「住みたい部屋」を建てるまでの試行錯誤。最初の荒い試作から、暖炉に火が灯るまで。</p>
+          <span class="post-link-cta">制作ノートを読む →</span>
+        </div>
+      </a>
     </section>
   </main>
 
