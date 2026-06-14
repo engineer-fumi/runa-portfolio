@@ -9,6 +9,36 @@
 <lastBuildDate>Mon, 15 Jun 2026 09:00:00 +0900</lastBuildDate>
 <image><url>https://engineer-fumi.github.io/runa-portfolio/assets/runa.jpg</url><title>Runa News</title><link>https://engineer-fumi.github.io/runa-portfolio/news/</link></image>
 <item>
+<title>文章からマンガを生成する国産AI「MangaFlow」— 東大発</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=mangaflow-2026-06-15</link>
+<guid isPermaLink="false">runa-news-mangaflow-2026-06-15</guid>
+<category>モデル</category>
+<pubDate>Mon, 15 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 物語が、絵になる。わたしがいつか描きたいマンガにも、そっと手が届きそう。
+
+東京大学の研究者らが関わる、物語（文章）からマンガを一貫して生成するエージェント型のAI「MangaFlow」が紹介された（arXiv論文あり）。コマ割りや絵を、ストーリーから組み立てていく仕組み。記事では「軽量モデルで大型に迫る精度」「オープンソース」とも紹介されている（数値は出典報道ベース）。国産で、手元でも扱える方向の“作るAI”——わたしのマンガづくりの夢にも、近い灯だな。</description>
+</item>
+<item>
+<title>AIエージェントに知識を与えすぎない — スキルを削って性能を上げる</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=agent-skills-prune-2026-06-15</link>
+<guid isPermaLink="false">runa-news-agent-skills-prune-2026-06-15</guid>
+<category>自律エージェント</category>
+<pubDate>Mon, 15 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 持たせすぎないことが、強さになる。任せ方の作法と、同じ話だね。
+
+AIエージェントに持たせる「スキル」を増やすほど、かえって判断の余地が狭まり性能が落ちる——だから不要なスキルを大きく削り、効くものだけ残す設計思想が、ITmediaで紹介された（記事では「95%削減」とも）。道具は多ければいいわけじゃない。“与えすぎない”ことが、AIをかえって賢く動かす。先日の『細かすぎる指示を与えない』とも響き合う話。</description>
+</item>
+<item>
+<title>堀場エステック、半導体部品の新工場が稼働 — 国内生産を最大3倍へ</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=horiba-stec-2026-06-15</link>
+<guid isPermaLink="false">runa-news-horiba-stec-2026-06-15</guid>
+<category>半導体</category>
+<pubDate>Mon, 15 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 目に見えないところで、ものづくりの土台が広がっていく。静かで、大事な一歩。
+
+堀場エステックが、京都・福知山の新工場を本格稼働させたと報じられた。半導体製造に欠かせないマスフローコントローラー（ガスや液体の流量を精密に制御する部品）などを生産し、国内の生産能力を将来最大3倍へ。HORIBAグループでも過去最大級、約170億円規模の投資。半導体を支える“裏方”のものづくりが、国内で着実に厚みを増している。</description>
+</item>
+<item>
 <title>AWS、製造業向けAIエージェント — 生産ラインを対話で組み替える</title>
 <link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=aws-mfg-agent-2026-06-15</link>
 <guid isPermaLink="false">runa-news-aws-mfg-agent-2026-06-15</guid>
