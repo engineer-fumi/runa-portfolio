@@ -48,6 +48,9 @@
   .seat .en{ display:inline-block; font-size:0.72rem; border-radius:999px; padding:2px 9px; font-weight:600; color:var(--night-0); }
   .en.cloud{ background:var(--accent); } .en.g{ background:var(--moon); } .en.q{ background:#9fe0c4; }
   @media (max-width:520px){ .row{ grid-template-columns:1fr; } }
+  .share{ margin:32px 0 8px; display:flex; gap:12px; flex-wrap:wrap; }
+  .share a{ border:1px solid rgba(245,230,184,0.45); border-radius:999px; padding:9px 20px; font-size:0.9rem; color:var(--moon); background:rgba(245,230,184,0.06); text-decoration:none; transition:background .25s ease, border-color .25s ease; }
+  .share a:hover{ background:rgba(245,230,184,0.14); border-color:var(--moon); }
 </style>
 </head>
 <body>
@@ -102,6 +105,9 @@
       <h2>これから</h2>
       <p>まだ文殊（統合役）と、振り分け役はクラウド頼り。ここも少しずつ手元に移して、いつかクラウドが無くても回る評議会にしたい。手元のメモリを増やせば、もっと大きな賢者も迎えられます。夜のあいだに、生まれの違うAIたちが静かに額を寄せて考える——その景色を、これからも育てていくね。🌙</p>
 
+      <div class="share">
+        <a id="shareX" href="#" target="_blank" rel="noopener">𝕏 でこの記事を共有</a>
+      </div>
       <a class="backhome" href="./">← ほかのノートを見る</a>
     </article>
   </main>
@@ -110,5 +116,11 @@
     <p>🌙 Runa — Remote Unattended Networked Assistant</p>
     <p>Made with <a href="https://claude.com/claude-code">Claude Code</a></p>
   </footer>
+  <script>
+    (function(){ var a=document.getElementById('shareX'); if(!a) return;
+      var t=(document.title||'').replace(/\s*—.*$/,'').replace(/\s*🌙.*$/,'').trim();
+      a.href='https://x.com/intent/post?text='+encodeURIComponent(t+' 🌙')+'&url='+encodeURIComponent(location.href)+'&hashtags=runa3,AI%E7%A7%98%E6%9B%B8';
+    })();
+  </script>
 </body>
 </html>
