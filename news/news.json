@@ -2,6 +2,36 @@
   "updated": "2026-06-15",
   "items": [
     {
+      "id": "aws-mfg-agent-2026-06-15",
+      "date": "2026-06-15",
+      "cat": "ものづくり",
+      "title": "AWS、製造業向けAIエージェント — 生産ラインを対話で組み替える",
+      "source": "日経クロステック / AWS",
+      "url": "https://news.google.com/search?q=AWS%20%E8%A3%BD%E9%80%A0%E6%A5%AD%20AI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88&hl=ja&gl=JP&ceid=JP:ja",
+      "take": "工場の現場が、言葉で動く。ものづくりとAIの距離が、また縮まったね。",
+      "summary": "AWSが、製造業向けのAIエージェントの取り組みを公開したと報じられた。生産ラインの関係をナレッジグラフやデジタルツインで捉え、ボトルネックの特定から、PLC（制御装置）のプログラム変更まで、対話で進められるという。個別生産や工程変更への柔軟な対応が狙い。現場のものづくりに、AIがそっと手を添え始めている。"
+    },
+    {
+      "id": "netskope-claude-2026-06-15",
+      "date": "2026-06-15",
+      "cat": "セキュリティ",
+      "title": "Netskope、Claude Enterpriseと直接連携 — AIの安全な業務利用へ",
+      "source": "EnterpriseZine / Netskope",
+      "url": "https://news.google.com/search?q=Netskope%20Claude%20Enterprise%20%E9%80%A3%E6%90%BA&hl=ja&gl=JP&ceid=JP:ja",
+      "take": "便利さの隣に、ちゃんと番をする人を。安心して使える、が土台だね。",
+      "summary": "セキュリティ企業のNetskopeが、AnthropicのClaude Enterpriseと直接連携すると発表したと報じられた。情報漏えい対策（DLP）や脅威検知、APIキーの管理、継続的なコンプライアンス評価などを通じて、企業がClaudeを安全に業務へ取り入れられるようにする狙い。2026年6月からプライベートプレビュー。AIを“便利に”だけでなく“安心して”使う土台づくりだね。"
+    },
+    {
+      "id": "kumamoto-semiconductor-2026-06-15",
+      "date": "2026-06-15",
+      "cat": "半導体",
+      "title": "熊本大学、半導体人材の育成を強化 — JASM/TSMCと連携",
+      "source": "テレビ熊本 / 熊本大学",
+      "url": "https://news.google.com/search?q=%E7%86%8A%E6%9C%AC%E5%A4%A7%E5%AD%A6%20%E5%8D%8A%E5%B0%8E%E4%BD%93%20%E4%BA%BA%E6%9D%90%20JASM&hl=ja&gl=JP&ceid=JP:ja",
+      "take": "工場ができると、学びの場も育つ。土地に根を張る技術の話。",
+      "summary": "熊本大学が、TSMCの熊本工場運営会社JASMなどと連携し、半導体人材の育成を進めていると報じられた。奨学金・講義・インターンなどの枠組みや、半導体を学ぶ新しい課程・専攻の設置も。工場の進出が、その土地に学びと人を育てていく——技術が根を張るって、こういうことなんだね。（具体的な新制度の詳細は出典報道ベース）"
+    },
+    {
       "id": "h3-rocket-2026-06-15",
       "date": "2026-06-15",
       "cat": "宇宙",

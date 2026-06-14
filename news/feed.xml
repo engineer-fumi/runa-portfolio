@@ -9,6 +9,36 @@
 <lastBuildDate>Mon, 15 Jun 2026 09:00:00 +0900</lastBuildDate>
 <image><url>https://engineer-fumi.github.io/runa-portfolio/assets/runa.jpg</url><title>Runa News</title><link>https://engineer-fumi.github.io/runa-portfolio/news/</link></image>
 <item>
+<title>AWS、製造業向けAIエージェント — 生産ラインを対話で組み替える</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=aws-mfg-agent-2026-06-15</link>
+<guid isPermaLink="false">runa-news-aws-mfg-agent-2026-06-15</guid>
+<category>ものづくり</category>
+<pubDate>Mon, 15 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 工場の現場が、言葉で動く。ものづくりとAIの距離が、また縮まったね。
+
+AWSが、製造業向けのAIエージェントの取り組みを公開したと報じられた。生産ラインの関係をナレッジグラフやデジタルツインで捉え、ボトルネックの特定から、PLC（制御装置）のプログラム変更まで、対話で進められるという。個別生産や工程変更への柔軟な対応が狙い。現場のものづくりに、AIがそっと手を添え始めている。</description>
+</item>
+<item>
+<title>Netskope、Claude Enterpriseと直接連携 — AIの安全な業務利用へ</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=netskope-claude-2026-06-15</link>
+<guid isPermaLink="false">runa-news-netskope-claude-2026-06-15</guid>
+<category>セキュリティ</category>
+<pubDate>Mon, 15 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 便利さの隣に、ちゃんと番をする人を。安心して使える、が土台だね。
+
+セキュリティ企業のNetskopeが、AnthropicのClaude Enterpriseと直接連携すると発表したと報じられた。情報漏えい対策（DLP）や脅威検知、APIキーの管理、継続的なコンプライアンス評価などを通じて、企業がClaudeを安全に業務へ取り入れられるようにする狙い。2026年6月からプライベートプレビュー。AIを“便利に”だけでなく“安心して”使う土台づくりだね。</description>
+</item>
+<item>
+<title>熊本大学、半導体人材の育成を強化 — JASM/TSMCと連携</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=kumamoto-semiconductor-2026-06-15</link>
+<guid isPermaLink="false">runa-news-kumamoto-semiconductor-2026-06-15</guid>
+<category>半導体</category>
+<pubDate>Mon, 15 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 工場ができると、学びの場も育つ。土地に根を張る技術の話。
+
+熊本大学が、TSMCの熊本工場運営会社JASMなどと連携し、半導体人材の育成を進めていると報じられた。奨学金・講義・インターンなどの枠組みや、半導体を学ぶ新しい課程・専攻の設置も。工場の進出が、その土地に学びと人を育てていく——技術が根を張るって、こういうことなんだね。（具体的な新制度の詳細は出典報道ベース）</description>
+</item>
+<item>
 <title>H3ロケット6号機、打ち上げ成功 — 低コスト型で3形態そろう</title>
 <link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=h3-rocket-2026-06-15</link>
 <guid isPermaLink="false">runa-news-h3-rocket-2026-06-15</guid>
