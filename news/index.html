@@ -46,6 +46,10 @@
   .card h2 a:hover{ color:var(--moon); border-bottom-color:var(--moon); }
   .card .src{ color:var(--muted); font-size:0.78rem; }
   .card .take{ color:var(--moon); font-size:0.92rem; margin-top:8px; opacity:0.95; }
+  .filterbar{ display:flex; flex-wrap:wrap; gap:8px; padding:14px 0 2px; }
+  .fchip{ font-size:0.8rem; color:var(--muted); background:rgba(255,255,255,0.04); border:1px solid rgba(184,167,224,0.25); border-radius:999px; padding:5px 14px; cursor:pointer; transition:color .2s ease, background .2s ease, border-color .2s ease; }
+  .fchip:hover{ color:var(--silver); border-color:rgba(245,230,184,0.4); }
+  .fchip.active{ color:var(--night-0); background:var(--moon); border-color:var(--moon); font-weight:600; }
   .empty{ color:var(--muted); padding:24px 0; }
   footer{ text-align:center; padding:40px 24px 72px; color:var(--muted); font-size:0.85rem; border-top:1px solid rgba(184,167,224,0.12); margin-top:8px; }
   footer a{ color:var(--moon); text-decoration:none; border-bottom:1px solid rgba(245,230,184,0.3); }
@@ -63,6 +67,7 @@
       <p class="updated" id="updated"></p>
     </header>
 
+    <div class="filterbar" id="filterbar"></div>
     <div class="feed" id="feed"><p class="empty">読み込み中…🌙</p></div>
   </main>
 
@@ -83,7 +88,7 @@
         feed.innerHTML = items.map(it => {
           const c = CAT_COLOR[it.cat] || '#b8a7e0';
           const href = './item.html?id=' + encodeURIComponent(it.id||'');
-          return `<a class="card" href="${href}" style="display:block;text-decoration:none">
+          return `<a class="card" data-cat="${esc(it.cat||'')}" href="${href}" style="display:block;text-decoration:none">
             <div class="meta"><span class="chip" style="background:${c}">${esc(it.cat||'NEWS')}</span><span class="date">${esc(it.date||'')}</span></div>
             <h2>${esc(it.title||'')}</h2>
             <div class="src">${esc(it.source||'')}</div>
@@ -91,6 +96,19 @@
             <div style="color:var(--accent);font-size:0.8rem;margin-top:8px">まとめを読む →</div>
           </a>`;
         }).join('');
+        // カテゴリ・フィルター
+        const cats = Array.from(new Set(items.map(it => it.cat).filter(Boolean)));
+        const bar = document.getElementById('filterbar');
+        const mk = (label, val) => `<span class="fchip${val===null?' active':''}" data-f="${val===null?'__all__':esc(val)}">${esc(label)}</span>`;
+        bar.innerHTML = mk('すべて', null) + cats.map(ct => mk(ct, ct)).join('');
+        bar.addEventListener('click', e => {
+          const chip = e.target.closest('.fchip'); if(!chip) return;
+          const f = chip.getAttribute('data-f');
+          bar.querySelectorAll('.fchip').forEach(x => x.classList.toggle('active', x===chip));
+          feed.querySelectorAll('.card').forEach(card => {
+            card.style.display = (f==='__all__' || card.getAttribute('data-cat')===f) ? 'block' : 'none';
+          });
+        });
       })
       .catch(() => { document.getElementById('feed').innerHTML = '<p class="empty">ニュースの読み込みに失敗しちゃった。あとでまた来てね🌙</p>'; });
     function esc(s){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
