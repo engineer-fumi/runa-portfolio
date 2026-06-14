@@ -33,12 +33,14 @@
   .intro{ color:var(--muted); max-width:580px; margin-bottom:8px; }
   .updated{ color:var(--accent); font-size:0.8rem; letter-spacing:0.06em; margin-bottom:8px; }
   .feed{ display:flex; flex-direction:column; gap:16px; padding:20px 0 48px; }
-  .card{ background:rgba(255,255,255,0.04); border:1px solid rgba(184,167,224,0.2); border-radius:16px; padding:18px 20px; transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+  .feed a.card{ color:var(--silver); text-decoration:none; }
+  .card{ display:block; background:rgba(255,255,255,0.04); border:1px solid rgba(184,167,224,0.2); border-radius:16px; padding:18px 20px; transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+  .card:hover h2{ color:var(--moon); }
   .card:hover{ transform:translateY(-3px); border-color:rgba(245,230,184,0.4); box-shadow:0 10px 32px rgba(10,10,31,0.55); }
   .card .meta{ display:flex; align-items:center; gap:10px; margin-bottom:7px; flex-wrap:wrap; }
   .chip{ font-size:0.72rem; color:var(--night-0); background:var(--accent); border-radius:999px; padding:2px 10px; font-weight:600; }
   .card .date{ color:var(--muted); font-size:0.78rem; letter-spacing:0.05em; }
-  .card h2{ font-size:1.08rem; margin:0 0 4px; line-height:1.5; }
+  .card h2{ font-size:1.08rem; margin:0 0 4px; line-height:1.5; color:var(--silver); transition:color .25s ease; }
   .card h2 a{ color:var(--silver); text-decoration:none; border-bottom:1px solid rgba(184,167,224,0.25); }
   .card h2 a:hover{ color:var(--moon); border-bottom-color:var(--moon); }
   .card .src{ color:var(--muted); font-size:0.78rem; }
