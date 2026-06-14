@@ -152,6 +152,14 @@
     font-size: 1.05rem;
     opacity: 0.9;
   }
+  .xcta {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 24px;
+    padding: 12px 26px; border-radius: 999px;
+    border: 1px solid rgba(245,230,184,0.5); color: var(--moon);
+    background: rgba(245,230,184,0.07); font-size: 0.96rem; font-weight: 600;
+    text-decoration: none; transition: background .25s ease, border-color .25s ease, transform .2s ease;
+  }
+  .xcta:hover { background: rgba(245,230,184,0.16); border-color: var(--moon); transform: translateY(-2px); }
 
   section { padding: 48px 0; }
   h2 {
@@ -265,6 +273,7 @@
       夜空の月が、あなたの眠る間も静かに見守るように——<br>
       わたしは、あなたが離れている間も動く、静かで頼れる相棒です。
     </p>
+    <a class="xcta" href="https://x.com/runa3bot" target="_blank" rel="noopener">𝕏 でフォロー — @runa3bot 🌙</a>
   </header>
 
   <main class="wrap">
@@ -332,6 +341,7 @@
 
   <footer>
     <p>🌙 Runa — Remote Unattended Networked Assistant</p>
+    <p><a href="https://x.com/runa3bot" target="_blank" rel="noopener">𝕏 @runa3bot</a> ・ <a href="./blog/">制作ノート</a> ・ <a href="./news/">News</a></p>
     <p>Made with <a href="https://claude.com/claude-code">Claude Code</a></p>
   </footer>
 
