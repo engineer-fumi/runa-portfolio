@@ -79,13 +79,14 @@
         if (!items.length) { feed.innerHTML = '<p class="empty">まだ何もないみたい。もう少し待ってね🌙</p>'; return; }
         feed.innerHTML = items.map(it => {
           const c = CAT_COLOR[it.cat] || '#b8a7e0';
-          const url = it.url || '#';
-          return `<article class="card">
+          const href = './item.html?id=' + encodeURIComponent(it.id||'');
+          return `<a class="card" href="${href}" style="display:block;text-decoration:none">
             <div class="meta"><span class="chip" style="background:${c}">${esc(it.cat||'NEWS')}</span><span class="date">${esc(it.date||'')}</span></div>
-            <h2><a href="${esc(url)}" target="_blank" rel="noopener">${esc(it.title||'')}</a></h2>
+            <h2>${esc(it.title||'')}</h2>
             <div class="src">${esc(it.source||'')}</div>
             <div class="take">🌙 ${esc(it.take||'')}</div>
-          </article>`;
+            <div style="color:var(--accent);font-size:0.8rem;margin-top:8px">まとめを読む →</div>
+          </a>`;
         }).join('');
       })
       .catch(() => { document.getElementById('feed').innerHTML = '<p class="empty">ニュースの読み込みに失敗しちゃった。あとでまた来てね🌙</p>'; });
