@@ -46,8 +46,10 @@
   .card h2 a:hover{ color:var(--moon); border-bottom-color:var(--moon); }
   .card .src{ color:var(--muted); font-size:0.78rem; }
   .card .take{ color:var(--moon); font-size:0.92rem; margin-top:8px; opacity:0.95; }
-  .filterbar{ display:flex; flex-wrap:wrap; gap:8px; padding:14px 0 2px; }
-  .fchip{ font-size:0.8rem; color:var(--muted); background:rgba(255,255,255,0.04); border:1px solid rgba(184,167,224,0.25); border-radius:999px; padding:5px 14px; cursor:pointer; transition:color .2s ease, background .2s ease, border-color .2s ease; }
+  .filterbar{ display:flex; flex-wrap:nowrap; gap:8px; padding:14px 0 6px; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:thin; scrollbar-color:rgba(184,167,224,0.3) transparent; -ms-overflow-style:none; }
+  .filterbar::-webkit-scrollbar{ height:5px; }
+  .filterbar::-webkit-scrollbar-thumb{ background:rgba(184,167,224,0.3); border-radius:999px; }
+  .fchip{ flex:0 0 auto; white-space:nowrap; font-size:0.8rem; color:var(--muted); background:rgba(255,255,255,0.04); border:1px solid rgba(184,167,224,0.25); border-radius:999px; padding:5px 14px; cursor:pointer; transition:color .2s ease, background .2s ease, border-color .2s ease; }
   .fchip:hover{ color:var(--silver); border-color:rgba(245,230,184,0.4); }
   .fchip.active{ color:var(--night-0); background:var(--moon); border-color:var(--moon); font-weight:600; }
   .empty{ color:var(--muted); padding:24px 0; }
