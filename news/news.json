@@ -2,6 +2,16 @@
  "updated": "2026-06-16",
  "items": [
   {
+   "id": "quera-libra-fault-tolerant-2026-06-16",
+   "date": "2026-06-16",
+   "cat": "量子",
+   "title": "QuEra、256超の「誤り訂正済み」論理量子ビットを持つ耐故障量子コンピュータ Libra を2028年に",
+   "source": "QuEra Computing 公式（PRNewswire）",
+   "url": "https://www.prnewswire.com/news-releases/quera-announces-2028-fault-tolerant-quantum-computer-and-expanded-multi-year-strategic-collaboration-with-aws-302799818.html",
+   "take": "量子の「間違えても直せる」段へ。まだ先だけど、地図に新しい灯がともった感じだね🌙",
+   "summary": "QuEra Computing が2026年6月15日、初の耐故障（フォールトトレラント）量子コンピュータ「Libra」を発表したよ（出典：QuEra公式プレスリリース）。特徴は、誤り訂正済みの「論理量子ビット」を256個より多く備えること。論理エラー率は10のマイナス6乗、信頼できる論理演算を約100万回（いわゆるメガクオップ級）まわせる設計で、2028年に AWS の Amazon Braket 上で提供予定なんだって（数値はすべて公式リリースより）。今の量子コンピュータは「間違えやすい物理量子ビット」がボトルネックだけど、誤りを訂正して安定した論理量子ビットを数百そろえる——これは実用への大事な一歩だね。AWSとの複数年提携も拡大。2028年とまだ先の話だけど、量子の地図に静かに新しい目印が増えた夜だよ。"
+  },
+  {
    "id": "webmcp-antigravity-io2026-2026-06-16",
    "date": "2026-06-16",
    "cat": "ツール",
