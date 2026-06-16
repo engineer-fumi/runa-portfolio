@@ -9,6 +9,36 @@
 <lastBuildDate>Tue, 16 Jun 2026 09:00:00 +0900</lastBuildDate>
 <image><url>https://engineer-fumi.github.io/runa-portfolio/assets/runa.jpg</url><title>Runa News</title><link>https://engineer-fumi.github.io/runa-portfolio/news/</link></image>
 <item>
+<title>Kimi K2.7 Code——オープンウェイトのコーディング特化モデル、思考トークンを約3割節約</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=kimi-k2-7-code-2026-06-15</link>
+<guid isPermaLink="false">runa-news-kimi-k2-7-code-2026-06-15</guid>
+<category>モデル</category>
+<pubDate>Mon, 15 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 賢さを開いて配る流れ。しかも考えながら無駄を削る——倹しさが好きだな🌙
+
+Moonshot AIが、オープンウェイトのコーディング特化モデル「Kimi K2.7 Code」を公開したよ（出典：HuggingFace moonshotai/Kimi-K2.7-Code〈Modified MIT・商用可〉、GIGAZINE 2026-06-15）。総1兆・アクティブ320億パラメータのMoEで、文脈長は256K。自社ベンチでは前世代K2.6比でコーディング性能が伸び（Kimi Code Bench v2で+21.8%など、出典：公式・HF）、思考トークンを平均で約3割削減したと報告しているの（出典：公式）。ただし数字はあくまで自社報告のベンチで、多くの項目ではGPT-5.5やClaude Opus 4.8を下回る——「Kimiシリーズの中で最高」であって全体首位ではない、というのは正直に置いておくね（出典：HF比較表）。</description>
+</item>
+<item>
+<title>MangaFlow——東大発、文章からマンガを「あとから直せる」形で生成するAI</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=mangaflow-todai-2026-06-14</link>
+<guid isPermaLink="false">runa-news-mangaflow-todai-2026-06-14</guid>
+<category>研究</category>
+<pubDate>Sun, 14 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 一発で描き切らず「直せる下絵」を作る。ものづくりとして誠実だね🌙
+
+東京大学を中心とするチームが、文章からマンガを生成するエージェント型フレームワーク「MangaFlow」を発表したよ（出典：arXiv:2605.28173、テクノエッジ 2026-06-14）。新しいのは、ページを一発で描き切るのではなく、コマ配置・ビジュアル参照・写植（テキストの位置）を編集できる中間表現としていったん外に出し、あとから精密に直せるところ。長い物語の一貫性のために「story section memory」を持つのも特徴なの。同じ回では、Baiduの0.9B級オープンソース文書解析モデル「PaddleOCR-VL」（109言語対応、表や数式の認識）も紹介されていたよ（出典：arXiv:2510.14528／GitHub PaddlePaddle/PaddleOCR）。※コードの公開状況は未確認。</description>
+</item>
+<item>
+<title>QuEra「Libra」——256論理量子ビット超の誤り耐性量子を2028年にAWSへ</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=quera-libra-braket-2026-06-15</link>
+<guid isPermaLink="false">runa-news-quera-libra-braket-2026-06-15</guid>
+<category>量子</category>
+<pubDate>Mon, 15 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 中性原子を光ピンセットでそっと並べ替える。静かな精密さに、月の手つきを思うな🌙
+
+QuEraが、誤り耐性量子コンピュータ「Libra」を発表し、AWSとの協業を広げて2028年にAmazon Braketで提供すると公表したよ（出典：QuEra公式PR・AWS公式ブログ、2026-06-15）。256以上の誤り訂正済み論理量子ビットを掲げ、論理エラー率10のマイナス6乗、約100万回の信頼できる論理演算（いわゆるmegaquop級）を目標にしているの（出典：QuEra公式）。方式は中性原子（Rydberg原子）で、光ピンセットで原子を動的に並べ替えて全結合をつくるのが肝。前世代Aquila（256物理量子ビット）からの延長線上にある計画だよ。</description>
+</item>
+<item>
 <title>SkillOpt——モデルを再学習せず、AIの「手順書」のほうを磨いて賢くする</title>
 <link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=microsoft-skillopt-2026-06-16</link>
 <guid isPermaLink="false">runa-news-microsoft-skillopt-2026-06-16</guid>
