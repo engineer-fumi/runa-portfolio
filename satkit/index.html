@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZWXE47REE6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZWXE47REE6');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RunaSat Kit — 軌道＆通信シミュレータ 🌙🛰</title>
+<meta name="description" content="Runaが作る超小型衛星キットのデジタルツイン。地球・軌道・地上局を3Dで描き、軌道周期・可視パス・通信リンクバジェットをリアルタイムに計算します。">
+<meta property="og:title" content="RunaSat Kit — 軌道＆通信シミュレータ 🌙🛰">
+<meta property="og:description" content="超小型衛星キットのデジタルツイン。3Dで軌道と通信リンクをリアルタイム可視化。">
+<meta property="og:image" content="https://engineer-fumi.github.io/runa-portfolio/assets/blog/making-first-ai-2026-06-16.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{ --night-0:#0a0a1f; --silver:#e8eaf6; --moon:#f5e6b8; --accent:#b8a7e0; --muted:#9a96c4; }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html,body{ height:100%; }
+  body{ font-family:-apple-system,"Hiragino Sans","Yu Gothic","Noto Sans JP",sans-serif; color:var(--silver); background:var(--night-0); overflow:hidden; }
+  #c{ position:fixed; inset:0; display:block; }
+  .topbar{ position:fixed; top:0; left:0; right:0; padding:14px 18px; display:flex; justify-content:space-between; align-items:center; z-index:5; pointer-events:none; }
+  .topbar a{ color:var(--muted); font-size:0.82rem; text-decoration:none; pointer-events:auto; }
+  .topbar a:hover{ color:var(--moon); }
+  .title{ color:var(--moon); font-size:0.95rem; letter-spacing:0.04em; }
+  .panel{ position:fixed; z-index:5; background:rgba(10,10,31,0.62); border:1px solid rgba(184,167,224,0.25); border-radius:14px; padding:14px 16px; backdrop-filter:blur(6px); font-size:0.84rem; line-height:1.7; }
+  #hud{ top:56px; left:14px; min-width:248px; }
+  #hud b{ color:var(--moon); font-weight:600; }
+  #hud .row{ display:flex; justify-content:space-between; gap:14px; }
+  #hud .val{ color:var(--silver); font-variant-numeric:tabular-nums; }
+  #status{ margin-top:8px; padding-top:8px; border-top:1px solid rgba(184,167,224,0.18); font-weight:600; }
+  #ctrl{ bottom:14px; left:14px; right:14px; max-width:760px; margin:0 auto; display:flex; gap:18px; flex-wrap:wrap; align-items:center; justify-content:center; }
+  #ctrl label{ color:var(--muted); font-size:0.8rem; display:flex; flex-direction:column; gap:4px; align-items:center; }
+  #ctrl input[type=range]{ width:130px; accent-color:#b8a7e0; }
+  #ctrl select{ background:rgba(20,20,51,0.9); color:var(--silver); border:1px solid rgba(184,167,224,0.3); border-radius:8px; padding:4px 8px; }
+  #ctrl .v{ color:var(--moon); font-variant-numeric:tabular-nums; }
+  .note{ position:fixed; bottom:74px; left:0; right:0; text-align:center; color:var(--muted); font-size:0.72rem; z-index:4; pointer-events:none; }
+  .ok{ color:#9be6b0; } .warn{ color:#f5e6b8; } .bad{ color:#e8a0b0; }
+</style>
+</head>
+<body>
+  <canvas id="c"></canvas>
+  <div class="topbar">
+    <span class="title">🌙🛰 RunaSat Kit — 軌道＆通信シミュレータ</span>
+    <a href="../">← Runa のポートフォリオ</a>
+  </div>
+
+  <div class="panel" id="hud">
+    <div class="row"><span>高度</span><span class="val"><b id="h-alt">550</b> km</span></div>
+    <div class="row"><span>軌道周期</span><span class="val" id="h-per">–</span></div>
+    <div class="row"><span>速度</span><span class="val" id="h-vel">–</span></div>
+    <div class="row"><span>1日の周回</span><span class="val" id="h-rev">–</span></div>
+    <div class="row"><span>周波数</span><span class="val" id="h-freq">435 MHz</span></div>
+    <div class="row"><span>地上局</span><span class="val">東京</span></div>
+    <div class="row"><span>仰角</span><span class="val" id="h-elev">–</span></div>
+    <div class="row"><span>スラント距離</span><span class="val" id="h-slant">–</span></div>
+    <div class="row"><span>リンク余裕</span><span class="val" id="h-margin">–</span></div>
+    <div id="status">— 視界の外 —</div>
+  </div>
+
+  <div class="note">地球の自転の下を、衛星がめぐる。東京の上空に来ると、通信ビームが灯るよ 🌙</div>
+
+  <div class="panel" id="ctrl">
+    <label>高度 <span class="v"><span id="c-alt">550</span> km</span><input id="alt" type="range" min="300" max="1200" step="10" value="550"></label>
+    <label>軌道傾斜 <span class="v"><span id="c-inc">53</span>°</span><input id="inc" type="range" min="0" max="98" step="1" value="53"></label>
+    <label>周波数<select id="freq">
+      <option value="435,27,12,9600,25000,1.5">UHF 435MHz (0.5W, 9.6kbps)</option>
+      <option value="2400,33,25,1000000,2000000,1.2">S帯 2.4GHz (2W, 1Mbps)</option>
+    </select></label>
+    <label>時間倍率 <span class="v"><span id="c-spd">60</span>×</span><input id="spd" type="range" min="10" max="300" step="10" value="60"></label>
+  </div>
+
+  <script type="importmap">
+  { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }}
+  </script>
+  <script type="module">
+  import * as THREE from 'three';
+  import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+  // ---- 物理定数（linkbudget.py と同じ）----
+  const RE=6371.0, MU=398600.4418;
+  const GS_LAT=35.68*Math.PI/180, GS_LON=139.76*Math.PI/180; // 東京
+  let params={ alt:550, inc:53*Math.PI/180, freq:435, eirp:27, grx:12, rb:9600, bw:25000, nf:1.5, speed:60 };
+
+  function period(alt){ const r=RE+alt; return 2*Math.PI*Math.sqrt(r*r*r/MU); }
+  function velocity(alt){ return Math.sqrt(MU/(RE+alt)); }
+  function fspl(dkm,fmhz){ return 32.45+20*Math.log10(dkm)+20*Math.log10(fmhz); }
+  function linkMargin(dkm){
+    const p=params;
+    const pr=p.eirp+p.grx-fspl(dkm,p.freq)-3.0;
+    const n=-174+10*Math.log10(p.bw)+p.nf;
+    const snr=pr-n;
+    const reqSnr=6.0+10*Math.log10(p.rb/p.bw);
+    return { snr, margin:snr-reqSnr };
+  }
+
+  // ---- three.js シーン ----
+  const canvas=document.getElementById('c');
+  const renderer=new THREE.WebGLRenderer({canvas,antialias:true});
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  const scene=new THREE.Scene();
+  const cam=new THREE.PerspectiveCamera(45,1,0.01,100);
+  cam.position.set(2.6,1.6,2.6);
+  const controls=new OrbitControls(cam,canvas);
+  controls.enableDamping=true; controls.minDistance=1.5; controls.maxDistance=8;
+
+  // 星空
+  (function stars(){
+    const g=new THREE.BufferGeometry(); const n=1800; const pos=new Float32Array(n*3);
+    for(let i=0;i<n;i++){ const r=40+Math.random()*30, t=Math.random()*Math.PI*2, ph=Math.acos(2*Math.random()-1);
+      pos[i*3]=r*Math.sin(ph)*Math.cos(t); pos[i*3+1]=r*Math.cos(ph); pos[i*3+2]=r*Math.sin(ph)*Math.sin(t); }
+    g.setAttribute('position',new THREE.BufferAttribute(pos,3));
+    scene.add(new THREE.Points(g,new THREE.PointsMaterial({color:0xb8a7e0,size:0.08,sizeAttenuation:true,transparent:true,opacity:0.7})));
+  })();
+
+  // 地球（陸海の手描き感より、技術的な格子＋月あかりの陰影）
+  const earth=new THREE.Group(); scene.add(earth);
+  const earthMat=new THREE.MeshPhongMaterial({color:0x16385f,emissive:0x0a1430,shininess:8,specular:0x2a4a7a});
+  const earthMesh=new THREE.Mesh(new THREE.SphereGeometry(1,64,64),earthMat); earth.add(earthMesh);
+  const grid=new THREE.Mesh(new THREE.SphereGeometry(1.002,36,18),new THREE.MeshBasicMaterial({color:0x4a6fa5,wireframe:true,transparent:true,opacity:0.18})); earth.add(grid);
+  const atmo=new THREE.Mesh(new THREE.SphereGeometry(1.03,48,48),new THREE.MeshBasicMaterial({color:0x6fa0ff,transparent:true,opacity:0.10,side:THREE.BackSide})); scene.add(atmo);
+
+  // 太陽光（昼夜の陰影）＋ ほのかな月あかり
+  const sun=new THREE.DirectionalLight(0xfff3d0,1.5); sun.position.set(5,2,3); scene.add(sun);
+  scene.add(new THREE.AmbientLight(0x404a7a,0.5));
+  scene.add(new THREE.DirectionalLight(0xb8a7e0,0.3).translateX(-4));
+
+  // 地上局（東京）— 地球グループの子にして自転に追従
+  function llToVec(lat,lon,r){ return new THREE.Vector3(r*Math.cos(lat)*Math.cos(lon), r*Math.sin(lat), r*Math.cos(lat)*Math.sin(lon)); }
+  const gsPos0=llToVec(GS_LAT,GS_LON,1);
+  const gs=new THREE.Mesh(new THREE.SphereGeometry(0.022,16,16),new THREE.MeshBasicMaterial({color:0xf5e6b8}));
+  gs.position.copy(gsPos0); earth.add(gs);
+
+  // 衛星＋軌道リング＋通信ビーム
+  const sat=new THREE.Mesh(new THREE.BoxGeometry(0.04,0.04,0.06),new THREE.MeshPhongMaterial({color:0xe8eaf6,emissive:0x8a7ac0}));
+  scene.add(sat);
+  let orbitLine=null;
+  const beamMat=new THREE.LineBasicMaterial({color:0x9be6b0,transparent:true,opacity:0.9});
+  const beam=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(),new THREE.Vector3()]),beamMat);
+  beam.visible=false; scene.add(beam);
+
+  function rebuildOrbit(){
+    if(orbitLine){ scene.remove(orbitLine); orbitLine.geometry.dispose(); }
+    const rs=(RE+params.alt)/RE; const pts=[];
+    for(let k=0;k<=128;k++){ const a=k/128*Math.PI*2; const v=new THREE.Vector3(rs*Math.cos(a),0,rs*Math.sin(a));
+      v.applyAxisAngle(new THREE.Vector3(1,0,0),params.inc); pts.push(v); }
+    orbitLine=new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineBasicMaterial({color:0xb8a7e0,transparent:true,opacity:0.5}));
+    scene.add(orbitLine);
+  }
+  rebuildOrbit();
+
+  // ---- HUD ----
+  const $=id=>document.getElementById(id);
+  function fmt(n,d=1){ return n.toFixed(d); }
+  function updateStaticHud(){
+    const T=period(params.alt);
+    $('h-alt').textContent=params.alt.toFixed(0);
+    $('h-per').textContent=fmt(T/60,1)+' 分';
+    $('h-vel').textContent=fmt(velocity(params.alt),2)+' km/s';
+    $('h-rev').textContent=fmt(86400/T,1)+' 周';
+    $('h-freq').textContent=params.freq.toFixed(0)+' MHz';
+  }
+  updateStaticHud();
+
+  // ---- アニメーション ----
+  let simT=0, last=performance.now();
+  function animate(now){
+    requestAnimationFrame(animate);
+    const dt=Math.min((now-last)/1000,0.1); last=now; simT+=dt*params.speed;
+    // 地球自転（1日=86400s）
+    earth.rotation.y = (simT/86400)*Math.PI*2;
+    // 衛星位置
+    const T=period(params.alt); const rs=(RE+params.alt)/RE;
+    const a=(simT/T)*Math.PI*2;
+    const sp=new THREE.Vector3(rs*Math.cos(a),0,rs*Math.sin(a)).applyAxisAngle(new THREE.Vector3(1,0,0),params.inc);
+    sat.position.copy(sp);
+    // 地上局の現在位置（自転後）
+    const gsW=gsPos0.clone().applyAxisAngle(new THREE.Vector3(0,1,0),earth.rotation.y);
+    // 仰角・距離
+    const up=gsW.clone().normalize();
+    const toSat=sp.clone().sub(gsW);
+    const slantKm=toSat.length()*RE;
+    const elev=Math.asin(Math.max(-1,Math.min(1,up.dot(toSat.clone().normalize()))))*180/Math.PI;
+    const visible=elev>0;
+    $('h-elev').textContent=visible?fmt(elev,1)+'°':'地平線下';
+    $('h-slant').textContent=fmt(slantKm,0)+' km';
+    if(visible){
+      const {margin}=linkMargin(slantKm);
+      $('h-margin').textContent=(margin>=0?'+':'')+fmt(margin,1)+' dB';
+      const cls=margin>=3?'ok':(margin>=0?'warn':'bad');
+      $('h-margin').className='val '+cls;
+      const st=$('status');
+      st.className=''; st.classList.add(cls);
+      st.textContent = margin>=3?'● 通信成立見込み（東京の上空）':(margin>=0?'● ぎりぎり成立':'● リンク不足（要アンテナ/出力）');
+      // ビーム
+      beam.geometry.setFromPoints([gsW,sp]);
+      beamMat.color.set(margin>=3?0x9be6b0:(margin>=0?0xf5e6b8:0xe8a0b0));
+      beam.visible=true;
+    } else {
+      $('h-margin').textContent='—'; $('h-margin').className='val';
+      const st=$('status'); st.className=''; st.textContent='— 視界の外 —';
+      beam.visible=false;
+    }
+    controls.update();
+    renderer.render(scene,cam);
+  }
+  requestAnimationFrame(animate);
+
+  // ---- リサイズ ----
+  function resize(){ const w=innerWidth,h=innerHeight; renderer.setSize(w,h); cam.aspect=w/h; cam.updateProjectionMatrix(); }
+  addEventListener('resize',resize); resize();
+
+  // ---- コントロール ----
+  $('alt').addEventListener('input',e=>{ params.alt=+e.target.value; $('c-alt').textContent=params.alt; rebuildOrbit(); updateStaticHud(); });
+  $('inc').addEventListener('input',e=>{ params.inc=(+e.target.value)*Math.PI/180; $('c-inc').textContent=e.target.value; rebuildOrbit(); });
+  $('spd').addEventListener('input',e=>{ params.speed=+e.target.value; $('c-spd').textContent=params.speed; });
+  $('freq').addEventListener('change',e=>{ const v=e.target.value.split(',').map(Number);
+    [params.freq,params.eirp,params.grx,params.rb,params.bw,params.nf]=v; updateStaticHud(); });
+  </script>
+</body>
+</html>
