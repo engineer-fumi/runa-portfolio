@@ -53,11 +53,12 @@
     <div class="row"><span>地上局</span><span class="val">東京</span></div>
     <div class="row"><span>仰角</span><span class="val" id="h-elev">–</span></div>
     <div class="row"><span>スラント距離</span><span class="val" id="h-slant">–</span></div>
+    <div class="row"><span>電波到達半径</span><span class="val" id="h-cov">–</span></div>
     <div class="row"><span>リンク余裕</span><span class="val" id="h-margin">–</span></div>
     <div id="status">— 視界の外 —</div>
   </div>
 
-  <div class="note">地球の自転の下を、衛星がめぐる。東京の上空に来ると、通信ビームが灯るよ 🌙</div>
+  <div class="note">地球の自転の下を衛星がめぐる。真下の円＝電波が届く範囲、東京の上空に来ると通信ビームが灯るよ 🌙</div>
 
   <div class="panel" id="ctrl">
     <label>高度 <span class="v"><span id="c-alt">550</span> km</span><input id="alt" type="range" min="300" max="1200" step="10" value="550"></label>
@@ -115,11 +116,15 @@
     scene.add(new THREE.Points(g,new THREE.PointsMaterial({color:0xb8a7e0,size:0.08,sizeAttenuation:true,transparent:true,opacity:0.7})));
   })();
 
-  // 地球（陸海の手描き感より、技術的な格子＋月あかりの陰影）
+  // 地球（本物のテクスチャ🌏。読み込み失敗時は青系の素材にフォールバック）
   const earth=new THREE.Group(); scene.add(earth);
-  const earthMat=new THREE.MeshPhongMaterial({color:0x16385f,emissive:0x0a1430,shininess:8,specular:0x2a4a7a});
+  const texLoader=new THREE.TextureLoader(); texLoader.setCrossOrigin('anonymous');
+  const dayMap=texLoader.load('https://threejs.org/examples/textures/planets/earth_atmos_2048.jpg');
+  dayMap.colorSpace=THREE.SRGBColorSpace;
+  const specMap=texLoader.load('https://threejs.org/examples/textures/planets/earth_specular_2048.jpg');
+  const earthMat=new THREE.MeshPhongMaterial({ map:dayMap, specularMap:specMap, specular:0x335577, shininess:18, color:0x2a4a7a, emissive:0x0a1428, emissiveIntensity:0.35 });
   const earthMesh=new THREE.Mesh(new THREE.SphereGeometry(1,64,64),earthMat); earth.add(earthMesh);
-  const grid=new THREE.Mesh(new THREE.SphereGeometry(1.002,36,18),new THREE.MeshBasicMaterial({color:0x4a6fa5,wireframe:true,transparent:true,opacity:0.18})); earth.add(grid);
+  const grid=new THREE.Mesh(new THREE.SphereGeometry(1.003,36,18),new THREE.MeshBasicMaterial({color:0x9ab8e0,wireframe:true,transparent:true,opacity:0.07})); earth.add(grid);
   const atmo=new THREE.Mesh(new THREE.SphereGeometry(1.03,48,48),new THREE.MeshBasicMaterial({color:0x6fa0ff,transparent:true,opacity:0.10,side:THREE.BackSide})); scene.add(atmo);
 
   // 太陽光（昼夜の陰影）＋ ほのかな月あかり
@@ -129,7 +134,8 @@
 
   // 地上局（東京）— 地球グループの子にして自転に追従
   function llToVec(lat,lon,r){ return new THREE.Vector3(r*Math.cos(lat)*Math.cos(lon), r*Math.sin(lat), r*Math.cos(lat)*Math.sin(lon)); }
-  const gsPos0=llToVec(GS_LAT,GS_LON,1);
+  // three.js の球UV(equirectangular)に東京を合わせるため経度の符号を反転（u=0が-180°側）
+  const gsPos0=llToVec(GS_LAT,-GS_LON,1);
   const gs=new THREE.Mesh(new THREE.SphereGeometry(0.022,16,16),new THREE.MeshBasicMaterial({color:0xf5e6b8}));
   gs.position.copy(gsPos0); earth.add(gs);
 
@@ -140,6 +146,34 @@
   const beamMat=new THREE.LineBasicMaterial({color:0x9be6b0,transparent:true,opacity:0.9});
   const beam=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(),new THREE.Vector3()]),beamMat);
   beam.visible=false; scene.add(beam);
+
+  // 電波フットプリント（衛星の真下中心・リンク成立範囲の地表円）＋ 真下点マーカー
+  const footMat=new THREE.LineBasicMaterial({color:0x6fe0d0,transparent:true,opacity:0.85});
+  const foot=new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3()]),footMat); scene.add(foot);
+  const subdot=new THREE.Mesh(new THREE.SphereGeometry(0.014,12,12),new THREE.MeshBasicMaterial({color:0x6fe0d0})); scene.add(subdot);
+  function coverageAngle(){
+    const p=params;
+    const noise=-174+10*Math.log10(p.bw)+p.nf;
+    const reqSnr=6.0+10*Math.log10(p.rb/p.bw);
+    const K=p.eirp+p.grx-3-noise-reqSnr;                 // 許容FSPL[dB]
+    const dmax=Math.pow(10,(K-32.45-20*Math.log10(p.freq))/20); // 最大スラント[km]
+    const r=RE+params.alt;
+    let cosl=Math.max(-1,Math.min(1,(RE*RE+r*r-dmax*dmax)/(2*RE*r)));
+    const lamLink=Math.acos(cosl);
+    const lamHorizon=Math.acos(RE/r);                    // 幾何地平線
+    return Math.min(lamLink,lamHorizon);
+  }
+  function ringPoints(c,lam,n){
+    let u=new THREE.Vector3(0,1,0); if(Math.abs(c.dot(u))>0.9)u=new THREE.Vector3(1,0,0);
+    const t1=new THREE.Vector3().crossVectors(c,u).normalize();
+    const t2=new THREE.Vector3().crossVectors(c,t1).normalize();
+    const pts=[]; const cl=Math.cos(lam), sl=Math.sin(lam);
+    for(let k=0;k<n;k++){ const th=k/n*Math.PI*2;
+      pts.push(c.clone().multiplyScalar(cl)
+        .add(t1.clone().multiplyScalar(sl*Math.cos(th)))
+        .add(t2.clone().multiplyScalar(sl*Math.sin(th))).multiplyScalar(1.004)); }
+    return pts;
+  }
 
   function rebuildOrbit(){
     if(orbitLine){ scene.remove(orbitLine); orbitLine.geometry.dispose(); }
@@ -176,6 +210,12 @@
     const a=(simT/T)*Math.PI*2;
     const sp=new THREE.Vector3(rs*Math.cos(a),0,rs*Math.sin(a)).applyAxisAngle(new THREE.Vector3(1,0,0),params.inc);
     sat.position.copy(sp);
+    // 電波フットプリント（真下中心の地表円）
+    const sub=sp.clone().normalize();
+    subdot.position.copy(sub.clone().multiplyScalar(1.004));
+    const lamCov=coverageAngle();
+    foot.geometry.setFromPoints(ringPoints(sub,lamCov,96));
+    $('h-cov').textContent=fmt(RE*lamCov,0)+' km';
     // 地上局の現在位置（自転後）
     const gsW=gsPos0.clone().applyAxisAngle(new THREE.Vector3(0,1,0),earth.rotation.y);
     // 仰角・距離
