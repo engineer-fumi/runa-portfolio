@@ -55,10 +55,12 @@
     <div class="row"><span>スラント距離</span><span class="val" id="h-slant">–</span></div>
     <div class="row"><span>電波到達半径</span><span class="val" id="h-cov">–</span></div>
     <div class="row"><span>リンク余裕</span><span class="val" id="h-margin">–</span></div>
+    <div class="row" style="margin-top:6px;padding-top:6px;border-top:1px solid rgba(184,167,224,0.18)"><span>実衛星(可視群)</span><span class="val" id="h-nsat">読込中…</span></div>
+    <div class="row"><span>最接近</span><span class="val" id="h-near">–</span></div>
     <div id="status">— 視界の外 —</div>
   </div>
 
-  <div class="note">地球の自転の下を衛星がめぐる。真下の円＝電波が届く範囲、東京の上空に来ると通信ビームが灯るよ 🌙</div>
+  <div class="note">青い点＝いま実際に飛んでいる衛星（CelesTrakのTLEをSGP4で伝播）。真下の円＝電波が届く範囲、東京上空で通信ビームが灯り、自機に近い衛星が出ると最接近を表示するよ 🌙</div>
 
   <div class="panel" id="ctrl">
     <label>高度 <span class="v"><span id="c-alt">550</span> km</span><input id="alt" type="range" min="300" max="1200" step="10" value="550"></label>
@@ -70,6 +72,8 @@
     <label>時間倍率 <span class="v"><span id="c-spd">60</span>×</span><input id="spd" type="range" min="10" max="300" step="10" value="60"></label>
   </div>
 
+  <!-- SGP4軌道伝播（実衛星TLE用） -->
+  <script src="https://cdn.jsdelivr.net/npm/satellite.js@5.0.0/dist/satellite.min.js"></script>
   <script type="importmap">
   { "imports": {
       "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
@@ -185,6 +189,23 @@
   }
   rebuildOrbit();
 
+  // ---- 実際に飛んでいる衛星（CelesTrak TLE → SGP4で伝播）----
+  let realSats=[], realPoints=null;
+  function eciToScene(p){ return new THREE.Vector3(p.x/RE, p.z/RE, -p.y/RE); } // ECI(z=北極) → three(y=上)
+  const nearMarker=new THREE.Mesh(new THREE.SphereGeometry(0.02,12,12),new THREE.MeshBasicMaterial({color:0xe8a0b0}));
+  nearMarker.visible=false; scene.add(nearMarker);
+  fetch('tle_sats.txt').then(r=>r.text()).then(txt=>{
+    const L=txt.split(/\r?\n/).filter(s=>s.trim());
+    for(let i=0;i+2<L.length;i+=3){
+      try{ const rec=window.satellite.twoline2satrec(L[i+1],L[i+2]); realSats.push({name:L[i].trim(),rec}); }catch(e){}
+    }
+    const g=new THREE.BufferGeometry();
+    g.setAttribute('position',new THREE.BufferAttribute(new Float32Array(realSats.length*3),3));
+    realPoints=new THREE.Points(g,new THREE.PointsMaterial({color:0xa6c8ff,size:0.026,sizeAttenuation:true,transparent:true,opacity:0.95}));
+    scene.add(realPoints);
+    $('h-nsat').textContent=realSats.length+' 機';
+  }).catch(()=>{ $('h-nsat').textContent='取得失敗'; });
+
   // ---- HUD ----
   const $=id=>document.getElementById(id);
   function fmt(n,d=1){ return n.toFixed(d); }
@@ -199,15 +220,16 @@
   updateStaticHud();
 
   // ---- アニメーション ----
-  let simT=0, last=performance.now();
+  let simMs=Date.now(), last=performance.now();
   function animate(now){
     requestAnimationFrame(animate);
-    const dt=Math.min((now-last)/1000,0.1); last=now; simT+=dt*params.speed;
-    // 地球自転（1日=86400s）
-    earth.rotation.y = (simT/86400)*Math.PI*2;
-    // 衛星位置
+    const dt=Math.min((now-last)/1000,0.1); last=now; simMs+=dt*params.speed*1000;
+    const clock=new Date(simMs);
+    // 地球自転（GMST＝実際の恒星時に合わせる→実衛星と地理が整合）
+    earth.rotation.y = window.satellite.gstime(clock);
+    // 自機の位置（慣性系・設計軌道）
     const T=period(params.alt); const rs=(RE+params.alt)/RE;
-    const a=(simT/T)*Math.PI*2;
+    const a=((simMs/1000)/T)*Math.PI*2;
     const sp=new THREE.Vector3(rs*Math.cos(a),0,rs*Math.sin(a)).applyAxisAngle(new THREE.Vector3(1,0,0),params.inc);
     sat.position.copy(sp);
     // 電波フットプリント（真下中心の地表円）
@@ -242,6 +264,26 @@
       $('h-margin').textContent='—'; $('h-margin').className='val';
       const st=$('status'); st.className=''; st.textContent='— 視界の外 —';
       beam.visible=false;
+    }
+    // 実衛星の伝播＆自機との最接近（衝突チェック・図示用）
+    if(realPoints && realSats.length){
+      const arr=realPoints.geometry.attributes.position.array;
+      let nearD=1e9, nearName='', nearPos=null;
+      for(let i=0;i<realSats.length;i++){
+        let pv=null; try{ pv=window.satellite.propagate(realSats[i].rec,clock); }catch(e){}
+        const p=pv&&pv.position;
+        if(!p||isNaN(p.x)){ arr[i*3]=arr[i*3+1]=arr[i*3+2]=0; continue; }
+        const v=eciToScene(p);
+        arr[i*3]=v.x; arr[i*3+1]=v.y; arr[i*3+2]=v.z;
+        const d=v.distanceTo(sp)*RE;
+        if(d<nearD){ nearD=d; nearName=realSats[i].name; nearPos=v; }
+      }
+      realPoints.geometry.attributes.position.needsUpdate=true;
+      if(nearPos){
+        $('h-near').textContent=fmt(nearD,0)+' km / '+nearName.slice(0,14);
+        $('h-near').className='val '+(nearD<100?'bad':(nearD<300?'warn':'ok'));
+        nearMarker.position.copy(nearPos); nearMarker.visible=nearD<100;
+      }
     }
     controls.update();
     renderer.render(scene,cam);
