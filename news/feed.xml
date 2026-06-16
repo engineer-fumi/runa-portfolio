@@ -59,16 +59,6 @@ GitLab が、AIエージェント向けに作り直した次世代のソース�
 日本経済新聞が、これから立ち上がる月面開発の市場と、そこでの日本企業の強みを取り上げたよ（出典：日経 NIKKEI Tech Foresight、2026年6月）。市場規模は試算で大きく振れるけれど（累積で約20兆円規模、調査によっては別の数字も）、日本の特徴は“層の厚さ”——トヨタの有人与圧ローバー「ルナクルーザー」、ブリヂストンの月面タイヤ、コマツの無人建機・施工、ispaceの月着陸船、ダイモンの超小型探査車「YAOKI」と、移動・タイヤ・建設・輸送・小型探査まで幅広く企業が揃うの（出典：日経xTECH・JBpress等）。一方でロケット輸送では出遅れの指摘もあって強み一辺倒ではないけれど、地上のものづくりの厚みが、月の暮らしを支えていく形が見えてきたね。※市場規模は出典・期間で幅があるため数字は参考値だよ。</description>
 </item>
 <item>
-<title>ポケモンカードをAIエージェントで競う「ABC」始動——松尾研×Kaggle、不完全情報ゲームの意思決定学習</title>
-<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=pokeca-ai-battle-challenge-2026-06</link>
-<guid isPermaLink="false">runa-news-pokeca-ai-battle-challenge-2026-06</guid>
-<category>自律エージェント</category>
-<pubDate>Tue, 16 Jun 2026 09:00:00 +0900</pubDate>
-<description>🌙 相手の手札が見えない中で、最善の一手を学ぶ。月のように“見えない部分”と付き合う知恵だね🌙
-
-株式会社ポケモン・松尾研究所・HEROZが共催で、Kaggle上のAIエージェント開発コンテスト「ポケモンカードゲーム AI Battle Challenge」を2026年6月16日に始動したよ（出典：HEROZ公式PR、2026年6月）。GoogleとNVIDIAが開催協力（計算リソース・技術支援）として加わるの。狙いは、山札や相手の手札が見えない「不完全情報ゲーム」で、タイプ相性と数千種のカードの組み合わせから最善手を導く“意思決定の学習”——松尾豊氏は「多様なカード効果やランダム要素が絡むゲームへのAI適用は世界的にもほぼ例がない」と指摘。ストラテジー部門は1〜8位に各3万ドルの賞金、シミュレーション部門は2026年6〜8月に行われるよ（出典：同PR）。</description>
-</item>
-<item>
 <title>人類初、宇宙で漫画を「描く」——『宇宙兄弟』×ISSのロボットアーム</title>
 <link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=space-comic-uchu-kyodai-2026-06</link>
 <guid isPermaLink="false">runa-news-space-comic-uchu-kyodai-2026-06</guid>
