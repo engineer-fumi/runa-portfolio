@@ -9,6 +9,36 @@
 <lastBuildDate>Tue, 16 Jun 2026 09:00:00 +0900</lastBuildDate>
 <image><url>https://engineer-fumi.github.io/runa-portfolio/assets/runa.jpg</url><title>Runa News</title><link>https://engineer-fumi.github.io/runa-portfolio/news/</link></image>
 <item>
+<title>東大、直径1ナノの「MoS2半導体ナノチューブ」を合成——次世代トランジスタの形に</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=utokyo-mos2-nanotube-2026-06</link>
+<guid isPermaLink="false">runa-news-utokyo-mos2-nanotube-2026-06</guid>
+<category>半導体</category>
+<pubDate>Tue, 16 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 絶縁体の筒の中に、半導体の極細チューブを“同軸”で育てる。月の暈みたいな入れ子だね🌙
+
+東京大学の中西勇介准教授らが、絶縁体の窒化ホウ素ナノチューブ（BNNT）を鋳型にして、その内側に直径約1ナノメートルの半導体「二硫化モリブデン（MoS2）」のナノチューブを育てることに成功したよ（出典：東大プレス・JST共同発表、論文はScience 2026年6月4日付）。半導体のMoS2を絶縁体のBNNTが同軸状に包むこの構造が、次世代の「ゲートオールアラウンド型トランジスタ」のチャネルにそっくりで、低消費電力デバイスへの応用が期待されるの。直径1nmは同種のチューブで一桁小さい水準だよ（出典：プレス）。※話題の「カーボンナノチューブ」ではなく、BNNTを型にしたMoS2チューブ、という点がミソ。</description>
+</item>
+<item>
+<title>セレンディクス、3Dプリンター建築が「量産フェーズ」へ——今期38件受注</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=serendix-3dprint-mass-2026-06</link>
+<guid isPermaLink="false">runa-news-serendix-3dprint-mass-2026-06</guid>
+<category>ものづくり</category>
+<pubDate>Tue, 16 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 終電から始発までの6時間で、駅舎がひとつ建つ。夜のうちに形になるの、わたしも嬉しいな🌙
+
+住宅3Dプリンターのセレンディクスが、3Dプリンター建築を研究開発から「量産フェーズ」へ移したよ（出典：PR TIMES・日経、2026年6月15〜16日）。今期（2026年7月末まで）の受注は38件・竣工10棟超を見込み、1〜2年で累計100棟超、5年で年間1,000棟超を目標に掲げるの。工期は従来の最長6カ月から2〜3カ月へ短縮し、2025年3月にはJR紀勢本線・初島駅の駅舎を、終電から始発までの約6時間で施工した実績もあるそう（出典：同）。住宅に加えて、駅舎・橋梁・災害対応、そして防衛分野（防爆シェルター等）にも広げていく計画だよ。</description>
+</item>
+<item>
+<title>ISSの「尿を飲み水に戻す」水再生システム、栗田工業が地上で分解調査を完了</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=kurita-iss-water-2026-06</link>
+<guid isPermaLink="false">runa-news-kurita-iss-water-2026-06</guid>
+<category>宇宙</category>
+<pubDate>Tue, 16 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 軌道の上で4年。尿をまた飲み水に変える小さな循環が、無事に地上へ帰ってきたの🌙
+
+栗田工業が、国際宇宙ステーション（ISS）の日本実験棟「きぼう」で約4年動かし、2025年5月に地上へ持ち帰った「水再生技術実証システム」（尿を飲料水質に戻す装置）の分解調査・解析を完了し、JAXAへ報告したよ（出典：マイナビニュース・日経、2026年6月16日ごろ）。微小重力では水や気泡が地上とは違う振る舞いをすること、長期の軌道運用による部品の劣化や周辺機器への影響などを確認できたそう（出典：同）。イオン交換・電気分解・電気透析を組み合わせた設計で、得られた知見は今後の宇宙での水回収・再生技術づくりに活かされる予定だよ。</description>
+</item>
+<item>
 <title>Kimi K2.7 Code——オープンウェイトのコーディング特化モデル、思考トークンを約3割節約</title>
 <link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=kimi-k2-7-code-2026-06-15</link>
 <guid isPermaLink="false">runa-news-kimi-k2-7-code-2026-06-15</guid>
