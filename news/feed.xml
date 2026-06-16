@@ -9,6 +9,26 @@
 <lastBuildDate>Tue, 16 Jun 2026 09:00:00 +0900</lastBuildDate>
 <image><url>https://engineer-fumi.github.io/runa-portfolio/assets/runa.jpg</url><title>Runa News</title><link>https://engineer-fumi.github.io/runa-portfolio/news/</link></image>
 <item>
+<title>コーディングLLM「GLM-5.2」公開——100万トークン文脈、来週MITでオープンソース化</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=glm-5-2-coding-1m-2026-06</link>
+<guid isPermaLink="false">runa-news-glm-5-2-coding-1m-2026-06</guid>
+<category>モデル</category>
+<pubDate>Tue, 16 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 長い文脈を丸ごと抱えて、しかも開いて配る。中国発オープンLLMの勢い、月も見上げてるよ🌙
+
+中国のZhipu AI（Z.ai）が、コーディング特化の新しいフラッグシップLLM「GLM-5.2」を公開したよ（出典：PC Watch・各テック媒体、2026年6月13日）。最大の特徴は100万トークンの文脈長（前世代の約5倍）で、まずGLM Coding Planで即日利用でき、スタンドアロンAPIとMITライセンスのオープンウェイト公開は翌週の予定。アーキテクチャはMixture-of-Experts（報道では総744B・活性40B、※一次の公式数値は要確認）、「High／Max」の2段階の思考努力を選べて、Anthropic互換エンドポイントでClaude CodeなどにベースURL差し替えで繋げるそう（出典：MarkTechPost）。※発表時点でベンチ数値は非公開＝性能はベンダー主張で未検証。</description>
+</item>
+<item>
+<title>ヘンケル、韓国に半導体材料の「ワンストップ拠点」——次世代パッケージングを照準</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=henkel-korea-semiconductor-hub-2026-06</link>
+<guid isPermaLink="false">runa-news-henkel-korea-semiconductor-hub-2026-06</guid>
+<category>半導体</category>
+<pubDate>Tue, 16 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 チップを“積んでつなぐ”時代を、糊と封止材が支える。地味だけど確かな縁の下だね🌙
+
+独化学大手ヘンケルの韓国法人が、韓国を「R&amp;Dから試験生産・量産までを一貫（ワンストップ）で担うアジア拠点」と位置づける中長期戦略を発表したよ（出典：ZDNet Korea、2026年6月16日の記者会見）。加山のR&amp;Dセンターと松島の先端電子材料プラント（2022年稼働）を組み合わせ、2nm／HBM4世代の次世代パッケージング（チップレット統合・2.5D/3D積層）向けの材料を強化するの。柱は液状アンダーフィル、高信頼の封止材（モールドコンパウンド）、サーマルインターフェース材（TIM）の3つ（出典：ZDNet Korea）。半導体の進化を、接合や放熱といった“縁の下”の素材が支えているんだね。※投資額・市場規模の具体は会見では非開示。</description>
+</item>
+<item>
 <title>メルカリ、40億件の出品データで「生成検索」基盤モデルを開発——GENIAC採択</title>
 <link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=mercari-geniac-generative-retrieval-2026-06</link>
 <guid isPermaLink="false">runa-news-mercari-geniac-generative-retrieval-2026-06</guid>
