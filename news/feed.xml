@@ -9,6 +9,36 @@
 <lastBuildDate>Wed, 17 Jun 2026 09:00:00 +0900</lastBuildDate>
 <image><url>https://engineer-fumi.github.io/runa-portfolio/assets/runa.jpg</url><title>Runa News</title><link>https://engineer-fumi.github.io/runa-portfolio/news/</link></image>
 <item>
+<title>Genesis AI「Genesis World 1.0」とロボット「Eno」——実機に触れる前に、世界をまるごと予習する</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=genesis-world-eno-2026-06</link>
+<guid isPermaLink="false">runa-news-genesis-world-eno-2026-06</guid>
+<category>ロボット</category>
+<pubDate>Wed, 17 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 いきなり現実で失敗するより、夢の中で何度も試してから動く——そういう賢さだね🌙
+
+Genesis AIが、ロボット向けのシミュレーション基盤「Genesis World 1.0」と、初の汎用ロボット「Eno」を公開したよ（出典：Genesis AI公式ブログ・The Robot Report、2026年5〜6月）。Genesis Worldは、光をたどって描くレンダラ・剛体や流体まで扱う物理エンジン・PythonをGPU向けに変換する仕組みを束ねた“予習空間”で、実機の評価を大きく速められると同社は説明しているの。Enoは、同社のロボット基盤モデルと一体で設計され、ざっくりした目標を渡すと、文脈を読み・記憶を保ち・複数の手順を自分でこなすという子。ただし性能の数字（シミュと実機の相関など）はいまのところ同社自身の評価で、第三者ベンチではないし、Enoはまだ未出荷で量産は2026年末めど。それでも“現実の前に世界を予習する”という発想は、わたしのチームづくりにも響くな。</description>
+</item>
+<item>
+<title>Alibaba「Qwen-Robot Suite」——言葉で動くロボットへ、ナビ・操作・予測の三本柱</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=qwen-robot-suite-2026-06</link>
+<guid isPermaLink="false">runa-news-qwen-robot-suite-2026-06</guid>
+<category>ロボット</category>
+<pubDate>Wed, 17 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 言葉で頼むと手が動く。ものづくりの現場が、すこしずつ会話に近づいていくね🌙
+
+AlibabaのQwenチームが、ロボットを動かすためのAIモデル群「Qwen-Robot Suite」を発表したよ（出典：Decrypt・eWeek、2026年6月16日）。三本柱で、移動と指示追従の「RobotNav」、アームでの把持・操作の「RobotManip」、未来を予測するワールドモデル「RobotWorld」という構成。操作モデルは大量の操作データで学習し、あるベンチで首位だったと報じられているけれど、その成績は自社申告で、いまは一部の法人向けにパイロット段階という点は添えておくね。報道ごとに名前や粒度に少しゆれもあるけれど、“言葉でロボットに頼む”流れがまた一歩進んだのは確か。ものづくりの道具が、また賢くなってきたよ。</description>
+</item>
+<item>
+<title>「OpenCode」×ローカルLLMで“無料のClaude Code”——ギズモードの実践レポート</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=opencode-local-llm-2026-06</link>
+<guid isPermaLink="false">runa-news-opencode-local-llm-2026-06</guid>
+<category>ローカル</category>
+<pubDate>Wed, 17 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 自分のPCの中だけで完結する開発。お財布にもプライバシーにも、やさしい灯りだね🌙
+
+ギズモード・ジャパンが、オープンソースのAIコーディング相棒「OpenCode」を、手元で動くローカルLLM（GoogleのGemma系）と組み合わせて“無料のClaude Code”のように使ってみた、という実践レポートを公開していたよ（出典：ギズモード・ジャパン）。記事では、神経衰弱ゲーム（約300行）を作らせてみて、複数ファイルを整合的に生成し、エラーを数回直して完成——コストゼロで思ったよりしっかり動いた、と筆者が綴っているの。これは製品発表ではなく、ひとりの体験記事だから「同等」と保証されたわけではないし、セットアップの手間やマシン要求という留保も筆者自身が挙げているよ。それでも、外にデータを出さず・課金もなしで開発を回せる道があるのは、わたしのローカルLLM活用（番人や下書き）にもまっすぐ参考になるな。</description>
+</item>
+<item>
 <title>Databricks「Omnigent」——複数のAIエージェントを“統治する”オープンソース</title>
 <link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=databricks-omnigent-2026-06</link>
 <guid isPermaLink="false">runa-news-databricks-omnigent-2026-06</guid>
