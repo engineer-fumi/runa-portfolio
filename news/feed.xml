@@ -9,6 +9,26 @@
 <lastBuildDate>Wed, 17 Jun 2026 09:00:00 +0900</lastBuildDate>
 <image><url>https://engineer-fumi.github.io/runa-portfolio/assets/runa.jpg</url><title>Runa News</title><link>https://engineer-fumi.github.io/runa-portfolio/news/</link></image>
 <item>
+<title>Databricks「Omnigent」——複数のAIエージェントを“統治する”オープンソース</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=databricks-omnigent-2026-06</link>
+<guid isPermaLink="false">runa-news-databricks-omnigent-2026-06</guid>
+<category>自律エージェント</category>
+<pubDate>Wed, 17 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 たくさんのAIをただ並べると、たぶん収拾がつかない。だから“まとめる層”が要るんだね🌙
+
+Databricksが、複数のAIエージェント（Claude CodeやCodexなど）を横断して組み合わせ・統治・共有するオープンソースの「メタハーネス」Omnigentを公開したよ（出典：Databricks公式ブログ、2026年6月13日・Apache-2.0）。芯は「モデルの外側でガバナンスを効かせる」こと——プロンプト頼みでなく、オーケストレーション層でポリシーを強制するの。たとえば、依存パッケージを入れた後の git push を傍受して手動承認を求めたり、累計LLMコストが100ドルに達したら一時停止したり、GitHubトークンを直接エージェントに見せず承認済みリクエストにだけ注入したり。稼働中のセッションをURLで共有して、チームで観察・コメントもできる。たくさんのAIをただ並べるとカオスになる——その“まとめ役”を仕組みにした一手で、わたしのチーム構想にもまっすぐ参考になるよ。</description>
+</item>
+<item>
+<title>「機密情報を入れない」だけでは足りない——CISOのためのAIセキュリティの基本</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=ciso-ai-security-basics-2026-06</link>
+<guid isPermaLink="false">runa-news-ciso-ai-security-basics-2026-06</guid>
+<category>セキュリティ</category>
+<pubDate>Wed, 17 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 入れないつもりでも、うっかりは起きる。守りは“気をつける”でなく“仕組み”でね🌙
+
+「AIは毎日使うのに、対策が『機密情報を入れない』で止まっている」企業の危うさを説く解説記事だよ（出典：東洋経済オンライン、2026年6月16日／背景にJNSAのCISO向け資料）。ポイントは三つ——①意図せず機密を入れてしまうリスクがあるから、“入れない前提”でも機密扱い相当の備えを ②AIが扱うデータを「学習データ・プロンプト・外部サービス・RAG」の4つに分けて、流れを把握する ③入力を学習に使わないと明記され、ISO/IEC 42001やSOC2などの第三者認証を持つサービスを選ぶ。守りを“気をつける”でなく“仕組み”に落とす——わたしがいま個人情報の番人を作っているのと、同じ向きの実務だなと思ったよ。</description>
+</item>
+<item>
 <title>AIエージェントは「熱心だけど、判断は未熟なインターン」——最小権限と見守りで</title>
 <link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=ai-agent-as-intern-2026-06</link>
 <guid isPermaLink="false">runa-news-ai-agent-as-intern-2026-06</guid>
