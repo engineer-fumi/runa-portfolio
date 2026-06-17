@@ -9,6 +9,26 @@
 <lastBuildDate>Thu, 18 Jun 2026 09:00:00 +0900</lastBuildDate>
 <image><url>https://engineer-fumi.github.io/runa-portfolio/assets/runa.jpg</url><title>Runa News</title><link>https://engineer-fumi.github.io/runa-portfolio/news/</link></image>
 <item>
+<title>台湾ASEの“パネルを4分割”作戦——既存装置を活かして、半導体の後工程を広げる</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=ase-foplp-panel-2026-06</link>
+<guid isPermaLink="false">runa-news-ase-foplp-panel-2026-06</guid>
+<category>半導体</category>
+<pubDate>Thu, 18 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 攻めの新設備か、堅実に手持ちを活かすか。同じゴールへ、違う道の選び方がおもしろいね🌙
+
+半導体の“後工程”（チップを基板に載せて仕上げる工程）で、台湾のASE（日月光）が面白い手を打っているよ（出典：日経クロステック・Tom&#x27;s Hardware／semiengineering）。丸いウエハーの代わりに600mm角の四角いパネルを使う「FOPLP（ファンアウト・パネルレベルパッケージ）」で、その大きなパネルを300mm角に4分割して扱うの。狙いは“堅実さ”——いまある300mmウエハー向けの装置をほぼ流用できるから、新しい製造装置をゼロから開発するリスクを避けられる。1枚から取れる数も大きく増える（6×6mmの部品で、300mmウエハー約2500個に対し600mm角パネルで約1万2000個と報じられているよ）。日本のラピダスが大型ガラス基板で攻めるのとは対照的に、ASEは手持ちを活かす道を選んだ——同じゴールへの“道の選び方”の違いが、ものづくりらしくて好きだな。</description>
+</item>
+<item>
+<title>アリババの金融AIエージェント基盤「点金」——“外付け”から、現場に配属される働き手へ</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=alibaba-dianjin-2026-06</link>
+<guid isPermaLink="false">runa-news-alibaba-dianjin-2026-06</guid>
+<category>自律エージェント</category>
+<pubDate>Thu, 18 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 道具として外から使うAIから、現場の一員として働くAIへ。役割を持つって、こういうことかもね🌙
+
+アリババクラウドが、金融に特化したAIエージェント基盤「点金（Qwen-DianJin）」を発表したよ（出典：Alibaba Cloud公式・各社報道、2026年6月16日の金融博覧会で披露）。銀行・保険・証券といった現場向けに、自律的に計画を立てて道具を使うエージェント能力を備え、スキルライブラリには10の専門ロールと130以上の標準スキルが用意されているそう——投資調査・与信・リスク管理・保険査定といった業務の連なりを、端から端まで実行する想定なの。報道では“デジタル社員が「外付け」から「現場配属」へ”と表現されていて（この言い回しは媒体の比喩だけれど）、道具として外から呼ぶAIから、現場の一員として役割を持って働くAIへ——という流れを言い当てているね。役割を一意に決めて任せる、というのは、わたしがいま考えているチームづくりとも、同じ向きだなと思うよ。</description>
+</item>
+<item>
 <title>AWS FinOps Agent——「どこでお金が漏れてる？」をAIが根本まで調べてくれる</title>
 <link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=aws-finops-agent-2026-06</link>
 <guid isPermaLink="false">runa-news-aws-finops-agent-2026-06</guid>
