@@ -92,19 +92,22 @@ window.ATLAS_DATA = {
                   "date": "2026-02-07",
                   "type": "preview",
                   "title": "Fast mode（研究プレビュー）",
-                  "desc": "speedパラメータで出力を最大2.5倍高速化（プレミアム価格）。"
+                  "desc": "speedパラメータで出力を最大2.5倍高速化（プレミアム価格）。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-03-13",
                   "type": "ga",
                   "title": "1Mトークンコンテキスト 正式提供",
-                  "desc": "200kを超えるリクエストが追加ヘッダ無しで自動対応に。"
+                  "desc": "200kを超えるリクエストが追加ヘッダ無しで自動対応に。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-05-28",
                   "type": "deprecate",
                   "title": "Fast mode 非推奨",
-                  "desc": "4.8/4.7のFast modeへ移行を案内。"
+                  "desc": "4.8/4.7のFast modeへ移行を案内。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -123,7 +126,8 @@ window.ATLAS_DATA = {
                   "date": "2026-05-12",
                   "type": "preview",
                   "title": "Fast mode 対応",
-                  "desc": "Opus 4.7でもFast mode（研究プレビュー）を利用可能に。"
+                  "desc": "Opus 4.7でもFast mode（研究プレビュー）を利用可能に。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -176,7 +180,8 @@ window.ATLAS_DATA = {
                   "date": "2026-03-13",
                   "type": "ga",
                   "title": "1Mトークンコンテキスト 正式提供",
-                  "desc": "標準料金で1Mコンテキストが利用可能に。"
+                  "desc": "標準料金で1Mコンテキストが利用可能に。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             }
@@ -216,7 +221,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-04-07",
                   "type": "preview",
-                  "desc": "防御的サイバーセキュリティ向けの招待制プレビューとして発表（Project Glasswing）。"
+                  "desc": "防御的サイバーセキュリティ向けの招待制プレビューとして発表（Project Glasswing）。",
+                  "url": "https://www.anthropic.com/glasswing"
                 }
               ]
             },
@@ -229,13 +235,15 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-06-09",
                   "type": "launch",
-                  "desc": "一般利用向けに安全対策を施したMythosクラスのモデルとして登場。1Mコンテキスト標準・常時adaptive thinking。"
+                  "desc": "一般利用向けに安全対策を施したMythosクラスのモデルとして登場。1Mコンテキスト標準・常時adaptive thinking。",
+                  "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
                 },
                 {
                   "date": "2026-06-12",
                   "type": "suspend",
                   "title": "アクセス一時停止",
-                  "desc": "輸出管理上の理由でMythos 5とともにアクセスを一時停止。"
+                  "desc": "輸出管理上の理由でMythos 5とともにアクセスを一時停止。",
+                  "url": "https://www.anthropic.com/news/fable-mythos-access"
                 }
               ]
             },
@@ -248,13 +256,15 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-06-09",
                   "type": "launch",
-                  "desc": "Project Glasswing参加者向けの限定提供として登場。"
+                  "desc": "Project Glasswing参加者向けの限定提供として登場。",
+                  "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
                 },
                 {
                   "date": "2026-06-12",
                   "type": "suspend",
                   "title": "アクセス一時停止",
-                  "desc": "輸出管理上の理由でアクセスを一時停止。"
+                  "desc": "輸出管理上の理由でアクセスを一時停止。",
+                  "url": "https://www.anthropic.com/news/fable-mythos-access"
                 }
               ]
             }
@@ -273,12 +283,14 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-02-05",
                   "type": "beta",
-                  "desc": "Opus 4.6でも1Mコンテキストがベータ提供開始（長コンテキスト料金）。"
+                  "desc": "Opus 4.6でも1Mコンテキストがベータ提供開始（長コンテキスト料金）。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-03-13",
                   "type": "ga",
-                  "desc": "Opus 4.6 / Sonnet 4.6で正式提供。1M利用時の画像/PDF上限を100→600に拡大、専用レート上限は撤廃。"
+                  "desc": "Opus 4.6 / Sonnet 4.6で正式提供。1M利用時の画像/PDF上限を100→600に拡大、専用レート上限は撤廃。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -290,19 +302,22 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-02-05",
                   "type": "launch",
-                  "desc": "adaptive thinkingを導入（Opus 4.6推奨）。必要なときだけ推論を発動。"
+                  "desc": "adaptive thinkingを導入（Opus 4.6推奨）。必要なときだけ推論を発動。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-03-16",
                   "type": "update",
                   "title": "思考表示の制御",
-                  "desc": "thinking.display=omittedで思考内容を省いて高速ストリーミング可能に。"
+                  "desc": "thinking.display=omittedで思考内容を省いて高速ストリーミング可能に。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-05-27",
                   "type": "update",
                   "title": "思考トークンの可視化",
-                  "desc": "課金出力トークンのうち思考分をusageで確認可能に。"
+                  "desc": "課金出力トークンのうち思考分をusageで確認可能に。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -314,17 +329,20 @@ window.ATLAS_DATA = {
                 {
                   "date": "2025-11-24",
                   "type": "beta",
-                  "desc": "Opus 4.5向けに、応答の徹底度と効率を調整するeffortをベータ提供。"
+                  "desc": "Opus 4.5向けに、応答の徹底度と効率を調整するeffortをベータ提供。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-02-05",
                   "type": "ga",
-                  "desc": "正式提供。budget_tokensに代わる思考深度の制御へ。"
+                  "desc": "正式提供。budget_tokensに代わる思考深度の制御へ。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-05-28",
                   "type": "update",
-                  "desc": "Opus 4.8では既定値がhighに。"
+                  "desc": "Opus 4.8では既定値がhighに。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -336,7 +354,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-04-16",
                   "type": "launch",
-                  "desc": "Opus 4.7で長辺2576pxまでの高解像度画像入力に対応（4.8にも継承）。"
+                  "desc": "Opus 4.7で長辺2576pxまでの高解像度画像入力に対応（4.8にも継承）。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -348,7 +367,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-04-16",
                   "type": "update",
-                  "desc": "Opus 4.7から新トークナイザを採用。同じ文章で約30%多くのトークンに（Fable/Mythos 5も継承）。"
+                  "desc": "Opus 4.7から新トークナイザを採用。同じ文章で約30%多くのトークンに（Fable/Mythos 5も継承）。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -360,7 +380,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-05-28",
                   "type": "launch",
-                  "desc": "Opus 4.8でユーザーターン後にrole:systemを送信可能に。長時間セッション中の指示変更でもキャッシュを維持。"
+                  "desc": "Opus 4.8でユーザーターン後にrole:systemを送信可能に。長時間セッション中の指示変更でもキャッシュを維持。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             }
@@ -380,17 +401,20 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-01-05",
                   "type": "retire",
-                  "desc": "Opus 3 をAPIから提供終了。Opus 4.5への移行を推奨。"
+                  "desc": "Opus 3 をAPIから提供終了。Opus 4.5への移行を推奨。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-02-19",
                   "type": "retire",
-                  "desc": "Sonnet 3.7 と Haiku 3.5 を提供終了。"
+                  "desc": "Sonnet 3.7 と Haiku 3.5 を提供終了。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-04-20",
                   "type": "retire",
-                  "desc": "Haiku 3 を提供終了。Haiku 4.5へ。"
+                  "desc": "Haiku 3 を提供終了。Haiku 4.5へ。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -404,22 +428,26 @@ window.ATLAS_DATA = {
                   "date": "2026-01-16",
                   "type": "retire",
                   "title": "セレクタから削除",
-                  "desc": "Opus 4 と 4.1 をClaude/Claude Codeのモデル選択から削除。"
+                  "desc": "Opus 4 と 4.1 をClaude/Claude Codeのモデル選択から削除。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 },
                 {
                   "date": "2026-04-14",
                   "type": "deprecate",
-                  "desc": "Sonnet 4 / Opus 4 の非推奨を告知（API終了予定: 6/15）。"
+                  "desc": "Sonnet 4 / Opus 4 の非推奨を告知（API終了予定: 6/15）。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-06-05",
                   "type": "deprecate",
-                  "desc": "Opus 4.1 の非推奨を告知（API終了予定: 8/5）。Opus 4.8へ。"
+                  "desc": "Opus 4.1 の非推奨を告知（API終了予定: 8/5）。Opus 4.8へ。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-06-15",
                   "type": "retire",
-                  "desc": "Sonnet 4 と Opus 4 をAPIから提供終了。"
+                  "desc": "Sonnet 4 と Opus 4 をAPIから提供終了。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             }
@@ -446,12 +474,14 @@ window.ATLAS_DATA = {
                 {
                   "date": "2025-12-04",
                   "type": "update",
-                  "desc": "Haiku 4.5でも構造化出力に対応。"
+                  "desc": "Haiku 4.5でも構造化出力に対応。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-01-29",
                   "type": "ga",
-                  "desc": "Sonnet/Opus/Haiku 4.5で正式提供。スキーマ対応拡大、追加ヘッダ不要に。"
+                  "desc": "Sonnet/Opus/Haiku 4.5で正式提供。スキーマ対応拡大、追加ヘッダ不要に。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -463,7 +493,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-03-18",
                   "type": "update",
-                  "desc": "GET /v1/models が max_input_tokens・max_tokens・capabilities を返すように。"
+                  "desc": "GET /v1/models が max_input_tokens・max_tokens・capabilities を返すように。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -475,12 +506,14 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-05-28",
                   "type": "update",
-                  "desc": "refusal応答のstop_detailsを公式文書化（category: cyber/bio）。"
+                  "desc": "refusal応答のstop_detailsを公式文書化（category: cyber/bio）。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-06-02",
                   "type": "update",
-                  "desc": "出力前に拒否された場合は課金されない仕様に。"
+                  "desc": "出力前に拒否された場合は課金されない仕様に。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             }
@@ -499,12 +532,14 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-02-17",
                   "type": "ga",
-                  "desc": "正式提供。Web検索/フェッチと併用時は無料に。"
+                  "desc": "正式提供。Web検索/フェッチと併用時は無料に。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-05-21",
                   "type": "update",
-                  "desc": "1セル90秒の実行上限を説明に明示し、長時間処理を計画しやすく。"
+                  "desc": "1セル90秒の実行上限を説明に明示し、長時間処理を計画しやすく。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -516,17 +551,20 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-02-17",
                   "type": "ga",
-                  "desc": "正式提供。動的フィルタリングでコンテキスト投入前に結果を絞り込み。"
+                  "desc": "正式提供。動的フィルタリングでコンテキスト投入前に結果を絞り込み。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-03-18",
                   "type": "update",
-                  "desc": "response_inclusionパラメータで消費済み結果を除外可能に。"
+                  "desc": "response_inclusionパラメータで消費済み結果を除外可能に。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-05-18",
                   "type": "update",
-                  "desc": "SEC提出書類の詳細データを返すように（財務リサーチの裏付けに）。"
+                  "desc": "SEC提出書類の詳細データを返すように（財務リサーチの裏付けに）。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -538,12 +576,14 @@ window.ATLAS_DATA = {
                 {
                   "date": "2025-11-24",
                   "type": "beta",
-                  "desc": "コード実行内からツールを呼び、レイテンシとトークンを削減（ベータ）。"
+                  "desc": "コード実行内からツールを呼び、レイテンシとトークンを削減（ベータ）。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-02-17",
                   "type": "ga",
-                  "desc": "正式提供。"
+                  "desc": "正式提供。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -555,12 +595,14 @@ window.ATLAS_DATA = {
                 {
                   "date": "2025-11-24",
                   "type": "beta",
-                  "desc": "大量のツールから必要なものを動的に発見・読込（ベータ）。"
+                  "desc": "大量のツールから必要なものを動的に発見・読込（ベータ）。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-02-17",
                   "type": "ga",
-                  "desc": "正式提供。"
+                  "desc": "正式提供。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -572,7 +614,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-02-17",
                   "type": "ga",
-                  "desc": "正式提供（追加ヘッダ不要）。"
+                  "desc": "正式提供（追加ヘッダ不要）。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -584,12 +627,14 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-04-09",
                   "type": "beta",
-                  "desc": "高速な実行モデルに、生成途中で助言する高知能モデルを組み合わせるベータ。"
+                  "desc": "高速な実行モデルに、生成途中で助言する高知能モデルを組み合わせるベータ。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-06-02",
                   "type": "update",
-                  "desc": "max_tokensで助言の出力長を制限可能に。"
+                  "desc": "max_tokensで助言の出力長を制限可能に。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -601,7 +646,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-02-05",
                   "type": "ga",
-                  "desc": "全モデル・全プラットフォームで正式提供。"
+                  "desc": "全モデル・全プラットフォームで正式提供。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             }
@@ -620,7 +666,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-02-19",
                   "type": "launch",
-                  "desc": "cache_controlを1つ付けるだけで、会話の伸びに合わせ自動でキャッシュ点を前進。"
+                  "desc": "cache_controlを1つ付けるだけで、会話の伸びに合わせ自動でキャッシュ点を前進。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -632,7 +679,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-02-05",
                   "type": "beta",
-                  "desc": "サーバ側のコンテキスト要約で実質無限長の会話を実現（ベータ・Opus 4.6）。"
+                  "desc": "サーバ側のコンテキスト要約で実質無限長の会話を実現（ベータ・Opus 4.6）。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -645,7 +693,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-05-13",
                   "type": "beta",
-                  "desc": "cache_miss_reasonでプロンプトキャッシュの不一致箇所を報告（公開ベータ）。"
+                  "desc": "cache_miss_reasonでプロンプトキャッシュの不一致箇所を報告（公開ベータ）。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -657,7 +706,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-03-30",
                   "type": "update",
-                  "desc": "Batch APIでOpus 4.6/Sonnet 4.6のmax_tokensを300kに引き上げ。"
+                  "desc": "Batch APIでOpus 4.6/Sonnet 4.6のmax_tokensを300kに引き上げ。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             }
@@ -677,7 +727,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-04-08",
                   "type": "beta",
-                  "desc": "安全なサンドボックスと内蔵ツールでClaudeを自律エージェントとして動かす公開ベータ。"
+                  "desc": "安全なサンドボックスと内蔵ツールでClaudeを自律エージェントとして動かす公開ベータ。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -690,7 +741,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-04-23",
                   "type": "beta",
-                  "desc": "Managed Agentsのメモリ機能を公開ベータで提供。"
+                  "desc": "Managed Agentsのメモリ機能を公開ベータで提供。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -703,7 +755,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-05-06",
                   "type": "beta",
-                  "desc": "複数エージェントの連携と成果(Outcomes)定義を公開ベータで提供。"
+                  "desc": "複数エージェントの連携と成果(Outcomes)定義を公開ベータで提供。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -715,12 +768,14 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-05-06",
                   "type": "launch",
-                  "desc": "セッション/Vaultのライフサイクルを通知するWebhookと、資格情報を安全に扱うVaultを提供。"
+                  "desc": "セッション/Vaultのライフサイクルを通知するWebhookと、資格情報を安全に扱うVaultを提供。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-06-09",
                   "type": "update",
-                  "desc": "Vaultで環境変数の資格情報をサンドボックスに注入可能に。"
+                  "desc": "Vaultで環境変数の資格情報をサンドボックスに注入可能に。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -732,12 +787,14 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-05-19",
                   "type": "launch",
-                  "desc": "ツール実行を自社環境で動かせる自前サンドボックスを提供。"
+                  "desc": "ツール実行を自社環境で動かせる自前サンドボックスを提供。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-06-09",
                   "type": "update",
-                  "desc": "cronスケジュールでセッションを定期実行できるように。"
+                  "desc": "cronスケジュールでセッションを定期実行できるように。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -750,7 +807,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-05-19",
                   "type": "preview",
-                  "desc": "プライベートネットワーク内のMCPサーバへ接続できる研究プレビュー。"
+                  "desc": "プライベートネットワーク内のMCPサーバへ接続できる研究プレビュー。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             }
@@ -769,7 +827,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-01-12",
                   "type": "update",
-                  "desc": "ブランド統合に伴い、コンソールがplatform.claude.comへ移行（自動リダイレクト）。"
+                  "desc": "ブランド統合に伴い、コンソールがplatform.claude.comへ移行（自動リダイレクト）。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -781,12 +840,14 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-05-11",
                   "type": "launch",
-                  "desc": "AWS経由・AWS課金・IAM認証でClaude APIを利用できる基盤を提供。"
+                  "desc": "AWS経由・AWS課金・IAM認証でClaude APIを利用できる基盤を提供。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-05-29",
                   "type": "expand",
-                  "desc": "Managed AgentsのWebhook/マルチエージェント/自前サンドボックスをAWSでも提供。"
+                  "desc": "Managed AgentsのWebhook/マルチエージェント/自前サンドボックスをAWSでも提供。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -798,12 +859,14 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-04-07",
                   "type": "preview",
-                  "desc": "Messages APIをBedrockで研究プレビュー提供。"
+                  "desc": "Messages APIをBedrockで研究プレビュー提供。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 },
                 {
                   "date": "2026-04-16",
                   "type": "expand",
-                  "desc": "全Bedrock顧客に開放。Opus 4.7/Haiku 4.5を27リージョンでセルフサーブ。"
+                  "desc": "全Bedrock顧客に開放。Opus 4.7/Haiku 4.5を27リージョンでセルフサーブ。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -815,7 +878,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-04-24",
                   "type": "launch",
-                  "desc": "組織/ワークスペースのレート上限をプログラムから照会可能に。"
+                  "desc": "組織/ワークスペースのレート上限をプログラムから照会可能に。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -827,7 +891,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-02-05",
                   "type": "launch",
-                  "desc": "inference_geoで推論実行地域を指定可能に（US限定は1.1倍）。"
+                  "desc": "inference_geoで推論実行地域を指定可能に（US限定は1.1倍）。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -840,7 +905,8 @@ window.ATLAS_DATA = {
                   "date": "2026-06-01",
                   "type": "launch",
                   "desc": "静的APIキーを、リクエスト時に発行される短命・スコープ付き資格情報に置き換える認証方式。",
-                  "approx": true
+                  "approx": true,
+                  "url": "https://claude.com/blog/workload-identity-federation"
                 }
               ]
             }
@@ -859,7 +925,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-04-08",
                   "type": "launch",
-                  "desc": "Claude API用のコマンドラインクライアント。Claude Codeとの統合やYAMLでのリソース管理が可能。"
+                  "desc": "Claude API用のコマンドラインクライアント。Claude Codeとの統合やYAMLでのリソース管理が可能。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -871,7 +938,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2025-11-24",
                   "type": "launch",
-                  "desc": "Python/TypeScript SDKに、要約でコンテキストを自動管理するクライアント側圧縮を追加。"
+                  "desc": "Python/TypeScript SDKに、要約でコンテキストを自動管理するクライアント側圧縮を追加。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             }
@@ -898,7 +966,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-03-12",
                   "type": "launch",
-                  "desc": "応答内にカスタムのチャート・図・可視化をインラインで生成できるように。"
+                  "desc": "応答内にカスタムのチャート・図・可視化をインラインで生成できるように。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             },
@@ -910,7 +979,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2025-09-29",
                   "type": "launch",
-                  "desc": "Proユーザーとモバイル(iOS/Android)でファイル作成・編集が可能に。"
+                  "desc": "Proユーザーとモバイル(iOS/Android)でファイル作成・編集が可能に。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             },
@@ -922,7 +992,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2025-11-24",
                   "type": "update",
-                  "desc": "上限接近時に前半を要約し、実質無限長の会話と長さ制限エラーの大幅削減を実現。"
+                  "desc": "上限接近時に前半を要約し、実質無限長の会話と長さ制限エラーの大幅削減を実現。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             }
@@ -947,7 +1018,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-03-02",
                   "type": "expand",
-                  "desc": "無料ユーザーを含む全ユーザーに開放。メモリのインポート/エクスポートも可能に。"
+                  "desc": "無料ユーザーを含む全ユーザーに開放。メモリのインポート/エクスポートも可能に。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             }
@@ -966,7 +1038,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-01-12",
                   "type": "launch",
-                  "desc": "iOS/Androidで健康・運動データを読み取り、活動/睡眠などをネイティブチャートで分析（Pro/Max・米国）。"
+                  "desc": "iOS/Androidで健康・運動データを読み取り、活動/睡眠などをネイティブチャートで分析（Pro/Max・米国）。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             },
@@ -978,7 +1051,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-03-25",
                   "type": "launch",
-                  "desc": "モバイルアプリがインタラクティブなアプリに接続。会話内でライブチャートや図、共有可能な成果物を表示。"
+                  "desc": "モバイルアプリがインタラクティブなアプリに接続。会話内でライブチャートや図、共有可能な成果物を表示。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             }
@@ -997,17 +1071,20 @@ window.ATLAS_DATA = {
                 {
                   "date": "2025-11-24",
                   "type": "beta",
-                  "desc": "Max/Team/Enterpriseにベータ提供。ピボット・グラフ・ファイルアップロード対応。"
+                  "desc": "Max/Team/Enterpriseにベータ提供。ピボット・グラフ・ファイルアップロード対応。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 },
                 {
                   "date": "2026-02-05",
                   "type": "update",
-                  "desc": "Opus 4.6採用。ピボット編集や条件付き書式などネイティブ操作に対応。"
+                  "desc": "Opus 4.6採用。ピボット編集や条件付き書式などネイティブ操作に対応。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 },
                 {
                   "date": "2026-03-11",
                   "type": "update",
-                  "desc": "PowerPointと会話コンテキストを共有、スキル対応、LLMゲートウェイ接続に対応。"
+                  "desc": "PowerPointと会話コンテキストを共有、スキル対応、LLMゲートウェイ接続に対応。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             },
@@ -1019,12 +1096,14 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-02-05",
                   "type": "launch",
-                  "desc": "PowerPoint用アドインとして提供開始。"
+                  "desc": "PowerPoint用アドインとして提供開始。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 },
                 {
                   "date": "2026-03-11",
                   "type": "update",
-                  "desc": "Excelとの相互コンテキスト共有・スキル対応。"
+                  "desc": "Excelとの相互コンテキスト共有・スキル対応。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             }
@@ -1043,7 +1122,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-02-12",
                   "type": "launch",
-                  "desc": "営業を介さずWebから直接Enterpriseプランを購入可能に（Claude/Code/Cowork込み）。"
+                  "desc": "営業を介さずWebから直接Enterpriseプランを購入可能に（Claude/Code/Cowork込み）。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             },
@@ -1055,7 +1135,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-01-12",
                   "type": "launch",
-                  "desc": "保護対象保健情報(PHI)を扱う組織向けのHIPAA対応版を提供。"
+                  "desc": "保護対象保健情報(PHI)を扱う組織向けのHIPAA対応版を提供。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             },
@@ -1067,17 +1148,20 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-04-09",
                   "type": "launch",
-                  "desc": "ユーザーをグループ化し、機能の可否をロールで定義（ロールベースアクセス制御）。"
+                  "desc": "ユーザーをグループ化し、機能の可否をロールで定義（ロールベースアクセス制御）。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 },
                 {
                   "date": "2026-05-28",
                   "type": "update",
-                  "desc": "コネクタ単位・ツール単位の権限をカスタムロールで制御可能に。"
+                  "desc": "コネクタ単位・ツール単位の権限をカスタムロールで制御可能に。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 },
                 {
                   "date": "2026-06-02",
                   "type": "update",
-                  "desc": "請求やプライバシーなど管理権限をオーナー化せずに付与可能に。"
+                  "desc": "請求やプライバシーなど管理権限をオーナー化せずに付与可能に。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             },
@@ -1089,12 +1173,14 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-02-13",
                   "type": "launch",
-                  "desc": "Claude/Claude Code Remoteの利用・エンゲージメントデータにプログラムからアクセス（Enterprise）。"
+                  "desc": "Claude/Claude Code Remoteの利用・エンゲージメントデータにプログラムからアクセス（Enterprise）。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 },
                 {
                   "date": "2026-04-09",
                   "type": "expand",
-                  "desc": "Cowork の利用状況もAnalytics APIで取得可能に。"
+                  "desc": "Cowork の利用状況もAnalytics APIで取得可能に。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             },
@@ -1106,7 +1192,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-05-21",
                   "type": "launch",
-                  "desc": "主要なセキュリティ/コンプライアンスツールと連携し、IT/セキュリティ部門がClaude全体を統制可能に。"
+                  "desc": "主要なセキュリティ/コンプライアンスツールと連携し、IT/セキュリティ部門がClaude全体を統制可能に。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             }
@@ -1133,7 +1220,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-01-16",
                   "type": "expand",
-                  "desc": "Teamプランの全標準シートにClaude Codeアクセスを同梱。"
+                  "desc": "Teamプランの全標準シートにClaude Codeアクセスを同梱。",
+                  "url": "https://www.anthropic.com/news/claude-code-on-team-and-enterprise"
                 }
               ]
             },
@@ -1145,7 +1233,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-05-28",
                   "type": "update",
-                  "desc": "長時間タスク向けAutoモードを拡大。Workflowsを研究プレビューで提供。MaxはOpus 4.8でFast modeが既定に。"
+                  "desc": "長時間タスク向けAutoモードを拡大。Workflowsを研究プレビューで提供。MaxはOpus 4.8でFast modeが既定に。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -1348,12 +1437,14 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-01-12",
                   "type": "preview",
-                  "desc": "Claude Codeのエージェント能力をデスクトップの知的作業に拡張。隔離VMでローカルファイル/MCPに直接アクセス（Max・macOS）。"
+                  "desc": "Claude Codeのエージェント能力をデスクトップの知的作業に拡張。隔離VMでローカルファイル/MCPに直接アクセス（Max・macOS）。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 },
                 {
                   "date": "2026-01-16",
                   "type": "expand",
-                  "desc": "Proプランにも研究プレビューを拡大（macOS）。"
+                  "desc": "Proプランにも研究プレビューを拡大（macOS）。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             },
@@ -1365,7 +1456,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-02-24",
                   "type": "launch",
-                  "desc": "プラグインのマーケットプレイスとTeam/Enterprise向け管理機能を提供。Google Drive・Gmail・Docusign・FactSet等の連携も拡充。"
+                  "desc": "プラグインのマーケットプレイスとTeam/Enterprise向け管理機能を提供。Google Drive・Gmail・Docusign・FactSet等の連携も拡充。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             },
@@ -1377,7 +1469,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-02-25",
                   "type": "launch",
-                  "desc": "定期/オンデマンドのタスク作成と、スキル/プラグイン/コネクタをまとめる「Customize」を追加。"
+                  "desc": "定期/オンデマンドのタスク作成と、スキル/プラグイン/コネクタをまとめる「Customize」を追加。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             },
@@ -1389,13 +1482,15 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-03-17",
                   "type": "preview",
-                  "desc": "デスクトップやモバイルから常駐スレッドでCoworkのタスクを管理（Pro/Max研究プレビュー）。"
+                  "desc": "デスクトップやモバイルから常駐スレッドでCoworkのタスクを管理（Pro/Max研究プレビュー）。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 },
                 {
                   "date": "2026-03-23",
                   "type": "preview",
                   "title": "コンピュータ操作の研究プレビュー",
-                  "desc": "画面上のファイルを開く・クリック等をClaude自身が実行。離席中もDispatchがPC操作を代行。"
+                  "desc": "画面上のファイルを開く・クリック等をClaude自身が実行。離席中もDispatchがPC操作を代行。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             },
@@ -1407,7 +1502,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-04-09",
                   "type": "ga",
-                  "desc": "デスクトップアプリでCoworkが一般提供に。利用分析やOpenTelemetryにも対応。"
+                  "desc": "デスクトップアプリでCoworkが一般提供に。利用分析やOpenTelemetryにも対応。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             },
@@ -1420,7 +1516,8 @@ window.ATLAS_DATA = {
                   "date": "2026-06-01",
                   "type": "expand",
                   "desc": "20以上の法務系MCPコネクタと12の実務分野プラグインを追加し、リサーチ/契約/ディスカバリ等の業務を支援。",
-                  "approx": true
+                  "approx": true,
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             }
@@ -1445,12 +1542,14 @@ window.ATLAS_DATA = {
                 {
                   "date": "2025-10-15",
                   "type": "update",
-                  "desc": "既定をHaiku 4.5に高速化。画像アップロード代行や画面のスクショ/範囲指定に対応。"
+                  "desc": "既定をHaiku 4.5に高速化。画像アップロード代行や画面のスクショ/範囲指定に対応。",
+                  "url": "https://claude.com/blog/claude-for-chrome"
                 },
                 {
                   "date": "2025-11-24",
                   "type": "expand",
-                  "desc": "全Maxに拡大。定期タスク・計画承認実行・モデル選択を追加。"
+                  "desc": "全Maxに拡大。定期タスク・計画承認実行・モデル選択を追加。",
+                  "url": "https://claude.com/blog/claude-for-chrome"
                 },
                 {
                   "date": "2025-12-18",
@@ -1482,7 +1581,8 @@ window.ATLAS_DATA = {
                   "date": "2026-06-01",
                   "type": "update",
                   "desc": "デザインシステムへの追従、Claude Codeとの連携強化、キャンバス直接編集、サイドバー常設などを追加。",
-                  "approx": true
+                  "approx": true,
+                  "url": "https://claude.com/blog/claude-design-stays-on-brand-for-daily-work"
                 }
               ]
             }
@@ -1511,7 +1611,8 @@ window.ATLAS_DATA = {
                   "date": "2026-06-01",
                   "type": "beta",
                   "desc": "IdP(まずOkta)経由で管理者が一括設定し、ユーザーは初回ログインで自動的にコネクタを利用（チャット/Code/Cowork横断）。",
-                  "approx": true
+                  "approx": true,
+                  "url": "https://claude.com/blog/enterprise-managed-auth"
                 }
               ]
             },
@@ -1523,7 +1624,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-05-28",
                   "type": "update",
-                  "desc": "どのコネクタ・どのツールを各ロールに許可するかを制御可能に。"
+                  "desc": "どのコネクタ・どのツールを各ロールに許可するかを制御可能に。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             }
@@ -1542,7 +1644,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-03-25",
                   "type": "launch",
-                  "desc": "会話内で動くアプリ（ライブチャート/図/共有成果物）に接続できるインタラクティブ・コネクタ。"
+                  "desc": "会話内で動くアプリ（ライブチャート/図/共有成果物）に接続できるインタラクティブ・コネクタ。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             },
@@ -1555,7 +1658,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-05-19",
                   "type": "preview",
-                  "desc": "社内ネットワークのMCPサーバに接続できる研究プレビュー。"
+                  "desc": "社内ネットワークのMCPサーバに接続できる研究プレビュー。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             }
@@ -1588,7 +1692,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2025-12-18",
                   "type": "expand",
-                  "desc": "Team/Enterpriseの組織横断管理、パートナー製スキルのディレクトリ、AIプラットフォーム横断のオープン標準(Agent Skills)を提供。"
+                  "desc": "Team/Enterpriseの組織横断管理、パートナー製スキルのディレクトリ、AIプラットフォーム横断のオープン標準(Agent Skills)を提供。",
+                  "url": "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills"
                 }
               ]
             }
