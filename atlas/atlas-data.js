@@ -72,7 +72,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2025-11-24",
                   "type": "launch",
-                  "desc": "当時最強のフロンティアモデルとして登場。視覚・コーディング・コンピュータ操作が大きく向上し、従来Opusより手頃な価格に。"
+                  "desc": "当時最強のフロンティアモデルとして登場。視覚・コーディング・コンピュータ操作が大きく向上し、従来Opusより手頃な価格に。",
+                  "url": "https://www.anthropic.com/news/claude-opus-4-5"
                 }
               ]
             },
@@ -84,7 +85,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-02-05",
                   "type": "launch",
-                  "desc": "長時間タスク向けの最も賢いモデルを更新。適応的思考(adaptive thinking)を推奨に。"
+                  "desc": "長時間タスク向けの最も賢いモデルを更新。適応的思考(adaptive thinking)を推奨に。",
+                  "url": "https://www.anthropic.com/news/claude-opus-4-6"
                 },
                 {
                   "date": "2026-02-07",
@@ -114,7 +116,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-04-16",
                   "type": "launch",
-                  "desc": "ソフトウェア工学・長時間コーディングが向上し、より高解像度の画像も扱える新トークナイザ採用モデル。価格はOpus 4.6と同じ。"
+                  "desc": "ソフトウェア工学・長時間コーディングが向上し、より高解像度の画像も扱える新トークナイザ採用モデル。価格はOpus 4.6と同じ。",
+                  "url": "https://www.anthropic.com/news/claude-opus-4-7"
                 },
                 {
                   "date": "2026-05-12",
@@ -133,7 +136,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-05-28",
                   "type": "launch",
-                  "desc": "現行の最上位モデル。コーディング・エージェント能力・推論・実務知識でOpus 4.7を上回る。1Mコンテキスト標準、最大出力128k。effortは既定でhigh。"
+                  "desc": "現行の最上位モデル。コーディング・エージェント能力・推論・実務知識でOpus 4.7を上回る。1Mコンテキスト標準、最大出力128k。effortは既定でhigh。",
+                  "url": "https://www.anthropic.com/news/claude-opus-4-8"
                 }
               ]
             }
@@ -152,7 +156,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2025-09-29",
                   "type": "launch",
-                  "desc": "実世界のエージェント・コーディング・コンピュータ操作で当時最良のモデルとして登場。"
+                  "desc": "実世界のエージェント・コーディング・コンピュータ操作で当時最良のモデルとして登場。",
+                  "url": "https://www.anthropic.com/news/claude-sonnet-4-5"
                 }
               ]
             },
@@ -164,7 +169,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-02-17",
                   "type": "launch",
-                  "desc": "速度と知能を両立した最新の標準モデル。トークン消費を抑えつつエージェント検索が向上。1Mコンテキスト(ベータ)対応。"
+                  "desc": "速度と知能を両立した最新の標準モデル。トークン消費を抑えつつエージェント検索が向上。1Mコンテキスト(ベータ)対応。",
+                  "url": "https://www.anthropic.com/news/claude-sonnet-4-6"
                 },
                 {
                   "date": "2026-03-13",
@@ -189,7 +195,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2025-10-15",
                   "type": "launch",
-                  "desc": "最速・最も低コストの小型モデル。コーディングやエージェント処理でSonnet 4相当の性能。リアルタイム/大量処理向け。"
+                  "desc": "最速・最も低コストの小型モデル。コーディングやエージェント処理でSonnet 4相当の性能。リアルタイム/大量処理向け。",
+                  "url": "https://www.anthropic.com/news/claude-haiku-4-5"
                 }
               ]
             }
@@ -934,7 +941,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2025-10-23",
                   "type": "launch",
-                  "desc": "Maxプランでメモリ機能が利用可能に（Proへ順次展開）。"
+                  "desc": "Maxプランでメモリ機能が利用可能に（Proへ順次展開）。",
+                  "url": "https://claude.com/blog/memory"
                 },
                 {
                   "date": "2026-03-02",
@@ -1149,12 +1157,14 @@ window.ATLAS_DATA = {
                 {
                   "date": "2025-02-24",
                   "type": "preview",
-                  "desc": "ターミナルで動くエージェント型コーディングツールとして研究プレビューで初登場（Claude 3.7 Sonnetと同時）。"
+                  "desc": "ターミナルで動くエージェント型コーディングツールとして研究プレビューで初登場（Claude 3.7 Sonnetと同時）。",
+                  "url": "https://www.anthropic.com/news/claude-3-7-sonnet"
                 },
                 {
                   "date": "2025-05-22",
                   "type": "ga",
-                  "desc": "Claude 4世代の発表と同時に一般提供へ。誰でもターミナルから使えるように。"
+                  "desc": "Claude 4世代の発表と同時に一般提供へ。誰でもターミナルから使えるように。",
+                  "url": "https://www.anthropic.com/news/claude-4"
                 }
               ]
             },
@@ -1167,7 +1177,8 @@ window.ATLAS_DATA = {
                   "date": "2025-05-01",
                   "type": "launch",
                   "approx": true,
-                  "desc": "Model Context Protocol(MCP)に対応し、外部ツール/データソースをサーバ経由で接続できるように。"
+                  "desc": "Model Context Protocol(MCP)に対応し、外部ツール/データソースをサーバ経由で接続できるように。",
+                  "url": "https://www.anthropic.com/news/model-context-protocol"
                 }
               ]
             },
@@ -1180,7 +1191,8 @@ window.ATLAS_DATA = {
                   "date": "2025-06-01",
                   "type": "launch",
                   "approx": true,
-                  "desc": "/で呼び出す組み込みコマンドと、Markdownで定義する独自のカスタムスラッシュコマンドに対応。"
+                  "desc": "/で呼び出す組み込みコマンドと、Markdownで定義する独自のカスタムスラッシュコマンドに対応。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
                 }
               ]
             },
@@ -1193,7 +1205,8 @@ window.ATLAS_DATA = {
                   "date": "2025-06-01",
                   "type": "launch",
                   "approx": true,
-                  "desc": "実行前に計画だけを立てる読み取り専用のプランモードを追加。安全に方針を確認してから着手できる。"
+                  "desc": "実行前に計画だけを立てる読み取り専用のプランモードを追加。安全に方針を確認してから着手できる。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
                 }
               ]
             },
@@ -1206,7 +1219,8 @@ window.ATLAS_DATA = {
                   "date": "2025-07-01",
                   "type": "launch",
                   "approx": true,
-                  "desc": "専門タスクを独立コンテキストで処理する custom subagent を導入。メインの文脈を汚さず分業できる。"
+                  "desc": "専門タスクを独立コンテキストで処理する custom subagent を導入。メインの文脈を汚さず分業できる。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
                 }
               ]
             },
@@ -1219,7 +1233,8 @@ window.ATLAS_DATA = {
                   "date": "2025-07-01",
                   "type": "launch",
                   "approx": true,
-                  "desc": "ツール実行などのライフサイクル各点で任意のコマンドを走らせるフックを導入。lint/テストの自動実行などを決定的に組み込める。"
+                  "desc": "ツール実行などのライフサイクル各点で任意のコマンドを走らせるフックを導入。lint/テストの自動実行などを決定的に組み込める。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
                 }
               ]
             },
@@ -1232,7 +1247,8 @@ window.ATLAS_DATA = {
                   "date": "2025-07-01",
                   "type": "launch",
                   "approx": true,
-                  "desc": "GitHub Actionsから起動し、PRやIssueにClaude Codeを組み込んでCIワークフローを自動化できるように。"
+                  "desc": "GitHub Actionsから起動し、PRやIssueにClaude Codeを組み込んでCIワークフローを自動化できるように。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
                 }
               ]
             },
@@ -1244,7 +1260,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2025-09-29",
                   "type": "launch",
-                  "desc": "v2.0でネイティブVS Code拡張を提供。ターミナルだけでなくIDE内で差分確認しながら作業できるように（JetBrains等のIDE連携も対応）。"
+                  "desc": "v2.0でネイティブVS Code拡張を提供。ターミナルだけでなくIDE内で差分確認しながら作業できるように（JetBrains等のIDE連携も対応）。",
+                  "url": "https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously"
                 }
               ]
             },
@@ -1256,7 +1273,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2025-09-29",
                   "type": "launch",
-                  "desc": "v2.0で各プロンプトごとに状態を自動保存するネイティブのチェックポイントを導入。変更を巻き戻して安全に試行錯誤できる（既定30日保持）。"
+                  "desc": "v2.0で各プロンプトごとに状態を自動保存するネイティブのチェックポイントを導入。変更を巻き戻して安全に試行錯誤できる（既定30日保持）。",
+                  "url": "https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously"
                 }
               ]
             },
@@ -1268,7 +1286,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2025-09-29",
                   "type": "update",
-                  "desc": "Claude Code SDKをClaude Agent SDKへ改称。Claude Codeを支える基盤を、独自エージェントを作るための汎用SDKとして位置づけ直し。"
+                  "desc": "Claude Code SDKをClaude Agent SDKへ改称。Claude Codeを支える基盤を、独自エージェントを作るための汎用SDKとして位置づけ直し。",
+                  "url": "https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously"
                 }
               ]
             },
@@ -1281,7 +1300,8 @@ window.ATLAS_DATA = {
                   "date": "2025-08-01",
                   "type": "launch",
                   "approx": true,
-                  "desc": "Claude Codeの応答の調子・形式を切り替えるアウトプットスタイルを導入。用途に合わせて振る舞いを変えられる。"
+                  "desc": "Claude Codeの応答の調子・形式を切り替えるアウトプットスタイルを導入。用途に合わせて振る舞いを変えられる。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
                 }
               ]
             },
@@ -1294,7 +1314,8 @@ window.ATLAS_DATA = {
                   "date": "2025-10-01",
                   "type": "launch",
                   "approx": true,
-                  "desc": "コマンド・サブエージェント・フック・MCPサーバをまとめて配布できるプラグインと、その導入元となるマーケットプレイスに対応。"
+                  "desc": "コマンド・サブエージェント・フック・MCPサーバをまとめて配布できるプラグインと、その導入元となるマーケットプレイスに対応。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
                 }
               ]
             }
@@ -1404,7 +1425,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2025-09-29",
                   "type": "update",
-                  "desc": "待機リストのMaxユーザーに開放。既定をSonnet 4.5に。"
+                  "desc": "待機リストのMaxユーザーに開放。既定をSonnet 4.5に。",
+                  "url": "https://claude.com/blog/claude-for-chrome"
                 },
                 {
                   "date": "2025-10-15",
@@ -1419,7 +1441,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2025-12-18",
                   "type": "expand",
-                  "desc": "全有料プランにベータ拡大。Claude Code連携、デスクトップからの操作、操作の記録、コンソールログ読取、管理機能を追加。"
+                  "desc": "全有料プランにベータ拡大。Claude Code連携、デスクトップからの操作、操作の記録、コンソールログ読取、管理機能を追加。",
+                  "url": "https://claude.com/blog/claude-for-chrome"
                 }
               ]
             }
@@ -1438,7 +1461,8 @@ window.ATLAS_DATA = {
                 {
                   "date": "2026-04-17",
                   "type": "launch",
-                  "desc": "自然言語でデザイン・プロトタイプ・スライド・ワンページャー等のビジュアルを共同制作できる新製品（Opus 4.7と同時）。"
+                  "desc": "自然言語でデザイン・プロトタイプ・スライド・ワンページャー等のビジュアルを共同制作できる新製品（Opus 4.7と同時）。",
+                  "url": "https://www.anthropic.com/news/claude-design-anthropic-labs"
                 },
                 {
                   "date": "2026-06-01",
@@ -1537,7 +1561,8 @@ window.ATLAS_DATA = {
                   "date": "2025-10-15",
                   "type": "launch",
                   "desc": "作業手順をClaudeに教える「スキル」を導入。pptx/xlsx/docx/pdf用の標準スキルとカスタムスキルAPIを提供。",
-                  "approx": true
+                  "approx": true,
+                  "url": "https://claude.com/blog/skills"
                 }
               ]
             },
