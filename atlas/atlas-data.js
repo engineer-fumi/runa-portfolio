@@ -291,6 +291,12 @@ window.ATLAS_DATA = {
                   "type": "ga",
                   "desc": "Opus 4.6 / Sonnet 4.6で正式提供。1M利用時の画像/PDF上限を100→600に拡大、専用レート上限は撤廃。",
                   "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                },
+                {
+                  "date": "2026-04-30",
+                  "type": "retire",
+                  "desc": "Sonnet 4.5 / Sonnet 4向けの1Mコンテキストβ（context-1m-2025-08-07）を提供終了。200k超の要求はエラーに。利用には4.6世代へ移行。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
@@ -472,6 +478,12 @@ window.ATLAS_DATA = {
               "name_en": "Structured outputs",
               "events": [
                 {
+                  "date": "2025-11-14",
+                  "type": "beta",
+                  "desc": "スキーマ準拠を保証する構造化出力を公開ベータ提供開始（Sonnet 4.5 / Opus 4.1、ヘッダ structured-outputs-2025-11-13）。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                },
+                {
                   "date": "2025-12-04",
                   "type": "update",
                   "desc": "Haiku 4.5でも構造化出力に対応。",
@@ -516,6 +528,19 @@ window.ATLAS_DATA = {
                   "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
+            },
+            {
+              "id": "fallbacks",
+              "name": "fallbacks パラメータ",
+              "name_en": "fallbacks parameter",
+              "events": [
+                {
+                  "date": "2026-06-09",
+                  "type": "beta",
+                  "desc": "拒否されたリクエストを別モデルで再実行できるサーバ側オプション（Claude API/AWS版でベータ、Batches API除く）。料金は再実行先モデルに従う。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                }
+              ]
             }
           ]
         },
@@ -548,6 +573,12 @@ window.ATLAS_DATA = {
               "name": "Web検索 / Webフェッチ",
               "name_en": "Web search / Web fetch",
               "events": [
+                {
+                  "date": "2025-09-10",
+                  "type": "beta",
+                  "desc": "指定したWebページやPDFの全文を取得できるWebフェッチツールをベータ提供開始。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                },
                 {
                   "date": "2026-02-17",
                   "type": "ga",
@@ -612,9 +643,28 @@ window.ATLAS_DATA = {
               "name_en": "Memory tool",
               "events": [
                 {
+                  "date": "2025-09-29",
+                  "type": "beta",
+                  "desc": "会話をまたいで情報を保存・参照できるメモリツールをベータ提供開始。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                },
+                {
                   "date": "2026-02-17",
                   "type": "ga",
                   "desc": "正式提供（追加ヘッダ不要）。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                }
+              ]
+            },
+            {
+              "id": "context-editing",
+              "name": "コンテキスト編集",
+              "name_en": "Context editing",
+              "events": [
+                {
+                  "date": "2025-09-29",
+                  "type": "beta",
+                  "desc": "トークン上限が近づくと古いツール結果/呼び出しを自動で除去し、長い会話のコンテキストを管理するベータ機能。",
                   "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
@@ -867,6 +917,19 @@ window.ATLAS_DATA = {
                   "type": "expand",
                   "desc": "全Bedrock顧客に開放。Opus 4.7/Haiku 4.5を27リージョンでセルフサーブ。",
                   "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                }
+              ]
+            },
+            {
+              "id": "foundry",
+              "name": "Claude in Microsoft Foundry",
+              "name_en": "Claude in Microsoft Foundry",
+              "events": [
+                {
+                  "date": "2025-11-18",
+                  "type": "preview",
+                  "desc": "Azure課金・OAuth認証でClaudeを使える新しいデプロイ基盤（Bedrock/Vertexに続く第3の経路）。拡張思考・プロンプトキャッシュ・PDF・Agent Skills・ツール使用に対応。",
+                  "url": "https://www.anthropic.com/news/claude-in-microsoft-foundry"
                 }
               ]
             },
@@ -1222,6 +1285,19 @@ window.ATLAS_DATA = {
                   "type": "expand",
                   "desc": "Teamプランの全標準シートにClaude Codeアクセスを同梱。",
                   "url": "https://www.anthropic.com/news/claude-code-on-team-and-enterprise"
+                }
+              ]
+            },
+            {
+              "id": "code-analytics-api",
+              "name": "Claude Code Analytics API",
+              "name_en": "Claude Code Analytics API",
+              "events": [
+                {
+                  "date": "2025-09-10",
+                  "type": "launch",
+                  "desc": "Claude Codeの日次集計メトリクス（生産性・ツール使用統計・コスト等）をプログラムから取得できるAPIを提供開始。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
             },
