@@ -56,15 +56,18 @@ window.ATLAS_DATA = {
     {
       "id": "models",
       "name": "モデル",
+      "name_en": "Models",
       "accent": "#6C56D6",
       "subs": [
         {
           "id": "opus",
           "name": "Opus（最上位・フロンティア）",
+          "name_en": "Opus (flagship / frontier)",
           "feats": [
             {
               "id": "opus45",
               "name": "Claude Opus 4.5",
+              "name_en": "Claude Opus 4.5",
               "events": [
                 {
                   "date": "2025-11-24",
@@ -76,6 +79,7 @@ window.ATLAS_DATA = {
             {
               "id": "opus46",
               "name": "Claude Opus 4.6",
+              "name_en": "Claude Opus 4.6",
               "events": [
                 {
                   "date": "2026-02-05",
@@ -105,6 +109,7 @@ window.ATLAS_DATA = {
             {
               "id": "opus47",
               "name": "Claude Opus 4.7",
+              "name_en": "Claude Opus 4.7",
               "events": [
                 {
                   "date": "2026-04-16",
@@ -122,6 +127,7 @@ window.ATLAS_DATA = {
             {
               "id": "opus48",
               "name": "Claude Opus 4.8",
+              "name_en": "Claude Opus 4.8",
               "status": "current",
               "events": [
                 {
@@ -136,10 +142,12 @@ window.ATLAS_DATA = {
         {
           "id": "sonnet",
           "name": "Sonnet（バランス）",
+          "name_en": "Sonnet (balanced)",
           "feats": [
             {
               "id": "sonnet45",
               "name": "Claude Sonnet 4.5",
+              "name_en": "Claude Sonnet 4.5",
               "events": [
                 {
                   "date": "2025-09-29",
@@ -151,6 +159,7 @@ window.ATLAS_DATA = {
             {
               "id": "sonnet46",
               "name": "Claude Sonnet 4.6",
+              "name_en": "Claude Sonnet 4.6",
               "events": [
                 {
                   "date": "2026-02-17",
@@ -170,10 +179,12 @@ window.ATLAS_DATA = {
         {
           "id": "haiku",
           "name": "Haiku（高速・低コスト）",
+          "name_en": "Haiku (fast / low-cost)",
           "feats": [
             {
               "id": "haiku45",
               "name": "Claude Haiku 4.5",
+              "name_en": "Claude Haiku 4.5",
               "events": [
                 {
                   "date": "2025-10-15",
@@ -187,10 +198,12 @@ window.ATLAS_DATA = {
         {
           "id": "mythos",
           "name": "Mythos ティア（最上位プレビュー）",
+          "name_en": "Mythos tier (top-tier preview)",
           "feats": [
             {
               "id": "mythosp",
               "name": "Claude Mythos Preview",
+              "name_en": "Claude Mythos Preview",
               "status": "preview",
               "events": [
                 {
@@ -203,6 +216,7 @@ window.ATLAS_DATA = {
             {
               "id": "fable5",
               "name": "Claude Fable 5",
+              "name_en": "Claude Fable 5",
               "status": "suspended",
               "events": [
                 {
@@ -221,6 +235,7 @@ window.ATLAS_DATA = {
             {
               "id": "mythos5",
               "name": "Claude Mythos 5",
+              "name_en": "Claude Mythos 5",
               "status": "suspended",
               "events": [
                 {
@@ -241,10 +256,12 @@ window.ATLAS_DATA = {
         {
           "id": "mcap",
           "name": "モデル機能・パラメータ",
+          "name_en": "Model capabilities & parameters",
           "feats": [
             {
               "id": "ctx1m",
               "name": "1Mトークンコンテキスト",
+              "name_en": "1M token context",
               "events": [
                 {
                   "date": "2026-02-05",
@@ -261,6 +278,7 @@ window.ATLAS_DATA = {
             {
               "id": "thinking",
               "name": "適応的思考 / 思考制御",
+              "name_en": "Adaptive / extended thinking",
               "events": [
                 {
                   "date": "2026-02-05",
@@ -284,6 +302,7 @@ window.ATLAS_DATA = {
             {
               "id": "effort",
               "name": "effort パラメータ",
+              "name_en": "Effort parameter",
               "events": [
                 {
                   "date": "2025-11-24",
@@ -305,6 +324,7 @@ window.ATLAS_DATA = {
             {
               "id": "hires",
               "name": "高解像度画像入力",
+              "name_en": "High-resolution image input",
               "events": [
                 {
                   "date": "2026-04-16",
@@ -316,6 +336,7 @@ window.ATLAS_DATA = {
             {
               "id": "tokenizer",
               "name": "新トークナイザ",
+              "name_en": "New tokenizer",
               "events": [
                 {
                   "date": "2026-04-16",
@@ -327,6 +348,7 @@ window.ATLAS_DATA = {
             {
               "id": "midsys",
               "name": "会話途中のシステムメッセージ",
+              "name_en": "Mid-conversation system messages",
               "events": [
                 {
                   "date": "2026-05-28",
@@ -340,10 +362,12 @@ window.ATLAS_DATA = {
         {
           "id": "lifecycle",
           "name": "モデルのライフサイクル（提供終了）",
+          "name_en": "Model lifecycle (retirements)",
           "feats": [
             {
               "id": "dep-opus3",
               "name": "Opus 3 / Sonnet 3.7 / Haiku 3.x",
+              "name_en": "Opus 3 / Sonnet 3.7 / Haiku 3.x",
               "status": "retired",
               "events": [
                 {
@@ -366,6 +390,7 @@ window.ATLAS_DATA = {
             {
               "id": "dep-4",
               "name": "Opus 4 / 4.1 / Sonnet 4",
+              "name_en": "Opus 4 / 4.1 / Sonnet 4",
               "status": "retired",
               "events": [
                 {
@@ -398,15 +423,18 @@ window.ATLAS_DATA = {
     {
       "id": "platform",
       "name": "開発者プラットフォーム / API",
+      "name_en": "Developer Platform / API",
       "accent": "#0E9C8C",
       "subs": [
         {
           "id": "messages",
           "name": "Messages API・生成制御",
+          "name_en": "Messages API & generation controls",
           "feats": [
             {
               "id": "struct",
               "name": "構造化出力（Structured outputs）",
+              "name_en": "Structured outputs",
               "events": [
                 {
                   "date": "2025-12-04",
@@ -423,6 +451,7 @@ window.ATLAS_DATA = {
             {
               "id": "modelsapi",
               "name": "Models API の能力フィールド",
+              "name_en": "Models API capability fields",
               "events": [
                 {
                   "date": "2026-03-18",
@@ -434,6 +463,7 @@ window.ATLAS_DATA = {
             {
               "id": "refusal",
               "name": "拒否(refusal)の扱い",
+              "name_en": "Refusal handling",
               "events": [
                 {
                   "date": "2026-05-28",
@@ -452,10 +482,12 @@ window.ATLAS_DATA = {
         {
           "id": "tools",
           "name": "ツール（Tool use）",
+          "name_en": "Tool use",
           "feats": [
             {
               "id": "codeexec",
               "name": "コード実行ツール",
+              "name_en": "Code execution tool",
               "events": [
                 {
                   "date": "2026-02-17",
@@ -472,6 +504,7 @@ window.ATLAS_DATA = {
             {
               "id": "websearch",
               "name": "Web検索 / Webフェッチ",
+              "name_en": "Web search / Web fetch",
               "events": [
                 {
                   "date": "2026-02-17",
@@ -493,6 +526,7 @@ window.ATLAS_DATA = {
             {
               "id": "ptc",
               "name": "プログラム的ツール呼び出し",
+              "name_en": "Programmatic tool calling",
               "events": [
                 {
                   "date": "2025-11-24",
@@ -509,6 +543,7 @@ window.ATLAS_DATA = {
             {
               "id": "toolsearch",
               "name": "ツール検索ツール",
+              "name_en": "Tool search tool",
               "events": [
                 {
                   "date": "2025-11-24",
@@ -525,6 +560,7 @@ window.ATLAS_DATA = {
             {
               "id": "memtool",
               "name": "メモリツール",
+              "name_en": "Memory tool",
               "events": [
                 {
                   "date": "2026-02-17",
@@ -536,6 +572,7 @@ window.ATLAS_DATA = {
             {
               "id": "advisor",
               "name": "アドバイザツール",
+              "name_en": "Advisor tool",
               "events": [
                 {
                   "date": "2026-04-09",
@@ -552,6 +589,7 @@ window.ATLAS_DATA = {
             {
               "id": "fgts",
               "name": "細粒度ツールストリーミング",
+              "name_en": "Fine-grained tool streaming",
               "events": [
                 {
                   "date": "2026-02-05",
@@ -565,10 +603,12 @@ window.ATLAS_DATA = {
         {
           "id": "context",
           "name": "コンテキスト・キャッシュ",
+          "name_en": "Context & caching",
           "feats": [
             {
               "id": "autocache",
               "name": "自動キャッシュ",
+              "name_en": "Automatic prompt caching",
               "events": [
                 {
                   "date": "2026-02-19",
@@ -580,6 +620,7 @@ window.ATLAS_DATA = {
             {
               "id": "compaction",
               "name": "圧縮(Compaction) API",
+              "name_en": "Compaction API",
               "events": [
                 {
                   "date": "2026-02-05",
@@ -591,6 +632,7 @@ window.ATLAS_DATA = {
             {
               "id": "cachediag",
               "name": "キャッシュ診断",
+              "name_en": "Cache diagnostics",
               "status": "beta",
               "events": [
                 {
@@ -603,6 +645,7 @@ window.ATLAS_DATA = {
             {
               "id": "output300k",
               "name": "拡張出力（最大300k）",
+              "name_en": "Extended output (up to 300k)",
               "events": [
                 {
                   "date": "2026-03-30",
@@ -616,10 +659,12 @@ window.ATLAS_DATA = {
         {
           "id": "agents-api",
           "name": "Claude Managed Agents",
+          "name_en": "Claude Managed Agents",
           "feats": [
             {
               "id": "ma-launch",
               "name": "Managed Agents（管理型エージェント）",
+              "name_en": "Managed Agents",
               "status": "beta",
               "events": [
                 {
@@ -632,6 +677,7 @@ window.ATLAS_DATA = {
             {
               "id": "ma-mem",
               "name": "エージェントメモリ",
+              "name_en": "Agent memory",
               "status": "beta",
               "events": [
                 {
@@ -644,6 +690,7 @@ window.ATLAS_DATA = {
             {
               "id": "ma-multi",
               "name": "マルチエージェント / Outcomes",
+              "name_en": "Multi-agent / Outcomes",
               "status": "beta",
               "events": [
                 {
@@ -656,6 +703,7 @@ window.ATLAS_DATA = {
             {
               "id": "ma-webhook",
               "name": "Webhook / Vault（資格情報）",
+              "name_en": "Webhooks / Vault (credentials)",
               "events": [
                 {
                   "date": "2026-05-06",
@@ -672,6 +720,7 @@ window.ATLAS_DATA = {
             {
               "id": "ma-sandbox",
               "name": "自前サンドボックス / スケジュール",
+              "name_en": "Bring-your-own sandbox / scheduling",
               "events": [
                 {
                   "date": "2026-05-19",
@@ -688,6 +737,7 @@ window.ATLAS_DATA = {
             {
               "id": "mcptunnel",
               "name": "MCPトンネル",
+              "name_en": "MCP tunnel",
               "status": "preview",
               "events": [
                 {
@@ -702,10 +752,12 @@ window.ATLAS_DATA = {
         {
           "id": "infra",
           "name": "プラットフォーム・インフラ",
+          "name_en": "Platform infrastructure",
           "feats": [
             {
               "id": "console",
               "name": "Console → platform.claude.com",
+              "name_en": "Console → platform.claude.com",
               "events": [
                 {
                   "date": "2026-01-12",
@@ -717,6 +769,7 @@ window.ATLAS_DATA = {
             {
               "id": "aws",
               "name": "Claude Platform on AWS",
+              "name_en": "Claude Platform on AWS",
               "events": [
                 {
                   "date": "2026-05-11",
@@ -733,6 +786,7 @@ window.ATLAS_DATA = {
             {
               "id": "bedrock",
               "name": "Claude in Amazon Bedrock",
+              "name_en": "Claude in Amazon Bedrock",
               "events": [
                 {
                   "date": "2026-04-07",
@@ -749,6 +803,7 @@ window.ATLAS_DATA = {
             {
               "id": "ratelimit",
               "name": "Rate Limits API",
+              "name_en": "Rate Limits API",
               "events": [
                 {
                   "date": "2026-04-24",
@@ -760,6 +815,7 @@ window.ATLAS_DATA = {
             {
               "id": "residency",
               "name": "データ所在地コントロール",
+              "name_en": "Data residency controls",
               "events": [
                 {
                   "date": "2026-02-05",
@@ -771,6 +827,7 @@ window.ATLAS_DATA = {
             {
               "id": "wif",
               "name": "Workload Identity Federation",
+              "name_en": "Workload Identity Federation",
               "events": [
                 {
                   "date": "2026-06-01",
@@ -785,10 +842,12 @@ window.ATLAS_DATA = {
         {
           "id": "sdk",
           "name": "SDK・CLI",
+          "name_en": "SDK & CLI",
           "feats": [
             {
               "id": "antcli",
               "name": "ant CLI",
+              "name_en": "ant CLI",
               "events": [
                 {
                   "date": "2026-04-08",
@@ -800,6 +859,7 @@ window.ATLAS_DATA = {
             {
               "id": "sdkcompact",
               "name": "SDKのクライアント側圧縮",
+              "name_en": "SDK client-side compaction",
               "events": [
                 {
                   "date": "2025-11-24",
@@ -815,15 +875,18 @@ window.ATLAS_DATA = {
     {
       "id": "apps",
       "name": "Claudeアプリ（Claude.ai・モバイル）",
+      "name_en": "Claude apps (Claude.ai & mobile)",
       "accent": "#DD6147",
       "subs": [
         {
           "id": "chatx",
           "name": "チャット体験",
+          "name_en": "Chat experience",
           "feats": [
             {
               "id": "visuals",
               "name": "チャット内のチャート・図・可視化",
+              "name_en": "In-chat charts, diagrams & visualizations",
               "events": [
                 {
                   "date": "2026-03-12",
@@ -835,6 +898,7 @@ window.ATLAS_DATA = {
             {
               "id": "filecreate",
               "name": "ファイルの作成・編集",
+              "name_en": "File creation & editing",
               "events": [
                 {
                   "date": "2025-09-29",
@@ -846,6 +910,7 @@ window.ATLAS_DATA = {
             {
               "id": "compact-chat",
               "name": "コンテキスト圧縮（無限長会話）",
+              "name_en": "Context compaction (infinite chats)",
               "events": [
                 {
                   "date": "2025-11-24",
@@ -859,10 +924,12 @@ window.ATLAS_DATA = {
         {
           "id": "memory",
           "name": "メモリ・検索",
+          "name_en": "Memory & search",
           "feats": [
             {
               "id": "mem-app",
               "name": "メモリ（チャット履歴の活用）",
+              "name_en": "Memory",
               "events": [
                 {
                   "date": "2025-10-23",
@@ -881,10 +948,12 @@ window.ATLAS_DATA = {
         {
           "id": "mobile",
           "name": "モバイル（iOS / Android）",
+          "name_en": "Mobile (iOS / Android)",
           "feats": [
             {
               "id": "health",
               "name": "ヘルス・フィットネスデータ",
+              "name_en": "Health & fitness data",
               "events": [
                 {
                   "date": "2026-01-12",
@@ -896,6 +965,7 @@ window.ATLAS_DATA = {
             {
               "id": "mob-interactive",
               "name": "モバイルのインタラクティブアプリ接続",
+              "name_en": "Mobile interactive app connections",
               "events": [
                 {
                   "date": "2026-03-25",
@@ -909,10 +979,12 @@ window.ATLAS_DATA = {
         {
           "id": "office",
           "name": "Office アドイン",
+          "name_en": "Office add-ins",
           "feats": [
             {
               "id": "excel",
               "name": "Claude for Excel",
+              "name_en": "Claude for Excel",
               "events": [
                 {
                   "date": "2025-11-24",
@@ -934,6 +1006,7 @@ window.ATLAS_DATA = {
             {
               "id": "ppt",
               "name": "Claude for PowerPoint",
+              "name_en": "Claude for PowerPoint",
               "events": [
                 {
                   "date": "2026-02-05",
@@ -952,10 +1025,12 @@ window.ATLAS_DATA = {
         {
           "id": "plans",
           "name": "プラン・管理・コンプライアンス",
+          "name_en": "Plans, admin & compliance",
           "feats": [
             {
               "id": "selfserve",
               "name": "セルフサーブ Enterprise",
+              "name_en": "Self-serve Enterprise",
               "events": [
                 {
                   "date": "2026-02-12",
@@ -967,6 +1042,7 @@ window.ATLAS_DATA = {
             {
               "id": "hipaa",
               "name": "HIPAA対応 Enterprise",
+              "name_en": "HIPAA-eligible Enterprise",
               "events": [
                 {
                   "date": "2026-01-12",
@@ -978,6 +1054,7 @@ window.ATLAS_DATA = {
             {
               "id": "roles",
               "name": "ロール / カスタムロール",
+              "name_en": "Roles / custom roles",
               "events": [
                 {
                   "date": "2026-04-09",
@@ -999,6 +1076,7 @@ window.ATLAS_DATA = {
             {
               "id": "analytics",
               "name": "Analytics API（利用状況）",
+              "name_en": "Analytics API (usage)",
               "events": [
                 {
                   "date": "2026-02-13",
@@ -1015,6 +1093,7 @@ window.ATLAS_DATA = {
             {
               "id": "compliance",
               "name": "コンプライアンスAPI連携",
+              "name_en": "Compliance API integrations",
               "events": [
                 {
                   "date": "2026-05-21",
@@ -1030,15 +1109,18 @@ window.ATLAS_DATA = {
     {
       "id": "agents",
       "name": "エージェント製品",
+      "name_en": "Agent products",
       "accent": "#BC831A",
       "subs": [
         {
           "id": "code",
           "name": "Claude Code",
+          "name_en": "Claude Code",
           "feats": [
             {
               "id": "code-team",
               "name": "Team標準シートに同梱",
+              "name_en": "Included in Team standard seats",
               "events": [
                 {
                   "date": "2026-01-16",
@@ -1050,11 +1132,169 @@ window.ATLAS_DATA = {
             {
               "id": "code-auto",
               "name": "Auto モード / Workflows / Fast",
+              "name_en": "Auto mode / Workflows / Fast",
               "events": [
                 {
                   "date": "2026-05-28",
                   "type": "update",
                   "desc": "長時間タスク向けAutoモードを拡大。Workflowsを研究プレビューで提供。MaxはOpus 4.8でFast modeが既定に。"
+                }
+              ]
+            },
+            {
+              "id": "code-launch",
+              "name": "提供開始（研究プレビュー → 一般提供）",
+              "name_en": "Availability (research preview → GA)",
+              "events": [
+                {
+                  "date": "2025-02-24",
+                  "type": "preview",
+                  "desc": "ターミナルで動くエージェント型コーディングツールとして研究プレビューで初登場（Claude 3.7 Sonnetと同時）。"
+                },
+                {
+                  "date": "2025-05-22",
+                  "type": "ga",
+                  "desc": "Claude 4世代の発表と同時に一般提供へ。誰でもターミナルから使えるように。"
+                }
+              ]
+            },
+            {
+              "id": "code-mcp",
+              "name": "MCP対応",
+              "name_en": "MCP support",
+              "events": [
+                {
+                  "date": "2025-05-01",
+                  "type": "launch",
+                  "approx": true,
+                  "desc": "Model Context Protocol(MCP)に対応し、外部ツール/データソースをサーバ経由で接続できるように。"
+                }
+              ]
+            },
+            {
+              "id": "code-slash",
+              "name": "スラッシュコマンド / カスタムコマンド",
+              "name_en": "Slash commands / custom commands",
+              "events": [
+                {
+                  "date": "2025-06-01",
+                  "type": "launch",
+                  "approx": true,
+                  "desc": "/で呼び出す組み込みコマンドと、Markdownで定義する独自のカスタムスラッシュコマンドに対応。"
+                }
+              ]
+            },
+            {
+              "id": "code-plan",
+              "name": "プランモード",
+              "name_en": "Plan mode",
+              "events": [
+                {
+                  "date": "2025-06-01",
+                  "type": "launch",
+                  "approx": true,
+                  "desc": "実行前に計画だけを立てる読み取り専用のプランモードを追加。安全に方針を確認してから着手できる。"
+                }
+              ]
+            },
+            {
+              "id": "code-subagents",
+              "name": "サブエージェント",
+              "name_en": "Subagents",
+              "events": [
+                {
+                  "date": "2025-07-01",
+                  "type": "launch",
+                  "approx": true,
+                  "desc": "専門タスクを独立コンテキストで処理する custom subagent を導入。メインの文脈を汚さず分業できる。"
+                }
+              ]
+            },
+            {
+              "id": "code-hooks",
+              "name": "フック",
+              "name_en": "Hooks",
+              "events": [
+                {
+                  "date": "2025-07-01",
+                  "type": "launch",
+                  "approx": true,
+                  "desc": "ツール実行などのライフサイクル各点で任意のコマンドを走らせるフックを導入。lint/テストの自動実行などを決定的に組み込める。"
+                }
+              ]
+            },
+            {
+              "id": "code-gha",
+              "name": "GitHub Actions 連携",
+              "name_en": "GitHub Actions integration",
+              "events": [
+                {
+                  "date": "2025-07-01",
+                  "type": "launch",
+                  "approx": true,
+                  "desc": "GitHub Actionsから起動し、PRやIssueにClaude Codeを組み込んでCIワークフローを自動化できるように。"
+                }
+              ]
+            },
+            {
+              "id": "code-ide",
+              "name": "ネイティブVS Code拡張 / IDE連携",
+              "name_en": "Native VS Code extension / IDE integration",
+              "events": [
+                {
+                  "date": "2025-09-29",
+                  "type": "launch",
+                  "desc": "v2.0でネイティブVS Code拡張を提供。ターミナルだけでなくIDE内で差分確認しながら作業できるように（JetBrains等のIDE連携も対応）。"
+                }
+              ]
+            },
+            {
+              "id": "code-checkpoints",
+              "name": "チェックポイント",
+              "name_en": "Checkpoints",
+              "events": [
+                {
+                  "date": "2025-09-29",
+                  "type": "launch",
+                  "desc": "v2.0で各プロンプトごとに状態を自動保存するネイティブのチェックポイントを導入。変更を巻き戻して安全に試行錯誤できる（既定30日保持）。"
+                }
+              ]
+            },
+            {
+              "id": "code-agentsdk",
+              "name": "Claude Agent SDK（旧 Claude Code SDK）",
+              "name_en": "Claude Agent SDK (formerly Claude Code SDK)",
+              "events": [
+                {
+                  "date": "2025-09-29",
+                  "type": "update",
+                  "desc": "Claude Code SDKをClaude Agent SDKへ改称。Claude Codeを支える基盤を、独自エージェントを作るための汎用SDKとして位置づけ直し。"
+                }
+              ]
+            },
+            {
+              "id": "code-output-styles",
+              "name": "アウトプットスタイル",
+              "name_en": "Output styles",
+              "events": [
+                {
+                  "date": "2025-08-01",
+                  "type": "launch",
+                  "approx": true,
+                  "desc": "Claude Codeの応答の調子・形式を切り替えるアウトプットスタイルを導入。用途に合わせて振る舞いを変えられる。"
+                }
+              ]
+            },
+            {
+              "id": "code-plugins",
+              "name": "プラグイン / マーケットプレイス",
+              "name_en": "Plugins / marketplace",
+              "events": [
+                {
+                  "date": "2025-10-01",
+                  "type": "launch",
+                  "approx": true,
+                  "desc": "コマンド・サブエージェント・フック・MCPサーバをまとめて配布できるプラグインと、その導入元となるマーケットプレイスに対応。"
                 }
               ]
             }
@@ -1063,10 +1303,12 @@ window.ATLAS_DATA = {
         {
           "id": "cowork",
           "name": "Claude Cowork",
+          "name_en": "Claude Cowork",
           "feats": [
             {
               "id": "cowork-rp",
               "name": "研究プレビュー（提供拡大）",
+              "name_en": "Research preview (rollout)",
               "events": [
                 {
                   "date": "2026-01-12",
@@ -1083,6 +1325,7 @@ window.ATLAS_DATA = {
             {
               "id": "cowork-plugins",
               "name": "プラグイン / 管理機能",
+              "name_en": "Plugins / admin controls",
               "events": [
                 {
                   "date": "2026-02-24",
@@ -1094,6 +1337,7 @@ window.ATLAS_DATA = {
             {
               "id": "cowork-sched",
               "name": "定期/オンデマンドのタスク",
+              "name_en": "Scheduled / on-demand tasks",
               "events": [
                 {
                   "date": "2026-02-25",
@@ -1105,6 +1349,7 @@ window.ATLAS_DATA = {
             {
               "id": "cowork-phone",
               "name": "スマホからの操作（Dispatch）",
+              "name_en": "Phone control (Dispatch)",
               "events": [
                 {
                   "date": "2026-03-17",
@@ -1122,6 +1367,7 @@ window.ATLAS_DATA = {
             {
               "id": "cowork-ga",
               "name": "一般提供（macOS / Windows）",
+              "name_en": "General availability (macOS / Windows)",
               "events": [
                 {
                   "date": "2026-04-09",
@@ -1133,6 +1379,7 @@ window.ATLAS_DATA = {
             {
               "id": "cowork-legal",
               "name": "法務向けコネクタ / プラグイン",
+              "name_en": "Legal connectors / plugins",
               "events": [
                 {
                   "date": "2026-06-01",
@@ -1147,10 +1394,12 @@ window.ATLAS_DATA = {
         {
           "id": "chrome",
           "name": "Claude in Chrome",
+          "name_en": "Claude in Chrome",
           "feats": [
             {
               "id": "chrome-rollout",
               "name": "提供拡大とモデル選択",
+              "name_en": "Rollout & model selection",
               "events": [
                 {
                   "date": "2025-09-29",
@@ -1179,10 +1428,12 @@ window.ATLAS_DATA = {
         {
           "id": "design",
           "name": "Claude Design",
+          "name_en": "Claude Design",
           "feats": [
             {
               "id": "design-launch",
               "name": "Claude Design（Anthropic Labs）",
+              "name_en": "Claude Design (Anthropic Labs)",
               "events": [
                 {
                   "date": "2026-04-17",
@@ -1204,15 +1455,18 @@ window.ATLAS_DATA = {
     {
       "id": "connect",
       "name": "連携・MCP・スキル",
+      "name_en": "Integrations, MCP & Skills",
       "accent": "#2F6BE0",
       "subs": [
         {
           "id": "connectors",
           "name": "コネクタ",
+          "name_en": "Connectors",
           "feats": [
             {
               "id": "conn-managed",
               "name": "組織管理型のコネクタアクセス",
+              "name_en": "Org-managed connector access",
               "status": "beta",
               "events": [
                 {
@@ -1226,6 +1480,7 @@ window.ATLAS_DATA = {
             {
               "id": "conn-perm",
               "name": "コネクタ権限（ロール連携）",
+              "name_en": "Connector permissions (role-based)",
               "events": [
                 {
                   "date": "2026-05-28",
@@ -1239,10 +1494,12 @@ window.ATLAS_DATA = {
         {
           "id": "mcp",
           "name": "MCP",
+          "name_en": "Model Context Protocol (MCP)",
           "feats": [
             {
               "id": "mcp-interactive",
               "name": "インタラクティブ・コネクタ",
+              "name_en": "Interactive connectors",
               "events": [
                 {
                   "date": "2026-03-25",
@@ -1254,6 +1511,7 @@ window.ATLAS_DATA = {
             {
               "id": "mcp-tunnel2",
               "name": "MCPトンネル（プライベート接続）",
+              "name_en": "MCP tunnel (private connections)",
               "status": "preview",
               "events": [
                 {
@@ -1268,10 +1526,12 @@ window.ATLAS_DATA = {
         {
           "id": "skills",
           "name": "Agent Skills（スキル）",
+          "name_en": "Agent Skills",
           "feats": [
             {
               "id": "skills-intro",
               "name": "スキルの導入",
+              "name_en": "Skills introduction",
               "events": [
                 {
                   "date": "2025-10-15",
@@ -1284,6 +1544,7 @@ window.ATLAS_DATA = {
             {
               "id": "skills-eco",
               "name": "組織管理 / ディレクトリ / オープン標準",
+              "name_en": "Org management / directory / open standard",
               "events": [
                 {
                   "date": "2025-12-18",
