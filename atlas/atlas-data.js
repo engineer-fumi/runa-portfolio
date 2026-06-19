@@ -1318,6 +1318,20 @@ window.ATLAS_DATA = {
                   "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
                 }
               ]
+            },
+            {
+              "id": "code-artifacts",
+              "name": "アーティファクト（共有ページ）",
+              "name_en": "Artifacts (shareable pages)",
+              "status": "current",
+              "events": [
+                {
+                  "date": "2026-06-18",
+                  "type": "beta",
+                  "desc": "Claude Codeのセッション出力を、組織内で共有できるライブなインタラクティブページ（PRウォークスルー／ダッシュボード／調査タイムライン等）として公開。更新は同じURLに即反映され、版履歴つき。Team/Enterpriseでベータ提供。",
+                  "url": "https://claude.com/blog/artifacts-in-claude-code"
+                }
+              ]
             }
           ]
         },
