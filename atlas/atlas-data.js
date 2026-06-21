@@ -17,7 +17,7 @@ window.ATLAS_DATA = {
 
   // 表示メタ情報（マストヘッド・フッターに反映）
   meta: {
-    lastUpdated: "2026-06-19",   // 最終更新日（必ず更新する）
+    lastUpdated: "2026-06-21",   // 最終更新日（必ず更新する）
     rangeStart: "2025.09",       // 収録範囲の開始（表示用ラベル）
     rangeEnd: "2026.06",         // 収録範囲の終了（表示用ラベル）
     sources: [
@@ -1684,10 +1684,9 @@ window.ATLAS_DATA = {
               "status": "beta",
               "events": [
                 {
-                  "date": "2026-06-01",
+                  "date": "2026-06-18",
                   "type": "beta",
-                  "desc": "IdP(まずOkta)経由で管理者が一括設定し、ユーザーは初回ログインで自動的にコネクタを利用（チャット/Code/Cowork横断）。",
-                  "approx": true,
+                  "desc": "IdP(まずOkta)経由で管理者がMCPコネクタの認可を組織全体に一括プロビジョニングし、ユーザーは初回ログインで自動利用（チャット/Code/Cowork横断・Asana/Atlassian/Figma等に対応）。",
                   "url": "https://claude.com/blog/enterprise-managed-auth"
                 }
               ]
