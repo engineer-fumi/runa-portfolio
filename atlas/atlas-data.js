@@ -17,7 +17,7 @@ window.ATLAS_DATA = {
 
   // 表示メタ情報（マストヘッド・フッターに反映）
   meta: {
-    lastUpdated: "2026-06-21",   // 最終更新日（必ず更新する）
+    lastUpdated: "2026-06-23",   // 最終更新日（必ず更新する）
     rangeStart: "2025.09",       // 収録範囲の開始（表示用ラベル）
     rangeEnd: "2026.06",         // 収録範囲の終了（表示用ラベル）
     sources: [
@@ -1580,6 +1580,19 @@ window.ATLAS_DATA = {
                   "type": "ga",
                   "desc": "デスクトップアプリでCoworkが一般提供に。利用分析やOpenTelemetryにも対応。",
                   "url": "https://support.claude.com/en/articles/12138966-release-notes"
+                }
+              ]
+            },
+            {
+              "id": "cowork-cloud-enterprise",
+              "name": "3大クラウドでフル機能（企業向け）",
+              "name_en": "Full experience on AWS / Google Cloud / Microsoft Foundry",
+              "events": [
+                {
+                  "date": "2026-06-22",
+                  "type": "expand",
+                  "desc": "Claude Desktopのフル機能（チャット＋Cowork＋Code）をAWS・Google Cloud・Microsoft Foundry経由で利用可能に。従来はCowork/Codeのみだった3クラウドにチャットが加わり完全版へ。推論は各社リージョン内に保持、SSO/MDM/オフラインインストーラ等で企業展開に対応。",
+                  "url": "https://claude.com/blog/the-full-claude-desktop-experience-on-aws-google-cloud-and-microsoft-foundry"
                 }
               ]
             },
