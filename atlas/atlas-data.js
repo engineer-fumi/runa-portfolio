@@ -17,7 +17,7 @@ window.ATLAS_DATA = {
 
   // 表示メタ情報（マストヘッド・フッターに反映）
   meta: {
-    lastUpdated: "2026-06-23",   // 最終更新日（必ず更新する）
+    lastUpdated: "2026-06-24",   // 最終更新日（必ず更新する）
     rangeStart: "2025.09",       // 収録範囲の開始（表示用ラベル）
     rangeEnd: "2026.06",         // 収録範囲の終了（表示用ラベル）
     sources: [
@@ -1672,6 +1672,33 @@ window.ATLAS_DATA = {
                   "desc": "デザインシステムへの追従、Claude Codeとの連携強化、キャンバス直接編集、サイドバー常設などを追加。",
                   "approx": true,
                   "url": "https://claude.com/blog/claude-design-stays-on-brand-for-daily-work"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tag",
+          "name": "Claude Tag（Slackのチームメンバー）",
+          "name_en": "Claude Tag",
+          "feats": [
+            {
+              "id": "tag-slack",
+              "name": "Slackでチームの一員として働く",
+              "name_en": "Joins Slack as a team member",
+              "status": "beta",
+              "events": [
+                {
+                  "date": "2026-06-23",
+                  "type": "beta",
+                  "desc": "ClaudeがSlackにチームメンバーとして参加し、@メンションでタスクを受けて、会話の文脈や接続ツールを使いながら非同期で作業する新しい連携。Enterprise/Team向けにベータ提供。",
+                  "url": "https://www.anthropic.com/news/introducing-claude-tag"
+                },
+                {
+                  "date": "2026-06-24",
+                  "type": "launch",
+                  "desc": "Claude Tagの土台となる「エージェント・アイデンティティ」を導入。個人の資格情報でなくワークスペース単位の独自アカウントと権限を持ち、管理者がチャンネル単位でアクセスを絞れる、共有環境向けのアクセスモデル。",
+                  "url": "https://claude.com/blog/agent-identity-access-model"
                 }
               ]
             }
