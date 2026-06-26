@@ -17,7 +17,7 @@ window.ATLAS_DATA = {
 
   // 表示メタ情報（マストヘッド・フッターに反映）
   meta: {
-    lastUpdated: "2026-06-24",   // 最終更新日（必ず更新する）
+    lastUpdated: "2026-06-26",   // 最終更新日（必ず更新する）
     rangeStart: "2025.09",       // 収録範囲の開始（表示用ラベル）
     rangeEnd: "2026.06",         // 収録範囲の終了（表示用ラベル）
     sources: [
@@ -1495,6 +1495,20 @@ window.ATLAS_DATA = {
                   "type": "beta",
                   "desc": "Claude Codeのセッション出力を、組織内で共有できるライブなインタラクティブページ（PRウォークスルー／ダッシュボード／調査タイムライン等）として公開。更新は同じURLに即反映され、版履歴つき。Team/Enterpriseでベータ提供。",
                   "url": "https://claude.com/blog/artifacts-in-claude-code"
+                }
+              ]
+            },
+            {
+              "id": "code-trusted-devices",
+              "name": "リモート操作の信頼済みデバイス",
+              "name_en": "Trusted Devices for Remote Control",
+              "status": "current",
+              "events": [
+                {
+                  "date": "2026-06-25",
+                  "type": "update",
+                  "desc": "Team/Enterpriseの管理者が、メンバーのローカルClaude Codeセッションをリモートで閲覧・操作する前にデバイス認証（信頼済みデバイス）を必須にできるように。リモート操作のセキュリティを強化。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
                 }
               ]
             }
