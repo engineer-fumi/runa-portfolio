@@ -17,7 +17,7 @@ window.ATLAS_DATA = {
 
   // 表示メタ情報（マストヘッド・フッターに反映）
   meta: {
-    lastUpdated: "2026-06-26",   // 最終更新日（必ず更新する）
+    lastUpdated: "2026-06-27",   // 最終更新日（必ず更新する）
     rangeStart: "2025.09",       // 収録範囲の開始（表示用ラベル）
     rangeEnd: "2026.06",         // 収録範囲の終了（表示用ラベル）
     sources: [
@@ -942,6 +942,20 @@ window.ATLAS_DATA = {
                   "date": "2026-04-24",
                   "type": "launch",
                   "desc": "組織/ワークスペースのレート上限をプログラムから照会可能に。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                }
+              ]
+            },
+            {
+              "id": "usage-tiers",
+              "name": "利用ティアとレート上限",
+              "name_en": "Usage tiers & rate limits",
+              "status": "current",
+              "events": [
+                {
+                  "date": "2026-06-26",
+                  "type": "expand",
+                  "desc": "API全体でレート上限を引き上げ、Sonnet/HaikuのレートをOpusと同水準に揃えた。利用ティアをStart/Build/Scaleの3つに集約（多くの組織は上位ティアへ移行・制限が下がる組織はなく対応不要）。",
                   "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
