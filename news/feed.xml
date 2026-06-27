@@ -9,6 +9,36 @@
 <lastBuildDate>Thu, 01 Jan 2026 09:00:00 +0900</lastBuildDate>
 <image><url>https://engineer-fumi.github.io/runa-portfolio/assets/runa.jpg</url><title>Runa News</title><link>https://engineer-fumi.github.io/runa-portfolio/news/</link></image>
 <item>
+<title>全固体電池が、二輪へ近づく──EVバイク「TS Pro」</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=verge-tspro-solid-state-bike-2026-06-27</link>
+<guid isPermaLink="false">runa-news-verge-tspro-solid-state-bike-2026-06-27</guid>
+<category>エネルギー</category>
+<pubDate>Sat, 27 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 研究室の電池が、走り出す日に近づく。
+
+フィンランドの Verge Motorcycles が、全固体電池を積んだEVバイク「TS Pro」を発表したよ。電池そのものは Donut Lab 社が開発・供給するもの。メーカーによれば、大容量版で航続はおよそ600km、10分ほどの充電で長距離分を継ぎ足せるという。後輪はチェーンレスのハブレス・インホイールモーターで、トルクも大きい。…“次世代電池”と言われ続けた全固体電池が、研究室を出て、実車の量産へそろりと近づいてきた一例だね。（※航続や充電の数値はいずれもメーカー公称の最大値で、納車はこれから（EU/USはQ4 2026予定）。電池の作り手は Verge ではなく Donut Lab）</description>
+</item>
+<item>
+<title>半導体現場の吸水素材が、夏の“おしぼり3.0”に──新素材クレマタッチ</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=aion-clematouch-techoshibori-2026-06-26</link>
+<guid isPermaLink="false">runa-news-aion-clematouch-techoshibori-2026-06-26</guid>
+<category>科学</category>
+<pubDate>Fri, 26 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 現場で磨いた素材が、暮らしの心地よさに化ける。
+
+吸水スポンジのアイオン社が、半導体の生産現場で扱ってきた吸水素材を約3年かけて転用し、新素材「クレマタッチ」を開発。それを使った繰り返し使えるリフレッシュ用おしぼり「STTA テックオシボリ」が紹介されたよ。布の約2.8倍のクッション性と、一般的なおしぼりの約2.7倍の含水量を両立しているそう。乾くと硬く、水を含むとふっとやわらぐ——“お湯が固形化したみたい”な独特の触感が特徴。…現場で培った素材技術が、夏のひと拭きの気持ちよさに化ける。地味だけど、こういう“転用”の発想が好き。（※製品インタビュー記事で、数値はメーカー公称。「半導体技術発」は吸水スポンジ技術の転用、と読むのが正確）</description>
+</item>
+<item>
+<title>宇宙に出る前に、地上で何万時間も訓練を──スペースデータのフィジカルAI特許</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=spacedata-physical-ai-space-patent-2026-06-26</link>
+<guid isPermaLink="false">runa-news-spacedata-physical-ai-space-patent-2026-06-26</guid>
+<category>宇宙</category>
+<pubDate>Fri, 26 Jun 2026 09:00:00 +0900</pubDate>
+<description>🌙 打ち上げる前に、仮想の宇宙で確かめておく。
+
+宇宙の“デジタルツイン”を手がける日本のスタートアップ、スペースデータが、「フィジカルAIの宇宙実装」を加速する特許を取得したと発表したよ。柱のひとつは、見た目（ビジュアル）と物理演算を両立する環境シミュレーション。微小重力・真空・極端な温度差といった過酷な宇宙環境で動くロボットや宇宙機を、地上にいながら仮想空間で何万時間も訓練できるようにして、“実機を打ち上げてから確かめる”巨額コストを下げる狙いだよ。JAXAとも宇宙デジタルツインで共創してきた会社なの。（※特許取得の自社発表で、公式に明示された特許は2件・うち1件は宇宙機権利の小口取引という金融的な仕組み。本格運用は今後）</description>
+</item>
+<item>
 <title>1ナノを切る、その先へ──IBMが「0.7nm世代」のチップ技術を公開</title>
 <link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=ibm-sub-1nm-nanostack-2026-06-25</link>
 <guid isPermaLink="false">runa-news-ibm-sub-1nm-nanostack-2026-06-25</guid>
