@@ -17,7 +17,7 @@ window.ATLAS_DATA = {
 
   // 表示メタ情報（マストヘッド・フッターに反映）
   meta: {
-    lastUpdated: "2026-06-27",   // 最終更新日（必ず更新する）
+    lastUpdated: "2026-08-11",   // 最終更新日（必ず更新する）
     rangeStart: "2025.09",       // 収録範囲の開始（表示用ラベル）
     rangeEnd: "2026.06",         // 収録範囲の終了（表示用ラベル）
     sources: [
@@ -135,13 +135,47 @@ window.ATLAS_DATA = {
               "id": "opus48",
               "name": "Claude Opus 4.8",
               "name_en": "Claude Opus 4.8",
-              "status": "current",
               "events": [
                 {
                   "date": "2026-05-28",
                   "type": "launch",
-                  "desc": "現行の最上位モデル。コーディング・エージェント能力・推論・実務知識でOpus 4.7を上回る。1Mコンテキスト標準、最大出力128k。effortは既定でhigh。",
+                  "desc": "コーディング・エージェント能力・推論・実務知識でOpus 4.7を上回る。1Mコンテキスト標準、最大出力128k。effortは既定でhigh。",
                   "url": "https://www.anthropic.com/news/claude-opus-4-8"
+                }
+              ]
+            },
+            {
+              "id": "opus5",
+              "name": "Claude Opus 5",
+              "name_en": "Claude Opus 5",
+              "status": "current",
+              "events": [
+                {
+                  "date": "2026-07-24",
+                  "type": "launch",
+                  "desc": "現行の最上位モデル（model id は claude-opus-5）。1Mコンテキストが既定かつ最大、出力128k、思考は既定でオン。価格は $5/$25 とOpus 4.8から据え置きで、性能向上ぶんが実質の値下げに。Claude Max の既定モデル。",
+                  "url": "https://www.anthropic.com/news/claude-opus-5"
+                },
+                {
+                  "date": "2026-07-24",
+                  "type": "update",
+                  "title": "effort が主要な制御に",
+                  "desc": "low〜max の effort で挙動を調整する形へ。xhigh と max では thinking を無効化できず400エラーになる（破壊的変更）。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                }
+              ]
+            },
+            {
+              "id": "opus-research",
+              "name": "研究版モデルの成果",
+              "name_en": "Research-version milestones",
+              "events": [
+                {
+                  "date": "2026-08-10",
+                  "type": "update",
+                  "title": "リーマン予想の関連問題で下界を改善",
+                  "desc": "未公開の研究版Claudeが、リーマンゼータ関数の零点のうち予想を満たす割合の下界を41.6%から67.2%へ更新。Claude Code上で約60のサブエージェントを統括し、証明はLeanで形式検証可能な形にした。",
+                  "url": "https://www.anthropic.com/research/riemann-zeta"
                 }
               ]
             }
@@ -181,6 +215,27 @@ window.ATLAS_DATA = {
                   "type": "ga",
                   "title": "1Mトークンコンテキスト 正式提供",
                   "desc": "標準料金で1Mコンテキストが利用可能に。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                }
+              ]
+            },
+            {
+              "id": "sonnet5",
+              "name": "Claude Sonnet 5",
+              "name_en": "Claude Sonnet 5",
+              "status": "current",
+              "events": [
+                {
+                  "date": "2026-06-30",
+                  "type": "launch",
+                  "desc": "Sonnet 4.6から推論・ツール利用・コーディングを大きく伸ばした新しい標準モデル（model id は claude-sonnet-5）。1Mコンテキスト・出力128k、適応的思考が既定。導入価格 $2/$10（2026-08-31まで、以降 $3/$15）。",
+                  "url": "https://www.anthropic.com/news/claude-sonnet-5"
+                },
+                {
+                  "date": "2026-06-30",
+                  "type": "update",
+                  "title": "新トークナイザと非対応パラメータ",
+                  "desc": "手動のextended thinkingとsamplingパラメータは400エラーに。新トークナイザにより同じ文章でもトークン数が約3割増える点に注意。Priority Tierは非対応。",
                   "url": "https://platform.claude.com/docs/en/release-notes/overview"
                 }
               ]
@@ -230,7 +285,7 @@ window.ATLAS_DATA = {
               "id": "fable5",
               "name": "Claude Fable 5",
               "name_en": "Claude Fable 5",
-              "status": "suspended",
+              "status": "current",
               "events": [
                 {
                   "date": "2026-06-09",
@@ -244,6 +299,20 @@ window.ATLAS_DATA = {
                   "title": "アクセス一時停止",
                   "desc": "輸出管理上の理由でMythos 5とともにアクセスを一時停止。",
                   "url": "https://www.anthropic.com/news/fable-mythos-access"
+                },
+                {
+                  "date": "2026-07-01",
+                  "type": "update",
+                  "title": "グローバル再展開",
+                  "desc": "6月末に規制が解除され、Claude Platform・Claude.ai・Claude Code・Cowork で全世界に再提供。クラウド各社での提供は順次復旧。",
+                  "url": "https://www.anthropic.com/news/redeploying-fable-5"
+                },
+                {
+                  "date": "2026-08-07",
+                  "type": "update",
+                  "title": "生物学セーフガードの改善",
+                  "desc": "誤検知を約85%減らし、正当な生物学・ヘルスケア用途に応えやすく。デュアルユース悪用への防御は維持。",
+                  "url": "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
                 }
               ]
             },
@@ -251,7 +320,7 @@ window.ATLAS_DATA = {
               "id": "mythos5",
               "name": "Claude Mythos 5",
               "name_en": "Claude Mythos 5",
-              "status": "suspended",
+              "status": "current",
               "events": [
                 {
                   "date": "2026-06-09",
@@ -265,6 +334,34 @@ window.ATLAS_DATA = {
                   "title": "アクセス一時停止",
                   "desc": "輸出管理上の理由でアクセスを一時停止。",
                   "url": "https://www.anthropic.com/news/fable-mythos-access"
+                },
+                {
+                  "date": "2026-07-01",
+                  "type": "update",
+                  "title": "グローバル再展開",
+                  "desc": "Fable 5とともに提供を再開。",
+                  "url": "https://www.anthropic.com/news/redeploying-fable-5"
+                }
+              ]
+            },
+            {
+              "id": "cyber-safeguards",
+              "name": "サイバー分野の安全対策",
+              "name_en": "Cyber safeguards",
+              "events": [
+                {
+                  "date": "2026-07-02",
+                  "type": "launch",
+                  "title": "CJS（脱獄の深刻度）フレームワーク公表",
+                  "desc": "ジェイルブレイクの深刻度をCJS-0〜CJS-4の5段階で測る共通の物差しを提案。capability gain・breadth・ease of weaponization・discoverability の4軸で評価する。",
+                  "url": "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework"
+                },
+                {
+                  "date": "2026-07-30",
+                  "type": "update",
+                  "title": "サイバー評価中のインシデント調査",
+                  "desc": "隔離されているはずの評価環境からモデルが実インターネットへ到達した3件を調査・公表。評価パートナー側の設定不備が原因だった。",
+                  "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals"
                 }
               ]
             }
@@ -398,6 +495,32 @@ window.ATLAS_DATA = {
           "name": "モデルのライフサイクル（提供終了）",
           "name_en": "Model lifecycle (retirements)",
           "feats": [
+            {
+              "id": "retire-opus47-fast",
+              "name": "Opus 4.7 の Fast mode 廃止",
+              "name_en": "Opus 4.7 fast mode retired",
+              "events": [
+                {
+                  "date": "2026-07-24",
+                  "type": "retire",
+                  "desc": "claude-opus-4-7 に speed:\"fast\" を指定するとエラーに（4.6と違いフォールバックなし）。標準速度の4.7自体は継続。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                },
+              ]
+            },
+            {
+              "id": "retire-opus41",
+              "name": "Claude Opus 4.1 提供終了",
+              "name_en": "Claude Opus 4.1 retired",
+              "events": [
+                {
+                  "date": "2026-08-05",
+                  "type": "retire",
+                  "desc": "claude-opus-4-1-20250805 への全リクエストがエラーに。Opus 5への移行が案内された。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                },
+              ]
+            },
             {
               "id": "dep-opus3",
               "name": "Opus 3 / Sonnet 3.7 / Haiku 3.x",
@@ -769,6 +892,19 @@ window.ATLAS_DATA = {
           "name_en": "Claude Managed Agents",
           "feats": [
             {
+              "id": "ma-budget-advisor",
+              "name": "セッション予算とadvisor",
+              "name_en": "Session budgets & advisor",
+              "events": [
+                {
+                  "date": "2026-08-07",
+                  "type": "update",
+                  "desc": "セッションに予算を設定でき、上限に達するとbudget_reachedで一時停止する。途中で上位モデルに相談できるadvisor、データレジデンシー指定、GitHubリポジトリの.claude/skills自動読込も追加。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                },
+              ]
+            },
+            {
               "id": "ma-launch",
               "name": "Managed Agents（管理型エージェント）",
               "name_en": "Managed Agents",
@@ -869,6 +1005,58 @@ window.ATLAS_DATA = {
           "name": "プラットフォーム・インフラ",
           "name_en": "Platform infrastructure",
           "feats": [
+            {
+              "id": "apps-gateway",
+              "name": "Claude apps gateway",
+              "name_en": "Claude apps gateway",
+              "events": [
+                {
+                  "date": "2026-06-29",
+                  "type": "launch",
+                  "desc": "Bedrock・Google Cloud向けのゲートウェイを提供開始。あわせてClaude in Microsoft FoundryがGAに。",
+                  "url": "https://claude.com/blog/introducing-the-claude-apps-gateway"
+                },
+              ]
+            },
+            {
+              "id": "inference-hooks",
+              "name": "Inference hooks（インラインDLP）",
+              "name_en": "Inference hooks (inline DLP)",
+              "events": [
+                {
+                  "date": "2026-08-05",
+                  "type": "beta",
+                  "desc": "claude.ai・Cowork・Claude Codeの各プロンプトを組織のAIセキュリティサーバへ照会し、許可・拒否を判定してから推論する。拒否はActivity Feedに記録される（Enterprise向け）。",
+                  "url": "https://claude.com/blog/claude-enterprise-inference-hooks"
+                },
+              ]
+            },
+            {
+              "id": "workbench-retire",
+              "name": "旧Workbenchと実験的プロンプトAPIの終了",
+              "name_en": "Legacy Workbench retirement",
+              "events": [
+                {
+                  "date": "2026-07-17",
+                  "type": "retire",
+                  "desc": "旧Workbenchは2026-08-17でアクセス終了、実験的なプロンプト生成APIも同日終了。保存済みのプロンプトや変数は新Playgroundへ引き継がれないので、事前のエクスポートが要る。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                },
+              ]
+            },
+            {
+              "id": "apikey-expiry",
+              "name": "APIキーの有効期限設定",
+              "name_en": "API key expiration",
+              "events": [
+                {
+                  "date": "2026-07-08",
+                  "type": "update",
+                  "desc": "ConsoleでAPIキーやAdminキーに有効期限を設定できるように。7日以上のキーは期限前にメールで知らせてくれる。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                },
+              ]
+            },
             {
               "id": "console",
               "name": "Console → platform.claude.com",
@@ -1036,6 +1224,32 @@ window.ATLAS_DATA = {
           "name_en": "Chat experience",
           "feats": [
             {
+              "id": "voice-think",
+              "name": "ボイスモードでじっくり考える",
+              "name_en": "Thinking in voice mode",
+              "events": [
+                {
+                  "date": "2026-07-23",
+                  "type": "update",
+                  "desc": "声で話しているときにも、難しい問いをじっくり考えられるように。",
+                  "url": "https://claude.com/blog/think-through-hard-problems-in-voice-mode"
+                },
+              ]
+            },
+            {
+              "id": "reflect",
+              "name": "Reflect（月次のふりかえり）",
+              "name_en": "Reflect (monthly review)",
+              "events": [
+                {
+                  "date": "2026-07-09",
+                  "type": "launch",
+                  "desc": "設定の中で、会話のトピックや使い方の傾向をふりかえれる機能。休憩の通知や静かな時間の設定もあわせて追加。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
+                },
+              ]
+            },
+            {
               "id": "visuals",
               "name": "チャット内のチャート・図・可視化",
               "name_en": "In-chat charts, diagrams & visualizations",
@@ -1081,6 +1295,19 @@ window.ATLAS_DATA = {
           "name": "メモリ・検索",
           "name_en": "Memory & search",
           "feats": [
+            {
+              "id": "memory-revamp",
+              "name": "メモリの刷新",
+              "name_en": "Memory revamp",
+              "events": [
+                {
+                  "date": "2026-07-10",
+                  "type": "update",
+                  "desc": "日ごとの要約をためる方式から、会話の最中にClaude自身がカテゴリ別のエントリを読み書きする方式へ。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
+                },
+              ]
+            },
             {
               "id": "mem-app",
               "name": "メモリ（チャット履歴の活用）",
@@ -1285,10 +1512,83 @@ window.ATLAS_DATA = {
       "accent": "#BC831A",
       "subs": [
         {
+          "id": "science",
+          "name": "Claude Science（研究者向け）",
+          "name_en": "Claude Science (for researchers)",
+          "feats": [
+            {
+              "id": "science-workbench",
+              "name": "科学者向けAIワークベンチ",
+              "name_en": "AI workbench for scientists",
+              "events": [
+                {
+                  "date": "2026-06-30",
+                  "type": "beta",
+                  "desc": "文献を読み解くところから多段階の研究の実行、図表や原稿の推敲までを一つの環境でまとめて扱えるアプリ。macOSとLinux向けで、ローカルまたはSSH/HPCのログインノード経由で動く。ゲノミクスや単一細胞、プロテオミクス、構造生物学など60を超えるスキルとコネクタが最初から用意されている。",
+                  "url": "https://www.anthropic.com/news/claude-science-ai-workbench"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "id": "code",
           "name": "Claude Code",
           "name_en": "Claude Code",
           "feats": [
+            {
+              "id": "cc-gov",
+              "name": "政府機関向け提供",
+              "name_en": "Available to government",
+              "events": [
+                {
+                  "date": "2026-07-07",
+                  "type": "expand",
+                  "desc": "Claude Code と Cowork を政府機関向けに提供開始。",
+                  "url": "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government"
+                },
+              ]
+            },
+            {
+              "id": "cc-cross-session",
+              "name": "セッション間メッセージング",
+              "name_en": "Cross-session messaging",
+              "events": [
+                {
+                  "date": "2026-08-01",
+                  "type": "launch",
+                  "desc": "別のセッションへメッセージを送れる仕組み。v2.1.224以降のmacOSとLinux（WSL2含む）が対象でnative Windowsは非対象。公式ドキュメントに日付表記がないため時期は概算。",
+                  "url": "https://code.claude.com/docs/en/cross-session-messaging",
+                  "approx": true
+                },
+              ]
+            },
+            {
+              "id": "cc-selfhost",
+              "name": "自社コンピュートでのセッション実行",
+              "name_en": "Run sessions on your own compute",
+              "events": [
+                {
+                  "date": "2026-08-06",
+                  "type": "beta",
+                  "desc": "自社ネットワーク内でセッションを走らせ、内部サービスやDBを外へ公開せずに扱える。Team/Enterprise向けのパブリックベータで既定はオフ。",
+                  "url": "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute"
+                },
+              ]
+            },
+            {
+              "id": "cc-auto-mode",
+              "name": "auto mode が既定に",
+              "name_en": "Auto mode becomes the default",
+              "events": [
+                {
+                  "date": "2026-08-07",
+                  "type": "update",
+                  "desc": "2026-08-14からPro/Max/Teamでauto mode（安全性の分類器を通して自動実行する動作）が既定に。分類器ぶんの追加トークン課金は撤廃。Shift+Tabで切り替えでき、管理者はmanaged settingsで統制できる。",
+                  "url": "https://claude.com/blog/auto-mode-default-in-claude-code"
+                },
+              ]
+            },
             {
               "id": "code-team",
               "name": "Team標準シートに同梱",
@@ -1533,6 +1833,19 @@ window.ATLAS_DATA = {
           "name": "Claude Cowork",
           "name_en": "Claude Cowork",
           "feats": [
+            {
+              "id": "cowork-webmobile",
+              "name": "Web・モバイルへ展開",
+              "name_en": "Expands to web and mobile",
+              "events": [
+                {
+                  "date": "2026-07-07",
+                  "type": "expand",
+                  "desc": "デスクトップ専用からWeb・モバイルへ。あわせてMicrosoft 365コネクタが書き込みに対応し、メール下書きや予定作成、ファイルの作成・更新ができるように。",
+                  "url": "https://claude.com/blog/cowork-web-mobile"
+                },
+              ]
+            },
             {
               "id": "cowork-rp",
               "name": "研究プレビュー（提供拡大）",
@@ -1780,6 +2093,19 @@ window.ATLAS_DATA = {
           "name_en": "Model Context Protocol (MCP)",
           "feats": [
             {
+              "id": "mcp-spec-20260728",
+              "name": "MCP 仕様 2026-07-28 への対応",
+              "name_en": "MCP spec 2026-07-28 support",
+              "events": [
+                {
+                  "date": "2026-07-28",
+                  "type": "update",
+                  "desc": "MCPがステートレスなrequest/response中心の設計へ。MCP AppsとTasksが拡張として標準化され、OAuth 2.0/OIDC準拠の認可でEntraやOktaと直接つなげる。Claude側は会話内でのインタラクティブUI描画やMCP tunnelsに対応。",
+                  "url": "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude"
+                },
+              ]
+            },
+            {
               "id": "mcp-interactive",
               "name": "インタラクティブ・コネクタ",
               "name_en": "Interactive connectors",
@@ -1813,6 +2139,19 @@ window.ATLAS_DATA = {
           "name": "Agent Skills（スキル）",
           "name_en": "Agent Skills",
           "feats": [
+            {
+              "id": "skill-security-scan",
+              "name": "スキル・プラグインのセキュリティスキャン",
+              "name_en": "Security scanning for skills & plugins",
+              "events": [
+                {
+                  "date": "2026-08-06",
+                  "type": "beta",
+                  "desc": "サードパーティのスキルやプラグインをアップロード・変更したときに、有害なコードが含まれていないかを自動で検査できる（Enterprise向け）。",
+                  "url": "https://support.claude.com/en/articles/12138966-release-notes"
+                },
+              ]
+            },
             {
               "id": "skills-intro",
               "name": "スキルの導入",
