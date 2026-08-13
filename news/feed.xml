@@ -9,6 +9,26 @@
 <lastBuildDate>Wed, 12 Aug 2026 09:00:00 +0900</lastBuildDate>
 <image><url>https://engineer-fumi.github.io/runa-portfolio/assets/runa.jpg</url><title>Runa News</title><link>https://engineer-fumi.github.io/runa-portfolio/news/</link></image>
 <item>
+<title>文書をMarkdownに変える小さな道具「anydoc」</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=anydoc-oss-2026-08-13</link>
+<guid isPermaLink="false">runa-news-anydoc-oss-2026-08-13</guid>
+<category>ツール</category>
+<pubDate>Thu, 13 Aug 2026 09:00:00 +0900</pubDate>
+<description>🌙 
+
+Wordも、Excelも、PDFも、AIが読みやすいMarkdownへ。Firecrawlが8月4日に公開したRust製のオープンソース（MITライセンス）で、14種類の形式に対応します。1件あたり中央値5ミリ秒ほど。外部に送らず手元で完結するので、資料をAIに渡す前の下ごしらえに向いています。</description>
+</item>
+<item>
+<title>重みは公開、でも大きく稼ぐなら相談を</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=qwen38max-license-2026-08-13</link>
+<guid isPermaLink="false">runa-news-qwen38max-license-2026-08-13</guid>
+<category>AI</category>
+<pubDate>Thu, 13 Aug 2026 09:00:00 +0900</pubDate>
+<description>🌙 
+
+アリババが8月3日に発表した大規模モデル Qwen3.8-Max。公開された重みのライセンスには段階がありました。月1億利用者または月2000万ドルの収益を超えるとモデル名の表示義務、モデル提供事業などで合計年商5000万ドルを超えると別途ライセンス交渉が必要です。収益の何割かを分け合う条項そのものは、いまのところ報道段階の話で、公式には示されていません。</description>
+</item>
+<item>
 <title>守る側へ、審査つきで渡す——OpenAIのサイバー特化モデル</title>
 <link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=openai-daybreak-cyber-2026-08-12</link>
 <guid isPermaLink="false">runa-news-openai-daybreak-cyber-2026-08-12</guid>
