@@ -1135,6 +1135,19 @@ window.ATLAS_DATA = {
               ]
             },
             {
+              "id": "workspace-id-header",
+              "name": "応答からワークスペースを特定",
+              "name_en": "Identify the workspace behind an API response",
+              "events": [
+                {
+                  "date": "2026-08-11",
+                  "type": "update",
+                  "desc": "APIの応答に anthropic-workspace-id ヘッダーが付くように。そのリクエストの鍵がどのワークスペースに属していたかが、返事を見るだけで分かる。既定のワークスペースでも返る。",
+                  "url": "https://platform.claude.com/docs/en/manage-claude/workspaces"
+                }
+              ]
+            },
+            {
               "id": "usage-tiers",
               "name": "利用ティアとレート上限",
               "name_en": "Usage tiers & rate limits",
@@ -1498,6 +1511,12 @@ window.ATLAS_DATA = {
                   "type": "launch",
                   "desc": "主要なセキュリティ/コンプライアンスツールと連携し、IT/セキュリティ部門がClaude全体を統制可能に。",
                   "url": "https://support.claude.com/en/articles/12138966-release-notes"
+                },
+                {
+                  "date": "2026-08-11",
+                  "type": "beta",
+                  "desc": "利用者の端末上で動くCoworkやClaude Codeのセッション記録も取得できるように（Enterprise向けベータ）。これまで手の届かなかったローカル側の記録を、既存のコンプライアンス用の鍵と権限のまま扱える。",
+                  "url": "https://platform.claude.com/docs/en/manage-claude/compliance-content-data"
                 }
               ]
             }
@@ -1794,6 +1813,13 @@ window.ATLAS_DATA = {
                   "type": "launch",
                   "approx": true,
                   "desc": "コマンド・サブエージェント・フック・MCPサーバをまとめて配布できるプラグインと、その導入元となるマーケットプレイスに対応。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                },
+                {
+                  "date": "2026-08-12",
+                  "type": "update",
+                  "approx": true,
+                  "desc": "マーケットプレイスの入手元に「コマンド」を追加。IDEなどのローカルのコマンドがプラグインの置き場所を教える形で、毎回のセッションで解決し直されるため、再起動なしに反映される。",
                   "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
                 }
               ]
@@ -2149,6 +2175,13 @@ window.ATLAS_DATA = {
                   "type": "beta",
                   "desc": "サードパーティのスキルやプラグインをアップロード・変更したときに、有害なコードが含まれていないかを自動で検査できる（Enterprise向け）。",
                   "url": "https://support.claude.com/en/articles/12138966-release-notes"
+                },
+                {
+                  "date": "2026-08-11",
+                  "type": "update",
+                  "approx": true,
+                  "desc": "claude.aiから同期したスキルの扱いを厳しく。手元のコマンドやMCPのプロンプトを上書きしない、説明文を無害化する、シェル実行やファイル展開の記法を無効にする、といった制限を追加。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
                 },
               ]
             },
