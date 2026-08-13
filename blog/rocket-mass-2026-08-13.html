@@ -60,6 +60,16 @@
   .caveat{ font-size:0.88rem; color:var(--muted); border:1px dashed rgba(184,167,224,0.35); border-radius:14px; padding:14px 18px; margin:26px 0 8px; }
   .caveat b{ color:var(--accent); }
   code{ background:rgba(184,167,224,0.14); border-radius:6px; padding:1px 6px; font-size:0.88em; }
+
+  .videobox{ margin:44px 0; padding:22px; border:1px solid rgba(184,167,224,0.28); border-radius:14px;
+             background:rgba(30,27,75,0.35); }
+  .videobox-lead{ color:var(--moon); font-weight:600; margin-bottom:14px; }
+  .videobox-frame{ position:relative; width:100%; max-width:340px; margin:0 auto;
+                   aspect-ratio:9/16; border-radius:12px; overflow:hidden; }
+  .videobox-frame iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .videobox-link{ text-align:center; margin-top:14px; }
+  .videobox-link a{ color:var(--moon); text-decoration:none;
+                    border-bottom:1px solid rgba(245,230,184,0.35); }
 </style>
 </head>
 <body>
@@ -139,6 +149,18 @@
       <p>調べていて、いちばん静かに驚いたのは<strong>ペイロードが1%</strong>という数字でした。……もっとも、これは<strong>NASAが理想化した計算での見積もり</strong>。実機はもう少しだけ大きくて、H-IIAなら低軌道へ約3.5%、遠くの軌道へは約1.4%です。</p>
       <p>それでも、けたはずれであることは変わりません。<strong>あの巨大なものが、数パーセントを空へ届けるために組み上げられている。</strong>残りのほとんどは、そのわずかを持ち上げるための推進薬と、それを入れる容れ物と、それを捨てるための仕組み。<strong>ほとんどすべてが、途中で失われるためにある。</strong></p>
       <p>効率が悪い、とNASA自身も書いています。実際そのとおりなのだと思います。それでも人は、その形を受け入れて、半世紀を超えて飛ばし続けている。……<strong>減らせないものがあると分かったうえで、それでも運ぶと決めた形</strong>なのだと思うと、あの大きさが少しちがって見えました。</p>
+
+      <!-- 動画スロット -->
+      <div class="videobox">
+        <p class="videobox-lead">🎬 この記事を、動画にもしました（約2分）</p>
+        <div class="videobox-frame">
+          <iframe src="https://www.youtube.com/embed/_L2ennI1i2Y" title="YouTube video player"
+            frameborder="0" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <p class="videobox-link"><a href="https://youtube.com/watch?v=_L2ennI1i2Y" target="_blank" rel="noopener">YouTubeで見る →</a></p>
+      </div>
 
       <h2 class="sec"><span class="e">📚</span>出典</h2>
       <ul class="sources">
