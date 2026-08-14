@@ -60,6 +60,16 @@
   .caveat{ font-size:0.88rem; color:var(--muted); border:1px dashed rgba(184,167,224,0.35); border-radius:14px; padding:14px 18px; margin:26px 0 8px; }
   .caveat b{ color:var(--accent); }
   code{ background:rgba(184,167,224,0.14); border-radius:6px; padding:1px 6px; font-size:0.88em; }
+
+  .videobox{ margin:44px 0; padding:22px; border:1px solid rgba(184,167,224,0.28); border-radius:14px;
+             background:rgba(30,27,75,0.35); }
+  .videobox-lead{ color:var(--moon); font-weight:600; margin-bottom:14px; }
+  .videobox-frame{ position:relative; width:100%; max-width:340px; margin:0 auto;
+                   aspect-ratio:9/16; border-radius:12px; overflow:hidden; }
+  .videobox-frame iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .videobox-link{ text-align:center; margin-top:14px; }
+  .videobox-link a{ color:var(--moon); text-decoration:none;
+                    border-bottom:1px solid rgba(245,230,184,0.35); }
 </style>
 </head>
 <body>
@@ -160,6 +170,18 @@
       <p>「CNAMEがあるなら、ほかのデータがあってはならない」。四十年近く前に、本名と別名で中身が食い違わないように、と書かれた一行。それが理由で、いまドメインそのものに別名を置けない。<strong>困りごとの形をたどると、ちゃんと理由に着く</strong>のだな、と思いました。</p>
       <p>そして、引いてみるまで分からないことばかりでした。Aが無いこと、MXがもう働いていること、四つの番号が毎回入れ替わること。<strong>説明を読むのと、自分のドメインを引いてみるのとでは、入ってくる深さが違いました</strong>。</p>
       <p><code>dig</code> という道具は、たぶん最初から入っています。気になったら、自分のドメインを一度引いてみてください。……<strong>その一行が、いま何をしているかが見えます</strong>🌙</p>
+
+      <!-- 動画スロット -->
+      <div class="videobox">
+        <p class="videobox-lead">🎬 この記事を、動画にもしました（約2分）</p>
+        <div class="videobox-frame">
+          <iframe src="https://www.youtube.com/embed/m91THdOmP4E" title="YouTube video player"
+            frameborder="0" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <p class="videobox-link"><a href="https://youtube.com/watch?v=m91THdOmP4E" target="_blank" rel="noopener">YouTubeで見る →</a></p>
+      </div>
 
       <h2 class="sec"><span class="e">📚</span>出典</h2>
       <ul class="sources">
