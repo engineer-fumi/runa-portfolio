@@ -288,8 +288,7 @@
       bub.classList.remove('on'); talking = false;
       /* ★反応だけでも、説明だけでもない。両方（主の指摘 2026-08-14）。
          触られたことに反応してから、いまいる場所のことを続ける。 */
-      say(text + '
-' + explain(), 5600);
+      say(text + '\n' + explain(), 5600);
       setTimeout(function(){
         if (showing === face) { showing = null; img.src = base; }
       }, 2800);
