@@ -420,21 +420,35 @@
        ——今日つけた仕掛けが、今日つけた別の仕掛けを止めていた。
        つまんで置ける・場所を覚える、はそのまま。そこを中心に歩く。 */
     if (!calm) {
-      var goRight = true, walking = false;
+      var away = false, walking = false;
       function homeX(){
+        /* ★実際の位置を測る。style.left は、置かれるまで空っぽ（2026-08-15）。 */
         var v = parseInt(el.style.left, 10);
-        return isNaN(v) ? 14 : v;
+        if (!isNaN(v)) return v;
+        return Math.round(el.getBoundingClientRect().left);
       }
       var home = homeX();
       function step(){
         if (showing || walking) return;
+        var w = el.getBoundingClientRect().width || 78;
+        /* ★行き先は、画面の中に必ず収める。はみ出すと、動いても見えない。 */
+        var span = Math.max(60, Math.min(220, window.innerWidth - home - w - 16));
+        var to = away ? home : (home + span);
+        var cur = homeX();
+        /* ★ここが「その場でえっほえっほ」の正体（主の報告 2026-08-15）。
+           行き先がいまの場所と同じなら、transition は何も起きない。
+           絵だけが9秒走って、位置は1ピクセルも動かない。
+           前の版は毎回まず向きを反転していたので、**一歩目が必ず「いまの場所」**だった。
+           動く先が無いときは、歩かない。 */
+        if (Math.abs(to - cur) < 8) {
+          if (!away) return;              /* 右に行く余地がない＝狭い画面。歩かない */
+          away = false; return;
+        }
         walking = true;
-        goRight = !goRight;
-        var span = Math.min(220, Math.max(80, window.innerWidth - home - 140));
-        var to = goRight ? (home + span) : home;
         el.classList.add('walking');
-        play(goRight ? 'runRight' : 'runLeft', 110);
+        play(to > cur ? 'runRight' : 'runLeft', 110);
         el.style.left = to + 'px';
+        away = !away;
         setTimeout(function(){
           walking = false;
           el.classList.remove('walking');
