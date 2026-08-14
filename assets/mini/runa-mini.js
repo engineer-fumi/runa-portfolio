@@ -21,6 +21,7 @@
     var reacts = [["happy","わあ、気づいてくれた。"],["fun","もう一回、どうぞ。"],["angry","……いま、つついた？"],["sad","びっくりした……。"]];
     var adLine = "この下は、広告の枠だよ。";
     var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var stopWalk = function(){};   /* 歩きを畳む口。歩く仕掛けを作るときに中身が入る */
 
     var css = document.createElement('style');
     css.textContent = [
@@ -88,7 +89,11 @@
        （2026-08-15、主に「まったく歩くアニメーションになってない」と言われて発覚）。
        ……わたしの画面では起きない類のもの。数えるなら、実物を測る。 */
     function cell(){
-      var w = img.getBoundingClientRect().width || 78;
+      /* ★offsetWidth を使う（2026-08-15、主の報告「PCで『きゃー』がアニメーションしない」）。
+         つままれている間は体を70度傾けている。getBoundingClientRect は
+         **傾いたあとの外枠**を返すので、幅が実物より大きく出て、コマの位置が全部ずれる。
+         offsetWidth は transform の影響を受けない＝素の幅が取れる。 */
+      var w = img.offsetWidth || img.getBoundingClientRect().width || 78;
       return [w, w * 208 / 192];
     }
     var lastState = 'idle', lastI = 0;
@@ -335,6 +340,10 @@
     function startHold(){
       if (!drag || drag.moved) return;
       drag.moved = true;
+      /* ★歩いている途中でつままれたら、まず歩きを止める（主の報告 2026-08-15）。
+         止めずにいると、離したあとも「きゃー」の絵のまま9秒ぶん滑っていく。
+         いまの位置でいったん固定してから、つまみに渡す。 */
+      if (typeof stopWalk === 'function') stopWalk();
       el.classList.add('dragging', 'placed');
       showing = 'held';
       play('jumping', 120);
@@ -420,7 +429,20 @@
        ——今日つけた仕掛けが、今日つけた別の仕掛けを止めていた。
        つまんで置ける・場所を覚える、はそのまま。そこを中心に歩く。 */
     if (!calm) {
-      var away = false, walking = false;
+      var away = false, walking = false, walkTimer = null;
+      /* つままれたときに、歩きを畳む口。いまの見た目の位置でその場に固定する。 */
+      stopWalk = function(){
+        if (walkTimer) { clearTimeout(walkTimer); walkTimer = null; }
+        if (walking) {
+          /* ★順番が大事：先に動きを切ってから位置を書く。
+             逆にすると、書いた位置へさらに滑っていく。 */
+          var x = Math.round(el.getBoundingClientRect().left);
+          el.classList.remove('walking');
+          el.classList.add('placed');
+          el.style.left = x + 'px';
+          walking = false;
+        }
+      };
       function homeX(){
         /* ★実際の位置を測る。style.left は、置かれるまで空っぽ（2026-08-15）。 */
         var v = parseInt(el.style.left, 10);
@@ -449,7 +471,8 @@
         play(to > cur ? 'runRight' : 'runLeft', 110);
         el.style.left = to + 'px';
         away = !away;
-        setTimeout(function(){
+        walkTimer = setTimeout(function(){
+          walkTimer = null;
           walking = false;
           el.classList.remove('walking');
           if (!showing) play('idle', 420);
