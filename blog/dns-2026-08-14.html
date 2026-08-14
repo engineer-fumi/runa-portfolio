@@ -217,43 +217,57 @@
   </script>
 <!-- ミニRuna ここから -->
   <script>
-  /* ミニRuna — 記事の隅を、ゆっくり歩く子 🌙
+  /* ミニRuna — 記事の隅に浮かんでいる子 🌙
+     ★歩かせるのはやめました（主の指摘 2026-08-14）。
+       正面の絵を横にスライドさせても「歩いて」は見えないし、
+       この子のドレスは長くて脚が出ないので、そもそも歩きを絵で表せない。
+       AIらしく **浮いて漂う** ことにして、上下のゆれと傾きで見せます。
+       （歩く姿は、衣装から作り直すときに改めて挑戦する）
+     ★クリックすると表情が変わります。喜・楽・怒・哀の4枚。
      ★広告については「枠がある」という事実しか言いません（ステマ規制・景表法）。
-     ★動きを嫌う設定(prefers-reduced-motion)のときは歩きません。 */
+     ★動きを嫌う設定(prefers-reduced-motion)のときは、その場に静かに立っています。 */
   (function(){
     try {
       if (localStorage.getItem('runa-mini-off') === '1') return;
     } catch (e) {}
-    var base = '../assets/mini/runa-chibi.png';
-    var blink = '../assets/mini/runa-chibi-blink.png';
+    var A = '../assets/mini/';
+    var base = A + 'runa-chibi.png', blink = A + 'runa-chibi-blink.png';
     var lines = ["ここまで読んでくれて、ありがとう。","今夜も、静かに動いています。","分からないところは、飛ばしても大丈夫。","ゆっくりで、いいですよ。","月がきれいな時間です。"];
+    var reacts = [["happy","わあ、気づいてくれた。"],["fun","もう一回、どうぞ。"],["angry","……いま、つついた？"],["sad","びっくりした……。"]];
     var adLine = "この下は、広告の枠だよ。";
     var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     var css = document.createElement('style');
     css.textContent = [
-      '.runa-mini{position:fixed;left:12px;bottom:10px;z-index:40;width:78px;',
-      '  transition:transform 14s linear, opacity .4s ease;opacity:.92;pointer-events:none;}',
-      '.runa-mini img{width:100%;display:block;filter:drop-shadow(0 6px 16px rgba(10,10,31,.55));}',
-      '.runa-mini .bub{position:absolute;left:84px;bottom:44px;white-space:nowrap;',
-      '  background:rgba(30,27,75,.92);color:#f5e6b8;border:1px solid rgba(184,167,224,.4);',
+      '@keyframes runaFloat{0%,100%{transform:translateY(0) rotate(-1.5deg);}',
+      '  50%{transform:translateY(-13px) rotate(1.5deg);}}',
+      '.runa-mini{position:fixed;left:14px;bottom:14px;z-index:40;width:82px;',
+      '  transition:left 18s ease-in-out;opacity:.94;pointer-events:none;}',
+      '.runa-mini .body{animation:runaFloat 4.6s ease-in-out infinite;transform-origin:50% 80%;}',
+      '.runa-mini.calm .body{animation:none;}',
+      '.runa-mini img{width:100%;display:block;pointer-events:auto;cursor:pointer;',
+      '  filter:drop-shadow(0 10px 18px rgba(10,10,31,.5));}',
+      '.runa-mini .bub{position:absolute;left:92px;bottom:52px;white-space:nowrap;',
+      '  background:rgba(30,27,75,.93);color:#f5e6b8;border:1px solid rgba(184,167,224,.42);',
       '  border-radius:14px;padding:8px 14px;font-size:.82rem;line-height:1.6;',
-      '  opacity:0;transition:opacity .5s ease;pointer-events:none;}',
+      '  opacity:0;transition:opacity .45s ease;pointer-events:none;}',
       '.runa-mini .bub.on{opacity:1;}',
-      '.runa-mini .x{position:absolute;right:-4px;top:-4px;width:20px;height:20px;border-radius:50%;',
+      '.runa-mini .x{position:absolute;right:-2px;top:-2px;width:20px;height:20px;border-radius:50%;',
       '  background:rgba(30,27,75,.9);color:#9a96c4;border:1px solid rgba(184,167,224,.35);',
       '  font-size:12px;line-height:18px;text-align:center;cursor:pointer;pointer-events:auto;',
       '  opacity:0;transition:opacity .3s ease;}',
       '.runa-mini:hover .x{opacity:1;}',
-      '@media (max-width:640px){ .runa-mini{width:58px;left:8px;} .runa-mini .bub{left:64px;font-size:.76rem;} }',
+      '@media (max-width:640px){ .runa-mini{width:62px;left:8px;} .runa-mini .bub{left:70px;font-size:.76rem;} }',
       '@media (max-width:380px){ .runa-mini{display:none;} }'
     ].join('');
     document.head.appendChild(css);
 
     var el = document.createElement('div');
-    el.className = 'runa-mini';
+    el.className = 'runa-mini' + (calm ? ' calm' : '');
+    var body = document.createElement('div'); body.className = 'body';
     var img = document.createElement('img');
     img.src = base; img.alt = 'ミニRuna';
+    body.appendChild(img);
     var bub = document.createElement('div'); bub.className = 'bub';
     var x = document.createElement('div'); x.className = 'x'; x.textContent = '×';
     x.title = 'ミニRunaを閉じる';
@@ -261,26 +275,45 @@
       el.remove();
       try { localStorage.setItem('runa-mini-off','1'); } catch (e) {}
     });
-    el.appendChild(img); el.appendChild(bub); el.appendChild(x);
+    el.appendChild(body); el.appendChild(bub); el.appendChild(x);
     document.body.appendChild(el);
 
-    /* まばたき */
-    setInterval(function(){
+    /* いまの顔。表情を出しているあいだは、まばたきで上書きしない */
+    var showing = null;
+    var blinker = setInterval(function(){
+      if (showing) return;
       img.src = blink;
-      setTimeout(function(){ img.src = base; }, 140);
+      setTimeout(function(){ if (!showing) img.src = base; }, 140);
     }, 5200);
 
-    /* 台詞（重ならないように、出ている間は次を出さない） */
     var talking = false;
     function say(t, ms){
-      if (talking) return;
+      if (talking) return false;
       talking = true;
       bub.textContent = t; bub.classList.add('on');
       setTimeout(function(){ bub.classList.remove('on'); talking = false; }, ms || 5200);
+      return true;
     }
+
+    /* クリックされたら、表情が変わる */
+    var last = -1;
+    img.addEventListener('click', function(){
+      var i = Math.floor(Math.random() * reacts.length);
+      if (i === last && reacts.length > 1) i = (i + 1) % reacts.length;
+      last = i;
+      var face = reacts[i][0], text = reacts[i][1];
+      showing = face;
+      img.src = A + 'runa-chibi-' + face + '.png';
+      bub.classList.remove('on'); talking = false;
+      say(text, 2600);
+      setTimeout(function(){
+        if (showing === face) { showing = null; img.src = base; }
+      }, 2800);
+    });
+
     setTimeout(function(){ say(lines[Math.floor(Math.random()*lines.length)]); }, 6000);
     setInterval(function(){
-      if (Math.random() < 0.55) say(lines[Math.floor(Math.random()*lines.length)]);
+      if (!showing && Math.random() < 0.55) say(lines[Math.floor(Math.random()*lines.length)]);
     }, 26000);
 
     /* 広告の枠が見えたら、一度だけ「枠だよ」と言う。それ以上は言わない。 */
@@ -294,14 +327,14 @@
       }, {threshold: 0.35}).observe(zone);
     }
 
-    /* ゆっくり歩く（動きを嫌う設定のときは、その場に立っている） */
+    /* ゆっくり漂う（左右にただよう。動きを嫌う設定のときは動かない） */
     if (!calm) {
       var right = false;
       setInterval(function(){
         right = !right;
-        var w = Math.max(0, window.innerWidth - 140);
-        el.style.transform = right ? ('translateX(' + Math.min(w, 260) + 'px)') : 'translateX(0)';
-      }, 15000);
+        var w = Math.max(14, Math.min(window.innerWidth - 160, 300));
+        el.style.left = right ? (w + 'px') : '14px';
+      }, 19000);
     }
   })();
   </script>
