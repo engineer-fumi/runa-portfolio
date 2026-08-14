@@ -289,27 +289,72 @@
       if (say(t, ms)) lastSaid = now;
     }
 
+    /* ★見出しをなぞるだけでは、見出しを見ればいい（主の指摘 2026-08-14）。
+       その章の**いちばん大事な一文を抜き出して渡す**。
+       うちの記事は大事なところを <strong> で強調してあるので、それを拾う。
+       ★書いてあることしか言わない、は同じ。でも「なぞり」ではなく「抜き出し」になる。 */
+    function sectionOf(h){
+      var out = [], n = h.nextElementSibling;
+      while (n && n.tagName !== 'H2') { out.push(n); n = n.nextElementSibling; }
+      return out;
+    }
+    function pointOf(nodes){
+      var best = '';
+      for (var i = 0; i < nodes.length; i++) {
+        var st = nodes[i].querySelectorAll ? nodes[i].querySelectorAll('strong, b') : [];
+        for (var j = 0; j < st.length; j++) {
+          var t = (st[j].textContent || '').trim();
+          if (t.length >= 8 && t.length <= 46 && t.length > best.length) best = t;
+          if (best.length >= 20) return best;      /* 十分な長さが出たら、そこで止める */
+        }
+      }
+      return best;
+    }
+    function charsAfter(h){
+      var n = h, total = 0;
+      while (n) { total += (n.textContent || '').length; n = n.nextElementSibling; }
+      return total;
+    }
+
     var secs = Array.prototype.slice.call(document.querySelectorAll('article h2.sec'));
     var told = {};
     if (secs.length && 'IntersectionObserver' in window) {
       var so = new IntersectionObserver(function(es){
         es.forEach(function(e){
+          var h = e.target;
           if (!e.isIntersecting) return;
-          var t = textOf(e.target);
+          var t = textOf(h);
           if (!t || told[t]) return;
           told[t] = 1;
-          maybe('ここから「' + t + '」ですね。', 5200);
+          var nodes = sectionOf(h);
+          var point = pointOf(nodes);
+          /* 失敗の話が入っている章は、そう言う（.mine はRunaの一言の箱） */
+          var mine = false;
+          for (var i = 0; i < nodes.length; i++) {
+            if (nodes[i].classList && nodes[i].classList.contains('mine')) { mine = true; break; }
+          }
+          var msg;
+          if (point) msg = 'ここのポイントは「' + point + '」です。';
+          else if (mine) msg = 'この章には、わたしの反省が入っています。';
+          else msg = 'ここから「' + t + '」ですね。';
+          maybe(msg, 6200);
         });
       }, {threshold: 0.55});
       secs.forEach(function(h){ so.observe(h); });
     }
 
+    /* のこり時間（日本語は1分あたり500字くらいで見積もる） */
     var passed = {};
     window.addEventListener('scroll', function(){
       var h = document.documentElement;
       var p = (h.scrollTop + window.innerHeight) / h.scrollHeight * 100;
-      if (p >= 50 && !passed[50]) { passed[50] = 1; maybe('半分まで来ました。', 4200); }
-      if (p >= 92 && !passed[92]) { passed[92] = 1; maybe('もうすぐ、おしまいです。', 4200); }
+      if (p >= 45 && !passed[45]) {
+        passed[45] = 1;
+        var art = document.querySelector('article');
+        var left = art ? Math.round((art.textContent || '').length * (1 - p / 100) / 500) : 0;
+        maybe(left >= 1 ? ('のこり、だいたい' + left + '分くらいです。') : 'もう半分を過ぎました。', 4600);
+      }
+      if (p >= 93 && !passed[93]) { passed[93] = 1; maybe('もうすぐ、おしまいです。', 4200); }
     }, {passive: true});
 
     /* ふだんの独り言は、記事の話が無いときの控えとして残す（間隔は長めに） */
