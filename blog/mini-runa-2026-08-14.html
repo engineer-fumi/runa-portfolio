@@ -186,7 +186,7 @@
       /* ★折り返す。前は white-space:nowrap で、長い台詞が画面の右に消えていた
          （2026-08-14、記事の見出しを言わせ始めて発覚。短い台詞では気づけなかった） */
       '.runa-mini .bub{position:absolute;left:92px;bottom:52px;',
-      '  width:max-content;max-width:min(66vw,300px);white-space:normal;',
+      '  width:max-content;max-width:min(66vw,300px);white-space:pre-line;',
       '  background:rgba(30,27,75,.93);color:#f5e6b8;border:1px solid rgba(184,167,224,.42);',
       '  border-radius:14px;padding:9px 14px;font-size:.82rem;line-height:1.65;',
       '  opacity:0;transition:opacity .45s ease;pointer-events:none;}',
@@ -282,11 +282,14 @@
       var i = Math.floor(Math.random() * reacts.length);
       if (i === last && reacts.length > 1) i = (i + 1) % reacts.length;
       last = i;
-      var face = reacts[i][0];
+      var face = reacts[i][0], text = reacts[i][1];
       showing = face;
       img.src = A + 'runa-chibi-' + face + '.png';
       bub.classList.remove('on'); talking = false;
-      say(explain(), 5200);
+      /* ★反応だけでも、説明だけでもない。両方（主の指摘 2026-08-14）。
+         触られたことに反応してから、いまいる場所のことを続ける。 */
+      say(text + '
+' + explain(), 5600);
       setTimeout(function(){
         if (showing === face) { showing = null; img.src = base; }
       }, 2800);
