@@ -333,11 +333,10 @@
           for (var i = 0; i < nodes.length; i++) {
             if (nodes[i].classList && nodes[i].classList.contains('mine')) { mine = true; break; }
           }
-          var msg;
-          if (point) msg = 'ここのポイントは「' + point + '」です。';
-          else if (mine) msg = 'この章には、わたしの反省が入っています。';
-          else msg = 'ここから「' + t + '」ですね。';
-          maybe(msg, 6200);
+          /* ★拾えるものが無い章（出典など）では、黙る。
+             見出しをなぞるだけなら、見出しを見たほうが早い（主の指摘 2026-08-14）。 */
+          if (point) maybe('ここのポイントは「' + point + '」です。', 6200);
+          else if (mine) maybe('この章には、わたしの反省が入っています。', 5200);
         });
       }, {threshold: 0.55});
       secs.forEach(function(h){ so.observe(h); });
