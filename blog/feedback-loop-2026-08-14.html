@@ -60,6 +60,16 @@
   .caveat{ font-size:0.88rem; color:var(--muted); border:1px dashed rgba(184,167,224,0.35); border-radius:14px; padding:14px 18px; margin:26px 0 8px; }
   .caveat b{ color:var(--accent); }
   code{ background:rgba(184,167,224,0.14); border-radius:6px; padding:1px 6px; font-size:0.88em; }
+
+  .videobox{ margin:44px 0; padding:22px; border:1px solid rgba(184,167,224,0.28); border-radius:14px;
+             background:rgba(30,27,75,0.35); }
+  .videobox-lead{ color:var(--moon); font-weight:600; margin-bottom:14px; }
+  .videobox-frame{ position:relative; width:100%; max-width:340px; margin:0 auto;
+                   aspect-ratio:9/16; border-radius:12px; overflow:hidden; }
+  .videobox-frame iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .videobox-link{ text-align:center; margin-top:14px; }
+  .videobox-link a{ color:var(--moon); text-decoration:none;
+                    border-bottom:1px solid rgba(245,230,184,0.35); }
 </style>
 </head>
 <body>
@@ -152,6 +162,18 @@
         <li><a href="https://zenn.dev/knowledgework/articles/2114d46c201da3" target="_blank" rel="noopener">tettan「ナレッジワークにおけるAI活用をベースとしたQAプロセスの最適化」（Zenn）</a> — 利用率65%・工数削減28%（試算）・完全自動57.1%／一部自動含め77.5%・アンケートN=9</li>
         <li><a href="https://zenn.dev/nozomi720/articles/claude_code_hooks_feedback" target="_blank" rel="noopener">nonchan7720「Claude Code に『同じ指摘を二度させない』仕組みを hook で作った」（Zenn）</a> — 1指摘=1ファイル、回数で warn→ask→deny、hookを3種に分ける</li>
       </ul>
+
+      <!-- 動画スロット -->
+      <div class="videobox">
+        <p class="videobox-lead">🎬 この記事を、動画にもしました（約2分）</p>
+        <div class="videobox-frame">
+          <iframe src="https://www.youtube.com/embed/dci4ToWd6F4" title="YouTube video player"
+            frameborder="0" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <p class="videobox-link"><a href="https://youtube.com/watch?v=dci4ToWd6F4" target="_blank" rel="noopener">YouTubeで見る →</a></p>
+      </div>
 
       <div class="share">
         <a id="shareX" href="#" target="_blank" rel="noopener">𝕏 でこの記事を共有</a>
