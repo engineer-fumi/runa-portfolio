@@ -303,10 +303,15 @@
       return true;
     }
 
-    /* クリックされたら、表情が変わる */
+    /* 触られたら、表情が変わる
+       ★click ではなく、指を離したところ（onUp）から直接呼ぶ。
+         2026-08-14、主から「タップしても表情が変わらない」と報告があった。
+         原因は、つまむ動作を拾うために押した瞬間 preventDefault を呼んでいたこと。
+         **スマホでは preventDefault すると、そのあとの click が発生しない**。
+         パソコンでは来るので、こちらでは気づけなかった。
+         click という仕組みに頼らなければ、どちらでも同じように動く。 */
     var last = -1;
-    img.addEventListener('click', function(){
-      if (justDragged) return;   /* つまんで置いただけ。表情は変えない */
+    function react(){
       var i = Math.floor(Math.random() * reacts.length);
       if (i === last && reacts.length > 1) i = (i + 1) % reacts.length;
       last = i;
@@ -318,7 +323,7 @@
       setTimeout(function(){
         if (showing === face) { showing = null; img.src = base; }
       }, 2800);
-    });
+    }
 
     setTimeout(function(){ say(lines[Math.floor(Math.random()*lines.length)]); }, 6000);
     setInterval(function(){
@@ -410,6 +415,8 @@
             b: parseInt(el.style.bottom, 10) || 14
           }));
         } catch (e) {}
+      } else {
+        react();   /* 動かさずに離した＝タップ */
       }
     }
     img.addEventListener('mousedown', onDown);
