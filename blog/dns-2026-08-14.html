@@ -270,6 +270,11 @@
     var body = document.createElement('div'); body.className = 'body';
     var img = document.createElement('img');
     img.src = base; img.alt = 'ミニRuna';
+    /* ★まだ用意できていない絵を指しても、割れた画像を出さずに元へ戻す。
+       （つままれる絵は用意中。届けば、この仕掛けを通らずそのまま出る） */
+    img.addEventListener('error', function(){
+      if (img.src.indexOf('runa-chibi.png') < 0) { showing = null; img.src = base; }
+    });
     body.appendChild(img);
     var bub = document.createElement('div'); bub.className = 'bub';
     var x = document.createElement('div'); x.className = 'x'; x.textContent = '×';
@@ -289,7 +294,7 @@
       setTimeout(function(){ if (!showing) img.src = base; }, 140);
     }, 5200);
 
-    var talking = false;
+    var talking = false, kick = null, kickFlip = false;
     function say(t, ms){
       if (talking) return false;
       talking = true;
@@ -345,17 +350,39 @@
       }
     } catch (e) {}
 
+    /* ★タップとドラッグの分け方（主の指摘 2026-08-14）
+       前の版は「1ピクセルでも動いたらクリックを飲み込む」書き方で、
+       人の指はぴたりと止まらないので、ふつうのタップまで全部ドラッグ扱いになっていた。
+       **距離と時間の両方**で分ける：
+         近く（6px未満）かつ短く（400ms未満）押した → タップ。表情が変わる
+         それ以外                                   → ドラッグ。つままれる */
+    var TAP_PX = 6, TAP_MS = 400;
     var drag = null, justDragged = false;
     function onDown(ev){
       var pt = ev.touches ? ev.touches[0] : ev;
       var r = el.getBoundingClientRect();
-      drag = {dx: pt.clientX - r.left, dy: pt.clientY - r.top, moved: false};
-      el.classList.add('dragging', 'placed');
+      drag = {dx: pt.clientX - r.left, dy: pt.clientY - r.top,
+              x0: pt.clientX, y0: pt.clientY, t0: Date.now(), moved: false};
       ev.preventDefault();
     }
     function onMove(ev){
       if (!drag) return;
       var pt = ev.touches ? ev.touches[0] : ev;
+      var far = Math.abs(pt.clientX - drag.x0) > TAP_PX || Math.abs(pt.clientY - drag.y0) > TAP_PX;
+      var long_ = Date.now() - drag.t0 > TAP_MS;
+      if (!far && !long_) return;          /* まだタップかもしれない。動かさない */
+      if (!drag.moved) {                   /* ここで初めて「つままれた」に変わる */
+        drag.moved = true;
+        el.classList.add('dragging', 'placed');
+        showing = 'held';
+        img.src = A + 'runa-chibi-held-a.png';
+        bub.classList.remove('on'); talking = false;
+        say('きゃっ……！', 1800);
+        kick = setInterval(function(){
+          kickFlip = !kickFlip;
+          img.src = A + (kickFlip ? 'runa-chibi-held-b.png' : 'runa-chibi-held-a.png');
+        }, 140);
+      }
       var l = pt.clientX - drag.dx;
       var t = pt.clientY - drag.dy;
       var w = el.offsetWidth, h = el.offsetHeight;
@@ -363,7 +390,6 @@
       t = Math.max(0, Math.min(window.innerHeight - h, t));
       el.style.left = l + 'px';
       el.style.bottom = (window.innerHeight - t - h) + 'px';
-      drag.moved = true;   /* onMove が来た＝動かした */
       ev.preventDefault();
     }
     function onUp(){
@@ -371,7 +397,10 @@
       var wasMoved = drag.moved;
       drag = null;
       el.classList.remove('dragging');
+      if (kick) { clearInterval(kick); kick = null; }
       if (wasMoved) {
+        /* 置かれた。ふう、と息をついて元に戻る */
+        showing = null; img.src = base;
         placed = true;
         justDragged = true;
         setTimeout(function(){ justDragged = false; }, 250);
