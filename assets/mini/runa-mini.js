@@ -30,7 +30,8 @@
       '.runa-mini{position:fixed;left:14px;bottom:14px;z-index:40;width:82px;',
       '  transition:left 18s linear;opacity:.94;pointer-events:none;}',
       '.runa-mini.placed{transition:none;}',
-      '.runa-mini.walking{transition:left 9s linear !important;}',
+      '.runa-mini{--walk:9s;}',
+      '.runa-mini.walking{transition:left var(--walk) linear !important;}',
       '.runa-mini.dragging{transition:none;opacity:1;cursor:grabbing;}',
       /* ★つままれているあいだは、体ごと傾ける（主の絵に寄せた 2026-08-14）。
          画像生成に『体を横に倒して』は2度頼んでも通らなかったが、
@@ -429,10 +430,12 @@
        ——今日つけた仕掛けが、今日つけた別の仕掛けを止めていた。
        つまんで置ける・場所を覚える、はそのまま。そこを中心に歩く。 */
     if (!calm) {
-      var away = false, walking = false, walkTimer = null;
+      var walking = false, walkTimer = null, nextTimer = null;
+      var SPEED = 34;                 /* 1秒に進む距離(px)。速すぎると落ち着かない */
       /* つままれたときに、歩きを畳む口。いまの見た目の位置でその場に固定する。 */
       stopWalk = function(){
         if (walkTimer) { clearTimeout(walkTimer); walkTimer = null; }
+        if (nextTimer) { clearTimeout(nextTimer); nextTimer = null; }
         if (walking) {
           /* ★順番が大事：先に動きを切ってから位置を書く。
              逆にすると、書いた位置へさらに滑っていく。 */
@@ -443,45 +446,54 @@
           walking = false;
         }
       };
-      function homeX(){
-        /* ★実際の位置を測る。style.left は、置かれるまで空っぽ（2026-08-15）。 */
+      function nowX(){
         var v = parseInt(el.style.left, 10);
-        if (!isNaN(v)) return v;
-        return Math.round(el.getBoundingClientRect().left);
+        return isNaN(v) ? Math.round(el.getBoundingClientRect().left) : v;
       }
-      var home = homeX();
-      function step(){
-        if (showing || walking) return;
-        var w = el.getBoundingClientRect().width || 78;
-        /* ★行き先は、画面の中に必ず収める。はみ出すと、動いても見えない。 */
-        var span = Math.max(60, Math.min(220, window.innerWidth - home - w - 16));
-        var to = away ? home : (home + span);
-        var cur = homeX();
-        /* ★ここが「その場でえっほえっほ」の正体（主の報告 2026-08-15）。
-           行き先がいまの場所と同じなら、transition は何も起きない。
-           絵だけが9秒走って、位置は1ピクセルも動かない。
-           前の版は毎回まず向きを反転していたので、**一歩目が必ず「いまの場所」**だった。
-           動く先が無いときは、歩かない。 */
-        if (Math.abs(to - cur) < 8) {
-          if (!away) return;              /* 右に行く余地がない＝狭い画面。歩かない */
-          away = false; return;
+      /* ★行き先を毎回えらぶ（主 2026-08-15「もっと歩き回って欲しいな」）。
+         前の版は「置かれた場所」と「そこから右へ220px」の2点を往復するだけで、
+         同じ道を行ったり来たりしていた。画面の端から端までを歩ける範囲にして、
+         そのなかから毎回えらぶ。近すぎる行き先は選び直す（動いて見えないので）。 */
+      function pick(cur, w){
+        var lo = 8, hi = Math.max(lo, window.innerWidth - w - 8);
+        if (hi - lo < 40) return null;            /* 狭すぎる画面では歩かない */
+        for (var i = 0; i < 12; i++) {
+          var t = lo + Math.random() * (hi - lo);
+          if (Math.abs(t - cur) >= Math.min(70, (hi - lo) * 0.35)) return Math.round(t);
         }
+        return Math.round(cur < (lo + hi) / 2 ? hi : lo);   /* 選べなければ遠いほうの端へ */
+      }
+      function step(){
+        nextTimer = null;
+        if (showing || walking) return schedule();
+        var w = el.offsetWidth || 78;
+        var cur = nowX();
+        var to = pick(cur, w);
+        if (to === null) return schedule();
+        var ms = Math.round(Math.abs(to - cur) / SPEED * 1000);
+        ms = Math.max(1600, Math.min(11000, ms));
         walking = true;
+        el.style.setProperty('--walk', ms + 'ms');
         el.classList.add('walking');
         play(to > cur ? 'runRight' : 'runLeft', 110);
         el.style.left = to + 'px';
-        away = !away;
         walkTimer = setTimeout(function(){
           walkTimer = null;
           walking = false;
           el.classList.remove('walking');
           if (!showing) play('idle', 420);
-        }, 9000);
+          schedule();
+        }, ms);
       }
-      setTimeout(step, 6000);        /* 最初の一歩は早めに（動いて見えないと、動いていないのと同じ） */
-      setInterval(step, 15000);
-      /* つまんで置き直したら、そこを新しい基点にする */
-      window.addEventListener('mouseup', function(){ setTimeout(function(){ home = homeX(); }, 60); });
-      window.addEventListener('touchend', function(){ setTimeout(function(){ home = homeX(); }, 60); });
+      /* 立ち止まる時間もばらつかせる。等間隔だと機械っぽく見えるので。 */
+      function schedule(){
+        if (nextTimer) clearTimeout(nextTimer);
+        nextTimer = setTimeout(step, 2500 + Math.random() * 5000);
+      }
+      setTimeout(step, 3500);        /* 最初の一歩は早めに（動いて見えないと、動いていないのと同じ） */
+      /* つまんで置いたあとも、そこから歩きだす */
+      function resume(){ setTimeout(schedule, 900); }
+      window.addEventListener('mouseup', resume);
+      window.addEventListener('touchend', resume);
     }
   })();
