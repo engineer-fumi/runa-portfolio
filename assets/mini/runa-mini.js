@@ -494,6 +494,7 @@
           walkTimer = null;
           walking = false;
           el.classList.remove('walking');
+          bubSide();                 /* 歩き終えた場所で、吹き出しの向きを見直す */
           if (!showing) play('idle', 420);
           schedule();
         }, ms);
