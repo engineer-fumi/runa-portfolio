@@ -232,11 +232,19 @@
     }, 5200);
 
     var talking = false, kick = null, kickFlip = false;
+    /* ★前の吹き出しのタイマーを必ず止める（主の指摘 2026-08-14
+       「なぜか一部コメント表示が極端に短いのがいる」）。
+       止めていなかったので、続けて出したとき**前のタイマーが新しい吹き出しを消していた**。
+       表示時間を伸ばすほど、食われる場面が増えて目立つようになっていた。 */
+    var bubTimer = null, faceTimer = null;
     function say(t, ms){
       if (talking) return false;
       talking = true;
       bub.textContent = t; bub.classList.add('on');
-      setTimeout(function(){ bub.classList.remove('on'); talking = false; }, ms || 9500);
+      if (bubTimer) clearTimeout(bubTimer);
+      bubTimer = setTimeout(function(){
+        bub.classList.remove('on'); talking = false; bubTimer = null;
+      }, ms || 9500);
       return true;
     }
 
@@ -285,12 +293,15 @@
       var face = reacts[i][0], text = reacts[i][1];
       showing = face;
       img.src = A + 'runa-chibi-' + face + '.png';
+      if (bubTimer) { clearTimeout(bubTimer); bubTimer = null; }
       bub.classList.remove('on'); talking = false;
       /* ★反応だけでも、説明だけでもない。両方（主の指摘 2026-08-14）。
          触られたことに反応してから、いまいる場所のことを続ける。 */
       say(text + '\n' + explain(), 14000);
-      setTimeout(function(){
+      if (faceTimer) clearTimeout(faceTimer);
+      faceTimer = setTimeout(function(){
         if (showing === face) { showing = null; img.src = base; }
+        faceTimer = null;
       }, 6000);
     }
 
@@ -432,6 +443,7 @@
       el.classList.add('dragging', 'placed');
       showing = 'held';
       img.src = A + 'runa-chibi-held-a.png';
+      if (bubTimer) { clearTimeout(bubTimer); bubTimer = null; }
       bub.classList.remove('on'); talking = false;
       say('きゃっ……！', 2400);
       if (kick) clearInterval(kick);
