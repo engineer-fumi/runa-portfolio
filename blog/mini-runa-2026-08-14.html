@@ -247,16 +247,46 @@
          **スマホでは preventDefault すると、そのあとの click が発生しない**。
          パソコンでは来るので、こちらでは気づけなかった。
          click という仕組みに頼らなければ、どちらでも同じように動く。 */
-    var last = -1;
+    var last = -1, tapN = 0;
+    /* ★タップは「教えて」の合図（主の指摘 2026-08-14）。
+       表情だけ変えて可愛いことを言っても、何の役にも立たない。
+       **いまいる場所のことを説明する**。押すたびに違う面を答える。 */
+    function whereAmI(){
+      var mid = window.innerHeight * 0.45, cur = null, idx = 0;
+      for (var i = 0; i < secs.length; i++) {
+        if (secs[i].getBoundingClientRect().top <= mid) { cur = secs[i]; idx = i + 1; }
+      }
+      return {el: cur, idx: idx, n: secs.length};
+    }
+    function explain(){
+      var w = whereAmI();
+      var art = document.querySelector('article');
+      var h = document.documentElement;
+      var p = (h.scrollTop + window.innerHeight) / h.scrollHeight;
+      var left = art ? Math.round((art.textContent || '').length * (1 - p) / 500) : 0;
+      var cands = [];
+      if (w.el) {
+        var pt = pointOf(sectionOf(w.el));
+        if (pt) cands.push('ここのポイントは「' + pt + '」です。');
+        cands.push('いまは「' + textOf(w.el) + '」のところです。');
+      } else if (title) {
+        cands.push('この回は「' + title + '」のお話です。');
+      }
+      if (w.n) cands.push('この回は全部で' + w.n + '章。いまは' + (w.idx || 1) + '章目です。');
+      if (left >= 1) cands.push('のこり、だいたい' + left + '分くらいです。');
+      else cands.push('もうすぐ、読み終わります。');
+      if (title && cands.length < 2) cands.push('この回は「' + title + '」のお話です。');
+      return cands[tapN++ % cands.length];
+    }
     function react(){
       var i = Math.floor(Math.random() * reacts.length);
       if (i === last && reacts.length > 1) i = (i + 1) % reacts.length;
       last = i;
-      var face = reacts[i][0], text = reacts[i][1];
+      var face = reacts[i][0];
       showing = face;
       img.src = A + 'runa-chibi-' + face + '.png';
       bub.classList.remove('on'); talking = false;
-      say(text, 2600);
+      say(explain(), 5200);
       setTimeout(function(){
         if (showing === face) { showing = null; img.src = base; }
       }, 2800);
