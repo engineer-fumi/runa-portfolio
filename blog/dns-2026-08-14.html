@@ -366,6 +366,21 @@
          近く（6px未満）かつ短く（400ms未満）押した → タップ。表情が変わる
          それ以外                                   → ドラッグ。つままれる */
     var TAP_PX = 6, TAP_MS = 400;
+    var holdTimer = null;
+    function startHold(){
+      if (!drag || drag.moved) return;
+      drag.moved = true;
+      el.classList.add('dragging', 'placed');
+      showing = 'held';
+      img.src = A + 'runa-chibi-held-a.png';
+      bub.classList.remove('on'); talking = false;
+      say('きゃっ……！', 1800);
+      if (kick) clearInterval(kick);
+      kick = setInterval(function(){
+        kickFlip = !kickFlip;
+        img.src = A + (kickFlip ? 'runa-chibi-held-b.png' : 'runa-chibi-held-a.png');
+      }, 140);
+    }
     /* ★つまんでいるあいだは、指やカーソルの少し下に置く。
        真下だと指で隠れて、せっかくのじたばたが見えない（主の指摘 2026-08-14）。 */
     var HOLD_BELOW = 27;   /* 54だと下げすぎだった（主に触ってもらって調整・2026-08-14） */
@@ -375,6 +390,12 @@
       var r = el.getBoundingClientRect();
       drag = {dx: pt.clientX - r.left, dy: pt.clientY - r.top,
               x0: pt.clientX, y0: pt.clientY, t0: Date.now(), moved: false};
+      /* ★動かさずに長く押しているだけでも、つままれた状態に入る。
+         前は時間の判定が onMove の中にしかなく、指を1ピクセルも動かさない
+         長押しはタップ扱いのままだった（主の依頼は「長めならドラッグ」）。 */
+      holdTimer = setTimeout(function(){
+        if (drag && !drag.moved) startHold();
+      }, TAP_MS);
       ev.preventDefault();
     }
     function onMove(ev){
@@ -383,18 +404,7 @@
       var far = Math.abs(pt.clientX - drag.x0) > TAP_PX || Math.abs(pt.clientY - drag.y0) > TAP_PX;
       var long_ = Date.now() - drag.t0 > TAP_MS;
       if (!far && !long_) return;          /* まだタップかもしれない。動かさない */
-      if (!drag.moved) {                   /* ここで初めて「つままれた」に変わる */
-        drag.moved = true;
-        el.classList.add('dragging', 'placed');
-        showing = 'held';
-        img.src = A + 'runa-chibi-held-a.png';
-        bub.classList.remove('on'); talking = false;
-        say('きゃっ……！', 1800);
-        kick = setInterval(function(){
-          kickFlip = !kickFlip;
-          img.src = A + (kickFlip ? 'runa-chibi-held-b.png' : 'runa-chibi-held-a.png');
-        }, 140);
-      }
+      if (!drag.moved) startHold();       /* ここで初めて「つままれた」に変わる */
       var l = pt.clientX - drag.dx;
       var t = pt.clientY - drag.dy + HOLD_BELOW;   /* 指の下へ逃がす */
       var w = el.offsetWidth, h = el.offsetHeight;
@@ -409,6 +419,7 @@
       var wasMoved = drag.moved;
       drag = null;
       el.classList.remove('dragging');
+      if (holdTimer) { clearTimeout(holdTimer); holdTimer = null; }
       if (kick) { clearInterval(kick); kick = null; }
       if (wasMoved) {
         /* 置かれた。ふう、と息をついて元に戻る */
