@@ -236,7 +236,7 @@
       if (talking) return false;
       talking = true;
       bub.textContent = t; bub.classList.add('on');
-      setTimeout(function(){ bub.classList.remove('on'); talking = false; }, ms || 7000);
+      setTimeout(function(){ bub.classList.remove('on'); talking = false; }, ms || 9500);
       return true;
     }
 
@@ -288,10 +288,10 @@
       bub.classList.remove('on'); talking = false;
       /* ★反応だけでも、説明だけでもない。両方（主の指摘 2026-08-14）。
          触られたことに反応してから、いまいる場所のことを続ける。 */
-      say(text + '\n' + explain(), 9500);
+      say(text + '\n' + explain(), 14000);
       setTimeout(function(){
         if (showing === face) { showing = null; img.src = base; }
-      }, 4200);
+      }, 6000);
     }
 
     /* ★いま読んでいるところについて言う（主の依頼 2026-08-14
@@ -310,7 +310,7 @@
     }
     var title = textOf(document.querySelector('article h1'));
     setTimeout(function(){
-      if (title) say('この回は「' + title + '」のお話です。', 8000);
+      if (title) say('この回は「' + title + '」のお話です。', 11000);
       else say(lines[Math.floor(Math.random()*lines.length)]);
     }, 2500);
 
@@ -367,8 +367,8 @@
           }
           /* ★拾えるものが無い章（出典など）では、黙る。
              見出しをなぞるだけなら、見出しを見たほうが早い（主の指摘 2026-08-14）。 */
-          if (point) maybe('ここのポイントは「' + point + '」です。', 9000);
-          else if (mine) maybe('この章には、わたしの反省が入っています。', 7000);
+          if (point) maybe('ここのポイントは「' + point + '」です。', 13000);
+          else if (mine) maybe('この章には、わたしの反省が入っています。', 10000);
         });
       }, {threshold: 0.55});
       secs.forEach(function(h){ so.observe(h); });
@@ -383,9 +383,9 @@
         passed[45] = 1;
         var art = document.querySelector('article');
         var left = art ? Math.round((art.textContent || '').length * (1 - p / 100) / 500) : 0;
-        maybe(left >= 1 ? ('のこり、だいたい' + left + '分くらいです。') : 'もう半分を過ぎました。', 6500);
+        maybe(left >= 1 ? ('のこり、だいたい' + left + '分くらいです。') : 'もう半分を過ぎました。', 9000);
       }
-      if (p >= 93 && !passed[93]) { passed[93] = 1; maybe('もうすぐ、おしまいです。', 6000); }
+      if (p >= 93 && !passed[93]) { passed[93] = 1; maybe('もうすぐ、おしまいです。', 8500); }
     }, {passive: true});
 
     /* ふだんの独り言は、記事の話が無いときの控えとして残す（間隔は長めに） */
