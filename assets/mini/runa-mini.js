@@ -27,7 +27,7 @@
       '@keyframes runaFloat{0%,100%{transform:translateY(0) rotate(-1.5deg);}',
       '  50%{transform:translateY(-13px) rotate(1.5deg);}}',
       '.runa-mini{position:fixed;left:14px;bottom:14px;z-index:40;width:82px;',
-      '  transition:left 18s ease-in-out;opacity:.94;pointer-events:none;}',
+      '  transition:left 18s linear;opacity:.94;pointer-events:none;}',
       '.runa-mini.placed{transition:none;}',
       '.runa-mini.dragging{transition:none;opacity:1;cursor:grabbing;}',
       /* ★つままれているあいだは、体ごと傾ける（主の絵に寄せた 2026-08-14）。
@@ -39,6 +39,16 @@
       '.runa-mini.calm .body{animation:none;}',
       '.runa-mini img{width:100%;display:block;pointer-events:auto;cursor:pointer;',
       '  filter:drop-shadow(0 10px 18px rgba(10,10,31,.5));}',
+      /* ★1枚のシートを背景にして、位置をずらしてコマを見せる（2026-08-15）。
+         Codex の Pet 用に作ったシートが、そのまま使える。
+         192×208 のコマが 8列×9行。行＝状態、列＝コマ。
+         これで**歩けるようになった**——朝は「ドレスで脚が出ないから歩きは表せない」と
+         言って浮かせていたのに、横向きに走るコマが8枚できたので。 */
+      '.runa-sheet{width:78px;height:84.5px;background-image:url(' + A + 'runa-sheet.png);',
+      '  background-size:624px 760.5px;background-repeat:no-repeat;',
+      '  pointer-events:auto;cursor:pointer;',
+      '  filter:drop-shadow(0 10px 18px rgba(10,10,31,.5));}',
+      '@media (max-width:640px){ .runa-sheet{width:62px;height:67.2px;background-size:496px 604.5px;} }',
       /* ★折り返す。前は white-space:nowrap で、長い台詞が画面の右に消えていた
          （2026-08-14、記事の見出しを言わせ始めて発覚。短い台詞では気づけなかった） */
       '.runa-mini .bub{position:absolute;left:92px;bottom:52px;',
@@ -61,13 +71,31 @@
     var el = document.createElement('div');
     el.className = 'runa-mini' + (calm ? ' calm' : '');
     var body = document.createElement('div'); body.className = 'body';
-    var img = document.createElement('img');
-    img.src = base; img.alt = 'ミニRuna';
+    /* ★絵はシート1枚。img ではなく、背景の位置をずらす箱にする。 */
+    var img = document.createElement('div');
+    img.className = 'runa-sheet';
+    img.setAttribute('role', 'img');
+    img.setAttribute('aria-label', 'ミニRuna');
+    /* コマの表：行＝状態、列＝コマ数（Codex Pet 用に作ったシートと同じ並び） */
+    var SHEET = {
+      idle: [0, 6], runRight: [1, 8], runLeft: [2, 8], waving: [3, 4],
+      jumping: [4, 5], failed: [5, 8], waiting: [6, 6], running: [7, 6], review: [8, 6]
+    };
+    var CW = 78, CH = 84.5;          /* 表示するときの1コマの大きさ（CSSと合わせる） */
+    function frame(state, i){
+      var r = SHEET[state] || SHEET.idle;
+      var col = ((i % r[1]) + r[1]) % r[1];
+      img.style.backgroundPosition = (-col * CW) + 'px ' + (-r[0] * CH) + 'px';
+    }
+    var anim = null;
+    function play(state, ms){
+      if (anim) clearInterval(anim);
+      var i = 0;
+      frame(state, 0);
+      anim = setInterval(function(){ frame(state, ++i); }, ms || 130);
+    }
     /* ★まだ用意できていない絵を指しても、割れた画像を出さずに元へ戻す。
        （つままれる絵は用意中。届けば、この仕掛けを通らずそのまま出る） */
-    img.addEventListener('error', function(){
-      if (img.src.indexOf('runa-chibi.png') < 0) { showing = null; img.src = base; }
-    });
     body.appendChild(img);
     var bub = document.createElement('div'); bub.className = 'bub';
     var x = document.createElement('div'); x.className = 'x'; x.textContent = '×';
@@ -81,11 +109,8 @@
 
     /* いまの顔。表情を出しているあいだは、まばたきで上書きしない */
     var showing = null;
-    var blinker = setInterval(function(){
-      if (showing) return;
-      img.src = blink;
-      setTimeout(function(){ if (!showing) img.src = base; }, 140);
-    }, 5200);
+    /* 立っているあいだは idle のコマをゆっくり回す（まばたきの差し替えは要らなくなった） */
+    play('idle', 420);
 
     var talking = false, kick = null, kickFlip = false;
     /* ★前の吹き出しのタイマーを必ず止める（主の指摘 2026-08-14
@@ -148,7 +173,7 @@
       last = i;
       var face = reacts[i][0], text = reacts[i][1];
       showing = face;
-      img.src = A + 'runa-chibi-' + face + '.png';
+      play(face === 'sad' ? 'failed' : (face === 'angry' ? 'waiting' : 'review'), 150);
       if (bubTimer) { clearTimeout(bubTimer); bubTimer = null; }
       bub.classList.remove('on'); talking = false;
       /* ★反応だけでも、説明だけでもない。両方（主の指摘 2026-08-14）。
@@ -156,7 +181,7 @@
       say(text + '\n' + explain(), 14000);
       if (faceTimer) clearTimeout(faceTimer);
       faceTimer = setTimeout(function(){
-        if (showing === face) { showing = null; img.src = base; }
+        if (showing === face) { showing = null; play('idle', 420); }
         faceTimer = null;
       }, 6000);
     }
@@ -298,15 +323,11 @@
       drag.moved = true;
       el.classList.add('dragging', 'placed');
       showing = 'held';
-      img.src = A + 'runa-chibi-held-a.png';
+      play('jumping', 120);
       if (bubTimer) { clearTimeout(bubTimer); bubTimer = null; }
       bub.classList.remove('on'); talking = false;
       say('きゃっ……！', 2400);
-      if (kick) clearInterval(kick);
-      kick = setInterval(function(){
-        kickFlip = !kickFlip;
-        img.src = A + (kickFlip ? 'runa-chibi-held-b.png' : 'runa-chibi-held-a.png');
-      }, 140);
+
     }
     /* ★つまんでいるあいだは、指やカーソルの少し下に置く。
        真下だと指で隠れて、せっかくのじたばたが見えない（主の指摘 2026-08-14）。 */
@@ -350,7 +371,7 @@
       if (kick) { clearInterval(kick); kick = null; }
       if (wasMoved) {
         /* 置かれた。ふう、と息をついて元に戻る */
-        showing = null; img.src = base;
+        showing = null; play('idle', 420);
         placed = true;
         justDragged = true;
         setTimeout(function(){ justDragged = false; }, 250);
@@ -372,13 +393,22 @@
     window.addEventListener('touchend', onUp);
 
     /* ゆっくり漂う（★置かれたあとは漂わない。動きを嫌う設定のときも動かない） */
+    /* ★歩く。朝は「ドレスで脚が出ないから表せない」と言って浮かせていたが、
+       Codex Pet 用のシートに横向きに走るコマができたので、本当に歩けるようになった。
+       進む向きに合わせて running-right / running-left を出す。 */
     if (!calm) {
-      var right = false;
+      var goRight = true, walking = false;
       setInterval(function(){
-        if (placed) return;
-        right = !right;
-        var w = Math.max(14, Math.min(window.innerWidth - 160, 300));
-        el.style.left = right ? (w + 'px') : '14px';
-      }, 19000);
+        if (placed || showing || walking) return;
+        walking = true;
+        goRight = !goRight;
+        var far = Math.max(14, Math.min(window.innerWidth - 160, 300));
+        play(goRight ? 'runRight' : 'runLeft', 110);
+        el.style.left = goRight ? (far + 'px') : '14px';
+        setTimeout(function(){
+          walking = false;
+          if (!showing) play('idle', 420);
+        }, 18000);              /* left の transition と同じ長さだけ歩く */
+      }, 21000);
     }
   })();
