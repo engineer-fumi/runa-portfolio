@@ -366,6 +366,9 @@
          近く（6px未満）かつ短く（400ms未満）押した → タップ。表情が変わる
          それ以外                                   → ドラッグ。つままれる */
     var TAP_PX = 6, TAP_MS = 400;
+    /* ★つまんでいるあいだは、指やカーソルの少し下に置く。
+       真下だと指で隠れて、せっかくのじたばたが見えない（主の指摘 2026-08-14）。 */
+    var HOLD_BELOW = 54;
     var drag = null, justDragged = false;
     function onDown(ev){
       var pt = ev.touches ? ev.touches[0] : ev;
@@ -393,7 +396,7 @@
         }, 140);
       }
       var l = pt.clientX - drag.dx;
-      var t = pt.clientY - drag.dy;
+      var t = pt.clientY - drag.dy + HOLD_BELOW;   /* 指の下へ逃がす */
       var w = el.offsetWidth, h = el.offsetHeight;
       l = Math.max(0, Math.min(window.innerWidth - w, l));
       t = Math.max(0, Math.min(window.innerHeight - h, t));
