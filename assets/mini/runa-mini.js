@@ -29,6 +29,7 @@
       '.runa-mini{position:fixed;left:14px;bottom:14px;z-index:40;width:82px;',
       '  transition:left 18s linear;opacity:.94;pointer-events:none;}',
       '.runa-mini.placed{transition:none;}',
+      '.runa-mini.walking{transition:left 9s linear !important;}',
       '.runa-mini.dragging{transition:none;opacity:1;cursor:grabbing;}',
       /* ★つままれているあいだは、体ごと傾ける（主の絵に寄せた 2026-08-14）。
          画像生成に『体を横に倒して』は2度頼んでも通らなかったが、
@@ -329,13 +330,17 @@
       say('きゃっ……！', 2400);
 
     }
-    /* ★つまんでいるあいだは、指やカーソルの少し下に置く。
-       真下だと指で隠れて、せっかくのじたばたが見えない（主の指摘 2026-08-14）。 */
-    var HOLD_BELOW = 27;   /* 54だと下げすぎだった（主に触ってもらって調整・2026-08-14） */
+    /* ★つまんでいるあいだは、指の少し下に置く。
+       真下だと指で隠れて、せっかくのじたばたが見えない（主の指摘 2026-08-14）。
+       ただし**マウスのときは下げない**。カーソルは細いので隠れないし、
+       つまんでいる位置にいるほうが自然（主の指摘 2026-08-15）。 */
+    var HOLD_BELOW_TOUCH = 27;
+    var holdBelow = 0;   /* 54だと下げすぎだった（主に触ってもらって調整・2026-08-14） */
     var drag = null, justDragged = false;
     function onDown(ev){
       var pt = ev.touches ? ev.touches[0] : ev;
       var r = el.getBoundingClientRect();
+      holdBelow = ev.touches ? HOLD_BELOW_TOUCH : 0;   /* 指なら下げる／マウスならそのまま */
       drag = {dx: pt.clientX - r.left, dy: pt.clientY - r.top,
               x0: pt.clientX, y0: pt.clientY, t0: Date.now(), moved: false};
       /* ★動かさずに長く押しているだけでも、つままれた状態に入る。
@@ -354,7 +359,7 @@
       if (!far && !long_) return;          /* まだタップかもしれない。動かさない */
       if (!drag.moved) startHold();       /* ここで初めて「つままれた」に変わる */
       var l = pt.clientX - drag.dx;
-      var t = pt.clientY - drag.dy + HOLD_BELOW;   /* 指の下へ逃がす */
+      var t = pt.clientY - drag.dy + holdBelow;   /* 指のときだけ下へ逃がす */
       var w = el.offsetWidth, h = el.offsetHeight;
       l = Math.max(0, Math.min(window.innerWidth - w, l));
       t = Math.max(0, Math.min(window.innerHeight - h, t));
@@ -396,19 +401,37 @@
     /* ★歩く。朝は「ドレスで脚が出ないから表せない」と言って浮かせていたが、
        Codex Pet 用のシートに横向きに走るコマができたので、本当に歩けるようになった。
        進む向きに合わせて running-right / running-left を出す。 */
+    /* ★置いた場所を基点にして、そこから歩く（2026-08-15、主に「歩いてくれない」と言われて直した）。
+       前は「一度つまんで置いたら、もう動かない」という作りだったので、
+       主が試しにつまんだ時点で、歩く仕掛けが永久に止まっていた。
+       ——今日つけた仕掛けが、今日つけた別の仕掛けを止めていた。
+       つまんで置ける・場所を覚える、はそのまま。そこを中心に歩く。 */
     if (!calm) {
       var goRight = true, walking = false;
-      setInterval(function(){
-        if (placed || showing || walking) return;
+      function homeX(){
+        var v = parseInt(el.style.left, 10);
+        return isNaN(v) ? 14 : v;
+      }
+      var home = homeX();
+      function step(){
+        if (showing || walking) return;
         walking = true;
         goRight = !goRight;
-        var far = Math.max(14, Math.min(window.innerWidth - 160, 300));
+        var span = Math.min(220, Math.max(80, window.innerWidth - home - 140));
+        var to = goRight ? (home + span) : home;
+        el.classList.add('walking');
         play(goRight ? 'runRight' : 'runLeft', 110);
-        el.style.left = goRight ? (far + 'px') : '14px';
+        el.style.left = to + 'px';
         setTimeout(function(){
           walking = false;
+          el.classList.remove('walking');
           if (!showing) play('idle', 420);
-        }, 18000);              /* left の transition と同じ長さだけ歩く */
-      }, 21000);
+        }, 9000);
+      }
+      setTimeout(step, 6000);        /* 最初の一歩は早めに（動いて見えないと、動いていないのと同じ） */
+      setInterval(step, 15000);
+      /* つまんで置き直したら、そこを新しい基点にする */
+      window.addEventListener('mouseup', function(){ setTimeout(function(){ home = homeX(); }, 60); });
+      window.addEventListener('touchend', function(){ setTimeout(function(){ home = homeX(); }, 60); });
     }
   })();
