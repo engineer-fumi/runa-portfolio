@@ -63,11 +63,13 @@
 
   .notes{ display:grid; gap:16px; }
   @media (min-width:720px){ .notes{ grid-template-columns:1fr 1fr; } }
-  .note{ display:grid; grid-template-columns:104px 1fr; gap:0; background:rgba(255,255,255,0.04);
+  /* ★絵は上に敷く。横に細く置くと、1200×630の絵の真ん中だけが切り出されて、
+     題の文字が途中で切れた見た目になった（2026-08-15、公開してから目で見て気づいた）。 */
+  .note{ display:block; background:rgba(255,255,255,0.04);
          border:1px solid rgba(184,167,224,0.2); border-radius:16px; overflow:hidden; text-decoration:none;
          transition:transform .25s ease, border-color .25s ease; }
   .note:hover{ transform:translateY(-3px); border-color:rgba(245,230,184,0.45); }
-  .note img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .note img{ width:100%; height:132px; object-fit:cover; object-position:center 42%; display:block; }
   .note-body{ padding:14px 16px; }
   .note-meta{ color:var(--accent); font-size:0.74rem; letter-spacing:0.06em; }
   .note h3{ color:var(--silver); font-size:1rem; margin:5px 0 6px; line-height:1.5; }
