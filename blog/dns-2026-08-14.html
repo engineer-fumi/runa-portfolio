@@ -245,7 +245,11 @@
       '  transition:left 18s ease-in-out;opacity:.94;pointer-events:none;}',
       '.runa-mini.placed{transition:none;}',
       '.runa-mini.dragging{transition:none;opacity:1;cursor:grabbing;}',
-      '.runa-mini.dragging .body{animation:none;}',
+      /* ★つままれているあいだは、体ごと傾ける（主の絵に寄せた 2026-08-14）。
+         画像生成に『体を横に倒して』は2度頼んでも通らなかったが、
+         手足が外に出た立ち姿を70度ほど回すと、つままれてぶら下がった形に見える。
+         描き直すより確実で、すぐ効く。 */
+      '.runa-mini.dragging .body{animation:none;transform:rotate(-70deg) translateY(-6px);}',
       '.runa-mini .body{animation:runaFloat 4.6s ease-in-out infinite;transform-origin:50% 80%;}',
       '.runa-mini.calm .body{animation:none;}',
       '.runa-mini img{width:100%;display:block;pointer-events:auto;cursor:pointer;',
