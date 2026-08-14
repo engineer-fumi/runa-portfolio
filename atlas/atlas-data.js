@@ -1574,6 +1574,13 @@ window.ATLAS_DATA = {
               "name_en": "Cross-session messaging",
               "events": [
                 {
+                  "date": "2026-08-14",
+                  "type": "update",
+                  "approx": true,
+                  "desc": "入力欄で @ を打つと、動いている別のセッションを名前で指名できるように。同じ機械の中では名前が重複しないよう自動で振り分けられ、受け取り方（承諾・保留・拒否）も設定から選べる。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                },
+                {
                   "date": "2026-08-01",
                   "type": "launch",
                   "desc": "別のセッションへメッセージを送れる仕組み。v2.1.224以降のmacOSとLinux（WSL2含む）が対象でnative Windowsは非対象。公式ドキュメントに日付表記がないため時期は概算。",
@@ -1714,6 +1721,13 @@ window.ATLAS_DATA = {
               "name_en": "Subagents",
               "events": [
                 {
+                  "date": "2026-08-14",
+                  "type": "update",
+                  "approx": true,
+                  "desc": "サブエージェントの fork が既定に。会話の流れとプロンプトキャッシュをそのまま引き継いだまま分岐でき、対話中に立てた別働隊は既定で裏側で走るようになった。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                },
+                {
                   "date": "2025-07-01",
                   "type": "launch",
                   "approx": true,
@@ -1808,6 +1822,13 @@ window.ATLAS_DATA = {
               "name": "プラグイン / マーケットプレイス",
               "name_en": "Plugins / marketplace",
               "events": [
+                {
+                  "date": "2026-08-14",
+                  "type": "expand",
+                  "approx": true,
+                  "desc": "プラグインの入手元として GitLab に対応。github.com と同じように素のリポジトリURLから取り込めるようになり、入れ子のサブグループも扱える。あわせて GitLab のトークンが記録に残らないよう伏せられるようになった。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                },
                 {
                   "date": "2025-10-01",
                   "type": "launch",
