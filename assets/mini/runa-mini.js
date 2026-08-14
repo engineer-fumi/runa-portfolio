@@ -60,13 +60,18 @@
       '  border-radius:14px;padding:9px 14px;font-size:.82rem;line-height:1.65;',
       '  opacity:0;transition:opacity .45s ease;pointer-events:none;}',
       '.runa-mini .bub.on{opacity:1;}',
+      /* ★右のほうにいるときは、吹き出しを左に出す（主 2026-08-15
+         「右端に行くと吹き出しが見えない」）。歩き回れるようにした途端に出た問題。
+         動けるようにするというのは、**それまで固定だった前提が全部ゆらぐ**ということでした。 */
+      '.runa-mini.bubL .bub{left:auto;right:92px;}',
       '.runa-mini .x{position:absolute;right:-2px;top:-2px;width:20px;height:20px;border-radius:50%;',
       '  background:rgba(30,27,75,.9);color:#9a96c4;border:1px solid rgba(184,167,224,.35);',
       '  font-size:12px;line-height:18px;text-align:center;cursor:pointer;pointer-events:auto;',
       '  opacity:0;transition:opacity .3s ease;}',
       '.runa-mini:hover .x{opacity:1;}',
       '@media (max-width:640px){ .runa-mini{width:62px;left:8px;}',
-      '  .runa-mini .bub{left:70px;font-size:.76rem;max-width:calc(100vw - 96px);} }',
+      '  .runa-mini .bub{left:70px;font-size:.76rem;max-width:calc(100vw - 96px);}',
+      '  .runa-mini.bubL .bub{left:auto;right:70px;} }',
       '@media (max-width:380px){ .runa-mini{display:none;} }'
     ].join('');
     document.head.appendChild(css);
@@ -138,7 +143,15 @@
        止めていなかったので、続けて出したとき**前のタイマーが新しい吹き出しを消していた**。
        表示時間を伸ばすほど、食われる場面が増えて目立つようになっていた。 */
     var bubTimer = null, faceTimer = null;
+    /* 吹き出しをどちら側に出すか決める。しゃべる直前に、そのつど測る。 */
+    function bubSide(){
+      var r = el.getBoundingClientRect();
+      var mid = r.left + r.width / 2;
+      el.classList.toggle('bubL', mid > window.innerWidth * 0.55);
+    }
+
     function say(t, ms){
+      bubSide();
       if (talking) return false;
       talking = true;
       bub.textContent = t; bub.classList.add('on');
