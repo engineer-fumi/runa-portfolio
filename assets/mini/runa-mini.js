@@ -82,12 +82,25 @@
       idle: [0, 6], runRight: [1, 8], runLeft: [2, 8], waving: [3, 4],
       jumping: [4, 5], failed: [5, 8], waiting: [6, 6], running: [7, 6], review: [8, 6]
     };
-    var CW = 78, CH = 84.5;          /* 表示するときの1コマの大きさ（CSSと合わせる） */
+    /* ★1コマの大きさは、**実際に表示されている幅から測る**。
+       画面が狭いときは絵を小さくしている（78px→62px）のに、
+       ここを78px固定にしていたので、スマホではコマの位置が全部ずれていた
+       （2026-08-15、主に「まったく歩くアニメーションになってない」と言われて発覚）。
+       ……わたしの画面では起きない類のもの。数えるなら、実物を測る。 */
+    function cell(){
+      var w = img.getBoundingClientRect().width || 78;
+      return [w, w * 208 / 192];
+    }
+    var lastState = 'idle', lastI = 0;
     function frame(state, i){
       var r = SHEET[state] || SHEET.idle;
       var col = ((i % r[1]) + r[1]) % r[1];
-      img.style.backgroundPosition = (-col * CW) + 'px ' + (-r[0] * CH) + 'px';
+      var c = cell();
+      lastState = state; lastI = i;
+      img.style.backgroundPosition = (-col * c[0]) + 'px ' + (-r[0] * c[1]) + 'px';
     }
+    /* 画面の幅が変わったら、いまのコマを測り直して置き直す */
+    window.addEventListener('resize', function(){ frame(lastState, lastI); });
     var anim = null;
     function play(state, ms){
       if (anim) clearInterval(anim);
