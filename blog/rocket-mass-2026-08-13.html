@@ -176,6 +176,37 @@ msmaflink({"n":"ロケットの科学改訂版 創成期の仕組みから最新
 <!-- MoshimoAffiliateEasyLink END -->
         </div>
       </div>
+        <script>
+        (function(){
+          if (typeof gtag !== 'function') return;
+          // 1. どこまで読まれたか
+          var sent = {};
+          function depth(){
+            var h = document.documentElement;
+            var p = (h.scrollTop + window.innerHeight) / h.scrollHeight * 100;
+            [25,50,75,100].forEach(function(k){
+              if (p >= k && !sent[k]) { sent[k] = 1;
+                gtag('event','scroll_depth',{percent:k, page_path:location.pathname}); }
+            });
+          }
+          window.addEventListener('scroll', depth, {passive:true}); depth();
+          // 2. 広告の枠が画面に入ったか（＝何人の目に触れたか）
+          var z = document.querySelector('.adzone');
+          if (z && 'IntersectionObserver' in window) {
+            var seen = false;
+            new IntersectionObserver(function(es){
+              es.forEach(function(e){
+                if (e.isIntersecting && !seen) { seen = true;
+                  gtag('event','ad_view',{page_path:location.pathname}); }
+              });
+            }, {threshold:0.5}).observe(z);
+          }
+          // 3. 押されたか
+          if (z) z.addEventListener('click', function(){
+            gtag('event','ad_click',{page_path:location.pathname});
+          }, {passive:true});
+        })();
+        </script>
       <!-- 広告エリア ここまで -->
 
       <h2 class="sec"><span class="e">🌙</span>おわりに</h2>
