@@ -368,7 +368,7 @@
     var TAP_PX = 6, TAP_MS = 400;
     /* ★つまんでいるあいだは、指やカーソルの少し下に置く。
        真下だと指で隠れて、せっかくのじたばたが見えない（主の指摘 2026-08-14）。 */
-    var HOLD_BELOW = 54;
+    var HOLD_BELOW = 27;   /* 54だと下げすぎだった（主に触ってもらって調整・2026-08-14） */
     var drag = null, justDragged = false;
     function onDown(ev){
       var pt = ev.touches ? ev.touches[0] : ev;
