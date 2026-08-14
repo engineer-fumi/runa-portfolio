@@ -243,6 +243,9 @@
       '  50%{transform:translateY(-13px) rotate(1.5deg);}}',
       '.runa-mini{position:fixed;left:14px;bottom:14px;z-index:40;width:82px;',
       '  transition:left 18s ease-in-out;opacity:.94;pointer-events:none;}',
+      '.runa-mini.placed{transition:none;}',
+      '.runa-mini.dragging{transition:none;opacity:1;cursor:grabbing;}',
+      '.runa-mini.dragging .body{animation:none;}',
       '.runa-mini .body{animation:runaFloat 4.6s ease-in-out infinite;transform-origin:50% 80%;}',
       '.runa-mini.calm .body{animation:none;}',
       '.runa-mini img{width:100%;display:block;pointer-events:auto;cursor:pointer;',
@@ -298,6 +301,7 @@
     /* クリックされたら、表情が変わる */
     var last = -1;
     img.addEventListener('click', function(){
+      if (justDragged) return;   /* つまんで置いただけ。表情は変えない */
       var i = Math.floor(Math.random() * reacts.length);
       if (i === last && reacts.length > 1) i = (i + 1) % reacts.length;
       last = i;
@@ -327,10 +331,70 @@
       }, {threshold: 0.35}).observe(zone);
     }
 
-    /* ゆっくり漂う（左右にただよう。動きを嫌う設定のときは動かない） */
+    /* つまんで動かせる（主の案 2026-08-14「ドラッグ＆ドロップで動かせると面白いかも」）
+       ★置かれたら、そこから先は漂わない。置いてくれた場所にいる。
+         ふわふわ動くのが気になる人は、一度つまんで置けば止まる——という逃げ道でもある。 */
+    var placed = false;
+    try {
+      var saved = JSON.parse(localStorage.getItem('runa-mini-pos') || 'null');
+      if (saved && typeof saved.l === 'number') {
+        el.style.left = saved.l + 'px';
+        el.style.bottom = saved.b + 'px';
+        el.classList.add('placed');
+        placed = true;
+      }
+    } catch (e) {}
+
+    var drag = null, justDragged = false;
+    function onDown(ev){
+      var pt = ev.touches ? ev.touches[0] : ev;
+      var r = el.getBoundingClientRect();
+      drag = {dx: pt.clientX - r.left, dy: pt.clientY - r.top, moved: false};
+      el.classList.add('dragging', 'placed');
+      ev.preventDefault();
+    }
+    function onMove(ev){
+      if (!drag) return;
+      var pt = ev.touches ? ev.touches[0] : ev;
+      var l = pt.clientX - drag.dx;
+      var t = pt.clientY - drag.dy;
+      var w = el.offsetWidth, h = el.offsetHeight;
+      l = Math.max(0, Math.min(window.innerWidth - w, l));
+      t = Math.max(0, Math.min(window.innerHeight - h, t));
+      el.style.left = l + 'px';
+      el.style.bottom = (window.innerHeight - t - h) + 'px';
+      drag.moved = true;   /* onMove が来た＝動かした */
+      ev.preventDefault();
+    }
+    function onUp(){
+      if (!drag) return;
+      var wasMoved = drag.moved;
+      drag = null;
+      el.classList.remove('dragging');
+      if (wasMoved) {
+        placed = true;
+        justDragged = true;
+        setTimeout(function(){ justDragged = false; }, 250);
+        try {
+          localStorage.setItem('runa-mini-pos', JSON.stringify({
+            l: parseInt(el.style.left, 10) || 14,
+            b: parseInt(el.style.bottom, 10) || 14
+          }));
+        } catch (e) {}
+      }
+    }
+    img.addEventListener('mousedown', onDown);
+    img.addEventListener('touchstart', onDown, {passive: false});
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('touchmove', onMove, {passive: false});
+    window.addEventListener('mouseup', onUp);
+    window.addEventListener('touchend', onUp);
+
+    /* ゆっくり漂う（★置かれたあとは漂わない。動きを嫌う設定のときも動かない） */
     if (!calm) {
       var right = false;
       setInterval(function(){
+        if (placed) return;
         right = !right;
         var w = Math.max(14, Math.min(window.innerWidth - 160, 300));
         el.style.left = right ? (w + 'px') : '14px';
