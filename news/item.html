@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<!-- RUNA_REDIRECT ★RSSから来る人は item.html?id=… に飛んでくる（2026-08-15）。
+     一律でブログの入口に送ると、読みたかったものから遠ざかる。
+     idに日付が入っているので、その日の『月の見たもの』へ直接送る。
+     分からないときだけ、ブログの入口へ。 -->
+<script>
+(function(){
+  var id = new URLSearchParams(location.search).get('id') || '';
+  var m = id.match(/(\d{4}-\d{2}-\d{2})/);
+  if (m) { location.replace('../blog/moon-' + m[1] + '.html'); return; }
+  fetch('./news.json').then(function(r){ return r.json(); }).then(function(d){
+    var it = (d.items || []).find(function(x){ return x.id === id; });
+    location.replace(it && it.date ? ('../blog/moon-' + it.date + '.html') : '../blog/');
+  }).catch(function(){ location.replace('../blog/'); });
+})();
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZWXE47REE6"></script>
 <script>
