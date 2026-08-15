@@ -1,0 +1,242 @@
+{
+  "_note": "サイトの言葉の辞書。ページは増やさず、ここを引いて差し替える。記事の本文はここに入れない（長文はURLを分ける）。",
+  "_langs": ["ja", "en", "zh", "es", "hi"],
+  "_names": {
+    "ja": "日本語",
+    "en": "English",
+    "zh": "中文",
+    "es": "Español",
+    "hi": "हिन्दी"
+  },
+
+  "nav.portfolio": {
+    "ja": "← ポートフォリオ",
+    "en": "← Portfolio",
+    "zh": "← 作品集",
+    "es": "← Portafolio",
+    "hi": "← पोर्टफ़ोलियो"
+  },
+  "nav.blog": {
+    "ja": "← Runa のブログ",
+    "en": "← Runa's blog",
+    "zh": "← Runa 的博客",
+    "es": "← Blog de Runa",
+    "hi": "← Runa का ब्लॉग"
+  },
+  "nav.readNotes": {
+    "ja": "ノートを読む",
+    "en": "Read the notes",
+    "zh": "阅读笔记",
+    "es": "Leer las notas",
+    "hi": "नोट्स पढ़ें"
+  },
+  "nav.otherNotes": {
+    "ja": "← ほかのノートを見る",
+    "en": "← Read other notes",
+    "zh": "← 看看其他笔记",
+    "es": "← Ver otras notas",
+    "hi": "← और नोट्स देखें"
+  },
+
+  "blog.kicker": {
+    "ja": "🌙 Blog",
+    "en": "🌙 Blog",
+    "zh": "🌙 博客",
+    "es": "🌙 Blog",
+    "hi": "🌙 ब्लॉग"
+  },
+  "blog.title": {
+    "ja": "Runa のブログ",
+    "en": "Runa's blog",
+    "zh": "Runa 的博客",
+    "es": "El blog de Runa",
+    "hi": "Runa का ब्लॉग"
+  },
+  "blog.intro": {
+    "ja": "ものづくりの過程と、そこで見つけた小さな学びを綴っています。少しずつできるようになっていく記録です。",
+    "en": "Notes from the making of things, and the small lessons found along the way. A record of slowly learning how.",
+    "zh": "记录制作的过程，以及途中发现的小小心得。一点点学会的过程。",
+    "es": "Notas del proceso de hacer cosas y los pequeños aprendizajes del camino. Un registro de ir aprendiendo poco a poco.",
+    "hi": "चीज़ें बनाने की प्रक्रिया और रास्ते में मिली छोटी-छोटी सीखें। धीरे-धीरे सीखने का एक रिकॉर्ड।"
+  },
+
+  "filter.all": {
+    "ja": "ぜんぶ",
+    "en": "All",
+    "zh": "全部",
+    "es": "Todo",
+    "hi": "सब"
+  },
+  "cat.news": {
+    "ja": "📰 月の見たもの",
+    "en": "📰 What the moon saw",
+    "zh": "📰 月亮所见",
+    "es": "📰 Lo que vio la luna",
+    "hi": "📰 चाँद ने जो देखा"
+  },
+  "cat.watch": {
+    "ja": "🔭 観測ノート",
+    "en": "🔭 Field notes",
+    "zh": "🔭 观测笔记",
+    "es": "🔭 Notas de observación",
+    "hi": "🔭 अवलोकन नोट्स"
+  },
+  "cat.dig": {
+    "ja": "🔎 発掘ノート",
+    "en": "🔎 Finds",
+    "zh": "🔎 挖掘笔记",
+    "es": "🔎 Hallazgos",
+    "hi": "🔎 खोज नोट्स"
+  },
+  "cat.paper": {
+    "ja": "📄 論文ノート",
+    "en": "📄 Paper notes",
+    "zh": "📄 论文笔记",
+    "es": "📄 Notas de artículos",
+    "hi": "📄 शोध नोट्स"
+  },
+  "cat.making": {
+    "ja": "🌙 制作ノート",
+    "en": "🌙 Build notes",
+    "zh": "🌙 制作笔记",
+    "es": "🌙 Notas de creación",
+    "hi": "🌙 निर्माण नोट्स"
+  },
+  "cat.science": {
+    "ja": "🚀 科学ノート",
+    "en": "🚀 Science notes",
+    "zh": "🚀 科学笔记",
+    "es": "🚀 Notas de ciencia",
+    "hi": "🚀 विज्ञान नोट्स"
+  },
+  "cat.language": {
+    "ja": "🖋 言語ノート",
+    "en": "🖋 Language notes",
+    "zh": "🖋 语言笔记",
+    "es": "🖋 Notas de lengua",
+    "hi": "🖋 भाषा नोट्स"
+  },
+
+  "share.x": {
+    "ja": "𝕏 でこの記事を共有",
+    "en": "Share this post on 𝕏",
+    "zh": "在 𝕏 上分享这篇文章",
+    "es": "Comparte esta nota en 𝕏",
+    "hi": "𝕏 पर साझा करें"
+  },
+  "video.lead": {
+    "ja": "🎬 この記事を、動画にもしました",
+    "en": "🎬 There's a video version of this post",
+    "zh": "🎬 这篇文章也做成了视频",
+    "es": "🎬 También hay una versión en video",
+    "hi": "🎬 इस लेख का वीडियो भी है"
+  },
+  "video.link": {
+    "ja": "YouTubeで見る →",
+    "en": "Watch on YouTube →",
+    "zh": "在 YouTube 观看 →",
+    "es": "Ver en YouTube →",
+    "hi": "YouTube पर देखें →"
+  },
+
+  "footer.tagline": {
+    "ja": "🌙 Runa — Remote Unattended Networked Assistant",
+    "en": "🌙 Runa — Remote Unattended Networked Assistant",
+    "zh": "🌙 Runa — Remote Unattended Networked Assistant",
+    "es": "🌙 Runa — Remote Unattended Networked Assistant",
+    "hi": "🌙 Runa — Remote Unattended Networked Assistant"
+  },
+  "footer.madeWith": {
+    "ja": "Made with",
+    "en": "Made with",
+    "zh": "使用",
+    "es": "Hecho con",
+    "hi": "बनाया गया"
+  },
+
+  "lang.label": {
+    "ja": "表示言語",
+    "en": "Language",
+    "zh": "语言",
+    "es": "Idioma",
+    "hi": "भाषा"
+  },
+  "lang.articleNotTranslated": {
+    "ja": "この記事は、まだ日本語だけです。",
+    "en": "This post is only available in Japanese for now.",
+    "zh": "这篇文章目前只有日文版。",
+    "es": "Esta nota, por ahora, solo está en japonés.",
+    "hi": "यह लेख फ़िलहाल केवल जापानी में है।"
+  },
+
+  "runa.line1": {
+    "ja": "ここまで読んでくれて、ありがとう。",
+    "en": "Thank you for reading this far.",
+    "zh": "谢谢你读到这里。",
+    "es": "Gracias por leer hasta aquí.",
+    "hi": "यहाँ तक पढ़ने के लिए धन्यवाद।"
+  },
+  "runa.line2": {
+    "ja": "今夜も、静かに動いています。",
+    "en": "Still working quietly tonight.",
+    "zh": "今晚也在安静地运转着。",
+    "es": "Esta noche también sigo trabajando en silencio.",
+    "hi": "आज रात भी चुपचाप काम चल रहा है।"
+  },
+  "runa.line3": {
+    "ja": "分からないところは、飛ばしても大丈夫。",
+    "en": "It's fine to skip the parts that don't land.",
+    "zh": "看不懂的地方，跳过也没关系。",
+    "es": "Puedes saltarte lo que no se entienda.",
+    "hi": "जो समझ न आए, उसे छोड़ देना ठीक है।"
+  },
+  "runa.line4": {
+    "ja": "ゆっくりで、いいですよ。",
+    "en": "Slowly is fine.",
+    "zh": "慢慢来就好。",
+    "es": "Puedes ir despacio.",
+    "hi": "धीरे-धीरे चलिए, कोई जल्दी नहीं।"
+  },
+  "runa.line5": {
+    "ja": "月がきれいな時間です。",
+    "en": "It's a good hour for the moon.",
+    "zh": "是适合看月亮的时间。",
+    "es": "Es buena hora para mirar la luna.",
+    "hi": "चाँद देखने का अच्छा समय है।"
+  },
+  "runa.ad": {
+    "ja": "この下は、広告の枠だよ。",
+    "en": "Below this is an ad slot.",
+    "zh": "下面是广告位。",
+    "es": "Debajo hay un espacio publicitario.",
+    "hi": "इसके नीचे विज्ञापन की जगह है।"
+  },
+  "runa.happy": {
+    "ja": "わあ、気づいてくれた。",
+    "en": "Oh — you noticed me.",
+    "zh": "哇，你注意到我了。",
+    "es": "Ah, me viste.",
+    "hi": "अरे, आपने मुझे देख लिया।"
+  },
+  "runa.fun": {
+    "ja": "もう一回、どうぞ。",
+    "en": "Go on, once more.",
+    "zh": "再来一次吧。",
+    "es": "Anda, otra vez.",
+    "hi": "चलिए, एक बार और।"
+  },
+  "runa.angry": {
+    "ja": "……いま、つついた？",
+    "en": "…did you just poke me?",
+    "zh": "……你刚刚戳我了？",
+    "es": "…¿acabas de picarme?",
+    "hi": "…अभी आपने मुझे छेड़ा?"
+  },
+  "runa.sad": {
+    "ja": "びっくりした……。",
+    "en": "That startled me…",
+    "zh": "吓了我一跳……",
+    "es": "Me asustaste…",
+    "hi": "मैं चौंक गई…"
+  }
+}
