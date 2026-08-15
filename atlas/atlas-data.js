@@ -17,7 +17,7 @@ window.ATLAS_DATA = {
 
   // 表示メタ情報（マストヘッド・フッターに反映）
   meta: {
-    lastUpdated: "2026-08-13",   // 最終更新日（必ず更新する）
+    lastUpdated: "2026-08-15",   // 最終更新日（必ず更新する）
     rangeStart: "2025.09",       // 収録範囲の開始（表示用ラベル）
     rangeEnd: "2026.06",         // 収録範囲の終了（表示用ラベル）
     sources: [
@@ -372,6 +372,27 @@ window.ATLAS_DATA = {
           "name": "モデル機能・パラメータ",
           "name_en": "Model capabilities & parameters",
           "feats": [
+            {
+              "id": "output-provenance",
+              "name": "生成物の来歴（透かし・C2PA）",
+              "name_en": "Output provenance (watermark & C2PA)",
+              "events": [
+                {
+                  "date": "2026-08-11",
+                  "type": "launch",
+                  "title": "生成物に機械が読める印をつける",
+                  "desc": "文章には目に見えない透かしを文そのものに埋め込み、コピー＆ペーストしても残る形に。画像などのファイルにはC2PA準拠の署名つき来歴情報を付与。EU AI法の透明性ルール（2026-08-02適用）への対応で、8月2日以降にEUでローンチするモデルから。提供範囲はEUに限らず世界中で、Claude・Claude Code・Cowork・APIが対象。",
+                  "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content"
+                },
+                {
+                  "date": "2026-08-14",
+                  "type": "update",
+                  "title": "仕組みの解説を公開",
+                  "desc": "テキスト透かしの仕組み（SynthID-Textベース）と方針を説明する記事を公開。今後のモデルへの標準搭載と、透かしを見つけるAPIを開発中であることも書かれた。",
+                  "url": "https://www.anthropic.com/news/claude-text-watermark"
+                }
+              ]
+            },
             {
               "id": "ctx1m",
               "name": "1Mトークンコンテキスト",
