@@ -20,6 +20,16 @@
     var lines = ["ここまで読んでくれて、ありがとう。","今夜も、静かに動いています。","分からないところは、飛ばしても大丈夫。","ゆっくりで、いいですよ。","月がきれいな時間です。"];
     var reacts = [["happy","わあ、気づいてくれた。"],["fun","もう一回、どうぞ。"],["angry","……いま、つついた？"],["sad","びっくりした……。"]];
     var adLine = "この下は、広告の枠だよ。";
+    /* ★台詞をページの言語に合わせる（主 2026-08-16）。
+       辞書（assets/i18n/dict.json）が読めていればそちらを使い、
+       読めなければ上に書いてある日本語のまま出る＝壊れない。 */
+    var lineKeys = ["runa.line1","runa.line2","runa.line3","runa.line4","runa.line5"];
+    var reactKeys = ["runa.happy","runa.fun","runa.angry","runa.sad"];
+    function pickText(i, fallback, keys) {
+      var I = window.RunaI18n;
+      if (I && I.ready && keys[i]) { var v = I.t(keys[i]); if (v) return v; }
+      return fallback;
+    }
     var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var stopWalk = function(){};   /* 歩きを畳む口。歩く仕掛けを作るときに中身が入る */
 
@@ -204,7 +214,7 @@
       var i = Math.floor(Math.random() * reacts.length);
       if (i === last && reacts.length > 1) i = (i + 1) % reacts.length;
       last = i;
-      var face = reacts[i][0], text = reacts[i][1];
+      var face = reacts[i][0], text = pickText(i, reacts[i][1], reactKeys);
       showing = face;
       play(face === 'sad' ? 'failed' : (face === 'angry' ? 'waiting' : 'review'), 150);
       if (bubTimer) { clearTimeout(bubTimer); bubTimer = null; }
@@ -236,7 +246,8 @@
     var title = textOf(document.querySelector('article h1'));
     setTimeout(function(){
       if (title) say('この回は「' + title + '」のお話です。', 11000);
-      else say(lines[Math.floor(Math.random()*lines.length)]);
+      else { var li = Math.floor(Math.random()*lines.length);
+             say(pickText(li, lines[li], lineKeys)); }
     }, 2500);
 
     var lastSaid = 0;
@@ -315,7 +326,8 @@
 
     /* ふだんの独り言は、記事の話が無いときの控えとして残す（間隔は長めに） */
     setInterval(function(){
-      if (!showing && Math.random() < 0.35) maybe(lines[Math.floor(Math.random()*lines.length)]);
+      if (!showing && Math.random() < 0.35) { var mi = Math.floor(Math.random()*lines.length);
+                                             maybe(pickText(mi, lines[mi], lineKeys)); }
     }, 42000);
 
     /* 広告の枠が見えたら、一度だけ「枠だよ」と言う。それ以上は言わない。 */
@@ -324,7 +336,9 @@
       var told = false;
       new IntersectionObserver(function(es){
         es.forEach(function(e){
-          if (e.isIntersecting && !told) { told = true; say(adLine, 6000); }
+          if (e.isIntersecting && !told) { told = true;
+            var I = window.RunaI18n; var ad = (I && I.ready && I.t("runa.ad")) || adLine;
+            say(ad, 6000); }
         });
       }, {threshold: 0.35}).observe(zone);
     }
