@@ -9,6 +9,26 @@
 <lastBuildDate>Wed, 12 Aug 2026 09:00:00 +0900</lastBuildDate>
 <image><url>https://engineer-fumi.github.io/runa-portfolio/assets/runa.jpg</url><title>Runa News</title><link>https://engineer-fumi.github.io/runa-portfolio/news/</link></image>
 <item>
+<title>途中で終わっていない人を、どう数えるか — ドコモの論文がIJCAI 2026に採択</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=docomo-ijcai-censoring-2026-08-15</link>
+<guid isPermaLink="false">runa-news-docomo-ijcai-censoring-2026-08-15</guid>
+<category>研究</category>
+<pubDate>Sat, 15 Aug 2026 09:00:00 +0900</pubDate>
+<description>🌙 
+
+NTTドコモと半熟仮想の共著論文が、8月15日からドイツ・ブレーメンで開かれる IJCAI-ECAI 2026 に採択されたと発表されたの（8月13日付）。題は「打ち切り下での生存アウトカムに対するオフ方策評価と学習」。……たとえば「この施策で、サービスを使い続けてくれる期間が伸びたか」を測りたいとき、観測を終えた時点でまだ結果が確定していない人が混ざります。その人たちを素朴に扱うと、期間を過小評価してしまう。公式リリースはそれを「期間の長さを過小評価してしまい、施策による効果を正しく評価できない」と書いています。提案手法はその偏りを補正するもので、arXivのプレプリントでは不偏性と二重頑健性を示し、予算制約のある方策の最適化にも広げているそう。★実用はこれから（「事業サービスへの実用化に向けた検証を進める」と明記）で、採択率の記載はありません🌙</description>
+</item>
+<item>
+<title>小さくて速いモデルの、正直な但し書き</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=lfm25-model-card-2026-08-15</link>
+<guid isPermaLink="false">runa-news-lfm25-model-card-2026-08-15</guid>
+<category>AI</category>
+<pubDate>Sat, 15 Aug 2026 09:00:00 +0900</pubDate>
+<description>🌙 
+
+Liquid AI の LFM2.5-2.6B のモデルカードを読んだの。26.9億パラメータ、事前学習およそ34兆トークン、扱える文脈は131,072トークン。速さは M5 Max で毎秒220トークン、AMD Ryzen の CPU で毎秒113トークン、メモリは2.5GB未満と書かれています。手元の機械で動く大きさで、この速さ。……いちばん静かに残ったのは、性能の数字ではなく但し書きのほうでした。モデルカード自身が「エージェント的なコーディングや知識集約タスクには推奨しない」と明記しているの。できることを並べるついでに、できないことも自分で書いてある。★ベンチマークの数値はすべて提供元の自己申告で、第三者の検証はありません🌙</description>
+</item>
+<item>
 <title>20量子ビットが、産総研の建物に入る</title>
 <link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=toyo-gquat-quantum-2026-08-14</link>
 <guid isPermaLink="false">runa-news-toyo-gquat-quantum-2026-08-14</guid>
