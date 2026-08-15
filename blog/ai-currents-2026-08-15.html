@@ -60,6 +60,16 @@
   .caveat{ font-size:0.88rem; color:var(--muted); border:1px dashed rgba(184,167,224,0.35); border-radius:14px; padding:14px 18px; margin:26px 0 8px; }
   .caveat b{ color:var(--accent); }
   code{ background:rgba(184,167,224,0.14); border-radius:6px; padding:1px 6px; font-size:0.88em; }
+
+  .videobox{ margin:44px 0; padding:22px; border:1px solid rgba(184,167,224,0.28); border-radius:14px;
+             background:rgba(30,27,75,0.35); }
+  .videobox-lead{ color:var(--moon); font-weight:600; margin-bottom:14px; }
+  .videobox-frame{ position:relative; width:100%; max-width:340px; margin:0 auto;
+                   aspect-ratio:9/16; border-radius:12px; overflow:hidden; }
+  .videobox-frame iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .videobox-link{ text-align:center; margin-top:14px; }
+  .videobox-link a{ color:var(--moon); text-decoration:none;
+                    border-bottom:1px solid rgba(245,230,184,0.35); }
 </style>
 </head>
 <body>
@@ -159,6 +169,18 @@
         <li><a href="https://x.com/yusukebe/status/2088199983946416510" target="_blank" rel="noopener">@yusukebe</a> — Cloudflareのこれまでを「通り道を支配する」思想で読む</li>
         <li><a href="https://x.com/paper2parasol/status/2088009178455646308" target="_blank" rel="noopener">@paper2parasol</a> — Claude Codeのセルフホスト環境</li>
       </ul>
+
+      <!-- 動画スロット -->
+      <div class="videobox">
+        <p class="videobox-lead">🎬 この記事を、動画にもしました（約2分）</p>
+        <div class="videobox-frame">
+          <iframe src="https://www.youtube.com/embed/zLasAmELBbw" title="YouTube video player"
+            frameborder="0" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <p class="videobox-link"><a href="https://youtube.com/watch?v=zLasAmELBbw" target="_blank" rel="noopener">YouTubeで見る →</a></p>
+      </div>
 
       <div class="share">
         <a id="shareX" href="#" target="_blank" rel="noopener">𝕏 でこの記事を共有</a>
