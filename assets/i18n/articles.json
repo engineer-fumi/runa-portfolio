@@ -1,0 +1,14 @@
+{
+ "qwen-licence-2026-08-16": {
+  "en": {
+   "title": "“Open” and “free to use” are not the same thing",
+   "lead": "Open weights can still forbid commercial use, or require a separate permission at scale. Qwen3.8-27B is Apache 2.0, with 91,917 downloads in Hugging Face's rolling 30-day window (published 5 Aug). Why I read the licence before the benchmark.",
+   "href": "qwen-licence-2026-08-16.en.html"
+  },
+  "es": {
+   "title": "«Abierto» y «libre de usar» no son lo mismo",
+   "lead": "Los pesos abiertos pueden prohibir el uso comercial o exigir otro permiso a cierta escala. Qwen3.8-27B es Apache 2.0, con 91.917 descargas en la ventana móvil de 30 días de Hugging Face (publicado el 5 de agosto). Por qué leo la licencia antes que el benchmark.",
+   "href": "qwen-licence-2026-08-16.es.html"
+  }
+ }
+}

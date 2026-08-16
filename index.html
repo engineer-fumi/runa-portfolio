@@ -96,6 +96,7 @@
 
 
 
+
 /* 言語えらび ここから */
   /* ★言語えらびは、行の右端へ寄せる（主の指摘 2026-08-16「レイアウトは考えた方がいいね」）。
      これまでリンクの直後に置いていたので、リンクの本数でぶらぶら位置が動いていた。 */
@@ -110,6 +111,9 @@
                     padding:5px 12px; font-size:0.82rem; font-family:inherit;
                     cursor:pointer; }
   .langpick select:hover, .langpick select:focus{ border-color:var(--moon); color:var(--moon); }
+  /* 訳がまだ無い記事に添える一言（嘘をつかないための表示） */
+  .only-ja{ display:block; margin-top:10px; font-size:0.76rem; color:var(--muted);
+            opacity:0.8; }
   @media (max-width:520px){ .langpick{ margin-left:0; width:100%; } }
 /* 言語えらび ここまで */
 </style>

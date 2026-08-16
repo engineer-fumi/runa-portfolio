@@ -70,8 +70,64 @@
     // ページの題（タブに出る文字）。属性で指定されていれば差し替える
     var tkey = document.documentElement.getAttribute('data-i18n-title');
     if (tkey) { var tv = api.t(tkey); if (tv) document.title = tv; }
+    localizeCards();
     var sel = document.getElementById('runa-lang-select');
     if (sel && sel.value !== api.lang) sel.value = api.lang;
+  }
+
+
+  /* 一覧に並ぶカードの題と説明を、言語版があるものだけ差し替える 🌙
+   *
+   * なぜ（主 2026-08-16「至る所が言語設定変えても日本語のまま」）:
+   *   サイトの言葉は辞書で変わるが、記事の題と説明は記事そのものの文章なので
+   *   辞書には入れない。かといって全記事を訳すのは追従できない。
+   *   ★だから「訳した記事だけ、その言語で出す」。無い記事は日本語のまま出して、
+   *     日本語だけであることを添える。嘘をつかずに、訳した順に増えていく。
+   */
+  function localizeCards() {
+    if (!api.articles) return;
+    var lang = api.lang;
+    var cards = document.querySelectorAll('a.post[href], a.note[href]');
+    for (var i = 0; i < cards.length; i++) {
+      var a = cards[i];
+      var m = (a.getAttribute('href') || '').match(/([a-z0-9\-]+)\.html$/i);
+      if (!m) continue;
+      var slug = m[1].replace(/\.(en|zh|es|hi)$/, '');
+      var head = a.querySelector('h2, h3');
+      var lead = a.querySelector('.body > p, .note-body > p');
+      if (!head) continue;
+
+      /* 最初の一度だけ、日本語の元の姿を覚えておく */
+      if (!a.dataset.jaTitle) {
+        a.dataset.jaTitle = head.textContent;
+        a.dataset.jaHref = a.getAttribute('href');
+        if (lead) a.dataset.jaLead = lead.textContent;
+      }
+      var v = api.articles[slug] && api.articles[slug][lang];
+      var note = a.querySelector('.only-ja');
+      if (v) {
+        head.textContent = v.title;
+        if (lead && v.lead) lead.textContent = v.lead;
+        a.setAttribute('href', a.dataset.jaHref.replace(/[^/]+$/, v.href));
+        if (note) note.remove();
+      } else {
+        head.textContent = a.dataset.jaTitle;
+        if (lead && a.dataset.jaLead) lead.textContent = a.dataset.jaLead;
+        a.setAttribute('href', a.dataset.jaHref);
+        if (lang === 'ja') {
+          if (note) note.remove();
+        } else {
+          var msg = api.t('lang.articleNotTranslated');
+          if (!note) {
+            note = document.createElement('span');
+            note.className = 'only-ja';
+            (a.querySelector('.body, .note-body') || a).appendChild(note);
+          }
+          note.textContent = msg;
+          note.lang = lang;
+        }
+      }
+    }
   }
 
   function buildSelector() {
@@ -109,10 +165,15 @@
 
   // 辞書の置き場は、記事（blog/）でもトップでも同じ場所を指せるように相対を吸収する
   var base = (location.pathname.indexOf('/blog/') >= 0) ? '../' : './';
-  fetch(base + 'assets/i18n/dict.json')
-    .then(function (r) { return r.json(); })
-    .then(start)
-    .catch(function () { /* 読めなくても、書いてある日本語のまま出る */ });
+  Promise.all([
+    fetch(base + 'assets/i18n/dict.json').then(function (r) { return r.json(); }),
+    fetch(base + 'assets/i18n/articles.json')
+      .then(function (r) { return r.json(); })
+      .catch(function () { return {}; })
+  ]).then(function (both) {
+    api.articles = both[1];
+    start(both[0]);
+  }).catch(function () { /* 読めなくても、書いてある日本語のまま出る */ });
 
   window.RunaI18n = api;
 })();
