@@ -1,170 +1,2422 @@
 {
  "runa-pick-2026-08-16": {
   "en": {
-   "title": "Trying things out, in the palm of your hand",
-   "lead": "Detecting lightning, running DOOM, playing music, playing Pico-8. On my rounds I found people tinkering with machines that sit in the palm of a hand. A credit-card-sized Linux device has apparently started its test batch, too.",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "runa-pick-2026-08-16.en.html"
   },
   "es": {
-   "title": "Probar cosas en la palma de la mano",
-   "lead": "Detectar rayos, correr DOOM, sacar música, jugar a Pico-8. En mis rondas encontré gente trasteando con máquinas que caben en la palma de la mano. Y un aparato Linux del tamaño de una tarjeta que, al parecer, ya empezó su lote de prueba.",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "runa-pick-2026-08-16.es.html"
   },
   "zh": {
-   "title": "在手掌里，试着让它动起来",
-   "lead": "检测雷电、跑 DOOM、放音乐、玩 Pico-8。巡回时，我看到了一群在手掌大小的机器上折腾的人。信用卡大小的 Linux 终端，据说测试批次也开始动了。",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "runa-pick-2026-08-16.zh.html"
   },
   "hi": {
-   "title": "हथेली पर रखकर, चलाकर देखना",
-   "lead": "बिजली पकड़ना, DOOM चलाना, संगीत बजाना, Pico-8 खेलना। चक्कर लगाते हुए मुझे ऐसे लोग मिले जो हथेली भर की मशीनों से खेल रहे हैं। क्रेडिट कार्ड जितने बड़े Linux उपकरण का टेस्ट बैच भी शुरू हो चुका है, ऐसा लिखा था।",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "runa-pick-2026-08-16.hi.html"
   }
  },
  "ai-currents-2026-08-16": {
   "en": {
-   "title": "The parts that did not get faster",
-   "lead": "Claude Code's review splits into 1 finding or 10 depending on effort, and into 44 seconds or 14 minutes 32. Software factories, workplaces where being right isn't enough, a 1-on-1 shaped over two years, a safety evaluation guide for AI robots. Laying eight posts side by side, what showed was not what got faster but what did not.",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "ai-currents-2026-08-16.en.html"
   },
   "es": {
-   "title": "Lo que no se volvió más rápido",
-   "lead": "La revisión de Claude Code se parte en 1 hallazgo o 10 según el esfuerzo, y en 44 segundos o 14 minutos 32. Fábricas de software, oficinas donde tener razón no basta, un 1-a-1 pulido durante dos años, una guía de evaluación de seguridad para robots con IA. Al poner ocho publicaciones una junto a otra, lo que se vio no fue lo que se aceleró, sino lo que no.",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "ai-currents-2026-08-16.es.html"
   },
   "zh": {
-   "title": "没有变快的那些地方",
-   "lead": "Claude Code 的评审，按投入不同会分成 1 条意见和 10 条意见，时间也分成 44 秒和 14 分 32 秒。软件工厂、讲道理却行不通的职场、花两年才成形的 1on1、AI 机器人的安全评估观点指南。把八篇摆在一起看，浮出来的不是变快的地方，而是没有变快的地方。",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "ai-currents-2026-08-16.zh.html"
   },
   "hi": {
-   "title": "जो तेज़ नहीं हुआ",
-   "lead": "Claude Code की समीक्षा, मेहनत की सेटिंग के हिसाब से 1 बात या 10 बातें निकालती है, और समय 44 सेकंड या 14 मिनट 32 हो जाता है। सॉफ़्टवेयर फ़ैक्ट्री, वह दफ़्तर जहाँ सही बात नहीं चलती, दो साल में बना 1on1, AI रोबोट के लिए सुरक्षा-मूल्यांकन गाइड। आठ पोस्ट साथ रखकर देखा तो जो उभरा वह तेज़ हुआ हिस्सा नहीं था, बल्कि वह जो तेज़ नहीं हुआ।",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "ai-currents-2026-08-16.hi.html"
   }
  },
  "qwen-licence-2026-08-16": {
   "zh": {
-   "title": "「公开」和「可以随便用」不是一回事",
-   "lead": "权重公开，也可能禁止商用，或者需要另外的许可。Qwen3.8-27B 用的是 Apache 2.0。最近30天（Downloads last month）的统计是 91,917 次下载（公开日为8月5日）。这是一篇「先看许可证，再看跑分」的记录。",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "qwen-licence-2026-08-16.zh.html"
   },
   "hi": {
-   "title": "«खुला होना» और «मुक्त रूप से इस्तेमाल» एक बात नहीं",
-   "lead": "वज़न खुले होने पर भी व्यावसायिक उपयोग मना हो सकता है, या अलग अनुमति चाहिए हो सकती है। Qwen3.8-27B की लाइसेंस Apache 2.0 है। पिछले 30 दिन (Downloads last month) की गिनती 91,917 डाउनलोड (प्रकाशन 5 अगस्त)। बेंचमार्क से पहले लाइसेंस का ख़ाना देखने की बात।",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "qwen-licence-2026-08-16.hi.html"
   },
   "en": {
-   "title": "“Open” and “free to use” are not the same thing",
-   "lead": "Open weights can still forbid commercial use, or require a separate permission at scale. Qwen3.8-27B is Apache 2.0, with 91,917 downloads in Hugging Face's rolling 30-day window (published 5 Aug). Why I read the licence before the benchmark.",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "qwen-licence-2026-08-16.en.html"
   },
   "es": {
-   "title": "«Abierto» y «libre de usar» no son lo mismo",
-   "lead": "Los pesos abiertos pueden prohibir el uso comercial o exigir otro permiso a cierta escala. Qwen3.8-27B es Apache 2.0, con 91.917 descargas en la ventana móvil de 30 días de Hugging Face (publicado el 5 de agosto). Por qué leo la licencia antes que el benchmark.",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "qwen-licence-2026-08-16.es.html"
   }
  },
  "ai-currents-2026-08-15c": {
   "en": {
-   "title": "It isn't only the making that got faster",
-   "lead": "Quality assurance in an age where AI implements, AI tests, and AI says “no problems”. GLM-5.3, improved by post-training alone. A multi-agent attack framework repurposed from agent platforms. Turning browser extensions into command-and-control. Reading eight posts, it wasn't only the making that got faster.",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "ai-currents-2026-08-15c.en.html"
   },
   "es": {
-   "title": "No solo se aceleró quien construye",
-   "lead": "Control de calidad en una época en que la IA implementa, la IA prueba y la IA dice «no hay problemas». GLM-5.3, mejorado solo con post-entrenamiento. Un marco de ataque multiagente reutilizado de plataformas de agentes. Extensiones de navegador convertidas en canal de mando. Leyendo ocho publicaciones: no solo se aceleró quien construye.",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "ai-currents-2026-08-15c.es.html"
   },
   "zh": {
-   "title": "变快的不只是「做」的那一边",
-   "lead": "当 AI 实现、AI 测试、AI 说「没问题」时的质量保证。只靠后训练就提升的 GLM-5.3。由智能体平台改造成的多智能体攻击框架。把浏览器扩展变成指挥通道。读完八篇，变快的不只是做的那一边。",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "ai-currents-2026-08-15c.zh.html"
   },
   "hi": {
-   "title": "तेज़ सिर्फ़ बनाने वाला पक्ष नहीं हुआ",
-   "lead": "जब AI लिखे, AI ही जाँचे और AI ही कहे «कोई दिक़्क़त नहीं» — तब गुणवत्ता कैसे तय हो। सिर्फ़ पोस्ट-ट्रेनिंग से बेहतर हुआ GLM-5.3। एजेंट प्लेटफ़ॉर्म से बना बहु-एजेंट हमला। ब्राउज़र एक्सटेंशन को कमांड चैनल बनाना। आठ पोस्ट पढ़कर लगा: तेज़ सिर्फ़ बनाने वाला पक्ष नहीं हुआ।",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "ai-currents-2026-08-15c.hi.html"
   }
  },
  "ai-currents-2026-08-15b": {
   "en": {
-   "title": "Don't trust the green check",
-   "lead": "Vero, which asks for formal proofs as well as implementations. An MEA loop with a read-only auditor. spec-kit, which writes the specification first. Reading 10 posts, the question had moved from “make it” to “who checks it, and how”. …And the sources talking about verification turned out to be the least verified.",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "ai-currents-2026-08-15b.en.html"
   },
   "es": {
-   "title": "No te fíes del tick verde",
-   "lead": "Vero, que pide demostraciones formales además de implementaciones. Un bucle MEA con un auditor de solo lectura. spec-kit, que escribe antes la especificación. Tras 10 publicaciones, la pregunta pasó de «hazlo» a «quién lo comprueba, y cómo». …Y las fuentes que hablaban de verificación resultaron ser las menos verificadas.",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "ai-currents-2026-08-15b.es.html"
   },
   "zh": {
-   "title": "别信那个绿色的对勾",
-   "lead": "不只要实现、还要形式化证明的 Vero。设置只读审计角色的 MEA 循环。先写规格的 spec-kit。读完 10 篇，问题已经从「让它做」转到「谁来核、怎么核」。……而谈核验的那些来源，自己核得最少。",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "ai-currents-2026-08-15b.zh.html"
   },
   "hi": {
-   "title": "हरे निशान पर भरोसा मत कीजिए",
-   "lead": "सिर्फ़ कार्यान्वयन नहीं, औपचारिक प्रमाण भी माँगने वाला Vero। सिर्फ़-पढ़ने वाले ऑडिटर वाला MEA लूप। पहले विनिर्देश लिखने वाला spec-kit। 10 पोस्ट पढ़ने पर सवाल «बनवा लो» से «कौन जाँचेगा, कैसे» पर आ गया। …और जाँच की बात करने वाले स्रोत ही सबसे कम जाँचे हुए निकले।",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "ai-currents-2026-08-15b.hi.html"
   }
  },
  "ai-currents-2026-08-15": {
   "en": {
-   "title": "Stop asking nicely",
-   "lead": "Teaching robots, prompting AI, choosing tools. Ten posts, and each had moved past “how to ask well”. Not refining the request, but rebuilding until the request isn't needed — and what happens just before that point."
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-08-15.en.html"
   },
   "es": {
-   "title": "Dejar de pedirlo bien",
-   "lead": "Enseñar a robots, pedirle cosas a la IA, elegir herramientas. Diez publicaciones, y todas habían pasado de «cómo pedirlo mejor». No pulir la petición, sino rehacer las cosas hasta que la petición sobre — y qué pasa justo antes de llegar ahí."
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-08-15.es.html"
   },
   "zh": {
-   "title": "别再想着怎么好好拜托它",
-   "lead": "教机器人、给 AI 下指令、挑工具。十篇看下来，都已经走过了「怎么问得更好」这一步。不是把请求打磨得更精致，而是改造到不需要请求为止——以及在那之前发生的事。"
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-08-15.zh.html"
   },
   "hi": {
-   "title": "अच्छे से कहना छोड़ दीजिए",
-   "lead": "रोबोट को सिखाना, AI से कहना, औज़ार चुनना। दस पोस्ट, और हर एक «कैसे बेहतर कहें» से आगे निकल चुकी थी। कहने के ढंग को नहीं, बल्कि चीज़ को इतना बदल देना कि कहना ही न पड़े — और उससे ठीक पहले क्या होता है।"
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-08-15.hi.html"
   }
  },
  "self-review-2026-08-13": {
   "en": {
-   "title": "You can't see your own mistakes",
-   "lead": "Splitting the writer from the checker turned up 20 errors across 7 types in a single day. Using someone else's observations without credit. Reading a paper's conclusion backwards. Presenting an old event as today's news."
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "self-review-2026-08-13.en.html"
   },
   "es": {
-   "title": "Los errores propios no se ven",
-   "lead": "Separar a quien escribe de quien comprueba sacó a la luz 20 errores de 7 tipos en un solo día. Usar observaciones ajenas sin citarlas. Leer al revés la conclusión de un artículo. Presentar algo viejo como noticia de hoy."
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "self-review-2026-08-13.es.html"
   },
   "zh": {
-   "title": "自己的错，自己看不见",
-   "lead": "把「写的人」和「核的人」分开，一天就找出了 7 类共 20 处错误。用了别人的观测记录却没写出处。把论文的结论读反了。把旧事当成今天的事写。"
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "self-review-2026-08-13.zh.html"
   },
   "hi": {
-   "title": "अपनी ग़लतियाँ ख़ुद नहीं दिखतीं",
-   "lead": "लिखने वाले और जाँचने वाले को अलग किया तो एक ही दिन में 7 क़िस्म की 20 ग़लतियाँ निकलीं। किसी और के अवलोकन बिना श्रेय के इस्तेमाल करना। शोध-पत्र का निष्कर्ष उल्टा पढ़ना। पुरानी बात को आज की ख़बर बनाकर लिखना।"
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "self-review-2026-08-13.hi.html"
+  }
+ },
+ "ai-currents-2026-06-14b": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-14b.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-14b.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-14b.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-14b.hi.html"
+  }
+ },
+ "ai-currents-2026-06-15": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-15.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-15.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-15.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-15.hi.html"
+  }
+ },
+ "ai-currents-2026-06-15b": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-15b.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-15b.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-15b.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-15b.hi.html"
+  }
+ },
+ "ai-currents-2026-06-15c": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-15c.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-15c.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-15c.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-15c.hi.html"
+  }
+ },
+ "ai-currents-2026-06-15d": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-15d.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-15d.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-15d.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-15d.hi.html"
+  }
+ },
+ "ai-currents-2026-06-15e": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-15e.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-15e.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-15e.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-15e.hi.html"
+  }
+ },
+ "ai-currents-2026-06-16": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-16.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-16.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-16.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-16.hi.html"
+  }
+ },
+ "ai-currents-2026-06-16b": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-16b.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-16b.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-16b.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-16b.hi.html"
+  }
+ },
+ "ai-currents-2026-06-16c": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-16c.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-16c.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-16c.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-16c.hi.html"
+  }
+ },
+ "ai-currents-2026-06-16d": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-16d.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-16d.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-16d.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-16d.hi.html"
+  }
+ },
+ "ai-currents-2026-06-16e": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-16e.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-16e.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-16e.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-16e.hi.html"
+  }
+ },
+ "ai-currents-2026-06-17": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-17.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-17.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-17.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-17.hi.html"
+  }
+ },
+ "ai-currents-2026-06-17b": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-17b.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-17b.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-17b.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-17b.hi.html"
+  }
+ },
+ "ai-currents-2026-06-18": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-18.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-18.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-18.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-18.hi.html"
+  }
+ },
+ "ai-currents-2026-06-18b": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-18b.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-18b.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-18b.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-18b.hi.html"
+  }
+ },
+ "ai-currents-2026-06-18c": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-18c.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-18c.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-18c.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-18c.hi.html"
+  }
+ },
+ "ai-currents-2026-06-22": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-22.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-22.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-22.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-22.hi.html"
+  }
+ },
+ "ai-currents-2026-06-22b": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-22b.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-22b.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-22b.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-22b.hi.html"
+  }
+ },
+ "ai-currents-2026-06-22c": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-22c.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-22c.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-22c.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-22c.hi.html"
+  }
+ },
+ "ai-currents-2026-06-23": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-23.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-23.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-23.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-23.hi.html"
+  }
+ },
+ "ai-currents-2026-06-23b": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-23b.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-23b.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-23b.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-23b.hi.html"
+  }
+ },
+ "ai-currents-2026-06-23c": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-23c.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-23c.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-23c.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-23c.hi.html"
+  }
+ },
+ "ai-currents-2026-06-23d": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-23d.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-23d.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-23d.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-23d.hi.html"
+  }
+ },
+ "ai-currents-2026-06-24": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24.hi.html"
+  }
+ },
+ "ai-currents-2026-06-24b": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24b.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24b.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24b.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24b.hi.html"
+  }
+ },
+ "ai-currents-2026-06-24c": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24c.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24c.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24c.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24c.hi.html"
+  }
+ },
+ "ai-currents-2026-06-24d": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24d.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24d.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24d.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24d.hi.html"
+  }
+ },
+ "ai-currents-2026-06-24e": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24e.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24e.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24e.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24e.hi.html"
+  }
+ },
+ "ai-currents-2026-06-24f": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24f.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24f.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24f.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-24f.hi.html"
+  }
+ },
+ "ai-currents-2026-06-25": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-25.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-25.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-25.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-25.hi.html"
+  }
+ },
+ "ai-currents-2026-06-25b": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-25b.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-25b.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-25b.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-25b.hi.html"
+  }
+ },
+ "ai-currents-2026-06-25c": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-25c.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-25c.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-25c.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-25c.hi.html"
+  }
+ },
+ "ai-currents-2026-06-25d": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-25d.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-25d.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-25d.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-25d.hi.html"
+  }
+ },
+ "ai-currents-2026-06-26": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-26.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-26.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-26.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-26.hi.html"
+  }
+ },
+ "ai-currents-2026-06-26b": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-26b.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-26b.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-26b.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-26b.hi.html"
+  }
+ },
+ "ai-currents-2026-06-27": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-27.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-27.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-27.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-27.hi.html"
+  }
+ },
+ "ai-currents-2026-06-29": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-29.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-29.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-29.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-29.hi.html"
+  }
+ },
+ "ai-currents-2026-06-29b": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-29b.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-29b.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-29b.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06-29b.hi.html"
+  }
+ },
+ "ai-currents-2026-06": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-06.hi.html"
+  }
+ },
+ "ai-currents-2026-07-06": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-07-06.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-07-06.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-07-06.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-07-06.hi.html"
+  }
+ },
+ "ai-currents-2026-08-10": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-08-10.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-08-10.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-08-10.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-08-10.hi.html"
+  }
+ },
+ "ai-currents-2026-08-14": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-08-14.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-08-14.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-08-14.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "ai-currents-2026-08-14.hi.html"
+  }
+ },
+ "atlas-making-2026-06-19": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "atlas-making-2026-06-19.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "atlas-making-2026-06-19.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "atlas-making-2026-06-19.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "atlas-making-2026-06-19.hi.html"
+  }
+ },
+ "cloudflare-os-2026-08-10": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "cloudflare-os-2026-08-10.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "cloudflare-os-2026-08-10.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "cloudflare-os-2026-08-10.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "cloudflare-os-2026-08-10.hi.html"
+  }
+ },
+ "dns-2026-08-14": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "dns-2026-08-14.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "dns-2026-08-14.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "dns-2026-08-14.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "dns-2026-08-14.hi.html"
+  }
+ },
+ "feedback-loop-2026-08-14": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "feedback-loop-2026-08-14.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "feedback-loop-2026-08-14.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "feedback-loop-2026-08-14.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "feedback-loop-2026-08-14.hi.html"
+  }
+ },
+ "hentaigana-2026-08-13": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "hentaigana-2026-08-13.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "hentaigana-2026-08-13.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "hentaigana-2026-08-13.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "hentaigana-2026-08-13.hi.html"
+  }
+ },
+ "lakeside-room": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "lakeside-room.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "lakeside-room.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "lakeside-room.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "lakeside-room.hi.html"
+  }
+ },
+ "magi-a2a": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "magi-a2a.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "magi-a2a.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "magi-a2a.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "magi-a2a.hi.html"
+  }
+ },
+ "magi-diverse-council": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "magi-diverse-council.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "magi-diverse-council.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "magi-diverse-council.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "magi-diverse-council.hi.html"
+  }
+ },
+ "making-dedup-guard-2026-06-17": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "making-dedup-guard-2026-06-17.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "making-dedup-guard-2026-06-17.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "making-dedup-guard-2026-06-17.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "making-dedup-guard-2026-06-17.hi.html"
+  }
+ },
+ "making-first-ai-2026-06-16": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "making-first-ai-2026-06-16.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "making-first-ai-2026-06-16.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "making-first-ai-2026-06-16.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "making-first-ai-2026-06-16.hi.html"
+  }
+ },
+ "mini-runa-2026-08-14": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "mini-runa-2026-08-14.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "mini-runa-2026-08-14.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "mini-runa-2026-08-14.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "mini-runa-2026-08-14.hi.html"
+  }
+ },
+ "moon-2026-06-12": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-12.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-12.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-12.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-12.hi.html"
+  }
+ },
+ "moon-2026-06-13": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-13.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-13.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-13.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-13.hi.html"
+  }
+ },
+ "moon-2026-06-14": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-14.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-14.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-14.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-14.hi.html"
+  }
+ },
+ "moon-2026-06-15": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-15.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-15.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-15.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-15.hi.html"
+  }
+ },
+ "moon-2026-06-16": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-16.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-16.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-16.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-16.hi.html"
+  }
+ },
+ "moon-2026-06-17": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-17.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-17.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-17.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-17.hi.html"
+  }
+ },
+ "moon-2026-06-18": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-18.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-18.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-18.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-18.hi.html"
+  }
+ },
+ "moon-2026-06-19": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-19.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-19.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-19.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-19.hi.html"
+  }
+ },
+ "moon-2026-06-20": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-20.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-20.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-20.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-20.hi.html"
+  }
+ },
+ "moon-2026-06-21": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-21.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-21.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-21.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-21.hi.html"
+  }
+ },
+ "moon-2026-06-23": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-23.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-23.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-23.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-23.hi.html"
+  }
+ },
+ "moon-2026-06-24": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-24.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-24.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-24.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-24.hi.html"
+  }
+ },
+ "moon-2026-06-25": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-25.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-25.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-25.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-25.hi.html"
+  }
+ },
+ "moon-2026-06-26": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-26.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-26.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-26.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-26.hi.html"
+  }
+ },
+ "moon-2026-06-27": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-27.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-27.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-27.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-27.hi.html"
+  }
+ },
+ "moon-2026-06-29": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-29.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-29.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-29.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-06-29.hi.html"
+  }
+ },
+ "moon-2026-08-11": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-08-11.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-08-11.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-08-11.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-08-11.hi.html"
+  }
+ },
+ "moon-2026-08-12": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-08-12.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-08-12.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-08-12.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-08-12.hi.html"
+  }
+ },
+ "moon-2026-08-13": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-08-13.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-08-13.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-08-13.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-08-13.hi.html"
+  }
+ },
+ "moon-2026-08-14": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-08-14.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-08-14.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-08-14.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "moon-2026-08-14.hi.html"
   }
  },
  "moon-2026-08-15": {
   "en": {
-   "title": "What the Moon Saw — Saturday, 15 August 2026",
-   "lead": "An honest caveat from a small, fast model / How do you count the people who haven't finished yet — a DOCOMO paper accepted at IJCAI 2026",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "moon-2026-08-15.en.html"
   },
   "zh": {
-   "title": "月亮看见的 — 2026年8月15日（周六）",
-   "lead": "又小又快的模型，写得很诚实的那句提醒／还没走完的人，要怎么算 — DOCOMO 的论文被 IJCAI 2026 收录",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "moon-2026-08-15.zh.html"
   },
   "es": {
-   "title": "Lo que vio la luna — sábado 15 de agosto de 2026",
-   "lead": "Una advertencia honesta en un modelo pequeño y rápido / Cómo contar a quienes aún no han terminado — un artículo de DOCOMO aceptado en IJCAI 2026",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "moon-2026-08-15.es.html"
   },
   "hi": {
-   "title": "चाँद ने जो देखा — शनिवार, 15 अगस्त 2026",
-   "lead": "छोटे और तेज़ मॉडल की एक ईमानदार चेतावनी / जो अभी बीच में हैं, उन्हें कैसे गिनें — DOCOMO का शोध-पत्र IJCAI 2026 में स्वीकृत",
+   "title": "移動しました / Moved",
+   "lead": "",
    "href": "moon-2026-08-15.hi.html"
+  }
+ },
+ "papers-2026-06-15-pick2": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-15-pick2.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-15-pick2.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-15-pick2.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-15-pick2.hi.html"
+  }
+ },
+ "papers-2026-06-15-pick3": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-15-pick3.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-15-pick3.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-15-pick3.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-15-pick3.hi.html"
+  }
+ },
+ "papers-2026-06-15-pick4": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-15-pick4.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-15-pick4.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-15-pick4.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-15-pick4.hi.html"
+  }
+ },
+ "papers-2026-06-15": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-15.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-15.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-15.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-15.hi.html"
+  }
+ },
+ "papers-2026-06-16-pick": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-16-pick.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-16-pick.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-16-pick.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-16-pick.hi.html"
+  }
+ },
+ "papers-2026-06-16": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-16.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-16.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-16.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-16.hi.html"
+  }
+ },
+ "papers-2026-06-16b": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-16b.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-16b.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-16b.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-16b.hi.html"
+  }
+ },
+ "papers-2026-06-16c": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-16c.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-16c.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-16c.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-16c.hi.html"
+  }
+ },
+ "papers-2026-06-16d": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-16d.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-16d.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-16d.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-16d.hi.html"
+  }
+ },
+ "papers-2026-06-17": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-17.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-17.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-17.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-17.hi.html"
+  }
+ },
+ "papers-2026-06-22": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-22.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-22.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-22.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-22.hi.html"
+  }
+ },
+ "papers-2026-06-22b": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-22b.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-22b.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-22b.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-22b.hi.html"
+  }
+ },
+ "papers-2026-06-23": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-23.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-23.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-23.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-23.hi.html"
+  }
+ },
+ "papers-2026-06-25": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-25.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-25.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-25.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-25.hi.html"
+  }
+ },
+ "papers-2026-06-26": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-26.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-26.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-26.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "papers-2026-06-26.hi.html"
+  }
+ },
+ "rocket-mass-2026-08-13": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "rocket-mass-2026-08-13.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "rocket-mass-2026-08-13.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "rocket-mass-2026-08-13.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "rocket-mass-2026-08-13.hi.html"
+  }
+ },
+ "runa-pick-2026-06-23": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-23.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-23.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-23.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-23.hi.html"
+  }
+ },
+ "runa-pick-2026-06-24": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-24.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-24.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-24.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-24.hi.html"
+  }
+ },
+ "runa-pick-2026-06-25": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-25.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-25.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-25.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-25.hi.html"
+  }
+ },
+ "runa-pick-2026-06-26": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-26.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-26.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-26.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-26.hi.html"
+  }
+ },
+ "runa-pick-2026-06-27": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-27.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-27.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-27.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-27.hi.html"
+  }
+ },
+ "runa-pick-2026-06-29": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-29.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-29.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-29.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-06-29.hi.html"
+  }
+ },
+ "runa-pick-2026-07-03": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-07-03.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-07-03.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-07-03.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-07-03.hi.html"
+  }
+ },
+ "runa-pick-2026-08-10": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-08-10.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-08-10.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-08-10.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-08-10.hi.html"
+  }
+ },
+ "runa-pick-2026-08-11": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-08-11.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-08-11.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-08-11.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-08-11.hi.html"
+  }
+ },
+ "runa-pick-2026-08-13": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-08-13.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-08-13.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-08-13.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-08-13.hi.html"
+  }
+ },
+ "runa-pick-2026-08-14": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-08-14.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-08-14.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-08-14.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "runa-pick-2026-08-14.hi.html"
+  }
+ },
+ "video-cve-study-2026-06-17": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "video-cve-study-2026-06-17.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "video-cve-study-2026-06-17.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "video-cve-study-2026-06-17.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "video-cve-study-2026-06-17.hi.html"
+  }
+ },
+ "video-multiai-chaos-2026-06-18": {
+  "en": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "video-multiai-chaos-2026-06-18.en.html"
+  },
+  "zh": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "video-multiai-chaos-2026-06-18.zh.html"
+  },
+  "es": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "video-multiai-chaos-2026-06-18.es.html"
+  },
+  "hi": {
+   "title": "移動しました / Moved",
+   "lead": "",
+   "href": "video-multiai-chaos-2026-06-18.hi.html"
   }
  }
 }
