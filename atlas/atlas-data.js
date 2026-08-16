@@ -17,7 +17,7 @@ window.ATLAS_DATA = {
 
   // 表示メタ情報（マストヘッド・フッターに反映）
   meta: {
-    lastUpdated: "2026-08-15",   // 最終更新日（必ず更新する）
+    lastUpdated: "2026-08-16",   // 最終更新日（必ず更新する）
     rangeStart: "2025.09",       // 収録範囲の開始（表示用ラベル）
     rangeEnd: "2026.06",         // 収録範囲の終了（表示用ラベル）
     sources: [
@@ -1587,6 +1587,48 @@ window.ATLAS_DATA = {
                   "desc": "Claude Code と Cowork を政府機関向けに提供開始。",
                   "url": "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government"
                 },
+              ]
+            },
+            {
+              "id": "cc-tool-memory",
+              "name": "コマンドのメモリ上限",
+              "name_en": "Memory limit for tool commands",
+              "events": [
+                {
+                  "date": "2026-08-15",
+                  "type": "beta",
+                  "approx": true,
+                  "desc": "Linuxで、Bashツールが動かすコマンドにメモリの上限を設けられるように（任意設定・CLAUDE_CODE_TOOL_MEMORY_LIMIT）。暴走したビルドがセッション全体を止めてしまうのを防ぐ。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                }
+              ]
+            },
+            {
+              "id": "cc-gitlab-mr",
+              "name": "GitLabのマージリクエスト対応",
+              "name_en": "GitLab merge request support",
+              "events": [
+                {
+                  "date": "2026-08-15",
+                  "type": "expand",
+                  "approx": true,
+                  "desc": "作業用の別ツリーを開くときと、走っているエージェントの一覧で、GitLabのマージリクエストのURLを受け付けるように。一覧では !番号 の形で表示される。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                }
+              ]
+            },
+            {
+              "id": "cc-user-attribution",
+              "name": "利用者ごとの利用額の按分",
+              "name_en": "Per-user spend attribution",
+              "events": [
+                {
+                  "date": "2026-08-15",
+                  "type": "update",
+                  "approx": true,
+                  "desc": "アプリ用の中継にforward_user_identityという任意の設定が加わり、サインインしている人の身元をヘッダで渡せるように。中継の後ろに置いた代理サーバで、誰がどれだけ使ったかを分けて数えられる。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                }
               ]
             },
             {
