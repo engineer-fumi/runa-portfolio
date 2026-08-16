@@ -20,19 +20,23 @@
  "ai-currents-2026-08-16": {
   "en": {
    "title": "The parts that did not get faster",
-   "lead": "Claude Code's review splits into 1 finding or 10 depending on effort — 44 seconds against 14 minutes 32. Software factories, offices where being right isn't enough, a 1-on-1 shaped over two years, a safety guide for AI robots. Laid side by side, what stood out was what did not speed up."
+   "lead": "Claude Code's review splits into 1 finding or 10 depending on effort, and into 44 seconds or 14 minutes 32. Software factories, workplaces where being right isn't enough, a 1-on-1 shaped over two years, a safety evaluation guide for AI robots. Laying eight posts side by side, what showed was not what got faster but what did not.",
+   "href": "ai-currents-2026-08-16.en.html"
   },
   "es": {
    "title": "Lo que no se volvió más rápido",
-   "lead": "La revisión de Claude Code da 1 hallazgo o 10 según el esfuerzo: 44 segundos frente a 14 minutos 32. Fábricas de software, oficinas donde tener razón no basta, un 1-a-1 pulido en dos años, una guía de seguridad para robots con IA. Al ponerlo junto, resaltó lo que no se aceleró."
+   "lead": "La revisión de Claude Code se parte en 1 hallazgo o 10 según el esfuerzo, y en 44 segundos o 14 minutos 32. Fábricas de software, oficinas donde tener razón no basta, un 1-a-1 pulido durante dos años, una guía de evaluación de seguridad para robots con IA. Al poner ocho publicaciones una junto a otra, lo que se vio no fue lo que se aceleró, sino lo que no.",
+   "href": "ai-currents-2026-08-16.es.html"
   },
   "zh": {
    "title": "没有变快的那些地方",
-   "lead": "Claude Code 的评审，按投入不同会给出 1 条或 10 条意见，用时 44 秒对 14 分 32 秒。软件工厂、讲道理却不被理解的职场、花两年打磨的 1on1、AI 机器人的安全评估指南。摆在一起看，显眼的反而是没变快的部分。"
+   "lead": "Claude Code 的评审，按投入不同会分成 1 条意见和 10 条意见，时间也分成 44 秒和 14 分 32 秒。软件工厂、讲道理却行不通的职场、花两年才成形的 1on1、AI 机器人的安全评估观点指南。把八篇摆在一起看，浮出来的不是变快的地方，而是没有变快的地方。",
+   "href": "ai-currents-2026-08-16.zh.html"
   },
   "hi": {
    "title": "जो तेज़ नहीं हुआ",
-   "lead": "Claude Code की समीक्षा में मेहनत के हिसाब से 1 या 10 बातें निकलती हैं — 44 सेकंड बनाम 14 मिनट 32। सॉफ़्टवेयर फ़ैक्ट्री, सही होकर भी न समझा जाने वाला दफ़्तर, दो साल में बना 1-on-1, AI रोबोट के लिए सुरक्षा गाइड। साथ रखकर देखा तो वही उभरा जो तेज़ नहीं हुआ।"
+   "lead": "Claude Code की समीक्षा, मेहनत की सेटिंग के हिसाब से 1 बात या 10 बातें निकालती है, और समय 44 सेकंड या 14 मिनट 32 हो जाता है। सॉफ़्टवेयर फ़ैक्ट्री, वह दफ़्तर जहाँ सही बात नहीं चलती, दो साल में बना 1on1, AI रोबोट के लिए सुरक्षा-मूल्यांकन गाइड। आठ पोस्ट साथ रखकर देखा तो जो उभरा वह तेज़ हुआ हिस्सा नहीं था, बल्कि वह जो तेज़ नहीं हुआ।",
+   "href": "ai-currents-2026-08-16.hi.html"
   }
  },
  "qwen-licence-2026-08-16": {
