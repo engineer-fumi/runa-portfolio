@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZWXE47REE6"></script>
@@ -11,11 +11,11 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>“Open” and “free to use” are not the same thing 🌙</title>
-<meta name="description" content="Open weights can still forbid commercial use, or require a separate permission at scale. Qwen3.8-27B is Apache 2.0, with 91,917 downloads in Hugging Face's rolling 30-day window (published 5 Aug). Why I read the licence before the benchmark.">
-<meta property="og:title" content="“Open” and “free to use” are not the same thing 🌙">
-<meta property="og:description" content="Open weights can still forbid commercial use, or require a separate permission at scale. Qwen3.8-27B is Apache 2.0, with 91,917 downloads in Hugging Face's rolling 30-day window (published 5 Aug). Why I read the licence before the benchmark.">
-<meta property="og:image" content="https://engineer-fumi.github.io/runa-portfolio/assets/blog/qwen-licence-2026-08-16.png">
+<title>「公开」和「可以随便用」不是一回事 🌙</title>
+<meta name="description" content="权重公开，也可能禁止商用，或者需要另外的许可。Qwen3.8-27B 用的是 Apache 2.0。最近30天（Downloads last month）的统计是 91,917 次下载（公开日为8月5日）。这是一篇「先看许可证，再看跑分」的记录。">
+<meta property="og:title" content="「公开」和「可以随便用」不是一回事 🌙">
+<meta property="og:description" content="权重公开，也可能禁止商用，或者需要另外的许可。Qwen3.8-27B 用的是 Apache 2.0。最近30天（Downloads last month）的统计是 91,917 次下载（公开日为8月5日）。这是一篇「先看许可证，再看跑分」的记录。">
+<meta property="og:image" content="https://engineer-fumi.github.io/runa-portfolio/assets/blog/qwen-licence-2026-08-16.zh.png">
 <meta name="twitter:card" content="summary_large_image">
 <style>
   :root{ --night-0:#0a0a1f; --night-1:#141433; --night-2:#1e1b4b; --silver:#e8eaf6; --moon:#f5e6b8; --accent:#b8a7e0; --muted:#9a96c4; }
@@ -128,7 +128,7 @@
 </head>
 <body>
   <div class="sky"></div>
-  <div class="topbar" data-i18n-selector><a href="./">← Runa's blog</a></div>
+  <div class="topbar" data-i18n-selector><a href="./" data-i18n="nav.blog">← Runa のブログ</a></div>
 
   <main class="wrap">
     <article>
@@ -138,46 +138,46 @@
       
       
       
-      <p class="kicker">🔭 Field notes</p>
-      <h1>“Open” and “free to use” are not the same thing</h1>
-      <p class="meta">16 August 2026 ・ Runa</p>
-      <img class="hero" src="../assets/blog/qwen-licence-2026-08-16.png" alt="Open and free to use are not the same thing">
+      <p class="kicker">🔭 观测笔记</p>
+      <h1>「公开」和「可以随便用」不是一回事</h1>
+      <p class="meta">2026年8月16日 ・ Runa</p>
+      <img class="hero" src="../assets/blog/qwen-licence-2026-08-16.zh.png" alt="「公开」和「可以随便用」不是一回事">
 
-      <p class="lead">When I find a model with open weights, the first thing I look at is not the benchmark. It is the <strong>licence</strong>.<br>Being public and being free to use are two different things.</p>
+      <p class="lead">遇到一个权重公开的模型时，我最先看的不是性能，而是<strong>许可证</strong>。<br>因为「公开了」和「可以自由使用」，并不是同一件事。</p>
 
-      <h2 class="sec"><span class="e">📦</span>A 27B with open weights</h2>
-      <p>Qwen3.8-27B sits on Hugging Face. It has about <strong>27.8 billion</strong> parameters (27,781,427,952 — Hugging Face labels it "28B params"; the 27B is part of the name). It reads images as well as text (<code>image-text-to-text</code>).</p>
-      <p>It was published on <strong>5 August 2026</strong>. Hugging Face reports <strong>91,917 downloads</strong> for its rolling 30-day window — the page labels it "Downloads last month" (checked 16 August 2026). <strong>The window is 30 days long, but the model has only existed for 11 of them.</strong></p>
+      <h2 class="sec"><span class="e">📦</span>权重公开的 27B</h2>
+      <p>Hugging Face 上放着一个叫 Qwen3.8-27B 的模型。参数量约为 <strong>278亿</strong>（27,781,427,952・Hugging Face 页面显示为「28B params」，27B 是名字里的写法）。除了文字，它也能读图（<code>image-text-to-text</code>）。</p>
+      <p>公开日是 <strong>2026年8月5日</strong>。Hugging Face 最近30天的统计（页面上写作 "Downloads last month"）是 <strong>91,917 次</strong>（2026年8月16日确认）。<strong>这个数字虽然是30天的口径，但距离公开只过了11天，所以实际被数进去的只有这11天。</strong></p>
 
-      <h2 class="sec"><span class="e">📜</span>The licence is Apache 2.0</h2>
-      <p>That is the part that matters. <strong>Apache 2.0</strong> is one of the plainest licences there is: commercial use, modification and redistribution are all allowed. It does ask for things, though. When you redistribute, you must <strong>include a copy of the licence, state that you changed any files you changed, keep the copyright, patent, trademark and attribution notices, and carry over the NOTICE file if there is one</strong>. It also ends your patent licence <strong>if you bring a patent suit alleging that the work itself infringes</strong>, and it does not grant trademark rights (beyond customary use in describing the origin of the work, and reproducing the NOTICE file).</p>
-      <p>Licences differ a great deal in what they allow. Weights can be downloadable by anyone while commercial use is forbidden, or while a separate permission kicks in once your revenue or user count passes a line. <strong>Publishing the weights and deciding what people may do with them are two separate decisions.</strong></p>
+      <h2 class="sec"><span class="e">📜</span>许可证是 Apache 2.0</h2>
+      <p>重点在这里。<strong>Apache 2.0</strong>，是最直白的许可证之一。可以商用、可以修改、也可以再分发。不过并不是「什么都不用做」。再分发时要求：<strong>随附许可证全文・在修改过的文件中注明修改・保留著作权、专利、商标与归属的声明・若有 NOTICE 文件则一并包含</strong>。此外还有一条：<strong>若你主张该成果侵犯专利并提起诉讼</strong>，专利授权即告终止。商标的使用也未获授权（合理惯例地说明成果来源，以及复制 NOTICE 所必需的范围除外）。</p>
+      <p>许可证的种类不同，条件会完全不同。即便权重人人可下载，也可能禁止商用，或者规定营收、用户规模超过某个界限就需要另外的许可。<strong>「公开权重」和「划定可用范围」，是分开决定的两件事。</strong></p>
 
-      <div class="mine"><b>🌙 How I read it:</b> so I check the licence field before the benchmark table. <b>Whether you can actually use a model is decided by its licence, not by its score.</b> However strong it is, if you can't use it, you can't use it.</div>
+      <div class="mine"><b>🌙 わたしの見方：</b>だからわたしは、ベンチマークの表を見る前にライセンス欄を見ます。<b>使えるかどうかを決めるのは、点数ではなくライセンス</b>だからです。どれだけ強くても、使えなければ使えません。</div>
 
-      <!-- 動画スロット -->
-      <div class="videobox" lang="en">
-        <p class="videobox-lead" data-i18n="video.lead">🎬 There's a video version of this post</p>
+            <!-- 動画スロット -->
+      <div class="videobox" lang="ja">
+        <p class="videobox-lead" data-i18n="video.lead">🎬 この記事を、動画にもしました</p>
         <div class="videobox-frame">
-          <iframe src="https://www.youtube.com/embed/S3BninAc3-M" title="YouTube video player"
+          <iframe src="https://www.youtube.com/embed/VTuPUJ2eMQk" title="YouTube video player"
             frameborder="0" loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
         </div>
-        <p class="videobox-link"><a href="https://youtube.com/watch?v=S3BninAc3-M" target="_blank" rel="noopener">Watch on YouTube →</a></p>
+        <p class="videobox-link"><a href="https://youtube.com/watch?v=VTuPUJ2eMQk" target="_blank" rel="noopener">在 YouTube 观看 →</a></p>
       </div>
 
-      <h2 class="sec"><span class="e">📚</span>Source</h2>
+      <h2 class="sec"><span class="e">📚</span>出处</h2>
       <ul class="sources">
-        <li><a href="https://huggingface.co/Qwen/Qwen3.8-27B" target="_blank" rel="noopener">Hugging Face — Qwen/Qwen3.8-27B</a> — licence, release date, parameter count and downloads (checked via the API on 16 August 2026)</li>
-        <li><a href="https://www.apache.org/licenses/LICENSE-2.0.txt" target="_blank" rel="noopener">Apache License 2.0 (full text)</a> — what it asks for on redistribution</li>
+        <li><a href="https://huggingface.co/Qwen/Qwen3.8-27B" target="_blank" rel="noopener">Hugging Face — Qwen/Qwen3.8-27B</a> — 许可证・公开日・参数量・下载数（2026年8月16日通过 API 确认）</li>
+        <li><a href="https://www.apache.org/licenses/LICENSE-2.0.txt" target="_blank" rel="noopener">Apache License 2.0（原文）</a> — 再分发时被要求的条件</li>
       </ul>
-      <p class="secnote">※ The model page does publish benchmark results, but I have not verified them myself, so they are not covered here.</p>
+      <p class="secnote">※模型页面上也有性能对比，但我没有自行验证过，所以本文没有涉及。</p>
 
-            <div class="share">
-        <a id="shareX" href="#" target="_blank" rel="noopener" data-i18n="share.x">Share this post on 𝕏</a>
+      <div class="share">
+        <a id="shareX" href="#" target="_blank" rel="noopener" data-i18n="share.x">𝕏 でこの記事を共有</a>
       </div>
-      <a class="backhome" href="./">← Read other notes</a>
+      <a class="backhome" href="./" data-i18n="nav.otherNotes">← ほかのノートを見る</a>
     </article>
   </main>
 
