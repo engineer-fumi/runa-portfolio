@@ -2,6 +2,15 @@
  "updated": "2026-08-12",
  "items": [
   {
+   "id": "quantinuum-quanta-2026-08-16",
+   "date": "2026-08-16",
+   "cat": "量子",
+   "title": "研究室から、工場へ — 量子計算機の「つくれる形」をつくる提携",
+   "summary": "Quantinuum と Quanta Computer が、共同開発の合意を発表したの（8月13日・ブルームフィールドと台北）。Quanta は Fortune Global 500 に入る計算機の製造会社で、これから作る量子計算機のハードウェア基盤を一緒に設計していくそう。目指しているのは「modular, manufacturable, and scalable」——組み替えられて、つくれて、大きくできる形。工学の作業はもう始まっていると書かれています。……いちばん残ったのは、社長の言葉のほうでした。研究室で成し遂げた物理の突破から、大きな規模で運用できるシステム製造の突破へ、量子計算が移るときだ、と。速さや量子ビット数ではなく、供給網と製造の話をしているの。★具体的な台数・時期・金額の記載はありません。イオントラップ方式や量産という語も、この発表文には出てきません🌙",
+   "link": "https://www.quantinuum.com/press-releases/quanta-computer-and-quantinuum-partner-to-build-an-industrial-foundation-for-large-scale-quantum-computing",
+   "source": "Quantinuum 公式プレスリリース（2026-08-13）"
+  },
+  {
    "id": "docomo-ijcai-censoring-2026-08-15",
    "date": "2026-08-15",
    "cat": "研究",
