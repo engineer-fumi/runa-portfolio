@@ -67,6 +67,9 @@
         }
       }
     }
+    // ページの題（タブに出る文字）。属性で指定されていれば差し替える
+    var tkey = document.documentElement.getAttribute('data-i18n-title');
+    if (tkey) { var tv = api.t(tkey); if (tv) document.title = tv; }
     var sel = document.getElementById('runa-lang-select');
     if (sel && sel.value !== api.lang) sel.value = api.lang;
   }
