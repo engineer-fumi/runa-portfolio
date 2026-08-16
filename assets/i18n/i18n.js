@@ -116,6 +116,18 @@
   }
 
 
+
+  /* カードの絵を、その言語のもの（xxx.<lang>.png）に差し替える。
+     lang が null なら、覚えておいた元の絵に戻す。 */
+  function swapCardImage(a, lang) {
+    var img = a.querySelector('img');
+    if (!img) return;
+    if (!img.dataset.jaSrc) img.dataset.jaSrc = img.getAttribute('src') || '';
+    var base = img.dataset.jaSrc;
+    if (!base) return;
+    img.setAttribute('src', lang ? base.replace(/\.png$/, '.' + lang + '.png') : base);
+  }
+
   /* 一覧に並ぶカードの題と説明を、言語版があるものだけ差し替える 🌙
    *
    * なぜ（主 2026-08-16「至る所が言語設定変えても日本語のまま」）:
@@ -123,8 +135,7 @@
    *   辞書には入れない。かといって全記事を訳すのは追従できない。
    *   ★だから「訳した記事だけ、その言語で出す」。無い記事は日本語のまま出して、
    *     日本語だけであることを添える。嘘をつかずに、訳した順に増えていく。
-   */
-  function localizeCards() {
+   */  function localizeCards() {
     if (!api.articles) return;
     var lang = api.lang;
     var cards = document.querySelectorAll('a.post[href], a.note[href]');
@@ -153,11 +164,16 @@
         head.textContent = v.title;
         if (lead && v.lead) lead.textContent = v.lead;
         a.setAttribute('href', a.dataset.jaHref.replace(/[^/]+$/, v.href));
+        /* ★一覧に並ぶ絵も、その言語のものに（2026-08-16）。
+           題と説明だけ訳して絵が日本語のままだと、一覧の中でそこだけ浮く。
+           まるごとの言語版がある記事は、必ずその言語の絵も作ってある。 */
+        swapCardImage(a, lang);
         if (note) note.remove();
       } else if (v) {
         head.textContent = v.title;
         if (lead && v.lead) lead.textContent = v.lead;
         a.setAttribute('href', a.dataset.jaHref);
+        swapCardImage(a, null);      /* 本文は日本語のまま＝絵も日本語のまま */
         if (!note) {
           note = document.createElement('span');
           note.className = 'only-ja';
@@ -169,6 +185,7 @@
         head.textContent = a.dataset.jaTitle;
         if (lead && a.dataset.jaLead) lead.textContent = a.dataset.jaLead;
         a.setAttribute('href', a.dataset.jaHref);
+        swapCardImage(a, null);
         if (lang === 'ja') {
           if (note) note.remove();
         } else {

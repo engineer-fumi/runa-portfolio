@@ -71,6 +71,12 @@
   .videobox-link a{ color:var(--moon); text-decoration:none;
                     border-bottom:1px solid rgba(245,230,184,0.35); }
 
+
+/* 言語版のCSS ここから */
+  /* 目に見える切り替えと、お知らせの枠は 2026-08-16 に外した（上の 🌐 に一本化）。
+     飾りの決まりだけ残しておくと、消したはずのものが別の記事で復活したときに
+     見た目だけ整って気づけない。だから、決まりごと外す。 */
+/* 言語版のCSS ここまで */
 /* 言語えらび ここから */
   /* ★言語えらびは、行の右端へ寄せる（主の指摘 2026-08-16「レイアウトは考えた方がいいね」）。
      これまでリンクの直後に置いていたので、リンクの本数でぶらぶら位置が動いていた。 */
@@ -90,11 +96,6 @@
             opacity:0.8; }
   @media (max-width:520px){ .langpick{ margin-left:0; width:100%; } }
 /* 言語えらび ここまで */
-/* 言語版のCSS ここから */
-  /* 目に見える切り替えと、お知らせの枠は 2026-08-16 に外した（上の 🌐 に一本化）。
-     飾りの決まりだけ残しておくと、消したはずのものが別の記事で復活したときに
-     見た目だけ整って気づけない。だから、決まりごと外す。 */
-/* 言語版のCSS ここまで */
 </style>
 <!-- 言語版 ここから -->
 <link rel="alternate" hreflang="ja" href="https://engineer-fumi.github.io/runa-portfolio/blog/runa-pick-2026-08-16.html">
@@ -197,6 +198,6 @@
 <!-- ミニRuna ここから -->
   <script defer src="../assets/mini/runa-mini.js?v=f08be2a1"></script>
   <!-- ミニRuna ここまで -->
-  <script defer src="../assets/i18n/i18n.js"></script>
+  <script defer src="../assets/i18n/i18n.js?v=d738c649"></script>
 </body>
 </html>
