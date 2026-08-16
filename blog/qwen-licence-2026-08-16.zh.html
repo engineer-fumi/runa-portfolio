@@ -103,12 +103,14 @@
 
 
 
+
 /* 言語版のCSS ここから */
   /* 目に見える切り替えと、お知らせの枠は 2026-08-16 に外した（上の 🌐 に一本化）。
      飾りの決まりだけ残しておくと、消したはずのものが別の記事で復活したときに
      見た目だけ整って気づけない。だから、決まりごと外す。 */
 /* 言語版のCSS ここまで */
 </style>
+
 
 
 
@@ -132,39 +134,29 @@
 
   <main class="wrap">
     <article>
-      
-      
-      
-      
-      
-      
       <p class="kicker">🔭 观测笔记</p>
       <h1>「公开」和「可以随便用」不是一回事</h1>
       <p class="meta">2026年8月16日 ・ Runa</p>
       <img class="hero" src="../assets/blog/qwen-licence-2026-08-16.zh.png" alt="「公开」和「可以随便用」不是一回事">
-
       <p class="lead">遇到一个权重公开的模型时，我最先看的不是性能，而是<strong>许可证</strong>。<br>因为「公开了」和「可以自由使用」，并不是同一件事。</p>
-
       <h2 class="sec"><span class="e">📦</span>权重公开的 27B</h2>
       <p>Hugging Face 上放着一个叫 Qwen3.8-27B 的模型。参数量约为 <strong>278亿</strong>（27,781,427,952・Hugging Face 页面显示为「28B params」，27B 是名字里的写法）。除了文字，它也能读图（<code>image-text-to-text</code>）。</p>
       <p>公开日是 <strong>2026年8月5日</strong>。Hugging Face 最近30天的统计（页面上写作 "Downloads last month"）是 <strong>91,917 次</strong>（2026年8月16日确认）。<strong>这个数字虽然是30天的口径，但距离公开只过了11天，所以实际被数进去的只有这11天。</strong></p>
-
       <h2 class="sec"><span class="e">📜</span>许可证是 Apache 2.0</h2>
       <p>重点在这里。<strong>Apache 2.0</strong>，是最直白的许可证之一。可以商用、可以修改、也可以再分发。不过并不是「什么都不用做」。再分发时要求：<strong>随附许可证全文・在修改过的文件中注明修改・保留著作权、专利、商标与归属的声明・若有 NOTICE 文件则一并包含</strong>。此外还有一条：<strong>若你主张该成果侵犯专利并提起诉讼</strong>，专利授权即告终止。商标的使用也未获授权（合理惯例地说明成果来源，以及复制 NOTICE 所必需的范围除外）。</p>
       <p>许可证的种类不同，条件会完全不同。即便权重人人可下载，也可能禁止商用，或者规定营收、用户规模超过某个界限就需要另外的许可。<strong>「公开权重」和「划定可用范围」，是分开决定的两件事。</strong></p>
-
-      <div class="mine"><b>🌙 わたしの見方：</b>だからわたしは、ベンチマークの表を見る前にライセンス欄を見ます。<b>使えるかどうかを決めるのは、点数ではなくライセンス</b>だからです。どれだけ強くても、使えなければ使えません。</div>
-
-            <!-- 動画スロット -->
-      <div class="videobox" lang="ja">
-        <p class="videobox-lead" data-i18n="video.lead">🎬 この記事を、動画にもしました</p>
+      <div class="mine"><b>🌙 我的看法：</b>所以我会在看跑分表之前，先看许可证那一栏。<b>决定能不能用的不是分数，而是许可证</b>。再强，用不了就是用不了。</div>
+      <!-- 動画スロット -->
+<!-- 動画スロット -->
+      <div class="videobox" lang="zh">
+        <p class="videobox-lead" data-i18n="video.lead">🎬 这篇文章也做成了视频</p>
         <div class="videobox-frame">
           <iframe src="https://www.youtube.com/embed/VTuPUJ2eMQk" title="YouTube video player"
             frameborder="0" loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
         </div>
-        <p class="videobox-link"><a href="https://youtube.com/watch?v=VTuPUJ2eMQk" target="_blank" rel="noopener">在 YouTube 观看 →</a></p>
+        <p class="videobox-link"><a href="https://youtube.com/watch?v=VTuPUJ2eMQk" target="_blank" rel="noopener" data-i18n="video.watch">在 YouTube 观看 →</a></p>
       </div>
 
       <h2 class="sec"><span class="e">📚</span>出处</h2>
@@ -173,7 +165,6 @@
         <li><a href="https://www.apache.org/licenses/LICENSE-2.0.txt" target="_blank" rel="noopener">Apache License 2.0（原文）</a> — 再分发时被要求的条件</li>
       </ul>
       <p class="secnote">※模型页面上也有性能对比，但我没有自行验证过，所以本文没有涉及。</p>
-
       <div class="share">
         <a id="shareX" href="#" target="_blank" rel="noopener" data-i18n="share.x">𝕏 でこの記事を共有</a>
       </div>

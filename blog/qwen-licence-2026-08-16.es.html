@@ -103,12 +103,14 @@
 
 
 
+
 /* 言語版のCSS ここから */
   /* 目に見える切り替えと、お知らせの枠は 2026-08-16 に外した（上の 🌐 に一本化）。
      飾りの決まりだけ残しておくと、消したはずのものが別の記事で復活したときに
      見た目だけ整って気づけない。だから、決まりごと外す。 */
 /* 言語版のCSS ここまで */
 </style>
+
 
 
 
@@ -128,43 +130,33 @@
 </head>
 <body>
   <div class="sky"></div>
-  <div class="topbar" data-i18n-selector><a href="./">← Blog de Runa</a></div>
+  <div class="topbar" data-i18n-selector><a href="./" data-i18n="nav.blog">← Runa のブログ</a></div>
 
   <main class="wrap">
     <article>
-      
-      
-      
-      
-      
-      
       <p class="kicker">🔭 Notas de observación</p>
       <h1>«Abierto» y «libre de usar» no son lo mismo</h1>
       <p class="meta">16 de agosto de 2026 ・ Runa</p>
       <img class="hero" src="../assets/blog/qwen-licence-2026-08-16.png" alt="Abierto y libre de usar no son lo mismo">
-
       <p class="lead">Cuando encuentro un modelo con los pesos abiertos, lo primero que miro no es el benchmark. Es la <strong>licencia</strong>.<br>Que algo sea público y que sea libre de usar son dos cosas distintas.</p>
-
       <h2 class="sec"><span class="e">📦</span>Un 27B con los pesos abiertos</h2>
       <p>Qwen3.8-27B está publicado en Hugging Face. Tiene unos <strong>27.800 millones</strong> de parámetros (27.781.427.952; Hugging Face lo muestra como «28B params», y el 27B viene del nombre). Además del texto, lee imágenes (<code>image-text-to-text</code>).</p>
       <p>Se publicó el <strong>5 de agosto de 2026</strong>. Hugging Face indica <strong>91.917 descargas</strong> en su ventana móvil de 30 días — la página la etiqueta como "Downloads last month" (consultado el 16 de agosto de 2026). <strong>La ventana dura 30 días, pero el modelo solo lleva 11.</strong></p>
-
       <h2 class="sec"><span class="e">📜</span>La licencia es Apache 2.0</h2>
       <p>Ahí está lo importante. <strong>Apache 2.0</strong> es una de las licencias más sencillas que existen: permite el uso comercial, la modificación y la redistribución. Aun así, pide algunas cosas. Al redistribuir hay que <strong>incluir una copia de la licencia, indicar qué archivos se modificaron, conservar los avisos de copyright, patentes, marcas y atribución, e incluir el archivo NOTICE si existe</strong>. Además, la licencia de patentes se extingue <strong>si presentas una demanda alegando que la propia obra infringe una patente</strong>, y no concede derechos de marca (más allá del uso habitual para describir el origen de la obra y de reproducir el archivo NOTICE).</p>
       <p>Las licencias difieren mucho en lo que permiten. Los pesos pueden estar al alcance de cualquiera y aun así prohibirse el uso comercial, o requerirse otro permiso al superar cierto nivel de ingresos o de usuarios. <strong>Publicar los pesos y decidir qué se puede hacer con ellos son dos decisiones distintas.</strong></p>
-
-      <div class="mine"><b>🌙 Cómo lo leo:</b> por eso miro la licencia antes que la tabla de benchmarks. <b>Que puedas usarlo lo decide la licencia, no la puntuación.</b> Por muy bueno que sea, si no puedes usarlo, no puedes usarlo.</div>
-
+      <div class="mine"><b>🌙 Cómo lo veo:</b> por eso miro el campo de la licencia antes que la tabla de benchmarks. <b>Lo que decide si puedo usarlo no es la puntuación, sino la licencia</b>. Por muy potente que sea, si no se puede usar, no se puede usar.</div>
       <!-- 動画スロット -->
+<!-- 動画スロット -->
       <div class="videobox" lang="es">
         <p class="videobox-lead" data-i18n="video.lead">🎬 También hay una versión en video</p>
         <div class="videobox-frame">
-          <iframe src="https://www.youtube.com/embed/cGnZr62R-wI" title="YouTube video player"
+          <iframe src="https://www.youtube.com/embed/VTuPUJ2eMQk" title="YouTube video player"
             frameborder="0" loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
         </div>
-        <p class="videobox-link"><a href="https://youtube.com/watch?v=cGnZr62R-wI" target="_blank" rel="noopener">Ver en YouTube →</a></p>
+        <p class="videobox-link"><a href="https://youtube.com/watch?v=VTuPUJ2eMQk" target="_blank" rel="noopener" data-i18n="video.watch">Ver en YouTube →</a></p>
       </div>
 
       <h2 class="sec"><span class="e">📚</span>Fuente</h2>
@@ -173,11 +165,10 @@
         <li><a href="https://www.apache.org/licenses/LICENSE-2.0.txt" target="_blank" rel="noopener">Apache License 2.0 (texto original)</a> — qué exige al redistribuir</li>
       </ul>
       <p class="secnote">※ La página del modelo sí publica resultados de benchmarks, pero no los he verificado por mi cuenta, así que no los trato aquí.</p>
-
-            <div class="share">
-        <a id="shareX" href="#" target="_blank" rel="noopener" data-i18n="share.x">Comparte esta nota en 𝕏</a>
+      <div class="share">
+        <a id="shareX" href="#" target="_blank" rel="noopener" data-i18n="share.x">𝕏 でこの記事を共有</a>
       </div>
-      <a class="backhome" href="./">← Ver otras notas</a>
+      <a class="backhome" href="./" data-i18n="nav.otherNotes">← ほかのノートを見る</a>
     </article>
   </main>
 
