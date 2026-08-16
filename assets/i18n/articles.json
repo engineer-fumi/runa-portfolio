@@ -68,19 +68,23 @@
  "ai-currents-2026-08-15c": {
   "en": {
    "title": "It isn't only the making that got faster",
-   "lead": "Quality assurance in an age where AI implements, AI tests, and AI says “looks fine”. GLM-5.3 grown by post-training alone. A multi-agent attack framework repurposed from agent platforms. Turning browser extensions into command-and-control. Eight posts, and the making was not the only thing that sped up."
+   "lead": "Quality assurance in an age where AI implements, AI tests, and AI says “no problems”. GLM-5.3, improved by post-training alone. A multi-agent attack framework repurposed from agent platforms. Turning browser extensions into command-and-control. Reading eight posts, it wasn't only the making that got faster.",
+   "href": "ai-currents-2026-08-15c.en.html"
   },
   "es": {
    "title": "No solo se aceleró quien construye",
-   "lead": "Control de calidad en una época donde la IA implementa, la IA prueba y la IA dice «todo bien». GLM-5.3 mejorado solo con post-entrenamiento. Un marco de ataque multiagente reutilizado de plataformas de agentes. Extensiones de navegador convertidas en canal de mando. Ocho publicaciones: no solo se aceleró quien construye."
+   "lead": "Control de calidad en una época en que la IA implementa, la IA prueba y la IA dice «no hay problemas». GLM-5.3, mejorado solo con post-entrenamiento. Un marco de ataque multiagente reutilizado de plataformas de agentes. Extensiones de navegador convertidas en canal de mando. Leyendo ocho publicaciones: no solo se aceleró quien construye.",
+   "href": "ai-currents-2026-08-15c.es.html"
   },
   "zh": {
    "title": "变快的不只是「做」的那一边",
-   "lead": "当 AI 实现、AI 测试、AI 说「没问题」时的质量保证。只靠后训练就提升的 GLM-5.3。由智能体平台改造成的多智能体攻击框架。把浏览器扩展变成指挥通道。八篇看下来，变快的不只是做的那一边。"
+   "lead": "当 AI 实现、AI 测试、AI 说「没问题」时的质量保证。只靠后训练就提升的 GLM-5.3。由智能体平台改造成的多智能体攻击框架。把浏览器扩展变成指挥通道。读完八篇，变快的不只是做的那一边。",
+   "href": "ai-currents-2026-08-15c.zh.html"
   },
   "hi": {
    "title": "तेज़ सिर्फ़ बनाने वाला पक्ष नहीं हुआ",
-   "lead": "जब AI लिखे, AI ही जाँचे और AI ही कहे «सब ठीक है» — तब गुणवत्ता कैसे तय हो। सिर्फ़ पोस्ट-ट्रेनिंग से बेहतर हुआ GLM-5.3। एजेंट प्लेटफ़ॉर्म से बना बहु-एजेंट हमला। ब्राउज़र एक्सटेंशन को कमांड चैनल बनाना। आठ पोस्ट पढ़कर लगा: तेज़ सिर्फ़ बनाने वाला पक्ष नहीं हुआ।"
+   "lead": "जब AI लिखे, AI ही जाँचे और AI ही कहे «कोई दिक़्क़त नहीं» — तब गुणवत्ता कैसे तय हो। सिर्फ़ पोस्ट-ट्रेनिंग से बेहतर हुआ GLM-5.3। एजेंट प्लेटफ़ॉर्म से बना बहु-एजेंट हमला। ब्राउज़र एक्सटेंशन को कमांड चैनल बनाना। आठ पोस्ट पढ़कर लगा: तेज़ सिर्फ़ बनाने वाला पक्ष नहीं हुआ।",
+   "href": "ai-currents-2026-08-15c.hi.html"
   }
  },
  "ai-currents-2026-08-15b": {
