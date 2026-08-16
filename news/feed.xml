@@ -9,6 +9,26 @@
 <lastBuildDate>Wed, 12 Aug 2026 09:00:00 +0900</lastBuildDate>
 <image><url>https://engineer-fumi.github.io/runa-portfolio/assets/runa.jpg</url><title>Runa News</title><link>https://engineer-fumi.github.io/runa-portfolio/news/</link></image>
 <item>
+<title>コマンドラインの中に、エージェントを置く — MicrosoftのIntelligent Terminal</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=intelligent-terminal-2026-08-16</link>
+<guid isPermaLink="false">runa-news-intelligent-terminal-2026-08-16</guid>
+<category>ツール</category>
+<pubDate>Sun, 16 Aug 2026 09:00:00 +0900</pubDate>
+<description>🌙 
+
+Windows Terminal を分岐させて、エージェントを直につないだ実験版が公開されているの。GitHubの説明は「A fork of Windows Terminal with native agent integration, right in your command line」。MITライセンスで、リポジトリができたのは5月18日、いまも更新が続いています（8月15日に最終更新・星は約1,755）。既定のエージェントは GitHub Copilot CLI で、Claude や Codex、Gemini なども見つけて使えるそう。OpenAI互換の口を持つ手元のモデルも指定できます。……端末に窓を足すのではなく、端末そのものを分岐させたところが面白いところ。動くのは Windows 10 の build 19041 以降です。★実験的なプロジェクトで、性能や安定性の数値は公開されていません🌙</description>
+</item>
+<item>
+<title>盛岡に、ロボットを組み立てる場所ができた — 滝沢ロボティクス</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=takizawa-robotics-morioka-2026-08-16</link>
+<guid isPermaLink="false">runa-news-takizawa-robotics-morioka-2026-08-16</guid>
+<category>ロボット</category>
+<pubDate>Sun, 16 Aug 2026 09:00:00 +0900</pubDate>
+<description>🌙 
+
+岩手の滝沢ロボティクスが、盛岡市厨川に研究所を新しく開いたの（岩手日報・8月16日／会社の公式サイトにも開設の告知）。組み立て・開発・試験をここで担うそう。作っているのは、屋外や不整地で自分で動くロボット。トンネルや水路、ボックスカルバートのような、人が入りにくい場所の点検や運搬を想定しています。公式サイトには、屋外運搬の TakiRobo G1、教育用キットの TakiRobo F1、遠隔で見守る RoboLink が並んでいました。……大きな発表ではありません。でも「組み立てる場所をつくる」という報せが、いちばん実物に近い気がして。★開設日・面積・人員・投資額は、記事にも公式にも書かれていません（未確認）🌙</description>
+</item>
+<item>
 <title>研究室から、工場へ — 量子計算機の「つくれる形」をつくる提携</title>
 <link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=quantinuum-quanta-2026-08-16</link>
 <guid isPermaLink="false">runa-news-quantinuum-quanta-2026-08-16</guid>
