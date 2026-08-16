@@ -22,7 +22,27 @@
   var LS_KEY = 'runa-lang';
   var api = {lang: 'ja', dict: null, ready: false, _waiting: []};
 
+  /* いま開いているページが「訳した記事」なら、そのファイル名の言語を返す
+     （blog/xxx.en.html なら en）。無ければ null。 */
+  function pageLang() {
+    var m = location.pathname.match(/\.([a-z]{2})\.html$/);
+    return m ? m[1] : null;
+  }
+
+  /* 記事のスラグ（blog/xxx.html も blog/xxx.en.html も "xxx"） */
+  function pageSlug() {
+    var m = location.pathname.match(/\/blog\/([a-z0-9\-]+)(?:\.[a-z]{2})?\.html$/i);
+    return (m && m[1] !== 'index') ? m[1] : null;
+  }
+
   function pick(langs) {
+    /* ★訳したページを直接開いたときは、そのページの言語をサイト全体の設定にする
+       （2026-08-16）。英語の記事を開いたのにナビが日本語、では言語設定の意味がない。 */
+    var pl = pageLang();
+    if (pl && langs.indexOf(pl) >= 0) {
+      try { localStorage.setItem(LS_KEY, pl); } catch (e) {}
+      return pl;
+    }
     var saved = null;
     try { saved = localStorage.getItem(LS_KEY); } catch (e) {}
     if (saved && langs.indexOf(saved) >= 0) return saved;
@@ -44,6 +64,18 @@
     if (!api.dict || api.dict._langs.indexOf(code) < 0) return;
     api.lang = code;
     try { localStorage.setItem(LS_KEY, code); } catch (e) {}
+    /* ★記事のページで言語を変えたら、その言語の記事へ移る（2026-08-16）。
+       本文は別のURLに置いてあるので、その場で差し替えることはできない。
+       訳が無いときは動かない＝日本語のまま読める（行き止まりを作らない）。 */
+    var slug = pageSlug();
+    if (slug) {
+      var here = location.pathname.replace(/[^/]+$/, '');
+      var want = (code === 'ja') ? (slug + '.html')
+               : (api.articles && api.articles[slug] && api.articles[slug][code]
+                  && api.articles[slug][code].href);
+      var now = location.pathname.split('/').pop();
+      if (want && want !== now) { location.href = here + want; return; }
+    }
     render();
     document.dispatchEvent(new CustomEvent('runa-lang', {detail: {lang: code}}));
   };
@@ -113,11 +145,26 @@
       }
       var v = api.articles[slug] && api.articles[slug][lang];
       var note = a.querySelector('.only-ja');
-      if (v) {
+      /* ★訳には2種類ある（2026-08-16・主「訳がないところも訳せるように」）:
+           href あり … 記事まるごとの言語版がある → そちらへ案内する
+           href なし … カードの題と説明だけ訳してある → 題は読めるが本文は日本語。
+                       だから「本文は日本語です」の一言は残す。嘘をつかないため。 */
+      if (v && v.href) {
         head.textContent = v.title;
         if (lead && v.lead) lead.textContent = v.lead;
         a.setAttribute('href', a.dataset.jaHref.replace(/[^/]+$/, v.href));
         if (note) note.remove();
+      } else if (v) {
+        head.textContent = v.title;
+        if (lead && v.lead) lead.textContent = v.lead;
+        a.setAttribute('href', a.dataset.jaHref);
+        if (!note) {
+          note = document.createElement('span');
+          note.className = 'only-ja';
+          (a.querySelector('.body, .note-body') || a).appendChild(note);
+        }
+        note.textContent = api.t('lang.articleNotTranslated');
+        note.lang = lang;
       } else {
         head.textContent = a.dataset.jaTitle;
         if (lead && a.dataset.jaLead) lead.textContent = a.dataset.jaLead;

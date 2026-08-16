@@ -79,21 +79,7 @@
                             border-color:var(--moon); font-weight:600; }
 
 
-/* 言語版のCSS ここから */
-  .langbar{ display:flex; gap:10px; flex-wrap:wrap; margin:0 0 18px; font-size:0.84rem; }
-  .langbar a{ color:var(--muted); border:1px solid rgba(184,167,224,0.28); border-radius:999px;
-              padding:5px 14px; text-decoration:none; }
-  .langbar a:hover{ color:var(--moon); border-color:var(--moon); }
-  .langbar a[aria-current]{ color:var(--night-0); background:var(--moon);
-                            border-color:var(--moon); font-weight:600; }
-  .langsuggest{ display:flex; align-items:center; gap:12px; margin:0 0 14px; padding:10px 16px;
-                border:1px solid rgba(245,230,184,0.35); border-radius:12px;
-                background:rgba(245,230,184,0.07); font-size:0.9rem; }
-  .langsuggest a{ color:var(--moon); text-decoration:none; border:none; }
-  .langsuggest button{ margin-left:auto; background:none; border:none; color:var(--muted);
-                       font-size:1.1rem; line-height:1; cursor:pointer; padding:2px 4px; }
-  .langsuggest button:hover{ color:var(--moon); }
-/* 言語版のCSS ここまで */
+
 
 /* 言語えらび ここから */
   /* ★言語えらびは、行の右端へ寄せる（主の指摘 2026-08-16「レイアウトは考えた方がいいね」）。
@@ -114,7 +100,17 @@
             opacity:0.8; }
   @media (max-width:520px){ .langpick{ margin-left:0; width:100%; } }
 /* 言語えらび ここまで */
+
+
+/* 言語版のCSS ここから */
+  /* 目に見える切り替えと、お知らせの枠は 2026-08-16 に外した（上の 🌐 に一本化）。
+     飾りの決まりだけ残しておくと、消したはずのものが別の記事で復活したときに
+     見た目だけ整って気づけない。だから、決まりごと外す。 */
+/* 言語版のCSS ここまで */
 </style>
+
+
+
 
 
 
@@ -132,9 +128,8 @@
 
   <main class="wrap">
     <article>
-      <!-- 言語版 ここから -->
-      <nav class="langbar"><a href="./qwen-licence-2026-08-16.html" hreflang="ja" lang="ja">日本語</a><a href="./qwen-licence-2026-08-16.en.html" hreflang="en" lang="en">English</a><a href="./qwen-licence-2026-08-16.es.html" hreflang="es" lang="es" aria-current="page">Español</a></nav>
-      <!-- 言語版 ここまで -->
+      
+      
       
       
       
@@ -200,41 +195,7 @@
 
 
 
-<script>
-(function(){
-  try{
-    var here = document.documentElement.lang || 'ja';
-    var have = {}; var links = document.querySelectorAll('link[rel=alternate][hreflang]');
-    for (var i=0;i<links.length;i++){
-      var c = links[i].getAttribute('hreflang'); if(c!=='x-default') have[c]=links[i].href;
-    }
-    var pref = (navigator.languages || [navigator.language || 'ja']);
-    var want = null;
-    for (var j=0;j<pref.length;j++){
-      var code = String(pref[j]).split('-')[0].toLowerCase();
-      if (code === here) return;                 // いま見ている版がその人の言語
-      if (have[code]) { want = code; break; }
-    }
-    if (!want) return;
-    if (localStorage.getItem('runa-lang-dismissed') === '1') return;
-    var LABEL = {ja:['この記事は日本語でも読めます','閉じる'],
-                 en:['This post is also available in English','Dismiss'],
-                 zh:['本文也有中文版','关闭'],
-                 es:['Esta nota también está en español','Cerrar'],
-                 hi:['यह लेख हिन्दी में भी उपलब्ध है','बंद करें']};
-    var t = LABEL[want] || LABEL.en;
-    var box = document.createElement('div');
-    box.className = 'langsuggest'; box.lang = want;
-    box.innerHTML = '<a href="'+have[want]+'" hreflang="'+want+'">'+t[0]+' →</a>'
-                  + '<button type="button" aria-label="'+t[1]+'">×</button>';
-    box.querySelector('button').addEventListener('click', function(){
-      localStorage.setItem('runa-lang-dismissed','1'); box.remove();
-    });
-    var anchor = document.querySelector('.langbar');
-    if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(box, anchor);
-  }catch(e){}
-})();
-</script>
   <script defer src="../assets/i18n/i18n.js"></script>
+
 </body>
 </html>

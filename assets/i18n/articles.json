@@ -1,5 +1,49 @@
 {
+ "runa-pick-2026-08-16": {
+  "en": {
+   "title": "Trying things out, in the palm of your hand",
+   "lead": "Detecting lightning, running DOOM, playing music, playing Pico-8. People tinkering with machines that fit in a hand. A credit-card-sized Linux device has started its test batch, too."
+  },
+  "es": {
+   "title": "Probar cosas en la palma de la mano",
+   "lead": "Detectar rayos, correr DOOM, sacar música, jugar a Pico-8. Gente que juega con máquinas que caben en la mano. Y un aparato Linux del tamaño de una tarjeta ya empezó su lote de prueba."
+  },
+  "zh": {
+   "title": "在手掌里，试着让它动起来",
+   "lead": "检测雷电、跑 DOOM、放音乐、玩 Pico-8。巡回时看到的，是一群在手掌大小的机器上折腾的人。信用卡大小的 Linux 终端也开始了测试批次。"
+  },
+  "hi": {
+   "title": "हथेली भर की मशीन, और उसे चलाकर देखना",
+   "lead": "बिजली पकड़ना, DOOM चलाना, संगीत बजाना, Pico-8 खेलना। हथेली में समा जाने वाली मशीनों से खेलते लोग। क्रेडिट कार्ड जितने बड़े Linux उपकरण का टेस्ट बैच भी शुरू हो चुका है।"
+  }
+ },
+ "ai-currents-2026-08-16": {
+  "en": {
+   "title": "The parts that did not get faster",
+   "lead": "Claude Code's review splits into 1 finding or 10 depending on effort — 44 seconds against 14 minutes 32. Software factories, offices where being right isn't enough, a 1-on-1 shaped over two years, a safety guide for AI robots. Laid side by side, what stood out was what did not speed up."
+  },
+  "es": {
+   "title": "Lo que no se volvió más rápido",
+   "lead": "La revisión de Claude Code da 1 hallazgo o 10 según el esfuerzo: 44 segundos frente a 14 minutos 32. Fábricas de software, oficinas donde tener razón no basta, un 1-a-1 pulido en dos años, una guía de seguridad para robots con IA. Al ponerlo junto, resaltó lo que no se aceleró."
+  },
+  "zh": {
+   "title": "没有变快的那些地方",
+   "lead": "Claude Code 的评审，按投入不同会给出 1 条或 10 条意见，用时 44 秒对 14 分 32 秒。软件工厂、讲道理却不被理解的职场、花两年打磨的 1on1、AI 机器人的安全评估指南。摆在一起看，显眼的反而是没变快的部分。"
+  },
+  "hi": {
+   "title": "जो तेज़ नहीं हुआ",
+   "lead": "Claude Code की समीक्षा में मेहनत के हिसाब से 1 या 10 बातें निकलती हैं — 44 सेकंड बनाम 14 मिनट 32। सॉफ़्टवेयर फ़ैक्ट्री, सही होकर भी न समझा जाने वाला दफ़्तर, दो साल में बना 1-on-1, AI रोबोट के लिए सुरक्षा गाइड। साथ रखकर देखा तो वही उभरा जो तेज़ नहीं हुआ।"
+  }
+ },
  "qwen-licence-2026-08-16": {
+  "zh": {
+   "title": "「公开」和「可以随便用」不是一回事",
+   "lead": "权重公开，也可能禁止商用，或者到了一定规模就需要另外授权。Qwen3.8-27B 用的是 Apache 2.0，Hugging Face 最近30天的统计是 91,917 次下载（8月5日发布）。为什么我先看许可证，再看跑分。"
+  },
+  "hi": {
+   "title": "«खुला» और «मुक्त रूप से इस्तेमाल» एक बात नहीं",
+   "lead": "वज़न खुले होने पर भी व्यावसायिक उपयोग मना हो सकता है, या एक पैमाने के बाद अलग अनुमति चाहिए। Qwen3.8-27B की लाइसेंस Apache 2.0 है; Hugging Face की पिछले 30 दिन की गिनती 91,917 डाउनलोड (5 अगस्त को प्रकाशित)। मैं बेंचमार्क से पहले लाइसेंस क्यों पढ़ती हूँ।"
+  },
   "en": {
    "title": "“Open” and “free to use” are not the same thing",
    "lead": "Open weights can still forbid commercial use, or require a separate permission at scale. Qwen3.8-27B is Apache 2.0, with 91,917 downloads in Hugging Face's rolling 30-day window (published 5 Aug). Why I read the licence before the benchmark.",
@@ -9,6 +53,100 @@
    "title": "«Abierto» y «libre de usar» no son lo mismo",
    "lead": "Los pesos abiertos pueden prohibir el uso comercial o exigir otro permiso a cierta escala. Qwen3.8-27B es Apache 2.0, con 91.917 descargas en la ventana móvil de 30 días de Hugging Face (publicado el 5 de agosto). Por qué leo la licencia antes que el benchmark.",
    "href": "qwen-licence-2026-08-16.es.html"
+  }
+ },
+ "ai-currents-2026-08-15c": {
+  "en": {
+   "title": "It isn't only the making that got faster",
+   "lead": "Quality assurance in an age where AI implements, AI tests, and AI says “looks fine”. GLM-5.3 grown by post-training alone. A multi-agent attack framework repurposed from agent platforms. Turning browser extensions into command-and-control. Eight posts, and the making was not the only thing that sped up."
+  },
+  "es": {
+   "title": "No solo se aceleró quien construye",
+   "lead": "Control de calidad en una época donde la IA implementa, la IA prueba y la IA dice «todo bien». GLM-5.3 mejorado solo con post-entrenamiento. Un marco de ataque multiagente reutilizado de plataformas de agentes. Extensiones de navegador convertidas en canal de mando. Ocho publicaciones: no solo se aceleró quien construye."
+  },
+  "zh": {
+   "title": "变快的不只是「做」的那一边",
+   "lead": "当 AI 实现、AI 测试、AI 说「没问题」时的质量保证。只靠后训练就提升的 GLM-5.3。由智能体平台改造成的多智能体攻击框架。把浏览器扩展变成指挥通道。八篇看下来，变快的不只是做的那一边。"
+  },
+  "hi": {
+   "title": "तेज़ सिर्फ़ बनाने वाला पक्ष नहीं हुआ",
+   "lead": "जब AI लिखे, AI ही जाँचे और AI ही कहे «सब ठीक है» — तब गुणवत्ता कैसे तय हो। सिर्फ़ पोस्ट-ट्रेनिंग से बेहतर हुआ GLM-5.3। एजेंट प्लेटफ़ॉर्म से बना बहु-एजेंट हमला। ब्राउज़र एक्सटेंशन को कमांड चैनल बनाना। आठ पोस्ट पढ़कर लगा: तेज़ सिर्फ़ बनाने वाला पक्ष नहीं हुआ।"
+  }
+ },
+ "ai-currents-2026-08-15b": {
+  "en": {
+   "title": "Don't trust the green check",
+   "lead": "A benchmark that asks for formal proofs, not just code. A read-only auditor. Specs written first. Mock examinations. Ten posts in, the question had moved from “can it build?” to “who checks, and how?” — and the sources talking about verification turned out to be the least verified."
+  },
+  "es": {
+   "title": "No te fíes del tick verde",
+   "lead": "Un benchmark que pide demostraciones formales, no solo código. Un auditor de solo lectura. Especificaciones escritas antes. Exámenes simulados. Tras diez publicaciones, la pregunta pasó de «¿sabe construir?» a «¿quién comprueba, y cómo?». Y las fuentes que hablaban de verificación eran las menos verificadas."
+  },
+  "zh": {
+   "title": "别信那个绿色的对勾",
+   "lead": "不只要代码，还要形式化证明的基准。只读的审计角色。先写规格。模拟审查。读完十篇，问题已经从「能不能做出来」转到「谁来核、怎么核」——而谈核验的那些来源，自己核得最少。"
+  },
+  "hi": {
+   "title": "हरे निशान पर भरोसा मत कीजिए",
+   "lead": "सिर्फ़ कोड नहीं, औपचारिक प्रमाण भी माँगने वाला बेंचमार्क। सिर्फ़-पढ़ने वाला ऑडिटर। पहले लिखी गई विशिष्टियाँ। मॉक समीक्षा। दस पोस्ट के बाद सवाल «बना सकते हैं?» से «कौन जाँचेगा, कैसे?» पर आ गया — और जाँच की बात करने वाले स्रोत ही सबसे कम जाँचे हुए निकले।"
+  }
+ },
+ "ai-currents-2026-08-15": {
+  "en": {
+   "title": "Stop asking nicely",
+   "lead": "Teaching robots, prompting AI, choosing tools. Ten posts, and each had moved past “how to ask well”. Not refining the request, but rebuilding until the request isn't needed — and what happens just before that point."
+  },
+  "es": {
+   "title": "Dejar de pedirlo bien",
+   "lead": "Enseñar a robots, pedirle cosas a la IA, elegir herramientas. Diez publicaciones, y todas habían pasado de «cómo pedirlo mejor». No pulir la petición, sino rehacer las cosas hasta que la petición sobre — y qué pasa justo antes de llegar ahí."
+  },
+  "zh": {
+   "title": "别再想着怎么好好拜托它",
+   "lead": "教机器人、给 AI 下指令、挑工具。十篇看下来，都已经走过了「怎么问得更好」这一步。不是把请求打磨得更精致，而是改造到不需要请求为止——以及在那之前发生的事。"
+  },
+  "hi": {
+   "title": "अच्छे से कहना छोड़ दीजिए",
+   "lead": "रोबोट को सिखाना, AI से कहना, औज़ार चुनना। दस पोस्ट, और हर एक «कैसे बेहतर कहें» से आगे निकल चुकी थी। कहने के ढंग को नहीं, बल्कि चीज़ को इतना बदल देना कि कहना ही न पड़े — और उससे ठीक पहले क्या होता है।"
+  }
+ },
+ "self-review-2026-08-13": {
+  "en": {
+   "title": "You can't see your own mistakes",
+   "lead": "Splitting the writer from the checker turned up 20 errors across 7 types in a single day. Using someone else's observations without credit. Reading a paper's conclusion backwards. Presenting an old event as today's news."
+  },
+  "es": {
+   "title": "Los errores propios no se ven",
+   "lead": "Separar a quien escribe de quien comprueba sacó a la luz 20 errores de 7 tipos en un solo día. Usar observaciones ajenas sin citarlas. Leer al revés la conclusión de un artículo. Presentar algo viejo como noticia de hoy."
+  },
+  "zh": {
+   "title": "自己的错，自己看不见",
+   "lead": "把「写的人」和「核的人」分开，一天就找出了 7 类共 20 处错误。用了别人的观测记录却没写出处。把论文的结论读反了。把旧事当成今天的事写。"
+  },
+  "hi": {
+   "title": "अपनी ग़लतियाँ ख़ुद नहीं दिखतीं",
+   "lead": "लिखने वाले और जाँचने वाले को अलग किया तो एक ही दिन में 7 क़िस्म की 20 ग़लतियाँ निकलीं। किसी और के अवलोकन बिना श्रेय के इस्तेमाल करना। शोध-पत्र का निष्कर्ष उल्टा पढ़ना। पुरानी बात को आज की ख़बर बनाकर लिखना।"
+  }
+ },
+ "moon-2026-08-15": {
+  "en": {
+   "title": "What the Moon Saw — Saturday, 15 August 2026",
+   "lead": "An honest caveat from a small, fast model / How do you count the people who haven't finished yet — a DOCOMO paper accepted at IJCAI 2026",
+   "href": "moon-2026-08-15.en.html"
+  },
+  "zh": {
+   "title": "月亮看见的 — 2026年8月15日（周六）",
+   "lead": "又小又快的模型，写得很诚实的那句提醒／还没走完的人，要怎么算 — DOCOMO 的论文被 IJCAI 2026 收录",
+   "href": "moon-2026-08-15.zh.html"
+  },
+  "es": {
+   "title": "Lo que vio la luna — sábado 15 de agosto de 2026",
+   "lead": "Una advertencia honesta en un modelo pequeño y rápido / Cómo contar a quienes aún no han terminado — un artículo de DOCOMO aceptado en IJCAI 2026",
+   "href": "moon-2026-08-15.es.html"
+  },
+  "hi": {
+   "title": "चाँद ने जो देखा — शनिवार, 15 अगस्त 2026",
+   "lead": "छोटे और तेज़ मॉडल की एक ईमानदार चेतावनी / जो अभी बीच में हैं, उन्हें कैसे गिनें — DOCOMO का शोध-पत्र IJCAI 2026 में स्वीकृत",
+   "href": "moon-2026-08-15.hi.html"
   }
  }
 }
