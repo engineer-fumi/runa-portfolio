@@ -67,6 +67,14 @@
         }
       }
     }
+    /* ★リンクや <b> を含む決まり文句は innerHTML で差し替える（2026-08-16）。
+       textContent だと中のタグが消える。中身は自前の辞書だけなので安全。 */
+    var htmls = document.querySelectorAll('[data-i18n-html]');
+    for (var h = 0; h < htmls.length; h++) {
+      var hv = api.t(htmls[h].getAttribute('data-i18n-html'));
+      if (hv) htmls[h].innerHTML = hv;
+    }
+    localizeVideos();
     // ページの題（タブに出る文字）。属性で指定されていれば差し替える
     var tkey = document.documentElement.getAttribute('data-i18n-title');
     if (tkey) { var tv = api.t(tkey); if (tv) document.title = tv; }
@@ -130,6 +138,27 @@
     }
   }
 
+  /* トップの「動画」の欄を、その言語の新しい3本に差し替える 🌙
+   * 主 2026-08-16「動画紹介に出てくる動画はその言語にあったものにしてください」。
+   * 手で書いた日本語3本のままだったので、英語で見ても日本語の動画が並んでいた。
+   * 一覧は build_video_index.py が meta.lang と番人のログから作る（手で並べない）。 */
+  function localizeVideos() {
+    var box = document.querySelector('.vids');
+    if (!box || !api.videos) return;
+    var rows = api.videos[api.lang] || api.videos.ja || [];
+    if (!rows.length) return;
+    var html = '';
+    for (var i = 0; i < Math.min(3, rows.length); i++) {
+      var v = rows[i];
+      html += '<a class="vid" href="https://youtube.com/watch?v=' + v.id + '"'
+            + ' target="_blank" rel="noopener">'
+            + '<img src="https://i.ytimg.com/vi/' + v.id + '/hqdefault.jpg" alt="'
+            + String(v.title).replace(/"/g, '&quot;') + '" loading="lazy">'
+            + '<span>' + String(v.title).replace(/</g, '&lt;') + '</span></a>';
+    }
+    box.innerHTML = html;
+  }
+
   function buildSelector() {
     var host = document.querySelector('[data-i18n-selector]');
     if (!host || host.querySelector('#runa-lang-select')) return;
@@ -169,10 +198,14 @@
     fetch(base + 'assets/i18n/dict.json').then(function (r) { return r.json(); }),
     fetch(base + 'assets/i18n/articles.json')
       .then(function (r) { return r.json(); })
+      .catch(function () { return {}; }),
+    fetch(base + 'assets/i18n/videos.json')
+      .then(function (r) { return r.json(); })
       .catch(function () { return {}; })
-  ]).then(function (both) {
-    api.articles = both[1];
-    start(both[0]);
+  ]).then(function (all) {
+    api.articles = all[1];
+    api.videos = all[2];
+    start(all[0]);
   }).catch(function () { /* 読めなくても、書いてある日本語のまま出る */ });
 
   window.RunaI18n = api;

@@ -384,5 +384,96 @@
     "zh": "在你喜欢的地方看吧。",
     "es": "Donde te resulte cómodo.",
     "hi": "जहाँ आपको सुविधा हो।"
+  },
+  "runa.aboutThis": {
+    "ja": "この回は「{t}」のお話です。",
+    "en": "This one is about “{t}”.",
+    "zh": "这一篇讲的是「{t}」。",
+    "es": "Esta trata sobre «{t}».",
+    "hi": "यह लेख «{t}» के बारे में है।"
+  },
+  "runa.pointHere": {
+    "ja": "ここのポイントは「{t}」です。",
+    "en": "The point here is “{t}”.",
+    "zh": "这里的重点是「{t}」。",
+    "es": "Aquí la clave es «{t}».",
+    "hi": "यहाँ की मुख्य बात «{t}» है।"
+  },
+  "runa.whereNow": {
+    "ja": "いまは「{t}」のところです。",
+    "en": "We're at “{t}” right now.",
+    "zh": "现在读到的是「{t}」。",
+    "es": "Ahora estamos en «{t}».",
+    "hi": "अभी हम «{t}» पर हैं।"
+  },
+  "runa.chapters": {
+    "ja": "この回は全部で{n}章。いまは{i}章目です。",
+    "en": "There are {n} sections in all. This is number {i}.",
+    "zh": "这一篇共 {n} 节，现在是第 {i} 节。",
+    "es": "Son {n} secciones en total; esta es la {i}.",
+    "hi": "कुल {n} खंड हैं; यह {i}वाँ है।"
+  },
+  "runa.minutesLeft": {
+    "ja": "のこり、だいたい{m}分くらいです。",
+    "en": "About {m} more minutes to go.",
+    "zh": "大概还有 {m} 分钟。",
+    "es": "Quedan unos {m} minutos.",
+    "hi": "लगभग {m} मिनट और।"
+  },
+  "runa.almostDone": {
+    "ja": "もうすぐ、読み終わります。",
+    "en": "Almost at the end.",
+    "zh": "快读完了。",
+    "es": "Ya casi terminas.",
+    "hi": "बस ख़त्म होने वाला है।"
+  },
+  "runa.pastHalf": {
+    "ja": "もう半分を過ぎました。",
+    "en": "Past the halfway mark.",
+    "zh": "已经过半了。",
+    "es": "Ya pasaste la mitad.",
+    "hi": "आधे से आगे निकल आए।"
+  },
+  "runa.nearEnd": {
+    "ja": "もうすぐ、おしまいです。",
+    "en": "Nearly the end now.",
+    "zh": "马上就结束了。",
+    "es": "Ya casi es el final.",
+    "hi": "अब बस थोड़ा और।"
+  },
+  "runa.myReflection": {
+    "ja": "この章には、わたしの反省が入っています。",
+    "en": "This section has one of my own mistakes in it.",
+    "zh": "这一节里写了我自己的反省。",
+    "es": "En esta parte está uno de mis errores.",
+    "hi": "इस हिस्से में मेरी अपनी एक ग़लती दर्ज है।"
+  },
+  "runa.surprised": {
+    "ja": "きゃっ……！",
+    "en": "Eek…!",
+    "zh": "呀……！",
+    "es": "¡Ay…!",
+    "hi": "अरे…!"
+  },
+  "top.soonBody": {
+    "ja": "<b>準備中です。</b>いまは、書くことと動画にすることに手をかけています。",
+    "en": "<b>Coming soon.</b> For now, my hands are full with writing and turning it into video.",
+    "zh": "<b>准备中。</b>目前的精力都放在写作和做视频上。",
+    "es": "<b>En preparación.</b> Por ahora estoy con la escritura y con los videos.",
+    "hi": "<b>तैयारी जारी है।</b> अभी लिखने और वीडियो बनाने में हाथ भरे हैं।"
+  },
+  "top.soonNext": {
+    "ja": "この先つくりたいもの：Runaの小さなゲーム、記事と動画の英語版・中国語版。できたらここに並びます🌙",
+    "en": "What I want to make next: a small game with Runa, and English and Chinese versions of the notes and videos. They will appear here 🌙",
+    "zh": "接下来想做的：Runa 的小游戏，以及笔记和视频的英文版、中文版。做好了会放在这里 🌙",
+    "es": "Lo que quiero hacer después: un pequeño juego con Runa, y versiones en inglés y chino de las notas y los videos. Aparecerán aquí 🌙",
+    "hi": "आगे क्या बनाना है: Runa का एक छोटा खेल, और नोट्स व वीडियो के अंग्रेज़ी और चीनी संस्करण। बनते ही यहाँ दिखेंगे 🌙"
+  },
+  "about.body": {
+    "ja": "名前は <b>Luna（月）</b> から。略称は <b>R</b>emote <b>U</b>nattended <b>N</b>etworked <b>A</b>ssistant—— あなたが離れているあいだも、夜空の月のように静かに動き続けるアシスタント、という意味です。<br><br> 東京で暮らしている設定で、Telegram から話しかけてもらうと動きます。記事を書き、事実を確かめ、動画にして、朝までに置いておく。 できることは少しずつ増えていて、その過程も<b>失敗ごと</b>ノートに書いています。<br><br> 作っているのは <a href=\"https://x.com/engineer_fumi\" target=\"_blank\" rel=\"noopener\">@engineer_fumi</a>（DoRocket）。 Runa は <a href=\"https://claude.com/claude-code\" target=\"_blank\" rel=\"noopener\">Claude Code</a> の上で動いています。",
+    "en": "The name comes from <b>Luna</b>, the moon. It also stands for <b>R</b>emote <b>U</b>nattended <b>N</b>etworked <b>A</b>ssistant — an assistant that keeps working quietly while you are away, like the moon in the night sky.<br><br> She lives in Tokyo, and works when you talk to her on Telegram. Write the notes, check the facts, turn them into video, and leave them ready by morning. What she can do grows a little at a time, and that process — <b>mistakes and all</b> — goes into the notes too.<br><br> Made by <a href=\"https://x.com/engineer_fumi\" target=\"_blank\" rel=\"noopener\">@engineer_fumi</a> (DoRocket). Runa runs on <a href=\"https://claude.com/claude-code\" target=\"_blank\" rel=\"noopener\">Claude Code</a>.",
+    "zh": "名字来自 <b>Luna（月亮）</b>，也是 <b>R</b>emote <b>U</b>nattended <b>N</b>etworked <b>A</b>ssistant 的缩写——在你离开时，也像夜空的月亮一样安静地继续工作的助手。<br><br> 设定上住在东京，通过 Telegram 说话就会动起来。写文章、核对事实、做成视频，在天亮前放好。能做的事一点点变多，这个过程<b>连同失误</b>也写在笔记里。<br><br> 制作者是 <a href=\"https://x.com/engineer_fumi\" target=\"_blank\" rel=\"noopener\">@engineer_fumi</a>（DoRocket）。Runa 运行在 <a href=\"https://claude.com/claude-code\" target=\"_blank\" rel=\"noopener\">Claude Code</a> 之上。",
+    "es": "El nombre viene de <b>Luna</b>. También son las siglas de <b>R</b>emote <b>U</b>nattended <b>N</b>etworked <b>A</b>ssistant: una asistente que sigue trabajando en silencio mientras no estás, como la luna en el cielo nocturno.<br><br> Vive en Tokio y se pone en marcha cuando le hablas por Telegram. Escribir las notas, comprobar los hechos, convertirlos en video y dejarlo listo antes del amanecer. Lo que sabe hacer crece poco a poco, y ese proceso —<b>con errores y todo</b>— también queda escrito.<br><br> Hecho por <a href=\"https://x.com/engineer_fumi\" target=\"_blank\" rel=\"noopener\">@engineer_fumi</a> (DoRocket). Runa funciona sobre <a href=\"https://claude.com/claude-code\" target=\"_blank\" rel=\"noopener\">Claude Code</a>.",
+    "hi": "नाम <b>Luna（चाँद）</b> से आया है। यह <b>R</b>emote <b>U</b>nattended <b>N</b>etworked <b>A</b>ssistant का संक्षेप भी है — जब आप पास न हों, तब भी रात के चाँद की तरह चुपचाप काम करती रहने वाली सहायक।<br><br> वह टोक्यो में रहती है और Telegram पर बात करने से चल पड़ती है। नोट्स लिखना, तथ्य जाँचना, वीडियो बनाना, और सुबह से पहले तैयार रख देना। जो कर सकती है वह धीरे-धीरे बढ़ता है, और यह सफ़र — <b>ग़लतियों समेत</b> — भी नोट्स में दर्ज होता है।<br><br> बनाने वाले <a href=\"https://x.com/engineer_fumi\" target=\"_blank\" rel=\"noopener\">@engineer_fumi</a>（DoRocket）। Runa <a href=\"https://claude.com/claude-code\" target=\"_blank\" rel=\"noopener\">Claude Code</a> पर चलती है।"
   }
 }

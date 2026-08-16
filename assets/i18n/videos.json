@@ -1,0 +1,128 @@
+{
+ "zh": [
+  {
+   "id": "vXeQV5X0PDo",
+   "title": "把代理放进终端里"
+  },
+  {
+   "id": "bxkS1oNkI-k",
+   "title": "看到大数字，先问它数的是什么"
+  },
+  {
+   "id": "C2GZESy7qUM",
+   "title": "Claude 的隐形水印"
+  },
+  {
+   "id": "as-uQAxb7bc",
+   "title": "AAAI 把 AI 放进了同行评审"
+  },
+  {
+   "id": "Q6gBYNDaXp0",
+   "title": "能在本地运行的27B模型，而且可以商用"
+  }
+ ],
+ "ja": [
+  {
+   "id": "583Bnmh_IU8",
+   "title": "端末の中に、エージェントを置く"
+  },
+  {
+   "id": "mc0Og5USzE8",
+   "title": "大きな数字を見たら、何を数えたのか"
+  },
+  {
+   "id": "WaVrIbg2Dos",
+   "title": "Claudeの見えない透かし"
+  },
+  {
+   "id": "M1zbfm1imY4",
+   "title": "査読にAIを入れたAAAI"
+  },
+  {
+   "id": "-G7iJZG9mXA",
+   "title": "AIが実装して、AIがテストして、AIが「問題ありません」と言う"
+  },
+  {
+   "id": "eFGLGD2kw48",
+   "title": "土台は変えず、後半の学習だけ。GLM-5.3 が伸びた場所"
+  }
+ ],
+ "hi": [
+  {
+   "id": "8V7B7AhdDSU",
+   "title": "टर्मिनल के भीतर एजेंट"
+  },
+  {
+   "id": "CN872IWfj7k",
+   "title": "बड़ा आंकड़ा दिखे तो पूछिए"
+  },
+  {
+   "id": "TXlFdF4XsFo",
+   "title": "Claude का अदृश्य वॉटरमार्क"
+  },
+  {
+   "id": "sL7_wWCPwSw",
+   "title": "AAAI ने पीयर रिव्यू में AI डाला"
+  },
+  {
+   "id": "F8WWxTgbkJw",
+   "title": "अपने कंप्यूटर पर चलने वाला 27B मॉडल"
+  },
+  {
+   "id": "5RisrlcMbAk",
+   "title": "अपने कंप्यूटर पर चलने वाला 27B मॉडल"
+  }
+ ],
+ "es": [
+  {
+   "id": "xQgPtE6kjXw",
+   "title": "Un agente dentro de la terminal"
+  },
+  {
+   "id": "ZFZnccjIUAU",
+   "title": "Ante un número grande, pregunta qué se contó"
+  },
+  {
+   "id": "g7mN8W_kSWw",
+   "title": "La marca de agua invisible de Claude"
+  },
+  {
+   "id": "0K7PTSM-6yE",
+   "title": "AAAI metió IA en la revisión por pares"
+  },
+  {
+   "id": "cGnZr62R-wI",
+   "title": "«Abierto» no significa «libre de usar»: la licencia de Qwen3.8-27B"
+  },
+  {
+   "id": "jIk8kRqdbAk",
+   "title": "Un modelo de 27B que puedes ejecutar tú mismo"
+  }
+ ],
+ "en": [
+  {
+   "id": "gCkRUeUsSSg",
+   "title": "An agent inside the terminal"
+  },
+  {
+   "id": "FConSu7pJH4",
+   "title": "When you see a big number, ask what was counted"
+  },
+  {
+   "id": "OVFoFbLzkOo",
+   "title": "Claude's invisible watermark"
+  },
+  {
+   "id": "s6saOHGdIrQ",
+   "title": "AAAI put AI into peer review"
+  },
+  {
+   "id": "rRaTlQ_0OKo",
+   "title": "AI writes the code. So what do you pick a language for now?"
+  },
+  {
+   "id": "S3BninAc3-M",
+   "title": "\"Open weights\" doesn't mean \"free to use\" - reading the Qwen3.8-27B licence"
+  }
+ ]
+}
