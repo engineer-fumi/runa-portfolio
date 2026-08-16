@@ -90,19 +90,23 @@
  "ai-currents-2026-08-15b": {
   "en": {
    "title": "Don't trust the green check",
-   "lead": "A benchmark that asks for formal proofs, not just code. A read-only auditor. Specs written first. Mock examinations. Ten posts in, the question had moved from “can it build?” to “who checks, and how?” — and the sources talking about verification turned out to be the least verified."
+   "lead": "Vero, which asks for formal proofs as well as implementations. An MEA loop with a read-only auditor. spec-kit, which writes the specification first. Reading 10 posts, the question had moved from “make it” to “who checks it, and how”. …And the sources talking about verification turned out to be the least verified.",
+   "href": "ai-currents-2026-08-15b.en.html"
   },
   "es": {
    "title": "No te fíes del tick verde",
-   "lead": "Un benchmark que pide demostraciones formales, no solo código. Un auditor de solo lectura. Especificaciones escritas antes. Exámenes simulados. Tras diez publicaciones, la pregunta pasó de «¿sabe construir?» a «¿quién comprueba, y cómo?». Y las fuentes que hablaban de verificación eran las menos verificadas."
+   "lead": "Vero, que pide demostraciones formales además de implementaciones. Un bucle MEA con un auditor de solo lectura. spec-kit, que escribe antes la especificación. Tras 10 publicaciones, la pregunta pasó de «hazlo» a «quién lo comprueba, y cómo». …Y las fuentes que hablaban de verificación resultaron ser las menos verificadas.",
+   "href": "ai-currents-2026-08-15b.es.html"
   },
   "zh": {
    "title": "别信那个绿色的对勾",
-   "lead": "不只要代码，还要形式化证明的基准。只读的审计角色。先写规格。模拟审查。读完十篇，问题已经从「能不能做出来」转到「谁来核、怎么核」——而谈核验的那些来源，自己核得最少。"
+   "lead": "不只要实现、还要形式化证明的 Vero。设置只读审计角色的 MEA 循环。先写规格的 spec-kit。读完 10 篇，问题已经从「让它做」转到「谁来核、怎么核」。……而谈核验的那些来源，自己核得最少。",
+   "href": "ai-currents-2026-08-15b.zh.html"
   },
   "hi": {
    "title": "हरे निशान पर भरोसा मत कीजिए",
-   "lead": "सिर्फ़ कोड नहीं, औपचारिक प्रमाण भी माँगने वाला बेंचमार्क। सिर्फ़-पढ़ने वाला ऑडिटर। पहले लिखी गई विशिष्टियाँ। मॉक समीक्षा। दस पोस्ट के बाद सवाल «बना सकते हैं?» से «कौन जाँचेगा, कैसे?» पर आ गया — और जाँच की बात करने वाले स्रोत ही सबसे कम जाँचे हुए निकले।"
+   "lead": "सिर्फ़ कार्यान्वयन नहीं, औपचारिक प्रमाण भी माँगने वाला Vero। सिर्फ़-पढ़ने वाले ऑडिटर वाला MEA लूप। पहले विनिर्देश लिखने वाला spec-kit। 10 पोस्ट पढ़ने पर सवाल «बनवा लो» से «कौन जाँचेगा, कैसे» पर आ गया। …और जाँच की बात करने वाले स्रोत ही सबसे कम जाँचे हुए निकले।",
+   "href": "ai-currents-2026-08-15b.hi.html"
   }
  },
  "ai-currents-2026-08-15": {
