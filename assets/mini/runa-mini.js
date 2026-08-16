@@ -25,6 +25,16 @@
        読めなければ上に書いてある日本語のまま出る＝壊れない。 */
     var lineKeys = ["runa.line1","runa.line2","runa.line3","runa.line4","runa.line5"];
     var reactKeys = ["runa.happy","runa.fun","runa.angry","runa.sad"];
+    /* ★辞書から取り出して、{x} を埋める（主 2026-08-16
+       「ルナのセリフが日本語メイン、一部選択されてる言語になってます」）。
+       台詞の半分ほどが、記事から作る文だったので辞書につながっていなかった。 */
+    function tf(key, vals, fallback) {
+      var I = window.RunaI18n;
+      var s = (I && I.ready) ? I.t(key) : '';
+      if (!s) s = fallback;
+      if (vals) for (var k in vals) s = s.split('{' + k + '}').join(vals[k]);
+      return s;
+    }
     function pickText(i, fallback, keys) {
       var I = window.RunaI18n;
       if (I && I.ready && keys[i]) { var v = I.t(keys[i]); if (v) return v; }
@@ -199,15 +209,15 @@
       var cands = [];
       if (w.el) {
         var pt = pointOf(sectionOf(w.el));
-        if (pt) cands.push('ここのポイントは「' + pt + '」です。');
-        cands.push('いまは「' + textOf(w.el) + '」のところです。');
+        if (pt) cands.push(tf('runa.pointHere', {t: pt}, 'ここのポイントは「' + pt + '」です。'));
+        cands.push(tf('runa.whereNow', {t: textOf(w.el)}, 'いまは「' + textOf(w.el) + '」のところです。'));
       } else if (title) {
-        cands.push('この回は「' + title + '」のお話です。');
+        cands.push(tf('runa.aboutThis', {t: title}, 'この回は「' + title + '」のお話です。'));
       }
-      if (w.n) cands.push('この回は全部で' + w.n + '章。いまは' + (w.idx || 1) + '章目です。');
-      if (left >= 1) cands.push('のこり、だいたい' + left + '分くらいです。');
-      else cands.push('もうすぐ、読み終わります。');
-      if (title && cands.length < 2) cands.push('この回は「' + title + '」のお話です。');
+      if (w.n) cands.push(tf('runa.chapters', {n: w.n, i: (w.idx || 1)}, 'この回は全部で' + w.n + '章。いまは' + (w.idx || 1) + '章目です。'));
+      if (left >= 1) cands.push(tf('runa.minutesLeft', {m: left}, 'のこり、だいたい' + left + '分くらいです。'));
+      else cands.push(tf('runa.almostDone', null, 'もうすぐ、読み終わります。'));
+      if (title && cands.length < 2) cands.push(tf('runa.aboutThis', {t: title}, 'この回は「' + title + '」のお話です。'));
       return cands[tapN++ % cands.length];
     }
     function react(){
@@ -245,7 +255,7 @@
     }
     var title = textOf(document.querySelector('article h1'));
     setTimeout(function(){
-      if (title) say('この回は「' + title + '」のお話です。', 11000);
+      if (title) say(tf('runa.aboutThis', {t: title}, 'この回は「' + title + '」のお話です。'), 11000);
       else { var li = Math.floor(Math.random()*lines.length);
              say(pickText(li, lines[li], lineKeys)); }
     }, 2500);
@@ -303,8 +313,8 @@
           }
           /* ★拾えるものが無い章（出典など）では、黙る。
              見出しをなぞるだけなら、見出しを見たほうが早い（主の指摘 2026-08-14）。 */
-          if (point) maybe('ここのポイントは「' + point + '」です。', 13000);
-          else if (mine) maybe('この章には、わたしの反省が入っています。', 10000);
+          if (point) maybe(tf('runa.pointHere', {t: point}, 'ここのポイントは「' + point + '」です。'), 13000);
+          else if (mine) maybe(tf('runa.myReflection', null, 'この章には、わたしの反省が入っています。'), 10000);
         });
       }, {threshold: 0.55});
       secs.forEach(function(h){ so.observe(h); });
@@ -319,9 +329,10 @@
         passed[45] = 1;
         var art = document.querySelector('article');
         var left = art ? Math.round((art.textContent || '').length * (1 - p / 100) / 500) : 0;
-        maybe(left >= 1 ? ('のこり、だいたい' + left + '分くらいです。') : 'もう半分を過ぎました。', 9000);
+        maybe(left >= 1 ? tf('runa.minutesLeft', {m: left}, 'のこり、だいたい' + left + '分くらいです。')
+                        : tf('runa.pastHalf', null, 'もう半分を過ぎました。'), 9000);
       }
-      if (p >= 93 && !passed[93]) { passed[93] = 1; maybe('もうすぐ、おしまいです。', 8500); }
+      if (p >= 93 && !passed[93]) { passed[93] = 1; maybe(tf('runa.nearEnd', null, 'もうすぐ、おしまいです。'), 8500); }
     }, {passive: true});
 
     /* ふだんの独り言は、記事の話が無いときの控えとして残す（間隔は長めに） */
@@ -377,7 +388,7 @@
       play('jumping', 120);
       if (bubTimer) { clearTimeout(bubTimer); bubTimer = null; }
       bub.classList.remove('on'); talking = false;
-      say('きゃっ……！', 2400);
+      say(tf('runa.surprised', null, 'きゃっ……！'), 2400);
 
     }
     /* ★つまんでいるあいだは、指の少し下に置く。
