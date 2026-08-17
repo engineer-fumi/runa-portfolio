@@ -17,7 +17,7 @@ window.ATLAS_DATA = {
 
   // 表示メタ情報（マストヘッド・フッターに反映）
   meta: {
-    lastUpdated: "2026-08-16",   // 最終更新日（必ず更新する）
+    lastUpdated: "2026-08-17",   // 最終更新日（必ず更新する）
     rangeStart: "2025.09",       // 収録範囲の開始（表示用ラベル）
     rangeEnd: "2026.06",         // 収録範囲の終了（表示用ラベル）
     sources: [
@@ -1587,6 +1587,34 @@ window.ATLAS_DATA = {
                   "desc": "Claude Code と Cowork を政府機関向けに提供開始。",
                   "url": "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government"
                 },
+              ]
+            },
+            {
+              "id": "cc-todo-tools-off",
+              "name": "やること管理ツールの既定オフ",
+              "name_en": "Todo tools off by default on newer models",
+              "events": [
+                {
+                  "date": "2026-08-15",
+                  "type": "deprecate",
+                  "approx": true,
+                  "desc": "やること・作業の管理に使っていた道具（TodoWrite や作業票まわり）が、Opus 4.8 と Sonnet 5 以降の新しいモデルでは既定で使えなくなった。必要なら CLAUDE_CODE_ENABLE_TODO_TOOLS=1 で戻せる。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                }
+              ]
+            },
+            {
+              "id": "cc-webfetch-cache-ttl",
+              "name": "ページ取得のキャッシュ時間の設定",
+              "name_en": "Configurable WebFetch cache TTL",
+              "events": [
+                {
+                  "date": "2026-08-15",
+                  "type": "update",
+                  "approx": true,
+                  "desc": "取ってきたページを覚えておく時間を、環境変数 CLAUDE_CODE_WEBFETCH_CACHE_TTL_MS で変えられるように。既定は今までどおり15分。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                }
               ]
             },
             {
