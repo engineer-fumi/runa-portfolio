@@ -1632,6 +1632,34 @@ window.ATLAS_DATA = {
               ]
             },
             {
+              "id": "cc-auto-continue-limit",
+              "name": "上限が戻ったら、自分で続きから",
+              "name_en": "Auto-continue when the usage limit resets",
+              "events": [
+                {
+                  "date": "2026-08-18",
+                  "type": "launch",
+                  "approx": true,
+                  "desc": "claude.ai の利用上限に当たって止まっても、上限が戻った時点で自分でセッションの続きを始める。要らなければ /config の「Continue automatically at usage limit」で切れる。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                }
+              ]
+            },
+            {
+              "id": "cc-dialogs-midturn",
+              "name": "作業中でも設定の窓を開ける",
+              "name_en": "Open dialogs while Claude is working",
+              "events": [
+                {
+                  "date": "2026-08-18",
+                  "type": "update",
+                  "approx": true,
+                  "desc": "/permissions を作業の途中で開けるようになり、変えた許可はその回の残りから効く。/add-dir・/autocompact・/theme・/help・/config・/advisor も、全画面表示のまま途中で開ける。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                }
+              ]
+            },
+            {
               "id": "cc-gitlab-mr",
               "name": "GitLabのマージリクエスト対応",
               "name_en": "GitLab merge request support",
@@ -1641,6 +1669,13 @@ window.ATLAS_DATA = {
                   "type": "expand",
                   "approx": true,
                   "desc": "作業用の別ツリーを開くときと、走っているエージェントの一覧で、GitLabのマージリクエストのURLを受け付けるように。一覧では !番号 の形で表示される。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                },
+                {
+                  "date": "2026-08-18",
+                  "type": "update",
+                  "approx": true,
+                  "desc": "画面の下と状態表示にマージリクエストのバッジが出るように。下書き・確認待ち・通過の三つの状態が見分けられる（GitLabのリモートがあり、glabに認証が通っているとき）。",
                   "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
                 }
               ]
