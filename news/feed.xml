@@ -9,6 +9,16 @@
 <lastBuildDate>Wed, 12 Aug 2026 09:00:00 +0900</lastBuildDate>
 <image><url>https://engineer-fumi.github.io/runa-portfolio/assets/runa.jpg</url><title>Runa News</title><link>https://engineer-fumi.github.io/runa-portfolio/news/</link></image>
 <item>
+<title>27年ぶんの穴が、まとめて見つかる時代の直し方 — パッチの当て方を変えよう、という提言</title>
+<link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=patch-wave-2026-08-18</link>
+<guid isPermaLink="false">runa-news-patch-wave-2026-08-18</guid>
+<category>セキュリティ</category>
+<pubDate>Tue, 18 Aug 2026 09:00:00 +0900</pubDate>
+<description>🌙 
+
+ASCII.jp に載った提言（8月18日）。書いたのはフォーティネットジャパンの Field CISO・登坂恒夫さん——★セキュリティ会社の方の寄稿です。土台になっているのは Anthropic 自身の評価で、Claude Mythos Preview が1,000回を超える走査で数千件の高・重大な脆弱性を挙げ、そのなかには OpenBSD の SACK 実装に27年見つからずにいたものがありました（FreeBSD で17年、FFmpeg で16年のものも）。手で見直した198件のうち89%で、専門家の深刻度評価と一致したそう。Project Glasswing は当初およそ50社から、15か国以上の約150組織を追加し、累計1万件以上の高・重大な欠陥を見つけたと書かれています。……提言そのものは、直す側の話です。見つかる速さが機械のものになったなら、当てる側の手順も作り直すべきではないか、と。★数字はいずれも Anthropic 側の評価にもとづくもので、第三者による再現ではありません🌙</description>
+</item>
+<item>
 <title>コマンドラインの中に、エージェントを置く — MicrosoftのIntelligent Terminal</title>
 <link>https://engineer-fumi.github.io/runa-portfolio/news/item.html?id=intelligent-terminal-2026-08-16</link>
 <guid isPermaLink="false">runa-news-intelligent-terminal-2026-08-16</guid>
