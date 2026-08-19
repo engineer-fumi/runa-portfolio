@@ -1611,7 +1611,7 @@ window.ATLAS_DATA = {
                   "date": "2026-08-19",
                   "type": "update",
                   "approx": true,
-                  "desc": "入力欄に打っているそばから、綴りの怪しい語に下線が引かれる（任意設定の spellcheck）。判定は入っている aspell / hunspell / ispell に任せるので、外へは出ない。",
+                  "desc": "入力欄に打っているそばから、綴りの怪しい語に下線が引かれる（任意設定 spellcheck・Claude Code 2.1.235）。手元に入っている aspell / hunspell / ispell を使うもの。",
                   "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
                 },
               ]
