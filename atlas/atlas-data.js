@@ -17,7 +17,7 @@ window.ATLAS_DATA = {
 
   // 表示メタ情報（マストヘッド・フッターに反映）
   meta: {
-    lastUpdated: "2026-08-17",   // 最終更新日（必ず更新する）
+    lastUpdated: "2026-08-19",   // 最終更新日（必ず更新する）
     rangeStart: "2025.09",       // 収録範囲の開始（表示用ラベル）
     rangeEnd: "2026.06",         // 収録範囲の終了（表示用ラベル）
     sources: [
@@ -1053,6 +1053,19 @@ window.ATLAS_DATA = {
               ]
             },
             {
+              "id": "playground",
+              "name": "Playground（旧Workbench）",
+              "name_en": "Playground (formerly Workbench)",
+              "events": [
+                {
+                  "date": "2026-08-18",
+                  "type": "update",
+                  "desc": "コンソールの試し場が Workbench から Playground に改名。Messages API のパラメータをひととおり触れるようになり、コード実行やウェブ検索を試す雛形が同梱。実行するたびに、送ったSDKのリクエスト全文と返ってきた応答の両方が見られる。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                },
+              ]
+            },
+            {
               "id": "workbench-retire",
               "name": "旧Workbenchと実験的プロンプトAPIの終了",
               "name_en": "Legacy Workbench retirement",
@@ -1586,6 +1599,20 @@ window.ATLAS_DATA = {
                   "type": "expand",
                   "desc": "Claude Code と Cowork を政府機関向けに提供開始。",
                   "url": "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government"
+                },
+              ]
+            },
+            {
+              "id": "cc-spellcheck",
+              "name": "打ちながら綴りの間違いに下線",
+              "name_en": "Spellcheck in the prompt input",
+              "events": [
+                {
+                  "date": "2026-08-19",
+                  "type": "update",
+                  "approx": true,
+                  "desc": "入力欄に打っているそばから、綴りの怪しい語に下線が引かれる（任意設定の spellcheck）。判定は入っている aspell / hunspell / ispell に任せるので、外へは出ない。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
                 },
               ]
             },
