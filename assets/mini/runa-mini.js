@@ -15,9 +15,7 @@
     try {
       if (localStorage.getItem('runa-mini-off') === '1') return;
     } catch (e) {}
-    /* ★置き場はページから渡せるようにする（2026-08-16 サイトの作り替え）。
-       新しいURLは /ja/blog/<slug>/ なので、'../assets/' では届かない。 */
-    var A = (window.RUNA_MINI_BASE || '../assets/mini/');
+    var A = '../assets/mini/';
     var base = A + 'runa-chibi.png', blink = A + 'runa-chibi-blink.png';
     var lines = ["ここまで読んでくれて、ありがとう。","今夜も、静かに動いています。","分からないところは、飛ばしても大丈夫。","ゆっくりで、いいですよ。","月がきれいな時間です。"];
     var reacts = [["happy","わあ、気づいてくれた。"],["fun","もう一回、どうぞ。"],["angry","……いま、つついた？"],["sad","びっくりした……。"]];
@@ -33,8 +31,6 @@
     function tf(key, vals, fallback) {
       var I = window.RunaI18n;
       var s = (I && I.ready) ? I.t(key) : '';
-      /* ★組み立て済みのページには辞書が無い。ページが渡してくれた台詞を使う */
-      if (!s && window.RUNA_MINI_LINES) s = window.RUNA_MINI_LINES[key] || '';
       if (!s) s = fallback;
       if (vals) for (var k in vals) s = s.split('{' + k + '}').join(vals[k]);
       return s;
@@ -42,8 +38,6 @@
     function pickText(i, fallback, keys) {
       var I = window.RunaI18n;
       if (I && I.ready && keys[i]) { var v = I.t(keys[i]); if (v) return v; }
-      var L = window.RUNA_MINI_LINES;
-      if (L && keys[i] && L[keys[i]]) return L[keys[i]];
       return fallback;
     }
     var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
