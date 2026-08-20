@@ -17,7 +17,7 @@ window.ATLAS_DATA = {
 
   // 表示メタ情報（マストヘッド・フッターに反映）
   meta: {
-    lastUpdated: "2026-08-19",   // 最終更新日（必ず更新する）
+    lastUpdated: "2026-08-20",   // 最終更新日（必ず更新する）
     rangeStart: "2025.09",       // 収録範囲の開始（表示用ラベル）
     rangeEnd: "2026.06",         // 収録範囲の終了（表示用ラベル）
     sources: [
@@ -694,6 +694,19 @@ window.ATLAS_DATA = {
           "name_en": "Tool use",
           "feats": [
             {
+              "id": "files-api",
+              "name": "ファイルを一度あずけて、何度も使う",
+              "name_en": "Files API",
+              "events": [
+                {
+                  "date": "2026-08-19",
+                  "type": "ga",
+                  "desc": "一度あずけたファイルを file_id で呼び出す仕組みが正式版に。ためし版の合図（files-api-2025-04-14）が要らなくなった。あずけるときに expires_in_seconds で保つ長さを決められ、一覧はページ送りと ids での絞り込みに対応。置ける量は組織あたり1TB、呼び出しは毎分500回まで。",
+                  "url": "https://platform.claude.com/docs/en/build-with-claude/files"
+                },
+              ]
+            },
+            {
               "id": "codeexec",
               "name": "コード実行ツール",
               "name_en": "Code execution tool",
@@ -913,6 +926,19 @@ window.ATLAS_DATA = {
           "name_en": "Claude Managed Agents",
           "feats": [
             {
+              "id": "ma-web-domains",
+              "name": "エージェントが見にいける先を、こちらで決める",
+              "name_en": "Web tool domain restrictions for Managed Agents",
+              "events": [
+                {
+                  "date": "2026-08-19",
+                  "type": "update",
+                  "desc": "エージェントの検索とページ取得に、行っていい先（allowed_domains）と行ってはいけない先（blocked_domains）を書けるように。あわせて取得は max_content_tokens、検索は user_location を受ける。今までの書き方のままでも動く。",
+                  "url": "https://platform.claude.com/docs/en/managed-agents/tools"
+                },
+              ]
+            },
+            {
               "id": "ma-budget-advisor",
               "name": "セッション予算とadvisor",
               "name_en": "Session budgets & advisor",
@@ -945,6 +971,12 @@ window.ATLAS_DATA = {
               "name_en": "Agent memory",
               "status": "beta",
               "events": [
+                {
+                  "date": "2026-08-19",
+                  "type": "update",
+                  "desc": "自前のサンドボックスで動かすときも、記憶の置き場をつなげるように。Python・TypeScript・Go の下働きが、置き場を mount_path に降ろして、エージェントが書き換えたぶんを戻す。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                },
                 {
                   "date": "2026-04-23",
                   "type": "beta",
@@ -1079,6 +1111,19 @@ window.ATLAS_DATA = {
               ]
             },
             {
+              "id": "admin-user-mgmt",
+              "name": "組織の人を、APIで足したり分けたりする",
+              "name_en": "Admin API user-management endpoints",
+              "events": [
+                {
+                  "date": "2026-08-19",
+                  "type": "ga",
+                  "desc": "Claude Enterprise の組織で、メンバー・招待・グループ・役割をAPIから扱う口が正式版に。グループと役割の請求に要っていたためし版の合図（ce-user-management-2026-07-13）が不要になった。付けて呼んでも今までどおり受け取る。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                },
+              ]
+            },
+            {
               "id": "apikey-expiry",
               "name": "APIキーの有効期限設定",
               "name_en": "API key expiration",
@@ -1096,6 +1141,12 @@ window.ATLAS_DATA = {
               "name": "Console → platform.claude.com",
               "name_en": "Console → platform.claude.com",
               "events": [
+                {
+                  "date": "2026-08-19",
+                  "type": "update",
+                  "desc": "セッションを見る画面を作り直した。時間の流れの小さな地図と、モデルの請求ごとにまとめた記録。細かい欄から、費用・生の出来事・道具ごとの数・積んだ資源・筋ごとの動きが見られる。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                },
                 {
                   "date": "2026-01-12",
                   "type": "update",
@@ -1599,6 +1650,62 @@ window.ATLAS_DATA = {
                   "type": "expand",
                   "desc": "Claude Code と Cowork を政府機関向けに提供開始。",
                   "url": "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government"
+                },
+              ]
+            },
+            {
+              "id": "cc-concise-style",
+              "name": "前置きを省いて、結果から言う型",
+              "name_en": "Concise output style",
+              "events": [
+                {
+                  "date": "2026-08-20",
+                  "type": "update",
+                  "approx": true,
+                  "desc": "組み込みの話し方に「Concise」が加わった（Claude Code 2.1.237）。前置きや実況を省いて結果から言う。仕事の丁寧さはそのまま、とされる。/config の Output style で選ぶ。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                },
+              ]
+            },
+            {
+              "id": "cc-default-model-env",
+              "name": "始まりのモデルを、環境変数で決める",
+              "name_en": "ANTHROPIC_DEFAULT_MODEL",
+              "events": [
+                {
+                  "date": "2026-08-20",
+                  "type": "update",
+                  "approx": true,
+                  "desc": "新しいセッションが始まるモデルを ANTHROPIC_DEFAULT_MODEL で決められる（2.1.236）。/model で選び直せばそちらが勝ち、立ち上げ直しても残る。ANTHROPIC_MODEL とはそこが違う。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                },
+              ]
+            },
+            {
+              "id": "cc-notify-idle",
+              "name": "手が空いたら、一度だけ知らせて",
+              "name_en": "notify_when_idle for cross-session SendMessage",
+              "events": [
+                {
+                  "date": "2026-08-20",
+                  "type": "update",
+                  "approx": true,
+                  "desc": "同じ機械の別のセッションに「次に手が空いたら一度だけ知らせて」と頼めるようになった（2.1.236）。頼んだときだけ・一度きりで、繰り返し見にいかない形。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                },
+              ]
+            },
+            {
+              "id": "cc-goal-checkin",
+              "name": "長い作業の後ろで止まったら、自分から声をかける",
+              "name_en": "/goal auto check-in",
+              "events": [
+                {
+                  "date": "2026-08-20",
+                  "type": "update",
+                  "approx": true,
+                  "desc": "後ろで動いている長い仕事を待って止まっているとき、こちらが戻るのを待たずに30分後（次は1時間、2時間）に自分から知らせる（2.1.236）。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
                 },
               ]
             },
@@ -2364,6 +2471,12 @@ window.ATLAS_DATA = {
               "name": "スキルの導入",
               "name_en": "Skills introduction",
               "events": [
+                {
+                  "date": "2026-08-19",
+                  "type": "ga",
+                  "desc": "Agent Skills と Skills API（/v1/skills）がAPIで正式版に。container で読み込む請求も含めて、ためし版の合図（skills-2025-10-02）が要らなくなった。今までどおり合図を付けて呼んでも動く。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                },
                 {
                   "date": "2025-10-15",
                   "type": "launch",
