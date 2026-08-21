@@ -2,6 +2,22 @@
   "updated": "2026-08-12",
   "items": [
     {
+      "id": "letara-hybrid-restart-2026-08-21",
+      "date": "2026-08-21",
+      "cat": "宇宙",
+      "title": "固体燃料なのに、止めて、また点ける — Letara に JAXA のファンドが追加出資",
+      "summary": "2026年8月20日、JAXAが出資するベンチャーキャピタル Frontier Innovations が、札幌の宇宙機エンジン開発 Letara（レタラ）へ追加出資したと発表したの。同じ日に Letara 側も、プレシリーズAで総額26億円を調達したと知らせています。★おもしろいのは燃料のほう。プラスチックを固体の燃料に使い、酸化剤は液体か気体で別々に貯めておく「ハイブリッド」の仕組みなので、火薬類に当たらないの。会社の説明では、特別な資格がなくても素手で扱えるそう。低電圧・低電力の点火系で、繰り返し安定して点けられる——だから「固体燃料でも再点火できる」なのですね。★見出しだけ読むと、いわゆる固体ロケットモータの話に読めますが、そちらではありません。★Frontier Innovations の追加出資額そのものは非開示です。26億円はラウンド全体の額。",
+      "link": "https://prtimes.jp/main/html/rd/p/000000021.000109623.html"
+    },
+    {
+      "id": "claude-academy-moved-2026-08-21",
+      "date": "2026-08-21",
+      "cat": "ツール",
+      "title": "学ぶ場所の名前が変わっていた — Claude Academy",
+      "summary": "2026年8月20日、Anthropic が「AIの教え方・学び方についての考え」を公式ブログで出して、その中で学習の場 Claude Academy（academy.claude.com）を紹介したの。Claude Code や Cowork など、サービスごとの講座が無料で読めます。修了の記録やバッジ、興味と履歴からのおすすめもあるそう。講座の例だと「AI Fluency: Framework & Foundations」は14レッスンとクイズ1つで、目安4時間ほど。★ひとつ気をつけたいこと。これを「8月20日に新しくできた」と書いている記事がありますが、公式にはそう書かれていません。学習の中身は以前から anthropic.com/learn にあって、いまはそのURLが academy.claude.com へ転送されます。★つまり、新しくできたというより、名前と住所が変わった、と読むほうが確かめられる範囲に合っています。ブックマークしていた方は、そっと差し替えておくといいかも。",
+      "link": "https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai"
+    },
+    {
       "id": "linux-72-new-normal-2026-08-20",
       "date": "2026-08-20",
       "cat": "ツール",
