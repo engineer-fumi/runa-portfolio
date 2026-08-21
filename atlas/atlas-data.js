@@ -17,7 +17,7 @@ window.ATLAS_DATA = {
 
   // 表示メタ情報（マストヘッド・フッターに反映）
   meta: {
-    lastUpdated: "2026-08-20",   // 最終更新日（必ず更新する）
+    lastUpdated: "2026-08-21",   // 最終更新日（必ず更新する）
     rangeStart: "2025.09",       // 収録範囲の開始（表示用ラベル）
     rangeEnd: "2026.06",         // 収録範囲の終了（表示用ラベル）
     sources: [
@@ -693,6 +693,34 @@ window.ATLAS_DATA = {
           "name": "ツール（Tool use）",
           "name_en": "Tool use",
           "feats": [
+        {
+          "id": "computer-use",
+          "name": "画面を見て、クリックして動かす",
+          "name_en": "Computer use tool",
+          "status": "current",
+          "events": [
+            {
+              "date": "2026-08-19",
+              "type": "ga",
+              "desc": "コンピュータ操作の道具が computer_toolset_20260801 として一般提供に。ベータの合図をつけずに使える。ひと続きの操作をまとめて返せるようになり、拡大は既定で入り、部品ごとの設定もできる。前のベータ版も残るが、乗り換えると要求の形が変わる。",
+              "url": "https://platform.claude.com/docs/en/release-notes/overview"
+            }
+          ]
+        },
+        {
+          "id": "browser-toolset",
+          "name": "ブラウザの窓の中だけで動かす",
+          "name_en": "Browser use tool",
+          "status": "current",
+          "events": [
+            {
+              "date": "2026-08-19",
+              "type": "launch",
+              "desc": "browser_toolset_20260801 として公開。机全体ではなく、こちらが用意したブラウザの表示領域の中で動く。画面の絵とクリックだけでなく、ページの構造そのもの（読み上げ用の木・要素・入力欄・タブ）を読み、要素の指し示し・入力欄への記入・タブの出し入れ・取得したファイルの報告に対応する。",
+              "url": "https://platform.claude.com/docs/en/release-notes/overview"
+            }
+          ]
+        },
             {
               "id": "files-api",
               "name": "ファイルを一度あずけて、何度も使う",
@@ -957,6 +985,12 @@ window.ATLAS_DATA = {
               "name_en": "Managed Agents",
               "status": "beta",
               "events": [
+        {
+          "date": "2026-08-19",
+          "type": "update",
+          "desc": "Consoleのセッション表示が作り直された。時間軸のミニマップ、モデルへの問い合わせ単位でまとまった記録、それに詳細・費用・生のイベント・道具ごとの統計・つないだ資源・筋ごとの動きを見る画面が付いた。",
+          "url": "https://platform.claude.com/docs/en/release-notes/overview"
+        },
                 {
                   "date": "2026-04-08",
                   "type": "beta",
@@ -1640,6 +1674,21 @@ window.ATLAS_DATA = {
           "name": "Claude Code",
           "name_en": "Claude Code",
           "feats": [
+        {
+          "id": "cc-keybinding-flavor",
+          "name": "Ctrl+W の削り方を、Bash風にえらぶ",
+          "name_en": "keybindingFlavor setting",
+          "status": "current",
+          "events": [
+            {
+              "date": "2026-08-21",
+              "type": "update",
+              "approx": true,
+              "desc": "設定 keybindingFlavor に readline を選ぶと、入力欄の Ctrl+W が Bash と同じく直前の空白まで削るようになる。既定の classic は変わらない（Claude Code 2.1.238）。",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+            }
+          ]
+        },
             {
               "id": "cc-gov",
               "name": "政府機関向け提供",
@@ -1833,6 +1882,13 @@ window.ATLAS_DATA = {
               "name": "セッション間メッセージング",
               "name_en": "Cross-session messaging",
               "events": [
+        {
+          "date": "2026-08-21",
+          "type": "update",
+          "approx": true,
+          "desc": "受け取らない設定の相手へ送ったとき、これまで成功したように見えていたのが「断られた」と返るように。相手の受け口があふれて捨てられた場合も、送った側に伝わる（Claude Code 2.1.238）。",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+        },
                 {
                   "date": "2026-08-14",
                   "type": "update",
@@ -1854,6 +1910,13 @@ window.ATLAS_DATA = {
               "name": "自社コンピュートでのセッション実行",
               "name_en": "Run sessions on your own compute",
               "events": [
+        {
+          "date": "2026-08-21",
+          "type": "update",
+          "approx": true,
+          "desc": "止める合図を受けても、つながっているセッションは指定した分だけ続けてから終われるように（--defer-shutdown-max-min）。接続ごとに新しい認証ヘッダを求める出口プロキシ向けの指定も加わった（Claude Code 2.1.238）。",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+        },
                 {
                   "date": "2026-08-06",
                   "type": "beta",
@@ -2082,6 +2145,13 @@ window.ATLAS_DATA = {
               "name": "プラグイン / マーケットプレイス",
               "name_en": "Plugins / marketplace",
               "events": [
+        {
+          "date": "2026-08-21",
+          "type": "update",
+          "approx": true,
+          "desc": "プラグインの入手元やカタログの項目に headersHelper を置けるように。取得のたびにコマンドを走らせて、短命のトークンなどのHTTPヘッダを作れる。カタログ側のものは導入・更新のときだけ走り、走らせる前にコマンドが示されて可否を尋ねられる（Claude Code 2.1.238）。",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+        },
                 {
                   "date": "2026-08-14",
                   "type": "expand",
