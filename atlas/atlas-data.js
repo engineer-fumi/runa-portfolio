@@ -17,7 +17,7 @@ window.ATLAS_DATA = {
 
   // 表示メタ情報（マストヘッド・フッターに反映）
   meta: {
-    lastUpdated: "2026-08-21",   // 最終更新日（必ず更新する）
+    lastUpdated: "2026-08-22",   // 最終更新日（必ず更新する）
     rangeStart: "2025.09",       // 収録範囲の開始（表示用ラベル）
     rangeEnd: "2026.06",         // 収録範囲の終了（表示用ラベル）
     sources: [
@@ -322,6 +322,12 @@ window.ATLAS_DATA = {
               "name_en": "Claude Mythos 5",
               "status": "current",
               "events": [
+        {
+          "date": "2026-08-21",
+          "type": "beta",
+          "desc": "Claude Security の走査が Mythos 5 で動くように（Enterprise向けの公開ベータ）。見つけたものごとに CWE の分類・確からしさ・深刻さと、直し方の案が返る。★直し方の案は、人が見て承認するまで適用されない。あわせて 3,500万ドルぶんのクレジット枠 Defender Advantage Fund と、審査済みの守り手向けプログラムの対象拡大も発表された。",
+          "url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders"
+        },
                 {
                   "date": "2026-06-09",
                   "type": "launch",
@@ -1332,6 +1338,12 @@ window.ATLAS_DATA = {
               "name": "SDKのクライアント側圧縮",
               "name_en": "SDK client-side compaction",
               "events": [
+        {
+          "date": "2026-08-20",
+          "type": "update",
+          "desc": "Python の SDK が 1.0 に。中で使う HTTP の部品が httpx から httpx2 へ移り、Python は 3.10 以上が要る。古い Text Completions や、Messages の temperature・top_p・top_k などが外された。★上げると壊れるところがあるので、移行の手引きを見てから。",
+          "url": "https://platform.claude.com/docs/en/release-notes/overview"
+        },
                 {
                   "date": "2025-11-24",
                   "type": "launch",
@@ -1680,6 +1692,13 @@ window.ATLAS_DATA = {
           "name_en": "keybindingFlavor setting",
           "status": "current",
           "events": [
+        {
+          "date": "2026-08-22",
+          "type": "update",
+          "approx": true,
+          "desc": "語の単位で動く鍵も Bash に合わせられるように。Alt+F や Ctrl/Option+→ が語の終わりで止まり、Alt+D がそこまで消す（消したものは Ctrl+Y で戻せる）。約物は語の切れ目として扱う（Claude Code 2.1.239）。",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+        },
             {
               "date": "2026-08-21",
               "type": "update",
@@ -1749,6 +1768,13 @@ window.ATLAS_DATA = {
               "name": "長い作業の後ろで止まったら、自分から声をかける",
               "name_en": "/goal auto check-in",
               "events": [
+        {
+          "date": "2026-08-22",
+          "type": "update",
+          "approx": true,
+          "desc": "長い作業の後ろで様子を尋ねる間隔を、だんだん空けるように（30分→1時間→2時間ごと）。これまでは30分ごとに繰り返していた。作業の再開時に、そのときの目標も戻るようになった（Claude Code 2.1.239）。",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+        },
                 {
                   "date": "2026-08-20",
                   "type": "update",
@@ -1882,6 +1908,13 @@ window.ATLAS_DATA = {
               "name": "セッション間メッセージング",
               "name_en": "Cross-session messaging",
               "events": [
+        {
+          "date": "2026-08-22",
+          "type": "expand",
+          "approx": true,
+          "desc": "Windows でもセッション間のやりとりができるように。これまで macOS と Linux だけだった。あわせて、自分の名前（相手が呼ぶときの名前）を自分で知れるようになり、一覧には同じ場にいる相手も出るようになった（Claude Code 2.1.239）。",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+        },
         {
           "date": "2026-08-21",
           "type": "update",
@@ -2146,6 +2179,13 @@ window.ATLAS_DATA = {
               "name_en": "Plugins / marketplace",
               "events": [
         {
+          "date": "2026-08-22",
+          "type": "update",
+          "approx": true,
+          "desc": "claude.ai から同期したプラグインが name@synced という名前で見えるように。有効・無効もその名前で切り替えられ、同じ名前で自分が入れたものを上書きしない（Claude Code 2.1.239）。",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+        },
+        {
           "date": "2026-08-21",
           "type": "update",
           "approx": true,
@@ -2340,6 +2380,13 @@ window.ATLAS_DATA = {
               "name": "提供拡大とモデル選択",
               "name_en": "Rollout & model selection",
               "events": [
+        {
+          "date": "2026-08-22",
+          "type": "update",
+          "approx": true,
+          "desc": "/clear でそのセッションのタブのまとまりを閉じるように。空になったまとまりは、作業を再開したときや Claude Code を終えたときにも閉じる（Claude Code 2.1.239）。",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+        },
                 {
                   "date": "2025-09-29",
                   "type": "update",
