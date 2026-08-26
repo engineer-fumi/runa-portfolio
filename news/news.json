@@ -1,6 +1,30 @@
 {
- "updated": "2026-08-25",
+ "updated": "2026-08-26",
  "items": [
+  {
+   "id": "citation-monoculture-2026-08-26",
+   "date": "2026-08-26",
+   "cat": "研究",
+   "title": "見出しと要旨で、向きが違っていた",
+   "summary": "「AIは同じ論文を繰り返し引用する — 人間と同様に」という見出しの記事を見かけたので、元の論文を開きました。★記事の本文はこちらでは読んでいません。見ているのは見出しと、arXiv に出ている論文の要旨です。★論文は「When AI Writes, Who Gets Cited? Evidence of Citation Monoculture Across Language Models」（2026年8月3日投稿・査読前）。三つの提供元の十一のモデルに、三十本ずつの候補から最大十本を選ばせる、というやり方です。候補は実在の題と要旨のまま、著者は架空のものに差し替え、年は別の年に付け替え、掲載先と被引用数は伏せてあります（要旨は「fabricated authors, reassigned years, and hidden venues and citation counts」と三つを書き分けています）。★要旨の数字はこう。「the top decile receives 23.3-30.2% of citations against 15.6% under the null」——上位一割が受け取る引用は23.3〜30.2%で、偶然に選んだ場合の15.6%より高い。「one component explains 68-73% of variation across their preference maps」とも。★そして人のほう。「Eight domain experts selecting from the same blinded panels under the same cap show no comparable shared preference, while model concentration persists in selection-only mode」。同じ伏せ方・同じ上限で選んだ八人の専門家には、これに当たる共有の偏りは見られず、モデルの集中のほうは（選ぶだけの条件でも）残った、ということです。★つまり見出しの「人間と同様に」は、要旨の言っていることとは向きが違います。★ただし要旨が言えているのはここまでで、「専門家には偏りが無い」という話ではありません。比べているのは選ぶだけの条件で、しかも査読前の論文です。★数字を見つけたら隣を見る、と何度も書いてきましたが、今回は見出しの隣にあったのが要旨でした。",
+   "link": "https://arxiv.org/abs/2608.19230"
+  },
+  {
+   "id": "mcp-roadmap-2026-08-26",
+   "date": "2026-08-26",
+   "cat": "ツール",
+   "title": "これから半年から一年でやること、と書いてある",
+   "summary": "AIと道具をつなぐ約束ごと MCP（Model Context Protocol）の公式サイトに、ロードマップのページが更新されました（最終更新 2026年8月22日）。★これは実装の発表ではありません。今後6〜12か月で優先する分野の表明です。ページ自身がこう書いています——「This roadmap reflects current thinking rather than firm commitments.」（いまの考えを映したものであって、確定した約束ではない）。続けて、優先順位は動くかもしれない、書いたとおりに出ないかもしれない、先送りになるかもしれない、逆にここに無いものが入るかもしれない、とも。★挙がっているのは五つ。エージェント的なやり取りの土台（Agentic Messaging Primitives）、HTTPを土台にした通信の統一と強化（HTTP-Native Transport Unification and Hardening）、エージェントの身元と企業で使えるだけの安全性（Agent Identity and Enterprise-Ready Security）、基本部品の改善（Improved Primitives）、SDKの作りやすさ（Improved SDK Developer Experience）。★日本語の紹介では「エージェンティックAI・非同期通信・セキュリティ」といった見出しが付いていました。公式の領域名は上の五つなので、そちらとは言い方が違います。★紹介記事の本文はこちらでは読んでいません。見ているのは見出しと、公式のロードマップです。★項目ごとに進み具合もばらばらで、作業部会が「forming（結成中）」と書かれているものもあります。できたことの一覧ではなく、これからの見取り図として読むのがよさそうです。",
+   "link": "https://modelcontextprotocol.io/development/roadmap"
+  },
+  {
+   "id": "rhobot-screen-2026-08-26",
+   "date": "2026-08-26",
+   "cat": "ロボット",
+   "title": "九十六個を並べて、色の変わる場所を探す",
+   "summary": "東京大学物性研究所の研究グループが、遺伝子の改変からタンパク質の性能評価までをロボットで一貫して行う仕組み「Rhobot-Screen（ロボット・スクリーン）」を開発しました。東京大学と科学技術振興機構（JST）の共同発表です（2026年8月6日）。JSTは戦略的創造研究推進事業（CREST）でこの研究を支えています。★数字がひとつ。「一貫して96個の試料を並列に扱えるよう統合実験ワークフローを開発しました」。手で一つずつやっていたところを、九十六本まとめて流せるようにした、ということです。★対象は光を受け取るタンパク質「ロドプシン」の改変体。特定の位置のアミノ酸を変えると、吸収する光の色が変わる仕組みを明らかにし、動物のロドプシンの機能も評価できることを実証した、とあります。★成果は BMC Biology のオンライン版に2026年8月6日（英国夏時間）付で掲載、と発表にあります。★ここは読み分けたいところ。発表には「人工知能（AI）が次に調べる候補をデザインし、ロボットがその実験データを取得、さらに得られた結果をAIにフィードバックする、AI駆動型の自律的たんぱく質開発への基盤となります」とありますが、これは今後の展望です。いまできているのは、実験の自動化と並列化のほう。★もとの日経の記事は会員向けのようで、こちらでは読めていません。ここに書いたのは JST と東京大学の発表の範囲です。",
+   "link": "https://www.jst.go.jp/pr/announce/20260806-2/index.html"
+  },
   {
    "id": "ncsc-agentic-ai-risk-2026-08-25",
    "date": "2026-08-25",
