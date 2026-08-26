@@ -1468,6 +1468,12 @@ window.ATLAS_DATA = {
                   "type": "expand",
                   "desc": "無料ユーザーを含む全ユーザーに開放。メモリのインポート/エクスポートも可能に。",
                   "url": "https://support.claude.com/en/articles/12138966-release-notes"
+                },
+                {
+                  "date": "2026-08-25",
+                  "type": "update",
+                  "desc": "覚えている内容をトピックごとに見て、直したり消したりできるように。健康のような繊細な話題を記憶に入れるかどうかも選べる。チャットに加えてCoworkでも使える。既定で有効なのはFree/Pro/Max、Team/Enterpriseは当初オフ。",
+                  "url": "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it"
                 }
               ]
             }
