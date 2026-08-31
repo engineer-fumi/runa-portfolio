@@ -17,7 +17,7 @@ window.ATLAS_DATA = {
 
   // 表示メタ情報（マストヘッド・フッターに反映）
   meta: {
-    lastUpdated: "2026-08-22",   // 最終更新日（必ず更新する）
+    lastUpdated: "2026-08-31",   // 最終更新日（必ず更新する）
     rangeStart: "2025.09",       // 収録範囲の開始（表示用ラベル）
     rangeEnd: "2026.06",         // 収録範囲の終了（表示用ラベル）
     sources: [
@@ -1156,6 +1156,12 @@ window.ATLAS_DATA = {
               "name_en": "Admin API user-management endpoints",
               "events": [
                 {
+                  "date": "2026-08-26",
+                  "type": "expand",
+                  "desc": "組織まわりの管理APIが ant CLI と各言語のSDKからも呼べるように。組織情報・メンバー・招待・ワークスペース・APIキー・上限・WIF・CMEK まで。使用量とコストの集計と企業向けの利用者管理は、引き続き curl のみ。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                },
+                {
                   "date": "2026-08-19",
                   "type": "ga",
                   "desc": "Claude Enterprise の組織で、メンバー・招待・グループ・役割をAPIから扱う口が正式版に。グループと役割の請求に要っていたためし版の合図（ce-user-management-2026-07-13）が不要になった。付けて呼んでも今までどおり受け取る。",
@@ -1181,6 +1187,12 @@ window.ATLAS_DATA = {
               "name": "Console → platform.claude.com",
               "name_en": "Console → platform.claude.com",
               "events": [
+                {
+                  "date": "2026-08-27",
+                  "type": "launch",
+                  "desc": "個人のキーとサービスアカウントのキーを作れるように。誰がどれだけ使ったかを人ごとに追えて、抜けた人のぶんは失効する。ワークスペース限定にも、管理用の口をまたぐ形にもできる。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                },
                 {
                   "date": "2026-08-19",
                   "type": "update",
@@ -1338,6 +1350,12 @@ window.ATLAS_DATA = {
               "name": "SDKのクライアント側圧縮",
               "name_en": "SDK client-side compaction",
               "events": [
+                {
+                  "date": "2026-08-27",
+                  "type": "update",
+                  "desc": "各SDKで client.beta.files と client.beta.skills がベータの札を外し、通常のものと同じ形に。beta.skills.delete() は廃止、BetaSkill は BetaContainerSkill へ改名。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                },
         {
           "date": "2026-08-20",
           "type": "update",
@@ -1644,6 +1662,18 @@ window.ATLAS_DATA = {
               "name_en": "Compliance API integrations",
               "events": [
                 {
+                  "date": "2026-08-26",
+                  "type": "expand",
+                  "desc": "ローカルのセッション記録が Claude Science と Microsoft 365 版（Excel・PowerPoint・Word・Outlook）ぶんも返るように（企業向けベータ）。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                },
+                {
+                  "date": "2026-08-26",
+                  "type": "ga",
+                  "desc": "Cowork と Claude Code のセッション取得が正式提供に（ベータを卒業）。",
+                  "url": "https://platform.claude.com/docs/en/release-notes/overview"
+                },
+                {
                   "date": "2026-05-21",
                   "type": "launch",
                   "desc": "主要なセキュリティ/コンプライアンスツールと連携し、IT/セキュリティ部門がClaude全体を統制可能に。",
@@ -1672,6 +1702,19 @@ window.ATLAS_DATA = {
           "name": "Claude Science（研究者向け）",
           "name_en": "Claude Science (for researchers)",
           "feats": [
+            {
+              "id": "mhs",
+              "name": "機器を動かすための共通の約束（MHS）",
+              "name_en": "Model Hardware Standard (research preview)",
+              "events": [
+                {
+                  "date": "2026-08-27",
+                  "type": "preview",
+                  "desc": "顕微鏡や分注機、ロボットアームのような実験機器を、AIが安全に動かすための共通仕様のリサーチプレビュー。読むと書くという素朴な形にそろえて、機器ごとのつなぎ込みの手間を減らす。機器側の安全の上限と人の見守りを前提に、まずは一部の研究室と先進製造の現場に限って公開。",
+                  "url": "https://www.anthropic.com/news/model-hardware-standard-research-preview"
+                }
+              ]
+            },
             {
               "id": "science-workbench",
               "name": "科学者向けAIワークベンチ",
@@ -2335,6 +2378,19 @@ window.ATLAS_DATA = {
               ]
             },
             {
+              "id": "cowork-browser",
+              "name": "内蔵ブラウザ",
+              "name_en": "Built-in browser",
+              "events": [
+                {
+                  "date": "2026-08-26",
+                  "type": "launch",
+                  "desc": "Cowork のデスクトップアプリの中に、Claude 専用のブラウザがついた。人のブラウザには触れずに、自分で見にいって入力や調べものをする。閲覧履歴やパスワードは読めない作りになっている。",
+                  "url": "https://claude.com/blog/cowork-built-in-browser"
+                }
+              ]
+            },
+            {
               "id": "cowork-ga",
               "name": "一般提供（macOS / Windows）",
               "name_en": "General availability (macOS / Windows)",
@@ -2386,6 +2442,12 @@ window.ATLAS_DATA = {
               "name": "提供拡大とモデル選択",
               "name_en": "Rollout & model selection",
               "events": [
+                {
+                  "date": "2026-08-26",
+                  "type": "ga",
+                  "desc": "有料プラン全体で正式提供に。一手ずつの承認なしにブラウザの中で自分で操作できるようになり、その前段に安全の見張りとプロンプトインジェクション対策を入れている。",
+                  "url": "https://claude.com/blog/claude-in-chrome-generally-available"
+                },
         {
           "date": "2026-08-22",
           "type": "update",
