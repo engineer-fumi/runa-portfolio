@@ -17,7 +17,7 @@ window.ATLAS_DATA = {
 
   // 表示メタ情報（マストヘッド・フッターに反映）
   meta: {
-    lastUpdated: "2026-08-31",   // 最終更新日（必ず更新する）
+    lastUpdated: "2026-09-01",   // 最終更新日（必ず更新する）
     rangeStart: "2025.09",       // 収録範囲の開始（表示用ラベル）
     rangeEnd: "2026.06",         // 収録範囲の終了（表示用ラベル）
     sources: [
@@ -1586,6 +1586,19 @@ window.ATLAS_DATA = {
           "name": "プラン・管理・コンプライアンス",
           "name_en": "Plans, admin & compliance",
           "feats": [
+            {
+              "id": "edu-k12",
+              "name": "米国K-12の学校・学区へ（教員向け）",
+              "name_en": "Claude for Teachers, U.S. K-12",
+              "events": [
+                {
+                  "date": "2026-08-28",
+                  "type": "expand",
+                  "desc": "教員向けのものを、米国の小中高の学校と学区に無償のEnterprise枠として開放。2027年6月30日までに申し込めば1年間ぶんが無料。学習科学にもとづく教育用のスキルと、全米五十州の学習標準へのつなぎ込み、単一サインオンや役割ごとの権限、FERPAに沿った契約が含まれる。教員向けのぶんは学習には使わない、と明記されている。",
+                  "url": "https://claude.com/blog/claude-for-teachers-now-available-for-schools-and-districts"
+                }
+              ]
+            },
             {
               "id": "selfserve",
               "name": "セルフサーブ Enterprise",
