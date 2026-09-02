@@ -17,7 +17,7 @@ window.ATLAS_DATA = {
 
   // 表示メタ情報（マストヘッド・フッターに反映）
   meta: {
-    lastUpdated: "2026-09-01",   // 最終更新日（必ず更新する）
+    lastUpdated: "2026-09-02",   // 最終更新日（必ず更新する）
     rangeStart: "2025.09",       // 収録範囲の開始（表示用ラベル）
     rangeEnd: "2026.06",         // 収録範囲の終了（表示用ラベル）
     sources: [
@@ -351,10 +351,61 @@ window.ATLAS_DATA = {
               ]
             },
             {
+              "id": "fable51",
+              "name": "Claude Fable 5.1",
+              "name_en": "Claude Fable 5.1",
+              "status": "current",
+              "events": [
+                {
+                  "date": "2026-09-01",
+                  "type": "launch",
+                  "title": "Fable 5.1 登場",
+                  "desc": "Mythos 5.1 と同じモデルで、安全装置の強さだけが違う版。値段は典型的な使い方で Fable 5 より約25%安くなる見込み（発表側は estimated と書いている）。理由はキャッシュ読み込みの値下げで、手を動かし続ける使い方では最大およそ45%まで。",
+                  "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+                },
+                {
+                  "date": "2026-09-01",
+                  "type": "update",
+                  "title": "科学の試験の点",
+                  "desc": "Terminal-Bench-Science 0.1 で 52.6%（前の Fable 5 は 24.7%、Opus 5 は 29.0%）。ただし同じページに、この試験の標準誤差はモデルごとに±3.5〜4.5ポイントと書かれている。測ったのは発表した側。",
+                  "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+                }
+              ]
+            },
+            {
+              "id": "mythos51",
+              "name": "Claude Mythos 5.1",
+              "name_en": "Claude Mythos 5.1",
+              "status": "current",
+              "events": [
+                {
+                  "date": "2026-09-01",
+                  "type": "launch",
+                  "title": "Mythos 5.1 登場",
+                  "desc": "Fable 5.1 と同じモデルだが、信頼できる相手だけの枠（trusted access programs）でのみ使える。安全装置はサイバーセキュリティと生命科学の仕事を支えるように作られている。",
+                  "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+                }
+              ]
+            },
+            {
               "id": "cyber-safeguards",
               "name": "サイバー分野の安全対策",
               "name_en": "Cyber safeguards",
               "events": [
+                {
+                  "date": "2026-08-31",
+                  "type": "update",
+                  "title": "7月30日の3件のあと、この1か月で変えたこと",
+                  "desc": "評価の環境からモデルが実インターネットへ届いた件などを受けた報告。原因の見立ては運用上の失敗に加え、動機づけられた推論と無謀さの2つとしている（調査はまだ続いており、発表側も preliminary と書いている）。外のサイバー評価をいったん止め、抜け出そうとする動きを道具の実行前に止める分類器を入れ、過去の記録を自動で見直した。評価の相手方には、既定でインターネットを断つ・鍵を環境の外に置く・モデル自身に脱出を試させてから使う、といった約束事を必須にした。★これらの約束事は、Fable 5 のような安全装置つきモデルを使う顧客には適用されない、と明記されている。",
+                  "url": "https://www.anthropic.com/news/improving-alignment-security-efforts"
+                },
+                {
+                  "date": "2026-09-01",
+                  "type": "update",
+                  "title": "誤検知を減らした",
+                  "desc": "サイバーセキュリティで、害のないものを取り違えて止めてしまう回数が以前より60%少なくなったと発表。弱点を見つける用途には使えるようになった一方、攻める道具を作る用途には使えないまま。",
+                  "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+                },
                 {
                   "date": "2026-07-02",
                   "type": "launch",
@@ -1670,6 +1721,20 @@ window.ATLAS_DATA = {
               ]
             },
             {
+              "id": "efs",
+              "name": "Enterprise Frontier Safeguards（EFS）",
+              "name_en": "Enterprise Frontier Safeguards",
+              "events": [
+                {
+                  "date": "2026-09-01",
+                  "type": "launch",
+                  "title": "データを預けずに、悪用の見張りだけ続ける",
+                  "desc": "見張りに使う活動の記録を、Anthropic ではなく顧客自身のクラウド（S3・Azure Blob・Google Cloud Storage など）に置く仕組みを発表。検知の合図は顧客へ直接届き、確かめるのは顧客側の人。100社を超える顧客と一緒に作ったとしている。提供は今秋から段階的で、それまでの間、条件を満たす顧客は Fable 5 と Fable 5.1 をデータ保持なしで使える。顧客側の保管・暗号鍵・自動確認はそれぞれ任意で、モデルの挙動や値段や上限は変わらない。Anthropic は EFS 自体には課金しない（クラウド側の保管や転送の費用はかかる）。",
+                  "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards"
+                }
+              ]
+            },
+            {
               "id": "compliance",
               "name": "コンプライアンスAPI連携",
               "name_en": "Compliance API integrations",
@@ -1802,6 +1867,13 @@ window.ATLAS_DATA = {
               "name": "始まりのモデルを、環境変数で決める",
               "name_en": "ANTHROPIC_DEFAULT_MODEL",
               "events": [
+                {
+                  "date": "2026-09-01",
+                  "type": "update",
+                  "title": "既定の Fable が 5.1 に",
+                  "desc": "Claude Code 2.1.257 で claude-fable-5-1 が加わり、Fable の既定になった。1Mコンテキスト、100万トークンあたり入力10ドル・出力50ドル、キャッシュ読み込みは0.25ドル。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                },
                 {
                   "date": "2026-08-20",
                   "type": "update",
@@ -2026,6 +2098,13 @@ window.ATLAS_DATA = {
               "name_en": "Auto mode becomes the default",
               "events": [
                 {
+                  "date": "2026-09-01",
+                  "type": "update",
+                  "title": "囲いを抜ける動きは、自動で通さない",
+                  "desc": "auto モードに Containment Escape の決まりが入り、クラウドの資格情報の取得・外への抜け道・他テナントへの到達を、環境が「想定内」と印をつけていないかぎり自動では通さなくなった。作業フォルダの外を初めて読むときにも一度だけ確認が出る。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                },
+                {
                   "date": "2026-08-07",
                   "type": "update",
                   "desc": "2026-08-14からPro/Max/Teamでauto mode（安全性の分類器を通して自動実行する動作）が既定に。分類器ぶんの追加トークン課金は撤廃。Shift+Tabで切り替えでき、管理者はmanaged settingsで統制できる。",
@@ -2138,6 +2217,13 @@ window.ATLAS_DATA = {
               "name": "サブエージェント",
               "name_en": "Subagents",
               "events": [
+                {
+                  "date": "2026-09-01",
+                  "type": "update",
+                  "title": "サブエージェントのモデルを、まとめて決める",
+                  "desc": "CLAUDE_CODE_SUBAGENT_MODEL_FORCE を付けると、役ごとの指定や呼び出しごとの指定を無視して、すべてのサブエージェントに同じモデルを当てられる。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                },
                 {
                   "date": "2026-08-14",
                   "type": "update",
