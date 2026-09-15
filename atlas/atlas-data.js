@@ -17,7 +17,7 @@ window.ATLAS_DATA = {
 
   // 表示メタ情報（マストヘッド・フッターに反映）
   meta: {
-    lastUpdated: "2026-09-02",   // 最終更新日（必ず更新する）
+    lastUpdated: "2026-09-15",   // 最終更新日（必ず更新する）
     rangeStart: "2025.09",       // 収録範囲の開始（表示用ラベル）
     rangeEnd: "2026.06",         // 収録範囲の終了（表示用ラベル）
     sources: [
@@ -392,6 +392,13 @@ window.ATLAS_DATA = {
               "name": "サイバー分野の安全対策",
               "name_en": "Cyber safeguards",
               "events": [
+                {
+                  "date": "2026-09-10",
+                  "type": "update",
+                  "title": "止めた事例を、まとめて出した",
+                  "desc": "悪用の検知と遮断についての報告。2025年12月から2026年8月までのあいだに止めた活動を、七つの領域（サイバー攻撃・監視・影響工作・通常兵器・生物学的な悪用・詐欺・不正な蒸留）に分けて並べている。★使われていたのは Haiku・Sonnet・Opus で、Fable や Mythos クラスは、不正な蒸留の一件を除いて含まれていなかったと書かれている。同じ形の報告は2025年の3月・8月・11月にも出ている。",
+                  "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+                },
                 {
                   "date": "2026-08-31",
                   "type": "update",
@@ -1042,6 +1049,13 @@ window.ATLAS_DATA = {
               "name_en": "Managed Agents",
               "status": "beta",
               "events": [
+                {
+                  "date": "2026-09-10",
+                  "type": "update",
+                  "title": "道具の呼び出しを、その都度みてもらう",
+                  "desc": "権限のきまりに auto が加わった。エージェントやMCPの道具の呼び出しを、サーバ側が一件ずつ見て、通す・断る・こちらの承認を待って止める、のどれかにする。どう判断したかは出来事の evaluation の欄に出る。あわせて ant CLI に beta:sessions connect が入り、端末からセッションに繋いで、実況を追う・話しかける・止まっている呼び出しを許す/断る ができるようになった。",
+                  "url": "https://docs.claude.com/en/release-notes/api"
+                },
         {
           "date": "2026-08-19",
           "type": "update",
@@ -1114,6 +1128,13 @@ window.ATLAS_DATA = {
               "name": "自前サンドボックス / スケジュール",
               "name_en": "Bring-your-own sandbox / scheduling",
               "events": [
+                {
+                  "date": "2026-09-03",
+                  "type": "update",
+                  "title": "書いたファイルのとおりに、作り直す",
+                  "desc": "ant CLI 1.30.0 に apply が入った。リポジトリに置いたファイルの記述から、エージェント・環境・スキル・記憶・配置を作ったり直したりできる。実行するとまず計画を見せて承認を求め、claude-lock.json という錠前のファイルを書く。それをコミットしておけば、手元でもCIでも「新しく作る」ではなく「同じものを直す」になる。",
+                  "url": "https://docs.claude.com/en/release-notes/api"
+                },
                 {
                   "date": "2026-05-19",
                   "type": "launch",
@@ -1721,6 +1742,21 @@ window.ATLAS_DATA = {
               ]
             },
             {
+              "id": "smart-reports",
+              "name": "スマートレポート（使われ方の報告）",
+              "name_en": "Smart reports",
+              "status": "beta",
+              "events": [
+                {
+                  "date": "2026-09-10",
+                  "type": "beta",
+                  "title": "どう使われているかを、返してくれる",
+                  "desc": "チームが Claude をどう使っているかを見て返す報告の仕組み。進んでいる仕事、かかっている費用、やりとりのどこで詰まったか、そして共有のスキルにまとめる価値のある繰り返しの型を挙げる。Claude Enterprise のプランで、ベータとして使える。",
+                  "url": "https://docs.claude.com/en/release-notes/claude-apps"
+                }
+              ]
+            },
+            {
               "id": "efs",
               "name": "Enterprise Frontier Safeguards（EFS）",
               "name_en": "Enterprise Frontier Safeguards",
@@ -2098,6 +2134,13 @@ window.ATLAS_DATA = {
               "name_en": "Auto mode becomes the default",
               "events": [
                 {
+                  "date": "2026-09-15",
+                  "type": "update",
+                  "title": "そのコマンドが要る先だけを、開ける",
+                  "desc": "囲いのある auto モードで、Bash・PowerShell・Monitor にコマンドごとの allowed_domains が付いた。そのコマンドが必要とする行き先だけを、そのコマンドと一緒に見てもらって開ける。ほかの行き先は断られる。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                },
+                {
                   "date": "2026-09-01",
                   "type": "update",
                   "title": "囲いを抜ける動きは、自動で通さない",
@@ -2218,6 +2261,13 @@ window.ATLAS_DATA = {
               "name_en": "Subagents",
               "events": [
                 {
+                  "date": "2026-09-15",
+                  "type": "update",
+                  "title": "手引きを渡さずに、走らせる",
+                  "desc": "役の定義に omitClaudeMd を書けるようになった。付けると、その役は利用者・企画・手元の CLAUDE.md を読まずに走る。組織が定めた決まりのファイルは、それでも読み込まれる。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                },
+                {
                   "date": "2026-09-01",
                   "type": "update",
                   "title": "サブエージェントのモデルを、まとめて決める",
@@ -2326,6 +2376,13 @@ window.ATLAS_DATA = {
               "name": "プラグイン / マーケットプレイス",
               "name_en": "Plugins / marketplace",
               "events": [
+                {
+                  "date": "2026-09-15",
+                  "type": "launch",
+                  "title": "プラグインに、点をつけて確かめる",
+                  "desc": "claude plugin eval が入った。プラグインに用意した試験の束を Claude Code に対して走らせ、点のついた・やり直しのきく結果（JSONとHTMLの報告書）を出す。作ったものが本当に効いているかを、感触ではなく数で見られるようになった。",
+                  "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+                },
         {
           "date": "2026-08-22",
           "type": "update",
